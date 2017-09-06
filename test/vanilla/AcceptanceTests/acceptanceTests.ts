@@ -25,6 +25,7 @@ import dateTimeClient = require('../Expected/AcceptanceTests/BodyDateTime/autoRe
 import dateTimeRfc1123Client = require('../Expected/AcceptanceTests/BodyDateTimeRfc1123/autoRestRFC1123DateTimeTestService');
 import durationClient = require('../Expected/AcceptanceTests/BodyDuration/autoRestDurationTestService');
 import urlClient = require('../Expected/AcceptanceTests/Url/autoRestUrlTestService');
+import urlMultiCollectionClient = require('../Expected/AcceptanceTests/UrlMultiCollectionFormat/autoRestUrlMutliCollectionFormatTestService');
 import fileClient = require('../Expected/AcceptanceTests/BodyFile/autoRestSwaggerBATFileService');
 import arrayClient = require('../Expected/AcceptanceTests/BodyArray/autoRestSwaggerBATArrayService');
 import dictionaryClient = require('../Expected/AcceptanceTests/BodyDictionary/autoRestSwaggerBATdictionaryService');
@@ -2604,6 +2605,30 @@ describe('nodejs', function () {
               });
             });
           });
+        });
+      });
+    });
+
+    describe('Url MultiFormatCollection Client', function () {
+      var testClient = new urlMultiCollectionClient(baseUri, clientOptions);
+      it('should work when query parameter with collection format multi is an empty array', function (done) {
+        testClient.queries.arrayStringMultiNull((err, result, request, response) => {
+          should.not.exist(err);
+          done();
+        });
+      });
+
+      it('should work when query parameter with collection format multi is an empty array', function (done) {
+        testClient.queries.arrayStringMultiEmpty({ arrayQuery: [] }, (err, result, request, response) => {
+          should.not.exist(err);
+          done();
+        });
+      });
+
+      it('should work when path has base64url encoded string', function (done) {
+        testClient.queries.arrayStringMultiValid({ arrayQuery: ["ArrayQuery1", "begin!*'();:@ &=+$,/?#[]end", null, ""] }, (err, result, request, response) => {
+          should.not.exist(err);
+          done();
         });
       });
     });

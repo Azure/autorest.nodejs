@@ -19,6 +19,7 @@ var dateTimeClient = require("../Expected/AcceptanceTests/BodyDateTime/autoRestD
 var dateTimeRfc1123Client = require("../Expected/AcceptanceTests/BodyDateTimeRfc1123/autoRestRFC1123DateTimeTestService");
 var durationClient = require("../Expected/AcceptanceTests/BodyDuration/autoRestDurationTestService");
 var urlClient = require("../Expected/AcceptanceTests/Url/autoRestUrlTestService");
+var urlMultiCollectionClient = require("../Expected/AcceptanceTests/UrlMultiCollectionFormat/autoRestUrlMutliCollectionFormatTestService");
 var fileClient = require("../Expected/AcceptanceTests/BodyFile/autoRestSwaggerBATFileService");
 var arrayClient = require("../Expected/AcceptanceTests/BodyArray/autoRestSwaggerBATArrayService");
 var dictionaryClient = require("../Expected/AcceptanceTests/BodyDictionary/autoRestSwaggerBATdictionaryService");
@@ -2427,6 +2428,27 @@ describe('nodejs', function () {
                             });
                         });
                     });
+                });
+            });
+        });
+        describe('Url MultiFormatCollection Client', function () {
+            var testClient = new urlMultiCollectionClient(baseUri, clientOptions);
+            it('should work when query parameter with collection format multi is an empty array', function (done) {
+                testClient.queries.arrayStringMultiNull(function (err, result, request, response) {
+                    should.not.exist(err);
+                    done();
+                });
+            });
+            it('should work when query parameter with collection format multi is an empty array', function (done) {
+                testClient.queries.arrayStringMultiEmpty({ arrayQuery: [] }, function (err, result, request, response) {
+                    should.not.exist(err);
+                    done();
+                });
+            });
+            it('should work when path has base64url encoded string', function (done) {
+                testClient.queries.arrayStringMultiValid({ arrayQuery: ["ArrayQuery1", "begin!*'();:@ &=+$,/?#[]end", null, ""] }, function (err, result, request, response) {
+                    should.not.exist(err);
+                    done();
                 });
             });
         });
