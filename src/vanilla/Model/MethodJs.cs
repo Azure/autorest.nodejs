@@ -666,6 +666,7 @@ namespace AutoRest.NodeJS.Model
                            .AppendLine(queryAddFormat, queryParameter.SerializedName, "''").Outdent()
                            .AppendLine("} else {").Indent()
                            .AppendLine("for (let item of {0}) {{", queryParameter.Name).Indent()
+                           .AppendLine("item = (item === null || item === undefined) ? '' : item;")
                            .AppendLine(queryAddFormat, queryParameter.SerializedName, "'' + item").Outdent()
                            .AppendLine("}").Outdent()
                            .AppendLine("}").Outdent();

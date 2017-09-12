@@ -28,7 +28,7 @@ namespace AutoRest.NodeJS
         }
 
         /// <summary>
-        /// Format the value of a sequence given the modeled element format.  Note that only sequences of strings are supported
+        /// Format the value of a sequence given the modeled element format.
         /// </summary>
         /// <param name="parameter">The parameter to format</param>
         /// <returns>A reference to the formatted parameter value</returns>
@@ -50,12 +50,6 @@ namespace AutoRest.NodeJS
             if (enumType != null && enumType.ModelAsString)
             {
                 primaryType = New<PrimaryType>(KnownPrimaryType.String);
-            }
-
-            if (primaryType == null || primaryType.KnownPrimaryType != KnownPrimaryType.String)
-            {
-                throw new InvalidOperationException(
-                    $"Cannot generate a formatted sequence from a non-string array parameter {parameter}");
             }
 
             return $"{parameter.Name}.join('{parameter.CollectionFormat.GetSeparator()}')";

@@ -2433,7 +2433,7 @@ describe('nodejs', function () {
         });
         describe('Url MultiFormatCollection Client', function () {
             var testClient = new urlMultiCollectionClient(baseUri, clientOptions);
-            it('should work when query parameter with collection format multi is an empty array', function (done) {
+            it('should work when query parameter with collection format multi is null', function (done) {
                 testClient.queries.arrayStringMultiNull(function (err, result, request, response) {
                     should.not.exist(err);
                     done();

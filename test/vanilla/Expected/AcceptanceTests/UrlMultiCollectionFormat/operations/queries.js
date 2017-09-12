@@ -69,6 +69,7 @@ function _arrayStringMultiNull(options, callback) {
       queryParameters.push('arrayQuery=' + encodeURIComponent(''));
     } else {
       for (let item of arrayQuery) {
+        item = (item === null || item === undefined) ? '' : item;
         queryParameters.push('arrayQuery=' + encodeURIComponent('' + item));
       }
     }
@@ -188,6 +189,7 @@ function _arrayStringMultiEmpty(options, callback) {
       queryParameters.push('arrayQuery=' + encodeURIComponent(''));
     } else {
       for (let item of arrayQuery) {
+        item = (item === null || item === undefined) ? '' : item;
         queryParameters.push('arrayQuery=' + encodeURIComponent('' + item));
       }
     }
@@ -308,6 +310,7 @@ function _arrayStringMultiValid(options, callback) {
       queryParameters.push('arrayQuery=' + encodeURIComponent(''));
     } else {
       for (let item of arrayQuery) {
+        item = (item === null || item === undefined) ? '' : item;
         queryParameters.push('arrayQuery=' + encodeURIComponent('' + item));
       }
     }
