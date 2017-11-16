@@ -2520,6 +2520,139 @@ export interface Polymorphism {
 
 
     /**
+     * Get complex types that are polymorphic, but not at the root of the
+     * hierarchy; also have additional properties
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<Salmon>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    getComplicatedWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Salmon>>;
+
+    /**
+     * Get complex types that are polymorphic, but not at the root of the
+     * hierarchy; also have additional properties
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {Salmon} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {Salmon} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link Salmon} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    getComplicated(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Salmon>;
+    getComplicated(callback: ServiceCallback<models.Salmon>): void;
+    getComplicated(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.Salmon>): void;
+
+
+    /**
+     * Put complex types that are polymorphic, but not at the root of the
+     * hierarchy; also have additional properties
+     *
+     * @param {object} complexBody
+     *
+     * @param {string} [complexBody.location]
+     *
+     * @param {boolean} [complexBody.iswild]
+     *
+     * @param {string} [complexBody.species]
+     *
+     * @param {number} complexBody.length
+     *
+     * @param {array} [complexBody.siblings]
+     *
+     * @param {string} complexBody.fishtype Polymorphic Discriminator
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    putComplicatedWithHttpOperationResponse(complexBody: models.Salmon, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+
+    /**
+     * Put complex types that are polymorphic, but not at the root of the
+     * hierarchy; also have additional properties
+     *
+     * @param {object} complexBody
+     *
+     * @param {string} [complexBody.location]
+     *
+     * @param {boolean} [complexBody.iswild]
+     *
+     * @param {string} [complexBody.species]
+     *
+     * @param {number} complexBody.length
+     *
+     * @param {array} [complexBody.siblings]
+     *
+     * @param {string} complexBody.fishtype Polymorphic Discriminator
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {null} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {null} [result]   - The deserialized result object if an error did not occur.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    putComplicated(complexBody: models.Salmon, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putComplicated(complexBody: models.Salmon, callback: ServiceCallback<void>): void;
+    putComplicated(complexBody: models.Salmon, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+
+
+    /**
      * Put complex types that are polymorphic, attempting to omit required
      * 'birthday' field - the request should not be allowed from the client
      *
