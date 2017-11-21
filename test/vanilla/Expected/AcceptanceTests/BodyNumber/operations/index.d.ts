@@ -382,8 +382,6 @@ export interface Number {
     /**
      * Put big double value 99999999.99
      *
-     * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
      *
      * @param {object} [options.customHeaders] Headers that will be added to the
@@ -395,12 +393,10 @@ export interface Number {
      *
      * @reject {Error|ServiceError} - The error object.
      */
-    putBigDoublePositiveDecimalWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+    putBigDoublePositiveDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big double value 99999999.99
-     *
-     * @param {number} numberBody
      *
      * @param {object} [options] Optional Parameters.
      *
@@ -428,9 +424,9 @@ export interface Number {
      *
      *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
      */
-    putBigDoublePositiveDecimal(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
-    putBigDoublePositiveDecimal(numberBody: number, callback: ServiceCallback<void>): void;
-    putBigDoublePositiveDecimal(numberBody: number, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+    putBigDoublePositiveDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putBigDoublePositiveDecimal(callback: ServiceCallback<void>): void;
+    putBigDoublePositiveDecimal(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 
 
     /**
@@ -486,8 +482,6 @@ export interface Number {
     /**
      * Put big double value -99999999.99
      *
-     * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
      *
      * @param {object} [options.customHeaders] Headers that will be added to the
@@ -499,12 +493,10 @@ export interface Number {
      *
      * @reject {Error|ServiceError} - The error object.
      */
-    putBigDoubleNegativeDecimalWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+    putBigDoubleNegativeDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big double value -99999999.99
-     *
-     * @param {number} numberBody
      *
      * @param {object} [options] Optional Parameters.
      *
@@ -532,9 +524,9 @@ export interface Number {
      *
      *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
      */
-    putBigDoubleNegativeDecimal(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
-    putBigDoubleNegativeDecimal(numberBody: number, callback: ServiceCallback<void>): void;
-    putBigDoubleNegativeDecimal(numberBody: number, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+    putBigDoubleNegativeDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putBigDoubleNegativeDecimal(callback: ServiceCallback<void>): void;
+    putBigDoubleNegativeDecimal(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 
 
     /**

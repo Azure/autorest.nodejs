@@ -6214,7 +6214,7 @@ function _beginDeleteNoHeaderInRetry(options, callback) {
       return callback(err);
     }
     let statusCode = response.statusCode;
-    if (statusCode !== 204 && statusCode !== 202) {
+    if (statusCode !== 202 && statusCode !== 204) {
       let error = new Error(responseBody);
       error.statusCode = response.statusCode;
       error.request = msRest.stripRequest(httpRequest);
@@ -6323,7 +6323,7 @@ function _beginDeleteAsyncNoHeaderInRetry(options, callback) {
       return callback(err);
     }
     let statusCode = response.statusCode;
-    if (statusCode !== 204 && statusCode !== 202) {
+    if (statusCode !== 202 && statusCode !== 204) {
       let error = new Error(responseBody);
       error.statusCode = response.statusCode;
       error.request = msRest.stripRequest(httpRequest);
@@ -6869,7 +6869,7 @@ function _beginPost200WithPayload(options, callback) {
       return callback(err);
     }
     let statusCode = response.statusCode;
-    if (statusCode !== 202 && statusCode !== 200) {
+    if (statusCode !== 200 && statusCode !== 202) {
       let error = new Error(responseBody);
       error.statusCode = response.statusCode;
       error.request = msRest.stripRequest(httpRequest);
@@ -6898,7 +6898,7 @@ function _beginPost200WithPayload(options, callback) {
     let result = null;
     if (responseBody === '') responseBody = null;
     // Deserialize Response
-    if (statusCode === 202) {
+    if (statusCode === 200) {
       let parsedResponse = null;
       try {
         parsedResponse = JSON.parse(responseBody);
@@ -6915,7 +6915,7 @@ function _beginPost200WithPayload(options, callback) {
       }
     }
     // Deserialize Response
-    if (statusCode === 200) {
+    if (statusCode === 202) {
       let parsedResponse = null;
       try {
         parsedResponse = JSON.parse(responseBody);
@@ -7317,7 +7317,7 @@ function _beginPostAsyncRetrySucceeded(options, callback) {
       return callback(err);
     }
     let statusCode = response.statusCode;
-    if (statusCode !== 202 && statusCode !== 200) {
+    if (statusCode !== 200 && statusCode !== 202) {
       let error = new Error(responseBody);
       error.statusCode = response.statusCode;
       error.request = msRest.stripRequest(httpRequest);
@@ -7467,7 +7467,7 @@ function _beginPostAsyncNoRetrySucceeded(options, callback) {
       return callback(err);
     }
     let statusCode = response.statusCode;
-    if (statusCode !== 202 && statusCode !== 200) {
+    if (statusCode !== 200 && statusCode !== 202) {
       let error = new Error(responseBody);
       error.statusCode = response.statusCode;
       error.request = msRest.stripRequest(httpRequest);

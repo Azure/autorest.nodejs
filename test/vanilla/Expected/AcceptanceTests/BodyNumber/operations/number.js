@@ -821,8 +821,6 @@ function _getBigDouble(options, callback) {
 /**
  * Put big double value 99999999.99
  *
- * @param {number} numberBody
- *
  * @param {object} [options] Optional Parameters.
  *
  * @param {object} [options.customHeaders] Headers that will be added to the
@@ -840,7 +838,7 @@ function _getBigDouble(options, callback) {
  *
  *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
-function _putBigDoublePositiveDecimal(numberBody, options, callback) {
+function _putBigDoublePositiveDecimal(options, callback) {
    /* jshint validthis: true */
   let client = this.client;
   if(!callback && typeof options === 'function') {
@@ -850,14 +848,7 @@ function _putBigDoublePositiveDecimal(numberBody, options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
-  // Validate
-  try {
-    if (numberBody === null || numberBody === undefined || typeof numberBody !== 'number') {
-      throw new Error('numberBody cannot be null or undefined and it must be of type number.');
-    }
-  } catch (error) {
-    return callback(error);
-  }
+  let numberBody = 99999999.99;
 
   // Construct URL
   let baseUrl = this.client.baseUri;
@@ -884,7 +875,9 @@ function _putBigDoublePositiveDecimal(numberBody, options, callback) {
     if (numberBody !== null && numberBody !== undefined) {
       let requestModelMapper = {
         required: true,
+        isConstant: true,
         serializedName: 'numberBody',
+        defaultValue: 99999999.99,
         type: {
           name: 'Number'
         }
@@ -1054,8 +1047,6 @@ function _getBigDoublePositiveDecimal(options, callback) {
 /**
  * Put big double value -99999999.99
  *
- * @param {number} numberBody
- *
  * @param {object} [options] Optional Parameters.
  *
  * @param {object} [options.customHeaders] Headers that will be added to the
@@ -1073,7 +1064,7 @@ function _getBigDoublePositiveDecimal(options, callback) {
  *
  *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
-function _putBigDoubleNegativeDecimal(numberBody, options, callback) {
+function _putBigDoubleNegativeDecimal(options, callback) {
    /* jshint validthis: true */
   let client = this.client;
   if(!callback && typeof options === 'function') {
@@ -1083,14 +1074,7 @@ function _putBigDoubleNegativeDecimal(numberBody, options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
-  // Validate
-  try {
-    if (numberBody === null || numberBody === undefined || typeof numberBody !== 'number') {
-      throw new Error('numberBody cannot be null or undefined and it must be of type number.');
-    }
-  } catch (error) {
-    return callback(error);
-  }
+  let numberBody = -99999999.99;
 
   // Construct URL
   let baseUrl = this.client.baseUri;
@@ -1117,7 +1101,9 @@ function _putBigDoubleNegativeDecimal(numberBody, options, callback) {
     if (numberBody !== null && numberBody !== undefined) {
       let requestModelMapper = {
         required: true,
+        isConstant: true,
         serializedName: 'numberBody',
+        defaultValue: -99999999.99,
         type: {
           name: 'Number'
         }
@@ -2325,8 +2311,6 @@ class Number {
   /**
    * Put big double value 99999999.99
    *
-   * @param {number} numberBody
-   *
    * @param {object} [options] Optional Parameters.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
@@ -2338,11 +2322,11 @@ class Number {
    *
    * @reject {Error} - The error object.
    */
-  putBigDoublePositiveDecimalWithHttpOperationResponse(numberBody, options) {
+  putBigDoublePositiveDecimalWithHttpOperationResponse(options) {
     let client = this.client;
     let self = this;
     return new Promise((resolve, reject) => {
-      self._putBigDoublePositiveDecimal(numberBody, options, (err, result, request, response) => {
+      self._putBigDoublePositiveDecimal(options, (err, result, request, response) => {
         let httpOperationResponse = new msRest.HttpOperationResponse(request, response);
         httpOperationResponse.body = result;
         if (err) { reject(err); }
@@ -2354,8 +2338,6 @@ class Number {
 
   /**
    * Put big double value 99999999.99
-   *
-   * @param {number} numberBody
    *
    * @param {object} [options] Optional Parameters.
    *
@@ -2383,7 +2365,7 @@ class Number {
    *
    *                      {stream} [response] - The HTTP Response stream if an error did not occur.
    */
-  putBigDoublePositiveDecimal(numberBody, options, optionalCallback) {
+  putBigDoublePositiveDecimal(options, optionalCallback) {
     let client = this.client;
     let self = this;
     if (!optionalCallback && typeof options === 'function') {
@@ -2392,14 +2374,14 @@ class Number {
     }
     if (!optionalCallback) {
       return new Promise((resolve, reject) => {
-        self._putBigDoublePositiveDecimal(numberBody, options, (err, result, request, response) => {
+        self._putBigDoublePositiveDecimal(options, (err, result, request, response) => {
           if (err) { reject(err); }
           else { resolve(result); }
           return;
         });
       });
     } else {
-      return self._putBigDoublePositiveDecimal(numberBody, options, optionalCallback);
+      return self._putBigDoublePositiveDecimal(options, optionalCallback);
     }
   }
 
@@ -2483,8 +2465,6 @@ class Number {
   /**
    * Put big double value -99999999.99
    *
-   * @param {number} numberBody
-   *
    * @param {object} [options] Optional Parameters.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
@@ -2496,11 +2476,11 @@ class Number {
    *
    * @reject {Error} - The error object.
    */
-  putBigDoubleNegativeDecimalWithHttpOperationResponse(numberBody, options) {
+  putBigDoubleNegativeDecimalWithHttpOperationResponse(options) {
     let client = this.client;
     let self = this;
     return new Promise((resolve, reject) => {
-      self._putBigDoubleNegativeDecimal(numberBody, options, (err, result, request, response) => {
+      self._putBigDoubleNegativeDecimal(options, (err, result, request, response) => {
         let httpOperationResponse = new msRest.HttpOperationResponse(request, response);
         httpOperationResponse.body = result;
         if (err) { reject(err); }
@@ -2512,8 +2492,6 @@ class Number {
 
   /**
    * Put big double value -99999999.99
-   *
-   * @param {number} numberBody
    *
    * @param {object} [options] Optional Parameters.
    *
@@ -2541,7 +2519,7 @@ class Number {
    *
    *                      {stream} [response] - The HTTP Response stream if an error did not occur.
    */
-  putBigDoubleNegativeDecimal(numberBody, options, optionalCallback) {
+  putBigDoubleNegativeDecimal(options, optionalCallback) {
     let client = this.client;
     let self = this;
     if (!optionalCallback && typeof options === 'function') {
@@ -2550,14 +2528,14 @@ class Number {
     }
     if (!optionalCallback) {
       return new Promise((resolve, reject) => {
-        self._putBigDoubleNegativeDecimal(numberBody, options, (err, result, request, response) => {
+        self._putBigDoubleNegativeDecimal(options, (err, result, request, response) => {
           if (err) { reject(err); }
           else { resolve(result); }
           return;
         });
       });
     } else {
-      return self._putBigDoubleNegativeDecimal(numberBody, options, optionalCallback);
+      return self._putBigDoubleNegativeDecimal(options, optionalCallback);
     }
   }
 

@@ -129,8 +129,6 @@ function _getTrue(options, callback) {
 /**
  * Set Boolean value true
  *
- * @param {boolean} boolBody
- *
  * @param {object} [options] Optional Parameters.
  *
  * @param {object} [options.customHeaders] Headers that will be added to the
@@ -148,7 +146,7 @@ function _getTrue(options, callback) {
  *
  *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
-function _putTrue(boolBody, options, callback) {
+function _putTrue(options, callback) {
    /* jshint validthis: true */
   let client = this.client;
   if(!callback && typeof options === 'function') {
@@ -158,14 +156,7 @@ function _putTrue(boolBody, options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
-  // Validate
-  try {
-    if (boolBody === null || boolBody === undefined || typeof boolBody !== 'boolean') {
-      throw new Error('boolBody cannot be null or undefined and it must be of type boolean.');
-    }
-  } catch (error) {
-    return callback(error);
-  }
+  let boolBody = true;
 
   // Construct URL
   let baseUrl = this.client.baseUri;
@@ -192,7 +183,9 @@ function _putTrue(boolBody, options, callback) {
     if (boolBody !== null && boolBody !== undefined) {
       let requestModelMapper = {
         required: true,
+        isConstant: true,
         serializedName: 'boolBody',
+        defaultValue: true,
         type: {
           name: 'Boolean'
         }
@@ -362,8 +355,6 @@ function _getFalse(options, callback) {
 /**
  * Set Boolean value false
  *
- * @param {boolean} boolBody
- *
  * @param {object} [options] Optional Parameters.
  *
  * @param {object} [options.customHeaders] Headers that will be added to the
@@ -381,7 +372,7 @@ function _getFalse(options, callback) {
  *
  *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
-function _putFalse(boolBody, options, callback) {
+function _putFalse(options, callback) {
    /* jshint validthis: true */
   let client = this.client;
   if(!callback && typeof options === 'function') {
@@ -391,14 +382,7 @@ function _putFalse(boolBody, options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
-  // Validate
-  try {
-    if (boolBody === null || boolBody === undefined || typeof boolBody !== 'boolean') {
-      throw new Error('boolBody cannot be null or undefined and it must be of type boolean.');
-    }
-  } catch (error) {
-    return callback(error);
-  }
+  let boolBody = false;
 
   // Construct URL
   let baseUrl = this.client.baseUri;
@@ -425,7 +409,9 @@ function _putFalse(boolBody, options, callback) {
     if (boolBody !== null && boolBody !== undefined) {
       let requestModelMapper = {
         required: true,
+        isConstant: true,
         serializedName: 'boolBody',
+        defaultValue: false,
         type: {
           name: 'Boolean'
         }
@@ -801,8 +787,6 @@ class Bool {
   /**
    * Set Boolean value true
    *
-   * @param {boolean} boolBody
-   *
    * @param {object} [options] Optional Parameters.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
@@ -814,11 +798,11 @@ class Bool {
    *
    * @reject {Error} - The error object.
    */
-  putTrueWithHttpOperationResponse(boolBody, options) {
+  putTrueWithHttpOperationResponse(options) {
     let client = this.client;
     let self = this;
     return new Promise((resolve, reject) => {
-      self._putTrue(boolBody, options, (err, result, request, response) => {
+      self._putTrue(options, (err, result, request, response) => {
         let httpOperationResponse = new msRest.HttpOperationResponse(request, response);
         httpOperationResponse.body = result;
         if (err) { reject(err); }
@@ -830,8 +814,6 @@ class Bool {
 
   /**
    * Set Boolean value true
-   *
-   * @param {boolean} boolBody
    *
    * @param {object} [options] Optional Parameters.
    *
@@ -859,7 +841,7 @@ class Bool {
    *
    *                      {stream} [response] - The HTTP Response stream if an error did not occur.
    */
-  putTrue(boolBody, options, optionalCallback) {
+  putTrue(options, optionalCallback) {
     let client = this.client;
     let self = this;
     if (!optionalCallback && typeof options === 'function') {
@@ -868,14 +850,14 @@ class Bool {
     }
     if (!optionalCallback) {
       return new Promise((resolve, reject) => {
-        self._putTrue(boolBody, options, (err, result, request, response) => {
+        self._putTrue(options, (err, result, request, response) => {
           if (err) { reject(err); }
           else { resolve(result); }
           return;
         });
       });
     } else {
-      return self._putTrue(boolBody, options, optionalCallback);
+      return self._putTrue(options, optionalCallback);
     }
   }
 
@@ -959,8 +941,6 @@ class Bool {
   /**
    * Set Boolean value false
    *
-   * @param {boolean} boolBody
-   *
    * @param {object} [options] Optional Parameters.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
@@ -972,11 +952,11 @@ class Bool {
    *
    * @reject {Error} - The error object.
    */
-  putFalseWithHttpOperationResponse(boolBody, options) {
+  putFalseWithHttpOperationResponse(options) {
     let client = this.client;
     let self = this;
     return new Promise((resolve, reject) => {
-      self._putFalse(boolBody, options, (err, result, request, response) => {
+      self._putFalse(options, (err, result, request, response) => {
         let httpOperationResponse = new msRest.HttpOperationResponse(request, response);
         httpOperationResponse.body = result;
         if (err) { reject(err); }
@@ -988,8 +968,6 @@ class Bool {
 
   /**
    * Set Boolean value false
-   *
-   * @param {boolean} boolBody
    *
    * @param {object} [options] Optional Parameters.
    *
@@ -1017,7 +995,7 @@ class Bool {
    *
    *                      {stream} [response] - The HTTP Response stream if an error did not occur.
    */
-  putFalse(boolBody, options, optionalCallback) {
+  putFalse(options, optionalCallback) {
     let client = this.client;
     let self = this;
     if (!optionalCallback && typeof options === 'function') {
@@ -1026,14 +1004,14 @@ class Bool {
     }
     if (!optionalCallback) {
       return new Promise((resolve, reject) => {
-        self._putFalse(boolBody, options, (err, result, request, response) => {
+        self._putFalse(options, (err, result, request, response) => {
           if (err) { reject(err); }
           else { resolve(result); }
           return;
         });
       });
     } else {
-      return self._putFalse(boolBody, options, optionalCallback);
+      return self._putFalse(options, optionalCallback);
     }
   }
 

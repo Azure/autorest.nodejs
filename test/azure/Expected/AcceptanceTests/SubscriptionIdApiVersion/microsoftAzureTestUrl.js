@@ -56,7 +56,7 @@ class MicrosoftAzureTestUrl extends ServiceClient {
     this.generateClientRequestId = true;
     this.baseUri = baseUri;
     if (!this.baseUri) {
-      this.baseUri = 'https://management.azure.com/';
+      this.baseUri = 'https://management.azure.com';
     }
     this.credentials = credentials;
     this.subscriptionId = subscriptionId;

@@ -178,8 +178,6 @@ export interface String {
     /**
      * Set string value empty ''
      *
-     * @param {string} stringBody Possible values include: ''
-     *
      * @param {object} [options] Optional Parameters.
      *
      * @param {object} [options.customHeaders] Headers that will be added to the
@@ -191,12 +189,10 @@ export interface String {
      *
      * @reject {Error|ServiceError} - The error object.
      */
-    putEmptyWithHttpOperationResponse(stringBody: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+    putEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set string value empty ''
-     *
-     * @param {string} stringBody Possible values include: ''
      *
      * @param {object} [options] Optional Parameters.
      *
@@ -224,9 +220,9 @@ export interface String {
      *
      *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
      */
-    putEmpty(stringBody: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
-    putEmpty(stringBody: string, callback: ServiceCallback<void>): void;
-    putEmpty(stringBody: string, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+    putEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putEmpty(callback: ServiceCallback<void>): void;
+    putEmpty(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 
 
     /**
@@ -285,9 +281,6 @@ export interface String {
      * Set string value mbcs
      * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
      *
-     * @param {string} stringBody Possible values include:
-     * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
-     *
      * @param {object} [options] Optional Parameters.
      *
      * @param {object} [options.customHeaders] Headers that will be added to the
@@ -299,13 +292,10 @@ export interface String {
      *
      * @reject {Error|ServiceError} - The error object.
      */
-    putMbcsWithHttpOperationResponse(stringBody: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+    putMbcsWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set string value mbcs
-     * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
-     *
-     * @param {string} stringBody Possible values include:
      * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
      *
      * @param {object} [options] Optional Parameters.
@@ -334,9 +324,9 @@ export interface String {
      *
      *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
      */
-    putMbcs(stringBody: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
-    putMbcs(stringBody: string, callback: ServiceCallback<void>): void;
-    putMbcs(stringBody: string, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+    putMbcs(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putMbcs(callback: ServiceCallback<void>): void;
+    putMbcs(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 
 
     /**
@@ -398,9 +388,6 @@ export interface String {
      * '<tab><space><space>Now is the time for all good men to come to the aid of
      * their country<tab><space><space>'
      *
-     * @param {string} stringBody Possible values include: '    Now is the time for
-     * all good men to come to the aid of their country    '
-     *
      * @param {object} [options] Optional Parameters.
      *
      * @param {object} [options.customHeaders] Headers that will be added to the
@@ -412,15 +399,12 @@ export interface String {
      *
      * @reject {Error|ServiceError} - The error object.
      */
-    putWhitespaceWithHttpOperationResponse(stringBody: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+    putWhitespaceWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set String value with leading and trailing whitespace
      * '<tab><space><space>Now is the time for all good men to come to the aid of
      * their country<tab><space><space>'
-     *
-     * @param {string} stringBody Possible values include: '    Now is the time for
-     * all good men to come to the aid of their country    '
      *
      * @param {object} [options] Optional Parameters.
      *
@@ -448,9 +432,9 @@ export interface String {
      *
      *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
      */
-    putWhitespace(stringBody: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
-    putWhitespace(stringBody: string, callback: ServiceCallback<void>): void;
-    putWhitespace(stringBody: string, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+    putWhitespace(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putWhitespace(callback: ServiceCallback<void>): void;
+    putWhitespace(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 
 
     /**

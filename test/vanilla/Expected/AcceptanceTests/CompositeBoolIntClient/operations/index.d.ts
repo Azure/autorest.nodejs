@@ -74,8 +74,6 @@ export interface Bool {
     /**
      * Set Boolean value true
      *
-     * @param {boolean} boolBody
-     *
      * @param {object} [options] Optional Parameters.
      *
      * @param {object} [options.customHeaders] Headers that will be added to the
@@ -87,12 +85,10 @@ export interface Bool {
      *
      * @reject {Error|ServiceError} - The error object.
      */
-    putTrueWithHttpOperationResponse(boolBody: boolean, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+    putTrueWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set Boolean value true
-     *
-     * @param {boolean} boolBody
      *
      * @param {object} [options] Optional Parameters.
      *
@@ -120,9 +116,9 @@ export interface Bool {
      *
      *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
      */
-    putTrue(boolBody: boolean, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
-    putTrue(boolBody: boolean, callback: ServiceCallback<void>): void;
-    putTrue(boolBody: boolean, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+    putTrue(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putTrue(callback: ServiceCallback<void>): void;
+    putTrue(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 
 
     /**
@@ -178,8 +174,6 @@ export interface Bool {
     /**
      * Set Boolean value false
      *
-     * @param {boolean} boolBody
-     *
      * @param {object} [options] Optional Parameters.
      *
      * @param {object} [options.customHeaders] Headers that will be added to the
@@ -191,12 +185,10 @@ export interface Bool {
      *
      * @reject {Error|ServiceError} - The error object.
      */
-    putFalseWithHttpOperationResponse(boolBody: boolean, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
+    putFalseWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set Boolean value false
-     *
-     * @param {boolean} boolBody
      *
      * @param {object} [options] Optional Parameters.
      *
@@ -224,9 +216,9 @@ export interface Bool {
      *
      *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
      */
-    putFalse(boolBody: boolean, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
-    putFalse(boolBody: boolean, callback: ServiceCallback<void>): void;
-    putFalse(boolBody: boolean, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
+    putFalse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
+    putFalse(callback: ServiceCallback<void>): void;
+    putFalse(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 
 
     /**

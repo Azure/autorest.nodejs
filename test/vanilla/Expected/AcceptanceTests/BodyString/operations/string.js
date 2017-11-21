@@ -363,8 +363,6 @@ function _getEmpty(options, callback) {
 /**
  * Set string value empty ''
  *
- * @param {string} stringBody Possible values include: ''
- *
  * @param {object} [options] Optional Parameters.
  *
  * @param {object} [options.customHeaders] Headers that will be added to the
@@ -382,7 +380,7 @@ function _getEmpty(options, callback) {
  *
  *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
-function _putEmpty(stringBody, options, callback) {
+function _putEmpty(options, callback) {
    /* jshint validthis: true */
   let client = this.client;
   if(!callback && typeof options === 'function') {
@@ -392,14 +390,7 @@ function _putEmpty(stringBody, options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
-  // Validate
-  try {
-    if (stringBody === null || stringBody === undefined || typeof stringBody.valueOf() !== 'string') {
-      throw new Error('stringBody cannot be null or undefined and it must be of type string.');
-    }
-  } catch (error) {
-    return callback(error);
-  }
+  let stringBody = '';
 
   // Construct URL
   let baseUrl = this.client.baseUri;
@@ -426,7 +417,9 @@ function _putEmpty(stringBody, options, callback) {
     if (stringBody !== null && stringBody !== undefined) {
       let requestModelMapper = {
         required: true,
+        isConstant: true,
         serializedName: 'stringBody',
+        defaultValue: '',
         type: {
           name: 'String'
         }
@@ -598,9 +591,6 @@ function _getMbcs(options, callback) {
  * Set string value mbcs
  * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
  *
- * @param {string} stringBody Possible values include:
- * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
- *
  * @param {object} [options] Optional Parameters.
  *
  * @param {object} [options.customHeaders] Headers that will be added to the
@@ -618,7 +608,7 @@ function _getMbcs(options, callback) {
  *
  *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
-function _putMbcs(stringBody, options, callback) {
+function _putMbcs(options, callback) {
    /* jshint validthis: true */
   let client = this.client;
   if(!callback && typeof options === 'function') {
@@ -628,14 +618,7 @@ function _putMbcs(stringBody, options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
-  // Validate
-  try {
-    if (stringBody === null || stringBody === undefined || typeof stringBody.valueOf() !== 'string') {
-      throw new Error('stringBody cannot be null or undefined and it must be of type string.');
-    }
-  } catch (error) {
-    return callback(error);
-  }
+  let stringBody = '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€';
 
   // Construct URL
   let baseUrl = this.client.baseUri;
@@ -662,7 +645,9 @@ function _putMbcs(stringBody, options, callback) {
     if (stringBody !== null && stringBody !== undefined) {
       let requestModelMapper = {
         required: true,
+        isConstant: true,
         serializedName: 'stringBody',
+        defaultValue: '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€',
         type: {
           name: 'String'
         }
@@ -836,9 +821,6 @@ function _getWhitespace(options, callback) {
  * '<tab><space><space>Now is the time for all good men to come to the aid of
  * their country<tab><space><space>'
  *
- * @param {string} stringBody Possible values include: '    Now is the time for
- * all good men to come to the aid of their country    '
- *
  * @param {object} [options] Optional Parameters.
  *
  * @param {object} [options.customHeaders] Headers that will be added to the
@@ -856,7 +838,7 @@ function _getWhitespace(options, callback) {
  *
  *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
-function _putWhitespace(stringBody, options, callback) {
+function _putWhitespace(options, callback) {
    /* jshint validthis: true */
   let client = this.client;
   if(!callback && typeof options === 'function') {
@@ -866,14 +848,7 @@ function _putWhitespace(stringBody, options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
-  // Validate
-  try {
-    if (stringBody === null || stringBody === undefined || typeof stringBody.valueOf() !== 'string') {
-      throw new Error('stringBody cannot be null or undefined and it must be of type string.');
-    }
-  } catch (error) {
-    return callback(error);
-  }
+  let stringBody = '    Now is the time for all good men to come to the aid of their country    ';
 
   // Construct URL
   let baseUrl = this.client.baseUri;
@@ -900,7 +875,9 @@ function _putWhitespace(stringBody, options, callback) {
     if (stringBody !== null && stringBody !== undefined) {
       let requestModelMapper = {
         required: true,
+        isConstant: true,
         serializedName: 'stringBody',
+        defaultValue: '    Now is the time for all good men to come to the aid of their country    ',
         type: {
           name: 'String'
         }
@@ -1787,8 +1764,6 @@ class String {
   /**
    * Set string value empty ''
    *
-   * @param {string} stringBody Possible values include: ''
-   *
    * @param {object} [options] Optional Parameters.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
@@ -1800,11 +1775,11 @@ class String {
    *
    * @reject {Error} - The error object.
    */
-  putEmptyWithHttpOperationResponse(stringBody, options) {
+  putEmptyWithHttpOperationResponse(options) {
     let client = this.client;
     let self = this;
     return new Promise((resolve, reject) => {
-      self._putEmpty(stringBody, options, (err, result, request, response) => {
+      self._putEmpty(options, (err, result, request, response) => {
         let httpOperationResponse = new msRest.HttpOperationResponse(request, response);
         httpOperationResponse.body = result;
         if (err) { reject(err); }
@@ -1816,8 +1791,6 @@ class String {
 
   /**
    * Set string value empty ''
-   *
-   * @param {string} stringBody Possible values include: ''
    *
    * @param {object} [options] Optional Parameters.
    *
@@ -1845,7 +1818,7 @@ class String {
    *
    *                      {stream} [response] - The HTTP Response stream if an error did not occur.
    */
-  putEmpty(stringBody, options, optionalCallback) {
+  putEmpty(options, optionalCallback) {
     let client = this.client;
     let self = this;
     if (!optionalCallback && typeof options === 'function') {
@@ -1854,14 +1827,14 @@ class String {
     }
     if (!optionalCallback) {
       return new Promise((resolve, reject) => {
-        self._putEmpty(stringBody, options, (err, result, request, response) => {
+        self._putEmpty(options, (err, result, request, response) => {
           if (err) { reject(err); }
           else { resolve(result); }
           return;
         });
       });
     } else {
-      return self._putEmpty(stringBody, options, optionalCallback);
+      return self._putEmpty(options, optionalCallback);
     }
   }
 
@@ -1948,9 +1921,6 @@ class String {
    * Set string value mbcs
    * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
    *
-   * @param {string} stringBody Possible values include:
-   * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
-   *
    * @param {object} [options] Optional Parameters.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
@@ -1962,11 +1932,11 @@ class String {
    *
    * @reject {Error} - The error object.
    */
-  putMbcsWithHttpOperationResponse(stringBody, options) {
+  putMbcsWithHttpOperationResponse(options) {
     let client = this.client;
     let self = this;
     return new Promise((resolve, reject) => {
-      self._putMbcs(stringBody, options, (err, result, request, response) => {
+      self._putMbcs(options, (err, result, request, response) => {
         let httpOperationResponse = new msRest.HttpOperationResponse(request, response);
         httpOperationResponse.body = result;
         if (err) { reject(err); }
@@ -1978,9 +1948,6 @@ class String {
 
   /**
    * Set string value mbcs
-   * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
-   *
-   * @param {string} stringBody Possible values include:
    * '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
    *
    * @param {object} [options] Optional Parameters.
@@ -2009,7 +1976,7 @@ class String {
    *
    *                      {stream} [response] - The HTTP Response stream if an error did not occur.
    */
-  putMbcs(stringBody, options, optionalCallback) {
+  putMbcs(options, optionalCallback) {
     let client = this.client;
     let self = this;
     if (!optionalCallback && typeof options === 'function') {
@@ -2018,14 +1985,14 @@ class String {
     }
     if (!optionalCallback) {
       return new Promise((resolve, reject) => {
-        self._putMbcs(stringBody, options, (err, result, request, response) => {
+        self._putMbcs(options, (err, result, request, response) => {
           if (err) { reject(err); }
           else { resolve(result); }
           return;
         });
       });
     } else {
-      return self._putMbcs(stringBody, options, optionalCallback);
+      return self._putMbcs(options, optionalCallback);
     }
   }
 
@@ -2115,9 +2082,6 @@ class String {
    * '<tab><space><space>Now is the time for all good men to come to the aid of
    * their country<tab><space><space>'
    *
-   * @param {string} stringBody Possible values include: '    Now is the time for
-   * all good men to come to the aid of their country    '
-   *
    * @param {object} [options] Optional Parameters.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
@@ -2129,11 +2093,11 @@ class String {
    *
    * @reject {Error} - The error object.
    */
-  putWhitespaceWithHttpOperationResponse(stringBody, options) {
+  putWhitespaceWithHttpOperationResponse(options) {
     let client = this.client;
     let self = this;
     return new Promise((resolve, reject) => {
-      self._putWhitespace(stringBody, options, (err, result, request, response) => {
+      self._putWhitespace(options, (err, result, request, response) => {
         let httpOperationResponse = new msRest.HttpOperationResponse(request, response);
         httpOperationResponse.body = result;
         if (err) { reject(err); }
@@ -2147,9 +2111,6 @@ class String {
    * Set String value with leading and trailing whitespace
    * '<tab><space><space>Now is the time for all good men to come to the aid of
    * their country<tab><space><space>'
-   *
-   * @param {string} stringBody Possible values include: '    Now is the time for
-   * all good men to come to the aid of their country    '
    *
    * @param {object} [options] Optional Parameters.
    *
@@ -2177,7 +2138,7 @@ class String {
    *
    *                      {stream} [response] - The HTTP Response stream if an error did not occur.
    */
-  putWhitespace(stringBody, options, optionalCallback) {
+  putWhitespace(options, optionalCallback) {
     let client = this.client;
     let self = this;
     if (!optionalCallback && typeof options === 'function') {
@@ -2186,14 +2147,14 @@ class String {
     }
     if (!optionalCallback) {
       return new Promise((resolve, reject) => {
-        self._putWhitespace(stringBody, options, (err, result, request, response) => {
+        self._putWhitespace(options, (err, result, request, response) => {
           if (err) { reject(err); }
           else { resolve(result); }
           return;
         });
       });
     } else {
-      return self._putWhitespace(stringBody, options, optionalCallback);
+      return self._putWhitespace(options, optionalCallback);
     }
   }
 
