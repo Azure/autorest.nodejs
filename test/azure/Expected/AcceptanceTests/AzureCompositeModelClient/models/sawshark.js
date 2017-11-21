@@ -37,6 +37,11 @@ class Sawshark extends models['Shark'] {
       serializedName: 'sawshark',
       type: {
         name: 'Composite',
+        polymorphicDiscriminator: {
+          serializedName: 'fishtype',
+          clientName: 'fishtype'
+        },
+        uberParent: 'Fish',
         className: 'Sawshark',
         modelProperties: {
           species: {

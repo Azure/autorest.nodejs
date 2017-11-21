@@ -38,6 +38,11 @@ class Shark extends models['Fish'] {
       serializedName: 'shark',
       type: {
         name: 'Composite',
+        polymorphicDiscriminator: {
+          serializedName: 'fishtype',
+          clientName: 'fishtype'
+        },
+        uberParent: 'Fish',
         className: 'Shark',
         modelProperties: {
           species: {

@@ -808,7 +808,7 @@ namespace AutoRest.NodeJS
                 builder.AppendLine("type: {")
                          .Indent()
                          .AppendLine("name: 'Composite',");
-                if (composite.IsPolymorphic)
+                if (composite.BaseIsPolymorphic)
                 {
                     builder = ConstructPolymorphicDiscriminator(composite, builder);
                 }
@@ -896,8 +896,8 @@ namespace AutoRest.NodeJS
             // marked as the discriminator. 
             builder.AppendLine("polymorphicDiscriminator: {")
                      .Indent()
-                     .AppendLine("serializedName: '{0}',", composite.PolymorphicDiscriminator)
-                     .AppendLine("clientName: '{0}'", Singleton<CodeNamerJs>.Instance.GetPropertyName(composite.PolymorphicDiscriminator))
+                     .AppendLine("serializedName: '{0}',", composite.BasePolymorphicDiscriminator)
+                     .AppendLine("clientName: '{0}'", Singleton<CodeNamerJs>.Instance.GetPropertyName(composite.BasePolymorphicDiscriminator))
                    .Outdent()
                    .AppendLine("},");
             var polymorphicType = composite;

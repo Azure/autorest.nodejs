@@ -90,7 +90,7 @@ describe('nodejs', function () {
               response.headers['value'].should.be.exactly('0.07');
               testClient.header.responseFloat('negative', function (error, result, request, response) {
                 should.not.exist(error);
-                JSON.parse(response.headers['value']).should.be.exactly(-3.0);
+                JSON.parse(response.headers['value'] as string).should.be.exactly(-3.0);
                 done();
               });
             });
@@ -105,10 +105,10 @@ describe('nodejs', function () {
             should.not.exist(error);
             testClient.header.responseDouble('positive', function (error, result, request, response) {
               should.not.exist(error);
-              JSON.parse(response.headers['value']).should.be.exactly(7e120);
+              JSON.parse(response.headers['value'] as string).should.be.exactly(7e120);
               testClient.header.responseDouble('negative', function (error, result, request, response) {
                 should.not.exist(error);
-                JSON.parse(response.headers['value']).should.be.exactly(-3.0);
+                JSON.parse(response.headers['value'] as string).should.be.exactly(-3.0);
                 done();
               });
             });
@@ -145,7 +145,7 @@ describe('nodejs', function () {
                 response.headers['value'].should.be.exactly('The quick brown fox jumps over the lazy dog');
                 testClient.header.responseString('null', function (error, result, request, response) {
                   should.not.exist(error);
-                  should.not.exist(JSON.parse(response.headers['value']));
+                  should.not.exist(JSON.parse(response.headers['value'] as string));
                   testClient.header.responseString('empty', function (error, result, request, response) {
                     should.not.exist(error);
                     response.headers['value'].should.be.exactly('');
@@ -181,10 +181,10 @@ describe('nodejs', function () {
             should.not.exist(error);
             testClient.header.responseDate('valid', function (error, result, request, response) {
               should.not.exist(error);
-              _.isEqual(new Date(response.headers['value']), new Date('2010-01-01')).should.be.exactly(true);
+              _.isEqual(new Date(response.headers['value'] as string), new Date('2010-01-01')).should.be.exactly(true);
               testClient.header.responseDate('min', function (error, result, request, response) {
                 should.not.exist(error);
-                _.isEqual(new Date(response.headers['value']), new Date('0001-01-01')).should.be.exactly(true);
+                _.isEqual(new Date(response.headers['value'] as string), new Date('0001-01-01')).should.be.exactly(true);
                 done();
               });
             });
@@ -198,10 +198,10 @@ describe('nodejs', function () {
             should.not.exist(error);
             testClient.header.responseDatetime('valid', function (error, result, request, response) {
               should.not.exist(error);
-              _.isEqual(new Date(response.headers['value']), new Date('2010-01-01T12:34:56Z')).should.be.exactly(true);
+              _.isEqual(new Date(response.headers['value'] as string), new Date('2010-01-01T12:34:56Z')).should.be.exactly(true);
               testClient.header.responseDatetime('min', function (error, result, request, response) {
                 should.not.exist(error);
-                _.isEqual(new Date(response.headers['value']), new Date('0001-01-01T00:00:00Z')).should.be.exactly(true);
+                _.isEqual(new Date(response.headers['value'] as string), new Date('0001-01-01T00:00:00Z')).should.be.exactly(true);
                 done();
               });
             });
@@ -215,10 +215,10 @@ describe('nodejs', function () {
             should.not.exist(error);
             testClient.header.responseDatetimeRfc1123('valid', function (error, result, request, response) {
               should.not.exist(error);
-              _.isEqual(new Date(response.headers['value']), new Date('Fri, 01 Jan 2010 12:34:56 GMT')).should.be.exactly(true);
+              _.isEqual(new Date(response.headers['value'] as string), new Date('Fri, 01 Jan 2010 12:34:56 GMT')).should.be.exactly(true);
               testClient.header.responseDatetimeRfc1123('min', function (error, result, request, response) {
                 should.not.exist(error);
-                _.isEqual(new Date(response.headers['value']), new Date('Mon, 01 Jan 0001 00:00:00 GMT')).should.be.exactly(true);
+                _.isEqual(new Date(response.headers['value'] as string), new Date('Mon, 01 Jan 0001 00:00:00 GMT')).should.be.exactly(true);
                 done();
               });
             });

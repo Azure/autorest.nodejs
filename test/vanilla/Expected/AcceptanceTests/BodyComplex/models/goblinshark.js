@@ -37,6 +37,11 @@ class Goblinshark extends models['Shark'] {
       serializedName: 'goblin',
       type: {
         name: 'Composite',
+        polymorphicDiscriminator: {
+          serializedName: 'fishtype',
+          clientName: 'fishtype'
+        },
+        uberParent: 'Fish',
         className: 'Goblinshark',
         modelProperties: {
           species: {

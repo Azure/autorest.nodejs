@@ -1853,7 +1853,7 @@ describe('nodejs', function () {
     describe('Form Data Client', function () {
       var testClient = new formDataClient(baseUri, clientOptions);
       it('should correctly accept file via form-data', function (done) {
-        testClient.formdata.uploadFile(fs.createReadStream(__dirname + '/sample.png'), 'sample.png', function (error, result) {
+        testClient.formdata.uploadFile(fs.createReadStream(__dirname + '/sample.png'), 'sample.png', function (error: Error, result: any) {
           should.not.exist(error);
           should.exist(result);
           readStreamToBuffer(result, function (err, buff) {
@@ -1865,7 +1865,7 @@ describe('nodejs', function () {
       });
 
       it('should correctly accept file via body', function (done) {
-        testClient.formdata.uploadFileViaBody(fs.createReadStream(__dirname + '/sample.png'), function (error, result) {
+        testClient.formdata.uploadFileViaBody(fs.createReadStream(__dirname + '/sample.png'), function (error: Error, result: any) {
           should.not.exist(error);
           should.exist(result);
           readStreamToBuffer(result, function (err, buff) {

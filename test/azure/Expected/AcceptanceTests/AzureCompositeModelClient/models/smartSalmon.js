@@ -39,6 +39,11 @@ class SmartSalmon extends models['Salmon'] {
       serializedName: 'smart_salmon',
       type: {
         name: 'Composite',
+        polymorphicDiscriminator: {
+          serializedName: 'fishtype',
+          clientName: 'fishtype'
+        },
+        uberParent: 'Fish',
         className: 'SmartSalmon',
         modelProperties: {
           species: {

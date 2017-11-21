@@ -36,6 +36,11 @@ class Cookiecuttershark extends models['Shark'] {
       serializedName: 'cookiecuttershark',
       type: {
         name: 'Composite',
+        polymorphicDiscriminator: {
+          serializedName: 'fishtype',
+          clientName: 'fishtype'
+        },
+        uberParent: 'Fish',
         className: 'Cookiecuttershark',
         modelProperties: {
           species: {
