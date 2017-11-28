@@ -87,7 +87,7 @@ namespace AutoRest.NodeJS
             {
                 if (!codeModel.Properties.Any(p => p.ModelType.IsPrimaryType(KnownPrimaryType.Credentials)))
                 {
-                    codeModel.Add(New<Property>(new
+                    codeModel.Insert(New<Property>(new
                     {
                         Name = "credentials",
                         SerializedName = "credentials",
