@@ -17,7 +17,6 @@ class ErrorModel {
   /**
    * Create a ErrorModel.
    * @member {number} [status]
-   * @member {number} [constantId]
    * @member {string} [message]
    */
   constructor() {
@@ -45,8 +44,10 @@ class ErrorModel {
             }
           },
           constantId: {
-            required: false,
+            required: true,
+            isConstant: true,
             serializedName: 'constantId',
+            defaultValue: 1,
             type: {
               name: 'Number'
             }

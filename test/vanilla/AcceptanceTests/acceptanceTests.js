@@ -10,6 +10,7 @@ var moment = require("moment");
 var fs = require("fs");
 var boolClient = require("../Expected/AcceptanceTests/BodyBoolean/autoRestBoolTestService");
 var stringClient = require("../Expected/AcceptanceTests/BodyString/autoRestSwaggerBATService");
+var extensibleEnumClient = require("../Expected/AcceptanceTests/ExtensibleEnums/petStoreInc");
 var integerClient = require("../Expected/AcceptanceTests/BodyInteger/autoRestIntegerTestService");
 var compositeBoolIntClient = require("../Expected/AcceptanceTests/CompositeBoolIntClient/compositeBoolInt");
 var numberClient = require("../Expected/AcceptanceTests/BodyNumber/autoRestNumberTestService");
@@ -362,8 +363,78 @@ describe('nodejs', function () {
                 });
             });
         });
+        describe('Extensible Enum Client', function () {
+            var testClient = new extensibleEnumClient(baseUri, clientOptions);
+            it('should support expected enum', function (done) {
+                testClient.petOperations.getByPetId('tommy', function (err, result) {
+                    should.not.exist(err);
+                    result.daysOfWeek.should.equal('Monday');
+                    done();
+                });
+            });
+            it('should support unexpected enum', function (done) {
+                testClient.petOperations.getByPetId('casper', function (err, result) {
+                    should.not.exist(err);
+                    result.daysOfWeek.should.equal('Weekend');
+                    done();
+                });
+            });
+            it('should support allowed value enum', function (done) {
+                testClient.petOperations.getByPetId('scooby', function (err, result) {
+                    should.not.exist(err);
+                    result.intEnum.should.equal('2.1');
+                    done();
+                });
+            });
+            it('should support roundtrip enum', function (done) {
+                var options = {
+                    petParam: {
+                        name: 'Retriever',
+                        intEnum: '3',
+                        daysOfWeek: 'Friday'
+                    }
+                };
+                testClient.petOperations.addPet(options, function (err, result) {
+                    should.not.exist(err);
+                    result.daysOfWeek.should.equal('Friday');
+                    result.intEnum.should.equal('3');
+                    done();
+                });
+            });
+        });
         describe('String Client', function () {
             var testClient = new stringClient(baseUri, clientOptions);
+            it('should get and put referenced enum', function (done) {
+                testClient.enumModel.getReferenced(function (err, result) {
+                    should.not.exist(err);
+                    result.should.equal('red color');
+                    testClient.enumModel.putReferenced('red color', function (error, result1) {
+                        should.not.exist(error);
+                        done();
+                    });
+                });
+            });
+            it('should get and put referenced enum constant', function (done) {
+                var options = { "field1": "Sample String" };
+                testClient.enumModel.putReferencedConstant(options, function (err, result) {
+                    should.not.exist(err);
+                    testClient.enumModel.getReferencedConstant(function (err, result) {
+                        should.not.exist(err);
+                        result.colorConstant.should.equal('green-color');
+                        done();
+                    });
+                });
+            });
+            it('should get and put enum notExpandable', function (done) {
+                testClient.enumModel.getNotExpandable(function (err, result) {
+                    should.not.exist(err);
+                    result.should.equal('red color');
+                    testClient.enumModel.putNotExpandable('red color', function (error, result1) {
+                        should.not.exist(error);
+                        done();
+                    });
+                });
+            });
             it('should support valid null value', function (done) {
                 testClient.string.getNull(function (error, result) {
                     should.not.exist(result);

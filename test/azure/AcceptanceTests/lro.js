@@ -398,7 +398,13 @@ describe('nodejs', function () {
     testClient.longRunningOperationRetryTimeout = 0;
     var product = { location: 'West US' };
 
-    //TODO: Port more C# test case over after 4103936 Fix exception type
+    it('should throw on PutNonRetry201Creating400InvalidJson', function (done) {
+      testClient.lROSADs.putNonRetry201Creating400InvalidJson(function (err, result) {
+        should.exist(err);
+        err.message.should.match(/.*\<\{ "message" \: "Error from the server.*/ig);
+        done();
+      })
+    });
 
     it('should throw on PutNonRetry400', function (done) {
       testClient.lROSADs.putNonRetry400(product, function (error, result) {

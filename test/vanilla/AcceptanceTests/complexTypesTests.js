@@ -6,6 +6,7 @@ var should = require('should');
 var assert = require('assert');
 var moment = require("moment");
 var complexClient = require("../Expected/AcceptanceTests/BodyComplex/autoRestComplexTestService");
+var additionalClient = require("../Expected/AcceptanceTests/AdditionalProperties/additionalPropertiesClient");
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
 describe('nodejs', function () {
@@ -359,6 +360,69 @@ describe('nodejs', function () {
                     done();
                 });
             });
+            var rawSalmon = {
+                "species": "king",
+                "length": 1,
+                "siblings": [
+                    {
+                        "species": "predator",
+                        "length": 20,
+                        "fishtype": "shark",
+                        "age": 6,
+                        "birthday": new Date("2012-01-05T01:00:00.000Z")
+                    },
+                    {
+                        "species": "dangerous",
+                        "length": 10,
+                        "fishtype": "sawshark",
+                        "age": 105,
+                        "birthday": new Date("1900-01-05T01:00:00.000Z"),
+                        "picture": new Buffer([255, 255, 255, 255, 254])
+                    },
+                    {
+                        "species": "scary",
+                        "length": 30,
+                        "fishtype": "goblin",
+                        "age": 1,
+                        "birthday": new Date("2015-08-08T00:00:00.000Z"),
+                        "jawsize": 5
+                    }
+                ],
+                "fishtype": "smart_salmon",
+                "location": "alaska",
+                "iswild": true,
+                "additionalProperty1": 1,
+                "additionalProperty2": false,
+                "additionalProperty3": "hello",
+                "additionalProperty4": {
+                    "a": 1,
+                    "b": 2
+                },
+                "additionalProperty5": [
+                    1,
+                    3
+                ]
+            };
+            it('should get complicated polymorphic types', function (done) {
+                testClient.polymorphism.getComplicated(function (err, result, req, res) {
+                    should.not.exist(err);
+                    assert.deepEqual(result, rawSalmon);
+                    done();
+                });
+            });
+            it('should put complicated polymorphic types', function (done) {
+                testClient.polymorphism.putComplicated(rawSalmon, function (err, result, req, res) {
+                    should.not.exist(err);
+                    res.statusCode.should.equal(200);
+                    var serializedPayload = JSON.parse(req['body']);
+                    serializedPayload.additionalProperty1.should.equal(1);
+                    serializedPayload.additionalProperty2.should.equal(false);
+                    serializedPayload.additionalProperty3.should.equal('hello');
+                    assert.deepEqual(serializedPayload.additionalProperty4, { "a": 1, "b": 2 });
+                    assert.deepEqual(serializedPayload.additionalProperty5, [1, 3]);
+                    done();
+                });
+            });
         });
         describe('Complex Types with recursive definitions', function () {
             var bigfish = {
@@ -431,6 +495,153 @@ describe('nodejs', function () {
                         done();
                     });
                 });
+            });
+        });
+    });
+    describe('Swagger additionalProperties BAT', function () {
+        var testClient = new additionalClient(baseUri, clientOptions);
+        it('should put object with additionalProperties true correctly', function (done) {
+            var apTrue = {
+                id: 1,
+                name: 'Puppy',
+                birthdate: new Date('2017-12-13T02:29:51Z'),
+                complexProperty: {
+                    color: 'Red'
+                }
+            };
+            var expectedResult = {
+                id: 1,
+                name: 'Puppy',
+                birthdate: '2017-12-13T02:29:51Z',
+                status: true,
+                complexProperty: {
+                    color: 'Red'
+                }
+            };
+            testClient.pets.createAPTrue(apTrue, function (error, result, request, response) {
+                should.not.exist(error);
+                assert.deepEqual(result, expectedResult);
+                done();
+            });
+        });
+        it('should put object with additionalProperties type object correctly', function (done) {
+            var apObject = {
+                id: 2,
+                name: 'Hira',
+                siblings: [
+                    {
+                        id: 1,
+                        name: 'Puppy',
+                        birthdate: '2017-12-13T02:29:51Z',
+                        complexProperty: {
+                            color: 'Red'
+                        }
+                    }
+                ],
+                picture: new Buffer([255, 255, 255, 255, 254]).toString('base64')
+            };
+            var expectedResult = {
+                id: 2,
+                name: 'Hira',
+                status: true,
+                siblings: [
+                    {
+                        id: 1,
+                        name: 'Puppy',
+                        birthdate: '2017-12-13T02:29:51Z',
+                        complexProperty: {
+                            color: 'Red'
+                        }
+                    }
+                ],
+                picture: new Buffer([255, 255, 255, 255, 254]).toString('base64')
+            };
+            testClient.pets.createAPObject(apObject, function (error, result, request, response) {
+                should.not.exist(error);
+                assert.deepEqual(result, expectedResult);
+                done();
+            });
+        });
+        it('should put object with additionalProperties type string correctly', function (done) {
+            var apString = {
+                id: 3,
+                name: 'Tommy',
+                color: 'red',
+                weight: "10 kg",
+                city: "Bombay"
+            };
+            var expectedResult = {
+                id: 3,
+                name: 'Tommy',
+                color: 'red',
+                weight: "10 kg",
+                city: "Bombay",
+                status: true
+            };
+            testClient.pets.createAPString(apString, function (error, result, request, response) {
+                should.not.exist(error);
+                assert.deepEqual(result, expectedResult);
+                done();
+            });
+        });
+        it('should put object with additionalProperties in properties correctly', function (done) {
+            var apInProperties = {
+                id: 4,
+                name: 'Bunny',
+                additionalProperties: {
+                    height: 5.61,
+                    weight: 599,
+                    footsize: 11.5
+                }
+            };
+            var expectedResult = {
+                id: 4,
+                name: 'Bunny',
+                status: true,
+                additionalProperties: {
+                    height: 5.61,
+                    weight: 599,
+                    footsize: 11.5
+                }
+            };
+            testClient.pets.createAPInProperties(apInProperties, function (error, result, request, response) {
+                should.not.exist(error);
+                assert.deepEqual(result, expectedResult);
+                done();
+            });
+        });
+        it('should put object with additionalProperties in properties and additionalProperties of type string correctly', function (done) {
+            var apInPropertiesWithAPString = {
+                id: 5,
+                name: 'Funny',
+                odatalocation: 'westus',
+                additionalProperties1: {
+                    height: 5.61,
+                    weight: 599,
+                    footsize: 11.5
+                },
+                color: 'red',
+                city: 'Seattle',
+                food: 'tikka masala'
+            };
+            var expectedResult = {
+                id: 5,
+                name: 'Funny',
+                status: true,
+                odatalocation: 'westus',
+                additionalProperties1: {
+                    height: 5.61,
+                    weight: 599,
+                    footsize: 11.5
+                },
+                color: 'red',
+                city: 'Seattle',
+                food: 'tikka masala'
+            };
+            testClient.pets.createAPInPropertiesWithAPString(apInPropertiesWithAPString, function (error, result, request, response) {
+                should.not.exist(error);
+                assert.deepEqual(result, expectedResult);
+                done();
             });
         });
     });

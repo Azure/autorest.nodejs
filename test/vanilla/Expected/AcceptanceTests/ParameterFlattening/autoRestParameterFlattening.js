@@ -40,7 +40,7 @@ class AutoRestParameterFlattening extends ServiceClient {
 
     this.baseUri = baseUri;
     if (!this.baseUri) {
-      this.baseUri = 'http://localhost';
+      this.baseUri = 'http://localhost:3000';
     }
 
     let packageInfo = this.getPackageJsonInfo(__dirname);

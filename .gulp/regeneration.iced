@@ -81,7 +81,9 @@ defaultMappings = {
   'AcceptanceTests/CustomBaseUri': 'custom-baseUrl.json',
   'AcceptanceTests/CustomBaseUriMoreOptions': 'custom-baseUrl-more-options.json',
   'AcceptanceTests/ModelFlattening': 'model-flattening.json',
-  'AcceptanceTests/UrlMultiCollectionFormat' : 'url-multi-collectionFormat.json'
+  'AcceptanceTests/UrlMultiCollectionFormat' : 'url-multi-collectionFormat.json',
+  'AcceptanceTests/ExtensibleEnums': 'extensible-enums-swagger.json'
+  'AcceptanceTests/AdditionalProperties': 'additionalProperties.json'
 }
 
 defaultAzureMappings = {

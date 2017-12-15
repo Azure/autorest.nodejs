@@ -31,22 +31,22 @@
   },
   "homepage": "https://github.com/Azure/autorest.nodejs/blob/master/README.md",
   "devDependencies": {
-    "autorest": "^2.0.4203",
-    "coffee-script": "^1.11.1",
+    "autorest": "^2.0.4215",
+    "coffee-script": "^1.12.7",
     "dotnet-sdk-2.0.0": "^1.4.4",
     "gulp": "^3.9.1",
-    "gulp-filter": "^5.0.0",
-    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-filter": "^5.0.1",
+    "gulp-line-ending-corrector": "^1.0.2",
     "iced-coffee-script": "^108.0.11",
-    "marked": "^0.3.6",
+    "marked": "^0.3.7",
     "marked-terminal": "^2.0.0",
     "moment": "~2.18.1",
     "run-sequence": "*",
     "shx": "^0.2.2",
     "through2-parallel": "^0.1.3",
     "yargs": "^8.0.2",
-    "@microsoft.azure/autorest.testserver": "^2.3.9",
-    "yarn": "^1.0.2"
+    "@microsoft.azure/autorest.testserver": "^2.3.17",
+    "yarn": "^1.3.2"
   },
   "dependencies": {
     "dotnet-2.0.0": "^1.4.4"

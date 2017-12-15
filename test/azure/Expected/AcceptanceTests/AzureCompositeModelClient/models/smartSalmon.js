@@ -19,8 +19,6 @@ const models = require('./index');
 class SmartSalmon extends models['Salmon'] {
   /**
    * Create a SmartSalmon.
-   * @member {object} [additionalProperties] Unmatched properties from the
-   * message are deserialized this collection
    * @member {string} [collegeDegree]
    */
   constructor() {
@@ -39,6 +37,18 @@ class SmartSalmon extends models['Salmon'] {
       serializedName: 'smart_salmon',
       type: {
         name: 'Composite',
+        additionalProperties: {
+          type: {
+            name: 'Dictionary',
+            value: {
+                required: false,
+                serializedName: 'ObjectElementType',
+                type: {
+                  name: 'Object'
+                }
+            }
+          }
+        },
         polymorphicDiscriminator: {
           serializedName: 'fishtype',
           clientName: 'fishtype'
@@ -99,19 +109,6 @@ class SmartSalmon extends models['Salmon'] {
             serializedName: 'iswild',
             type: {
               name: 'Boolean'
-            }
-          },
-          additionalProperties: {
-            required: false,
-            type: {
-              name: 'Dictionary',
-              value: {
-                  required: false,
-                  serializedName: 'ObjectElementType',
-                  type: {
-                    name: 'Object'
-                  }
-              }
             }
           },
           collegeDegree: {

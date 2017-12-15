@@ -37,6 +37,11 @@ declare class AutoRestReportService extends ServiceClient {
    *
    * @param {object} [options] Optional Parameters.
    *
+   * @param {string} [options.qualifier] If specified, qualifies the generated
+   * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
+   * generators that run all tests several times, can distinguish the generated
+   * reports.
+   *
    * @param {object} [options.customHeaders] Headers that will be added to the
    * request
    *
@@ -46,12 +51,17 @@ declare class AutoRestReportService extends ServiceClient {
    *
    * @reject {Error|ServiceError} - The error object.
    */
-  getReportWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: number }>>;
+  getReportWithHttpOperationResponse(options?: { qualifier? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: number }>>;
 
   /**
    * Get test coverage report
    *
    * @param {object} [options] Optional Parameters.
+   *
+   * @param {string} [options.qualifier] If specified, qualifies the generated
+   * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
+   * generators that run all tests several times, can distinguish the generated
+   * reports.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
    * request
@@ -77,9 +87,9 @@ declare class AutoRestReportService extends ServiceClient {
    *
    *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
    */
-  getReport(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: number }>;
+  getReport(options?: { qualifier? : string, customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: number }>;
   getReport(callback: ServiceCallback<{ [propertyName: string]: number }>): void;
-  getReport(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<{ [propertyName: string]: number }>): void;
+  getReport(options: { qualifier? : string, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<{ [propertyName: string]: number }>): void;
 }
 
 export = AutoRestReportService;

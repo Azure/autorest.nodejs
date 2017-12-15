@@ -51,7 +51,7 @@ class AutoRestParameterGroupingTestService extends ServiceClient {
     this.generateClientRequestId = true;
     this.baseUri = baseUri;
     if (!this.baseUri) {
-      this.baseUri = 'https://localhost';
+      this.baseUri = 'http://localhost:3000';
     }
     this.credentials = credentials;
 

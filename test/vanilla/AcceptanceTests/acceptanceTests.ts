@@ -16,6 +16,7 @@ import stream = require('stream');
 
 import boolClient = require('../Expected/AcceptanceTests/BodyBoolean/autoRestBoolTestService');
 import stringClient = require('../Expected/AcceptanceTests/BodyString/autoRestSwaggerBATService');
+import extensibleEnumClient = require('../Expected/AcceptanceTests/ExtensibleEnums/petStoreInc');
 import integerClient = require('../Expected/AcceptanceTests/BodyInteger/autoRestIntegerTestService');
 import compositeBoolIntClient = require('../Expected/AcceptanceTests/CompositeBoolIntClient/compositeBoolInt');
 import numberClient = require('../Expected/AcceptanceTests/BodyNumber/autoRestNumberTestService');
@@ -400,8 +401,84 @@ describe('nodejs', function () {
       });
     });
 
+    describe('Extensible Enum Client', function () {
+      var testClient = new extensibleEnumClient(baseUri, clientOptions);
+      it('should support expected enum', function (done) {
+        testClient.petOperations.getByPetId('tommy', function (err, result) {
+          should.not.exist(err);
+          result.daysOfWeek.should.equal('Monday');
+          done();
+        });
+      });
+
+      it('should support unexpected enum', function (done) {
+        testClient.petOperations.getByPetId('casper', function (err, result) {
+          should.not.exist(err);
+          result.daysOfWeek.should.equal('Weekend');
+          done();
+        });
+      });
+
+      it('should support allowed value enum', function (done) {
+        testClient.petOperations.getByPetId('scooby', function (err, result) {
+          should.not.exist(err);
+          result.intEnum.should.equal('2.1');
+          done();
+        });
+      });
+
+      it('should support roundtrip enum', function (done) {
+        let options = {
+          petParam: {
+            name: 'Retriever',
+            intEnum: '3',
+            daysOfWeek: 'Friday'
+          }
+        };
+        testClient.petOperations.addPet(options, function (err, result) {
+          should.not.exist(err);
+          result.daysOfWeek.should.equal('Friday');
+          result.intEnum.should.equal('3');
+          done();
+        });
+      });
+    });
     describe('String Client', function () {
       var testClient = new stringClient(baseUri, clientOptions);
+      it('should get and put referenced enum', function (done) {
+        testClient.enumModel.getReferenced(function (err, result) {
+          should.not.exist(err);
+          result.should.equal('red color');
+          testClient.enumModel.putReferenced('red color', function (error, result1) {
+            should.not.exist(error);
+            done();
+          });
+        });
+      });
+
+      it('should get and put referenced enum constant', function (done) {
+        let options = { "field1": "Sample String" };
+        testClient.enumModel.putReferencedConstant(options, function (err, result) {
+          should.not.exist(err);
+          testClient.enumModel.getReferencedConstant(function (err, result) {
+            should.not.exist(err);          
+            (result as any).colorConstant.should.equal('green-color');
+            done();
+          });
+        });
+      });
+
+      it('should get and put enum notExpandable', function (done) {
+        testClient.enumModel.getNotExpandable(function (err, result) {
+          should.not.exist(err);
+          result.should.equal('red color');
+          testClient.enumModel.putNotExpandable('red color', function (error, result1) {
+            should.not.exist(error);
+            done();
+          });
+        });
+      });
+
       it('should support valid null value', function (done) {
         testClient.string.getNull(function (error, result) {
           should.not.exist(result);

@@ -56,7 +56,7 @@ class AutoRestAzureSpecialParametersTestClient extends ServiceClient {
     this.generateClientRequestId = true;
     this.baseUri = baseUri;
     if (!this.baseUri) {
-      this.baseUri = 'http://localhost';
+      this.baseUri = 'http://localhost:3000';
     }
     this.credentials = credentials;
     this.subscriptionId = subscriptionId;

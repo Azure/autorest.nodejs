@@ -25,6 +25,13 @@ before(function (done) {
     }
   });
 
+  child.stderr.on('data', (data) => {
+    fs.writeSync(out, data.toString());
+    if (!started) {
+      done();
+    }
+  });
+
   child.on('close', function () {
     if (!started) {
       done();

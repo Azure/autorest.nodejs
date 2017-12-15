@@ -21,7 +21,6 @@ namespace AutoRest.NodeJS.Model
 
         public CompositeTypeJs(string name) : base(name)
         {
-
         }
 
         public override Property Add(Property item)
@@ -36,6 +35,8 @@ namespace AutoRest.NodeJS.Model
 
         public string NameAsFileName => Name.EqualsIgnoreCase("index") ? "IndexModelType" : (string)Name;
 
+        public IModelType AdditionalProperties { get; set; }
+
         /// <summary>
         /// Gets or sets the discriminator property for polymorphic types.
         /// </summary>
@@ -49,10 +50,40 @@ namespace AutoRest.NodeJS.Model
             }
         }
 
-        /// <summary>
-        /// If PolymorphicDiscriminator is set, makes sure we have a PolymorphicDiscriminator property.
-        /// </summary>
-        private void AddPolymorphicPropertyIfNecessary()
+        public string AdditionaPropertiesTSType()
+        {
+            string result = "any";
+            if (AdditionalProperties != null)
+            {
+                var type = AdditionalProperties.TSType(true);
+                result = type != "any" ? $"{type} | any" : "any";
+            }
+            return result;
+        }
+
+        public string AdditionaPropertiesDocumentation()
+        {
+            string result = "Describes unknown properties. ";
+            if (AdditionalProperties != null)
+            {
+                var type = AdditionalProperties.TSType(true);
+                if (type != "any")
+                {
+                    result += $"The value of an unknown property MUST be of type \"{type}\". Due to valid TS constraints " + 
+                        $"we have modeled this as a union of `{type} | any`.";
+                }
+                else
+                {
+                    result += "The value of an unknown property can be of \"any\" type.";
+                }
+            }
+            return result;
+        }
+
+            /// <summary>
+            /// If PolymorphicDiscriminator is set, makes sure we have a PolymorphicDiscriminator property.
+            /// </summary>
+            private void AddPolymorphicPropertyIfNecessary()
         {
             if (!string.IsNullOrEmpty(PolymorphicDiscriminator) &&
                 Properties.All(p => p.Name != PolymorphicDiscriminator))

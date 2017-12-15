@@ -45,7 +45,7 @@ class AutoRestUrlTestService extends ServiceClient {
 
     this.baseUri = baseUri;
     if (!this.baseUri) {
-      this.baseUri = 'http://localhost';
+      this.baseUri = 'http://localhost:3000';
     }
     this.globalStringPath = globalStringPath;
 

@@ -24,7 +24,7 @@ namespace AutoRest.NodeJS
 
             SwaggerExtensions.NormalizeClientModel(codeModel);
             PopulateAdditionalProperties(codeModel);
-
+            ProcessAdditionalProperties(codeModel);
             NormalizeOdataFilterParameter(codeModel);
 
             foreach (var method in codeModel.Methods)
@@ -95,6 +95,28 @@ namespace AutoRest.NodeJS
                         IsRequired = true,
                         Documentation = "Subscription credentials which uniquely identify client subscription."
                     }));
+                }
+            }
+        }
+
+        private void ProcessAdditionalProperties(CodeModelJs cm)
+        {
+            bool isAdditionalPropertiesTrue(Property p)
+            {
+                return p.Name.EqualsIgnoreCase("additionalProperties") && p.SerializedName == null && p.ModelType is DictionaryTypeJs;
+            }
+
+            var modelTypes = cm.ModelTypes.Cast<CompositeTypeJs>();
+            foreach(var model in modelTypes)
+            {
+                var modelProperties = model.Properties.ToList();
+                foreach (var property in modelProperties)
+                {
+                    if (isAdditionalPropertiesTrue(property))
+                    {
+                        model.AdditionalProperties = (property.ModelType as DictionaryTypeJs).ValueType;
+                        model.Remove(property);
+                    }
                 }
             }
         }

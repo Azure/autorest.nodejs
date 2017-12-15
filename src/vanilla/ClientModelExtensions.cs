@@ -10,6 +10,7 @@ using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using AutoRest.Extensions;
 using static AutoRest.Core.Utilities.DependencyInjection;
+using AutoRest.NodeJS.Model;
 
 namespace AutoRest.NodeJS
 {
@@ -47,7 +48,7 @@ namespace AutoRest.NodeJS
 
             PrimaryType primaryType = sequence.ElementType as PrimaryType;
             EnumType enumType = sequence.ElementType as EnumType;
-            if (enumType != null && enumType.ModelAsString)
+            if (enumType != null && (enumType.ModelAsString || enumType.ModelAsExtensible))
             {
                 primaryType = New<PrimaryType>(KnownPrimaryType.String);
             }
@@ -478,7 +479,7 @@ namespace AutoRest.NodeJS
             }
             else if (enumType != null && enumType.Values.Any())
             {
-                if (enumType.ModelAsString)
+                if (enumType.ModelAsString || enumType.ModelAsExtensible)
                 {
                     return New<PrimaryType>(KnownPrimaryType.String).ValidatePrimaryType(scope, valueReference, isRequired);
                 }
@@ -777,7 +778,7 @@ namespace AutoRest.NodeJS
             }
             else if (enumType != null)
             {
-                if (enumType.ModelAsString)
+                if (enumType.ModelAsString || enumType.ModelAsExtensible)
                 {
                     builder.AppendLine("type: {").Indent().AppendLine("name: 'String'").Outdent().AppendLine("}");
                 }
@@ -816,6 +817,21 @@ namespace AutoRest.NodeJS
                 builder.AppendLine("type: {")
                          .Indent()
                          .AppendLine("name: 'Composite',");
+                var compositeJs = composite as CompositeTypeJs;
+                if (compositeJs != null && compositeJs.AdditionalProperties != null)
+                {
+                    builder.AppendLine("additionalProperties: {")
+                           .Indent()
+                           .AppendLine("type: {")
+                           .Indent()
+                           .AppendLine("name: 'Dictionary',")
+                           .AppendLine("value: {")
+                           .Indent()
+                           .AppendLine("{0}", compositeJs.AdditionalProperties.ConstructMapper(compositeJs.AdditionalProperties.DeclarationName + "ElementType", null, false, false))
+                           .Outdent().AppendLine("}")
+                           .Outdent().AppendLine("}")
+                           .Outdent().AppendLine("},");
+                }
                 if (composite.BaseIsPolymorphic)
                 {
                     builder = ConstructPolymorphicDiscriminator(composite, builder);

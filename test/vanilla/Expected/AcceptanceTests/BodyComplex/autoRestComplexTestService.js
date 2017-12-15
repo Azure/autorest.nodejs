@@ -41,7 +41,7 @@ class AutoRestComplexTestService extends ServiceClient {
     this.apiVersion = '2014-04-01-preview';
     this.baseUri = baseUri;
     if (!this.baseUri) {
-      this.baseUri = 'http://localhost';
+      this.baseUri = 'http://localhost:3000';
     }
 
     let packageInfo = this.getPackageJsonInfo(__dirname);

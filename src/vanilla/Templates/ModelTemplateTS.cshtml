@@ -43,6 +43,12 @@
     {
   @:@(CompositeTypeJs.PropertyTS(propertyList[i], true));
     }
-
+    if (Model.AdditionalProperties != null)
+    {
+  @:/**
+  @:@WrapComment(" * ", $"@property {Model.AdditionaPropertiesDocumentation()}")
+  @: */
+  @:[property: string]: @(Model.AdditionaPropertiesTSType());
+    }
 @:}
 }

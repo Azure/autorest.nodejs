@@ -22,6 +22,12 @@ before(function (done) {
             done();
         }
     });
+    child.stderr.on('data', function (data) {
+        fs.writeSync(out, data.toString());
+        if (!started) {
+            done();
+        }
+    });
     child.on('close', function () {
         if (!started) {
             done();

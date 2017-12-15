@@ -27,6 +27,11 @@ const models = require('./models');
  *
  * @param {object} [options] Optional Parameters.
  *
+ * @param {string} [options.qualifier] If specified, qualifies the generated
+ * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
+ * generators that run all tests several times, can distinguish the generated
+ * reports.
+ *
  * @param {object} [options.customHeaders] Headers that will be added to the
  * request
  *
@@ -52,8 +57,12 @@ function _getReport(options, callback) {
   if (!callback) {
     throw new Error('callback cannot be null.');
   }
+  let qualifier = (options && options.qualifier !== undefined) ? options.qualifier : undefined;
   // Validate
   try {
+    if (qualifier !== null && qualifier !== undefined && typeof qualifier.valueOf() !== 'string') {
+      throw new Error('qualifier must be of type string.');
+    }
     if (this.acceptLanguage !== null && this.acceptLanguage !== undefined && typeof this.acceptLanguage.valueOf() !== 'string') {
       throw new Error('this.acceptLanguage must be of type string.');
     }
@@ -65,6 +74,9 @@ function _getReport(options, callback) {
   let baseUrl = this.baseUri;
   let requestUrl = baseUrl + (baseUrl.endsWith('/') ? '' : '/') + 'report/azure';
   let queryParameters = [];
+  if (qualifier !== null && qualifier !== undefined) {
+    queryParameters.push('qualifier=' + encodeURIComponent(qualifier));
+  }
   if (queryParameters.length > 0) {
     requestUrl += '?' + queryParameters.join('&');
   }
@@ -189,7 +201,7 @@ class AutoRestReportServiceForAzure extends ServiceClient {
     this.generateClientRequestId = true;
     this.baseUri = baseUri;
     if (!this.baseUri) {
-      this.baseUri = 'http://localhost';
+      this.baseUri = 'http://localhost:3000';
     }
     this.credentials = credentials;
 
@@ -213,6 +225,11 @@ class AutoRestReportServiceForAzure extends ServiceClient {
    * Get test coverage report
    *
    * @param {object} [options] Optional Parameters.
+   *
+   * @param {string} [options.qualifier] If specified, qualifies the generated
+   * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
+   * generators that run all tests several times, can distinguish the generated
+   * reports.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
    * request
@@ -241,6 +258,11 @@ class AutoRestReportServiceForAzure extends ServiceClient {
    * Get test coverage report
    *
    * @param {object} [options] Optional Parameters.
+   *
+   * @param {string} [options.qualifier] If specified, qualifies the generated
+   * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
+   * generators that run all tests several times, can distinguish the generated
+   * reports.
    *
    * @param {object} [options.customHeaders] Headers that will be added to the
    * request
