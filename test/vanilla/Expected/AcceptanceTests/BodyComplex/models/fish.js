@@ -82,6 +82,7 @@ class Fish {
           fishtype: {
             required: true,
             serializedName: 'fishtype',
+            isPolymorphicDiscriminator: true,
             type: {
               name: 'String'
             }

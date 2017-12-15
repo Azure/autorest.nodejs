@@ -651,6 +651,7 @@ namespace AutoRest.NodeJS
             bool isRequired = false;
             bool isConstant = false;
             bool isReadOnly = false;
+            bool isPolymorphicDiscriminator = false;
             Dictionary<Constraint, string> constraints = null;
             var property = parameter as Property;
             if (parameter != null)
@@ -660,8 +661,10 @@ namespace AutoRest.NodeJS
                 isConstant = parameter.IsConstant;
                 constraints = parameter.Constraints;
             }
+
             if (property != null)
             {
+                isPolymorphicDiscriminator = property.IsPolymorphicDiscriminator;
                 isReadOnly = property.IsReadOnly;
             }
             CompositeType composite = type as CompositeType;
@@ -693,6 +696,10 @@ namespace AutoRest.NodeJS
             if (serializedName != null)
             {
                 builder.AppendLine("serializedName: '{0}',", serializedName);
+            }
+            if (isPolymorphicDiscriminator)
+            {
+                builder.AppendLine("isPolymorphicDiscriminator: true,");
             }
             if (defaultValue != null)
             {

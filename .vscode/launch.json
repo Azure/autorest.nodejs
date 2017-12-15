@@ -21,7 +21,7 @@
         "--timeout",
         "999999",
         "--colors",
-        "${workspaceRoot}/test/vanilla/AcceptanceTests/acceptanceTests.js"
+        "${workspaceRoot}/test/vanilla/AcceptanceTests/complexTypesTests.js"
       ],
       "internalConsoleOptions": "openOnSessionStart"
     }

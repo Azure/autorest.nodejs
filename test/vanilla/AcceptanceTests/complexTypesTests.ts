@@ -465,6 +465,60 @@ describe('nodejs', function () {
           done();
         });
       });
+
+      it('should put polymorphic types without discriminator property', function (done) {
+        var rawSalmon: complexClientModels.SmartSalmon = {
+          "species": "king",
+          "length": 1,
+          "siblings": [
+            <complexClientModels.Shark>{
+              "species": "predator",
+              "length": 20,
+              "fishtype": "shark",
+              "age": 6,
+              "birthday": new Date("2012-01-05T01:00:00.000Z")
+            },
+            <complexClientModels.Sawshark>{
+              "species": "dangerous",
+              "length": 10,
+              "fishtype": "sawshark",
+              "age": 105,
+              "birthday": new Date("1900-01-05T01:00:00.000Z"),
+              "picture": new Buffer([255, 255, 255, 255, 254])
+            },
+            <complexClientModels.Goblinshark>{
+              "species": "scary",
+              "length": 30,
+              "fishtype": "goblin",
+              "age": 1,
+              "birthday": new Date("2015-08-08T00:00:00.000Z"),
+              "jawsize": 5
+            }
+          ],
+          "location": "alaska",
+          "iswild": true,
+          "additionalProperty1": 1,
+          "additionalProperty2": false,
+          "additionalProperty3": "hello",
+          "additionalProperty4": {
+            "a": 1,
+            "b": 2
+          },
+          "additionalProperty5": [
+            1,
+            3
+          ],
+        } as any;
+        testClient.polymorphism.putMissingDiscriminator(rawSalmon, function (err, result, req, res) {
+          should.not.exist(err);
+          res.statusCode.should.equal(200);
+          let serializedPayload = JSON.parse(req['body']);
+          serializedPayload.fishtype.should.equal("salmon");
+          result.fishtype.should.equal("salmon");
+          should.not.exist((result as any).additionalProperty1);
+          done();
+        });
+      });
     });
 
     describe('Complex Types with recursive definitions', function () {

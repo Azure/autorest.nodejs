@@ -2653,6 +2653,85 @@ export interface Polymorphism {
 
 
     /**
+     * Put complex types that are polymorphic, omitting the discriminator
+     *
+     * @param {object} complexBody
+     *
+     * @param {string} [complexBody.location]
+     *
+     * @param {boolean} [complexBody.iswild]
+     *
+     * @param {string} [complexBody.species]
+     *
+     * @param {number} complexBody.length
+     *
+     * @param {array} [complexBody.siblings]
+     *
+     * @param {string} complexBody.fishtype Polymorphic Discriminator
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<Salmon>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    putMissingDiscriminatorWithHttpOperationResponse(complexBody: models.Salmon, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Salmon>>;
+
+    /**
+     * Put complex types that are polymorphic, omitting the discriminator
+     *
+     * @param {object} complexBody
+     *
+     * @param {string} [complexBody.location]
+     *
+     * @param {boolean} [complexBody.iswild]
+     *
+     * @param {string} [complexBody.species]
+     *
+     * @param {number} complexBody.length
+     *
+     * @param {array} [complexBody.siblings]
+     *
+     * @param {string} complexBody.fishtype Polymorphic Discriminator
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {Salmon} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {Salmon} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link Salmon} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    putMissingDiscriminator(complexBody: models.Salmon, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Salmon>;
+    putMissingDiscriminator(complexBody: models.Salmon, callback: ServiceCallback<models.Salmon>): void;
+    putMissingDiscriminator(complexBody: models.Salmon, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.Salmon>): void;
+
+
+    /**
      * Put complex types that are polymorphic, attempting to omit required
      * 'birthday' field - the request should not be allowed from the client
      *
