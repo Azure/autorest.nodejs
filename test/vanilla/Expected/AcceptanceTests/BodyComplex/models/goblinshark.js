@@ -20,6 +20,8 @@ class Goblinshark extends models['Shark'] {
   /**
    * Create a Goblinshark.
    * @member {number} [jawsize]
+   * @member {string} [color] Colors possible. Possible values include: 'pink',
+   * 'gray', 'brown'. Default value: 'gray' .
    */
   constructor() {
     super();
@@ -105,6 +107,14 @@ class Goblinshark extends models['Shark'] {
             serializedName: 'jawsize',
             type: {
               name: 'Number'
+            }
+          },
+          color: {
+            required: false,
+            serializedName: 'color',
+            defaultValue: 'gray',
+            type: {
+              name: 'String'
             }
           }
         }

@@ -221,9 +221,12 @@ export interface Sawshark extends Shark {
  * Initializes a new instance of the Goblinshark class.
  * @constructor
  * @member {number} [jawsize]
+ * @member {string} [color] Colors possible. Possible values include: 'pink',
+ * 'gray', 'brown'. Default value: 'gray' .
  */
 export interface Goblinshark extends Shark {
   jawsize?: number;
+  color?: string;
 }
 
 /**

@@ -169,7 +169,7 @@ describe('nodejs', function () {
                 testClient.primitive.getDuration(function (error, result) {
                     should.not.exist(error);
                     //should.not.exist(result.field);
-                    assert.deepEqual(result.field, moment.duration(durationString));
+                    assert.deepEqual(result.field.toJSON(), moment.duration(durationString).toJSON());
                     testClient.primitive.putDuration({ field: moment.duration(durationString) }, function (error) {
                         should.not.exist(error);
                         done();
@@ -312,12 +312,13 @@ describe('nodejs', function () {
                         'length': 30,
                         'species': 'scary',
                         'birthday': new Date('2015-08-08T00:00:00Z'),
-                        'jawsize': 5
+                        'jawsize': 5,
+                        'color': 'pinkish-gray'
                     }
                 ]
             };
             var testClient = new complexClient(baseUri, clientOptions);
-            it('should get valid polymorphic properties', function (done) {
+            it.only('should get valid polymorphic properties', function (done) {
                 testClient.polymorphism.getValid(function (error, result) {
                     should.not.exist(error);
                     assert.deepEqual(result, fish);
