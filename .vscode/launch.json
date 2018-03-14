@@ -16,6 +16,8 @@
       "name": "Mocha Tests",
       "program": "${workspaceRoot}/test/vanilla/node_modules/mocha/bin/_mocha",
       "args": [
+        "--require",
+        "source-map-support/register",
         "-u",
         "tdd",
         "--timeout",
@@ -23,7 +25,11 @@
         "--colors",
         "${workspaceRoot}/test/vanilla/AcceptanceTests/complexTypesTests.js"
       ],
-      "internalConsoleOptions": "openOnSessionStart"
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceRoot}/test/vanilla/AcceptanceTests/*.js"
+      ]
     }
   ]
 }

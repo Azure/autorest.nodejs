@@ -18,12 +18,17 @@
     }
   ],
   "dependencies": {
-    "ms-rest": "^2.2.9",
-    "ms-rest-azure": "^2.2.1",
+    "ms-rest": "^2.3.2",
+    "ms-rest-azure": "^2.5.4",
     "jshint": "2.9.4",
-    "moment": "^2.14.1",
-    "mocha": "2.2.5",
+    "moment": "^2.21.0",
+    "mocha": "5.0.4",
     "should": "5.2.0"
+  },
+  "devDependencies": {
+    "tslint": "^2.5.1",
+    "typescript": "^2.6.2",
+    "source-map-support": "0.5.3"
   },
   "homepage": "https://github.com/Azure/AutoRest/src/generator/AutoRest.NodeJS.Azure.Tests",
   "repository": {
@@ -35,7 +40,8 @@
   },
   "scripts": {
     "pretest": "npm install",
-    "test": "npm -s run-script jshint && npm -s run-script unit",
+    "build": "tsc",
+    "test": "npm run build && npm run unit",
     "unit": "node unit.js testlist.txt list",
     "xunit": "node unit.js testlist.txt",
     "jshint": "jshint Expected --reporter=jslint"

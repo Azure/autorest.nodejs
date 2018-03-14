@@ -17,6 +17,8 @@ if  (!fs.existsSync) {
 
 fileContent = fs.readFileSync('./AcceptanceTests/' + testList).toString();
 var files = fileContent.split('\n');
+args.push('--require');
+args.push('source-map-support/register')
 args.push('-u');
 args.push('tdd');
 args.push('-t');

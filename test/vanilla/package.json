@@ -18,20 +18,21 @@
     }
   ],
   "dependencies": {
-    "@types/mocha": "^2.2.39",
+    "@types/mocha": "^2.2.48",
     "@types/should": "^8.1.30",
     "@types/node": "^8.0.53",
-    "ms-rest": "^2.2.9",
-    "jshint": "2.9.4",
+    "ms-rest": "^2.3.2",
+    "jshint": "2.9.5",
     "xunit-file": "0.0.5",
-    "mocha": "^3.2.0",
-    "moment": "~2.18.1",
+    "mocha": "^5.0.4",
+    "moment": "^2.21.0",
     "should": "5.2.0",
     "underscore": "*"
   },
   "devDependencies": {
     "tslint": "^2.5.1",
-    "typescript": "^2.6.2"
+    "typescript": "^2.6.2",
+    "source-map-support": "0.5.3"
   },
   "homepage": "https://github.com/Azure/AutoRest/src/generator/AutoRest.NodeJS.Tests",
   "repository": {
@@ -44,7 +45,7 @@
   "scripts": {
     "pretest": "npm install",
     "build": "tsc",
-    "test": "npm -s run-script build && npm -s run-script unit",
+    "test": "npm run build && npm run unit",
     "unit": "node unit.js testlist.txt list",
     "xunit": "node unit.js testlist.txt",
     "jshint": "jshint Expected --reporter=jslint"

@@ -4,7 +4,8 @@
     "noImplicitAny": true,
     "lib": [
       "es2016"
-    ]
+    ],
+    "sourceMap": true
   },
   "include": [
     "Expected/AcceptanceTests/**/*"

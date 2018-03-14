@@ -5,14 +5,18 @@
   "scripts": {
     "autorest": "autorest",
     "start": "dotnet src/bin/netcoreapp2.0/autorest.nodejs.dll --server",
-    "test": "gulp test",
+    "test": "npm run build-tests && gulp test",
     "testci": "gulp testci",
     "build": "gulp build",
+    "build-tests": "npm run build-vanilla-tests && npm run build-azure-tests",
+    "build-vanilla-tests": "npm --prefix test/vanilla run build",
+    "build-azure-tests": "npm --prefix test/azure run build",
     "prepare": "gulp build",
     "publish-preview": "gulp publish-preview",
     "regenerate": "gulp regenerate",
     "clean": "gulp clean",
-    "nuke": "git clean -xdf"
+    "nuke": "git clean -xdf",
+    "start-test-server": "npm --prefix node_modules/@microsoft.azure/autorest.testserver run start"
   },
   "repository": {
     "type": "git",
@@ -31,7 +35,7 @@
   },
   "homepage": "https://github.com/Azure/autorest.nodejs/blob/master/README.md",
   "devDependencies": {
-    "autorest": "^2.0.4215",
+    "autorest": "^2.0.4245",
     "coffee-script": "^1.12.7",
     "dotnet-sdk-2.0.0": "^1.4.4",
     "gulp": "^3.9.1",
@@ -40,12 +44,12 @@
     "iced-coffee-script": "^108.0.11",
     "marked": "^0.3.7",
     "marked-terminal": "^2.0.0",
-    "moment": "~2.18.1",
+    "moment": "^2.21.0",
     "run-sequence": "*",
     "shx": "^0.2.2",
     "through2-parallel": "^0.1.3",
     "yargs": "^8.0.2",
-    "@microsoft.azure/autorest.testserver": "^2.3.19",
+    "@microsoft.azure/autorest.testserver": "^2.4.2",
     "yarn": "^1.3.2"
   },
   "dependencies": {
