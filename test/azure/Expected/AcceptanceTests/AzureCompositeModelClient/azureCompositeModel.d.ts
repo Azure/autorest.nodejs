@@ -13,7 +13,7 @@ import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
 import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AzureCompositeModel extends AzureServiceClient {
+export default class AzureCompositeModel extends AzureServiceClient {
   /**
    * Initializes a new instance of the AzureCompositeModel class.
    * @constructor
@@ -263,4 +263,4 @@ declare class AzureCompositeModel extends AzureServiceClient {
   update(subscriptionId: string, resourceGroupName: string, options: { productArrayOfDictionary? : { [propertyName: string]: models.Product }[], customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.CatalogArray>): void;
 }
 
-export = AzureCompositeModel;
+export { AzureCompositeModel, models as AzureCompositeModelModels };

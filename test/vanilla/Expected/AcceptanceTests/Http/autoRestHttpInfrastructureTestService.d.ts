@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestHttpInfrastructureTestService extends ServiceClient {
+export default class AutoRestHttpInfrastructureTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestHttpInfrastructureTestService class.
@@ -41,4 +42,4 @@ declare class AutoRestHttpInfrastructureTestService extends ServiceClient {
   multipleResponses: operations.MultipleResponses;
 }
 
-export = AutoRestHttpInfrastructureTestService;
+export { AutoRestHttpInfrastructureTestService, models as AutoRestHttpInfrastructureTestServiceModels };

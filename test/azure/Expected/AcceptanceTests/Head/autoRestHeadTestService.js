@@ -74,3 +74,6 @@ class AutoRestHeadTestService extends ServiceClient {
 }
 
 module.exports = AutoRestHeadTestService;
+module.exports['default'] = AutoRestHeadTestService;
+module.exports.AutoRestHeadTestService = AutoRestHeadTestService;
+module.exports.AutoRestHeadTestServiceModels = models;

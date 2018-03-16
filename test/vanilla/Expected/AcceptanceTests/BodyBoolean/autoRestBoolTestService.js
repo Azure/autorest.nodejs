@@ -53,3 +53,6 @@ class AutoRestBoolTestService extends ServiceClient {
 }
 
 module.exports = AutoRestBoolTestService;
+module.exports['default'] = AutoRestBoolTestService;
+module.exports.AutoRestBoolTestService = AutoRestBoolTestService;
+module.exports.AutoRestBoolTestServiceModels = models;

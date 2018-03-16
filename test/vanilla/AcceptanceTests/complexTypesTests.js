@@ -5,14 +5,14 @@ exports.__esModule = true;
 var should = require('should');
 var assert = require('assert');
 var moment = require("moment");
-var complexClient = require("../Expected/AcceptanceTests/BodyComplex/autoRestComplexTestService");
-var additionalClient = require("../Expected/AcceptanceTests/AdditionalProperties/additionalPropertiesClient");
+var autoRestComplexTestService_1 = require("../Expected/AcceptanceTests/BodyComplex/autoRestComplexTestService");
+var additionalPropertiesClient_1 = require("../Expected/AcceptanceTests/AdditionalProperties/additionalPropertiesClient");
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
 describe('nodejs', function () {
     describe('Swagger Complex Type BAT', function () {
         describe('Basic Types Operations', function () {
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it('should get and put valid basic type properties', function (done) {
                 testClient.basicOperations.getValid(function (error, result) {
                     should.not.exist(error);
@@ -57,7 +57,7 @@ describe('nodejs', function () {
             });
         });
         describe('Primitive Types Operations', function () {
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it('should get and put valid int properties', function (done) {
                 testClient.primitive.getInt(function (error, result) {
                     should.not.exist(error);
@@ -189,7 +189,7 @@ describe('nodejs', function () {
             });
         });
         describe('Array Types Operations', function () {
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it('should get valid array type properties', function (done) {
                 var testArray = ['1, 2, 3, 4', '', null, '&S#$(*Y', 'The quick brown fox jumps over the lazy dog'];
                 testClient.arrayModel.getValid(function (error, result) {
@@ -220,7 +220,7 @@ describe('nodejs', function () {
             });
         });
         describe('Dictionary Types Operations', function () {
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it('should get and put valid dictionary type properties', function (done) {
                 var testDictionary = { 'txt': 'notepad', 'bmp': 'mspaint', 'xls': 'excel', 'exe': '', '': null };
                 testClient.dictionary.getValid(function (error, result) {
@@ -259,7 +259,7 @@ describe('nodejs', function () {
         });
         describe('Complex Types with Inheritance Operations', function () {
             var siamese = { "breed": "persian", "color": "green", "hates": [{ "food": "tomato", "id": 1, "name": "Potato" }, { "food": "french fries", "id": -1, "name": "Tomato" }], "id": 2, "name": "Siameeee" };
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it('should get valid basic type properties', function (done) {
                 testClient.inheritance.getValid(function (error, result) {
                     should.not.exist(error);
@@ -272,7 +272,7 @@ describe('nodejs', function () {
             });
         });
         describe('Complex Types with ReadOnly Properties', function () {
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it('should get and put complex types with readonly properties', function (done) {
                 testClient.readonlyproperty.getValid(function (error, result) {
                     should.not.exist(error);
@@ -317,7 +317,7 @@ describe('nodejs', function () {
                     }
                 ]
             };
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it.only('should get valid polymorphic properties', function (done) {
                 testClient.polymorphism.getValid(function (error, result) {
                     should.not.exist(error);
@@ -539,7 +539,7 @@ describe('nodejs', function () {
                     }
                 ]
             };
-            var testClient = new complexClient(baseUri, clientOptions);
+            var testClient = new autoRestComplexTestService_1.AutoRestComplexTestService(baseUri, clientOptions);
             it('should get and put valid basic type properties', function (done) {
                 testClient.polymorphicrecursive.getValid(function (error, result) {
                     should.not.exist(error);
@@ -553,7 +553,7 @@ describe('nodejs', function () {
         });
     });
     describe('Swagger additionalProperties BAT', function () {
-        var testClient = new additionalClient(baseUri, clientOptions);
+        var testClient = new additionalPropertiesClient_1.AdditionalPropertiesClient(baseUri, clientOptions);
         it('should put object with additionalProperties true correctly', function (done) {
             var apTrue = {
                 id: 1,

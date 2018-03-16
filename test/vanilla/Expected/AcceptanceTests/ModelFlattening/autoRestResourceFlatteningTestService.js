@@ -2562,3 +2562,6 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 }
 
 module.exports = AutoRestResourceFlatteningTestService;
+module.exports['default'] = AutoRestResourceFlatteningTestService;
+module.exports.AutoRestResourceFlatteningTestService = AutoRestResourceFlatteningTestService;
+module.exports.AutoRestResourceFlatteningTestServiceModels = models;

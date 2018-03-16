@@ -74,3 +74,6 @@ class AutoRestPagingTestService extends ServiceClient {
 }
 
 module.exports = AutoRestPagingTestService;
+module.exports['default'] = AutoRestPagingTestService;
+module.exports.AutoRestPagingTestService = AutoRestPagingTestService;
+module.exports.AutoRestPagingTestServiceModels = models;

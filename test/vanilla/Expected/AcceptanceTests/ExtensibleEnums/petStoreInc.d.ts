@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class PetStoreInc extends ServiceClient {
+export default class PetStoreInc extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the PetStoreInc class.
@@ -35,4 +36,4 @@ declare class PetStoreInc extends ServiceClient {
   petOperations: operations.PetOperations;
 }
 
-export = PetStoreInc;
+export { PetStoreInc, models as PetStoreIncModels };

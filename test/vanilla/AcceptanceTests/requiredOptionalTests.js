@@ -3,13 +3,13 @@
 'use strict';
 exports.__esModule = true;
 var should = require("should");
-var reqOptClient = require("../Expected/AcceptanceTests/RequiredOptional/autoRestRequiredOptionalTestService");
+var autoRestRequiredOptionalTestService_1 = require("../Expected/AcceptanceTests/RequiredOptional/autoRestRequiredOptionalTestService");
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
 describe('nodejs', function () {
     describe('Swagger Required Optional BAT', function () {
         describe('Basic Required Optional Operations', function () {
-            var testClient = new reqOptClient('', '', baseUri, clientOptions);
+            var testClient = new autoRestRequiredOptionalTestService_1["default"]('', '', baseUri, clientOptions);
             it('should throw error on null path parameter', function (done) {
                 testClient.implicit.getRequiredPath(null, function (error, result) {
                     should.exist(error);

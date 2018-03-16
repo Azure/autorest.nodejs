@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestComplexTestService extends ServiceClient {
+export default class AutoRestComplexTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestComplexTestService class.
@@ -44,4 +45,4 @@ declare class AutoRestComplexTestService extends ServiceClient {
   readonlyproperty: operations.Readonlyproperty;
 }
 
-export = AutoRestComplexTestService;
+export { AutoRestComplexTestService, models as AutoRestComplexTestServiceModels };

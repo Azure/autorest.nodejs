@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestSwaggerBATService extends ServiceClient {
+export default class AutoRestSwaggerBATService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestSwaggerBATService class.
@@ -36,4 +37,4 @@ declare class AutoRestSwaggerBATService extends ServiceClient {
   enumModel: operations.EnumModel;
 }
 
-export = AutoRestSwaggerBATService;
+export { AutoRestSwaggerBATService, models as AutoRestSwaggerBATServiceModels };

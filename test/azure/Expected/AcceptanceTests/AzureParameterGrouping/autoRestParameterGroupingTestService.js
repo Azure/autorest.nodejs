@@ -74,3 +74,6 @@ class AutoRestParameterGroupingTestService extends ServiceClient {
 }
 
 module.exports = AutoRestParameterGroupingTestService;
+module.exports['default'] = AutoRestParameterGroupingTestService;
+module.exports.AutoRestParameterGroupingTestService = AutoRestParameterGroupingTestService;
+module.exports.AutoRestParameterGroupingTestServiceModels = models;

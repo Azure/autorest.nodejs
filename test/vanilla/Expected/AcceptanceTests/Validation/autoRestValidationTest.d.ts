@@ -11,7 +11,7 @@
 import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResponse } from 'ms-rest';
 import * as models from "./models";
 
-declare class AutoRestValidationTest extends ServiceClient {
+export default class AutoRestValidationTest extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestValidationTest class.
@@ -323,4 +323,4 @@ declare class AutoRestValidationTest extends ServiceClient {
   postWithConstantInBody(options: { body? : models.Product, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.Product>): void;
 }
 
-export = AutoRestValidationTest;
+export { AutoRestValidationTest, models as AutoRestValidationTestModels };

@@ -53,3 +53,6 @@ class PetStoreInc extends ServiceClient {
 }
 
 module.exports = PetStoreInc;
+module.exports['default'] = PetStoreInc;
+module.exports.PetStoreInc = PetStoreInc;
+module.exports.PetStoreIncModels = models;

@@ -61,3 +61,6 @@ class AutoRestComplexTestService extends ServiceClient {
 }
 
 module.exports = AutoRestComplexTestService;
+module.exports['default'] = AutoRestComplexTestService;
+module.exports.AutoRestComplexTestService = AutoRestComplexTestService;
+module.exports.AutoRestComplexTestServiceModels = models;

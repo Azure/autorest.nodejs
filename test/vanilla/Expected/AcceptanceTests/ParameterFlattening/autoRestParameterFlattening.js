@@ -53,3 +53,6 @@ class AutoRestParameterFlattening extends ServiceClient {
 }
 
 module.exports = AutoRestParameterFlattening;
+module.exports['default'] = AutoRestParameterFlattening;
+module.exports.AutoRestParameterFlattening = AutoRestParameterFlattening;
+module.exports.AutoRestParameterFlatteningModels = models;

@@ -26,10 +26,7 @@ const ServiceClient = msRest.ServiceClient;
 }
 
 @EmptyLine
-@if (Model.ModelTypes.Any())
-{
-@:const models = require('./models');
-}
+const models = require('./models');
 @if (Model.MethodGroupModels.Any())
 {
 @:const operations = require('./operations');
@@ -133,4 +130,4 @@ else
 }
 }
 @EmptyLine
-module.exports = @Model.Name;
+@Model.ConstructServiceClientJSExports()

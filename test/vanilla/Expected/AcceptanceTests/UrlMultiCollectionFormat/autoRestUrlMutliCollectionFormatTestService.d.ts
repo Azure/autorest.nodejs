@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestUrlMutliCollectionFormatTestService extends ServiceClient {
+export default class AutoRestUrlMutliCollectionFormatTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestUrlMutliCollectionFormatTestService class.
@@ -35,4 +36,4 @@ declare class AutoRestUrlMutliCollectionFormatTestService extends ServiceClient 
   queries: operations.Queries;
 }
 
-export = AutoRestUrlMutliCollectionFormatTestService;
+export { AutoRestUrlMutliCollectionFormatTestService, models as AutoRestUrlMutliCollectionFormatTestServiceModels };

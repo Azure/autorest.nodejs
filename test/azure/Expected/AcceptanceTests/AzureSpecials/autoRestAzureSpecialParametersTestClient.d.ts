@@ -10,9 +10,10 @@
 
 import { ServiceClientCredentials } from 'ms-rest';
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestAzureSpecialParametersTestClient extends AzureServiceClient {
+export default class AutoRestAzureSpecialParametersTestClient extends AzureServiceClient {
   /**
    * Initializes a new instance of the AutoRestAzureSpecialParametersTestClient class.
    * @constructor
@@ -65,4 +66,4 @@ declare class AutoRestAzureSpecialParametersTestClient extends AzureServiceClien
   header: operations.Header;
 }
 
-export = AutoRestAzureSpecialParametersTestClient;
+export { AutoRestAzureSpecialParametersTestClient, models as AutoRestAzureSpecialParametersTestModels };

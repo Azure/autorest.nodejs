@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestSwaggerBATFormDataService extends ServiceClient {
+export default class AutoRestSwaggerBATFormDataService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestSwaggerBATFormDataService class.
@@ -35,4 +36,4 @@ declare class AutoRestSwaggerBATFormDataService extends ServiceClient {
   formdata: operations.Formdata;
 }
 
-export = AutoRestSwaggerBATFormDataService;
+export { AutoRestSwaggerBATFormDataService, models as AutoRestSwaggerBATFormDataServiceModels };

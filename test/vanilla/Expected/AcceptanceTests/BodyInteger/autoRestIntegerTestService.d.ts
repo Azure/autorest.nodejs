@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestIntegerTestService extends ServiceClient {
+export default class AutoRestIntegerTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestIntegerTestService class.
@@ -35,4 +36,4 @@ declare class AutoRestIntegerTestService extends ServiceClient {
   intModel: operations.IntModel;
 }
 
-export = AutoRestIntegerTestService;
+export { AutoRestIntegerTestService, models as AutoRestIntegerTestServiceModels };

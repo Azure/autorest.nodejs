@@ -87,3 +87,6 @@ class AutoRestAzureSpecialParametersTestClient extends ServiceClient {
 }
 
 module.exports = AutoRestAzureSpecialParametersTestClient;
+module.exports['default'] = AutoRestAzureSpecialParametersTestClient;
+module.exports.AutoRestAzureSpecialParametersTestClient = AutoRestAzureSpecialParametersTestClient;
+module.exports.AutoRestAzureSpecialParametersTestModels = models;

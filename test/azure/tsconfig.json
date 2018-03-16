@@ -5,9 +5,11 @@
     "lib": [
       "es2016"
     ],
-    "sourceMap": true
+    "sourceMap": true,
+    "declaration": true
   },
   "include": [
+    "AcceptanceTests/**/*",
     "Expected/AcceptanceTests/**/*"
   ],
   "exclude": [

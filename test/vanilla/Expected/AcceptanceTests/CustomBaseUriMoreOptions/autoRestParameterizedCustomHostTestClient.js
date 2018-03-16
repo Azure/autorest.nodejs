@@ -59,3 +59,6 @@ class AutoRestParameterizedCustomHostTestClient extends ServiceClient {
 }
 
 module.exports = AutoRestParameterizedCustomHostTestClient;
+module.exports['default'] = AutoRestParameterizedCustomHostTestClient;
+module.exports.AutoRestParameterizedCustomHostTestClient = AutoRestParameterizedCustomHostTestClient;
+module.exports.AutoRestParameterizedCustomHostTestModels = models;

@@ -12,7 +12,7 @@ import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResp
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
 import * as models from "./models";
 
-declare class AutoRestResourceFlatteningTestService extends AzureServiceClient {
+export default class AutoRestResourceFlatteningTestService extends AzureServiceClient {
   /**
    * Initializes a new instance of the AutoRestResourceFlatteningTestService class.
    * @constructor
@@ -403,4 +403,4 @@ declare class AutoRestResourceFlatteningTestService extends AzureServiceClient {
   getResourceCollection(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.ResourceCollection>): void;
 }
 
-export = AutoRestResourceFlatteningTestService;
+export { AutoRestResourceFlatteningTestService, models as AutoRestResourceFlatteningTestServiceModels };

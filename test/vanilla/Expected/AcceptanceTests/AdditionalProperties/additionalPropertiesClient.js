@@ -53,3 +53,6 @@ class AdditionalPropertiesClient extends ServiceClient {
 }
 
 module.exports = AdditionalPropertiesClient;
+module.exports['default'] = AdditionalPropertiesClient;
+module.exports.AdditionalPropertiesClient = AdditionalPropertiesClient;
+module.exports.AdditionalPropertiesModels = models;

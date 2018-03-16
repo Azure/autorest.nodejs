@@ -53,3 +53,6 @@ class AutoRestNumberTestService extends ServiceClient {
 }
 
 module.exports = AutoRestNumberTestService;
+module.exports['default'] = AutoRestNumberTestService;
+module.exports.AutoRestNumberTestService = AutoRestNumberTestService;
+module.exports.AutoRestNumberTestServiceModels = models;

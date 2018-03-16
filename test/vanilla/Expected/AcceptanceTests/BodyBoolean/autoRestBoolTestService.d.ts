@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestBoolTestService extends ServiceClient {
+export default class AutoRestBoolTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestBoolTestService class.
@@ -35,4 +36,4 @@ declare class AutoRestBoolTestService extends ServiceClient {
   bool: operations.Bool;
 }
 
-export = AutoRestBoolTestService;
+export { AutoRestBoolTestService, models as AutoRestBoolTestServiceModels };

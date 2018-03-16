@@ -9,6 +9,7 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
 /**
@@ -21,7 +22,7 @@ declare interface AutoRestParameterizedCustomHostTestClientOptions extends Servi
   dnsSuffix?: string;
 }
 
-declare class AutoRestParameterizedCustomHostTestClient extends ServiceClient {
+export default class AutoRestParameterizedCustomHostTestClient extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestParameterizedCustomHostTestClient class.
@@ -51,4 +52,4 @@ declare class AutoRestParameterizedCustomHostTestClient extends ServiceClient {
   paths: operations.Paths;
 }
 
-export = AutoRestParameterizedCustomHostTestClient;
+export { AutoRestParameterizedCustomHostTestClient, models as AutoRestParameterizedCustomHostTestModels };

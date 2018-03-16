@@ -10,9 +10,10 @@
 
 import { ServiceClientCredentials } from 'ms-rest';
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class MicrosoftAzureTestUrl extends AzureServiceClient {
+export default class MicrosoftAzureTestUrl extends AzureServiceClient {
   /**
    * Initializes a new instance of the MicrosoftAzureTestUrl class.
    * @constructor
@@ -58,4 +59,4 @@ declare class MicrosoftAzureTestUrl extends AzureServiceClient {
   group: operations.Group;
 }
 
-export = MicrosoftAzureTestUrl;
+export { MicrosoftAzureTestUrl, models as MicrosoftAzureTestUrlModels };

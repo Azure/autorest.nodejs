@@ -5,13 +5,13 @@ exports.__esModule = true;
 var should = require("should");
 var assert = require("assert");
 var _ = require('underscore');
-var flatteningClient = require("../Expected/AcceptanceTests/ModelFlattening/autoRestResourceFlatteningTestService");
+var autoRestResourceFlatteningTestService_1 = require("../Expected/AcceptanceTests/ModelFlattening/autoRestResourceFlatteningTestService");
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
 describe('nodejs', function () {
     describe('Swagger ModelFlattening BAT', function () {
         describe('Resource Flattening Operations', function () {
-            var testClient = new flatteningClient(baseUri, clientOptions);
+            var testClient = new autoRestResourceFlatteningTestService_1.AutoRestResourceFlatteningTestService(baseUri, clientOptions);
             it('should get external resource as an array', function (done) {
                 var expectedResult = [
                     {

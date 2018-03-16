@@ -9,6 +9,7 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
 /**
@@ -21,7 +22,7 @@ declare interface AutoRestUrlTestServiceOptions extends ServiceClientOptions {
   globalStringQuery?: string;
 }
 
-declare class AutoRestUrlTestService extends ServiceClient {
+export default class AutoRestUrlTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestUrlTestService class.
@@ -55,4 +56,4 @@ declare class AutoRestUrlTestService extends ServiceClient {
   pathItems: operations.PathItems;
 }
 
-export = AutoRestUrlTestService;
+export { AutoRestUrlTestService, models as AutoRestUrlTestServiceModels };

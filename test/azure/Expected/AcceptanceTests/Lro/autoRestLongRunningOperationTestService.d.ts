@@ -10,9 +10,10 @@
 
 import { ServiceClientCredentials } from 'ms-rest';
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestLongRunningOperationTestService extends AzureServiceClient {
+export default class AutoRestLongRunningOperationTestService extends AzureServiceClient {
   /**
    * Initializes a new instance of the AutoRestLongRunningOperationTestService class.
    * @constructor
@@ -55,4 +56,4 @@ declare class AutoRestLongRunningOperationTestService extends AzureServiceClient
   lROsCustomHeader: operations.LROsCustomHeader;
 }
 
-export = AutoRestLongRunningOperationTestService;
+export { AutoRestLongRunningOperationTestService, models as AutoRestLongRunningOperationTestServiceModels };

@@ -778,3 +778,6 @@ class ComplexModelClient extends ServiceClient {
 }
 
 module.exports = ComplexModelClient;
+module.exports['default'] = ComplexModelClient;
+module.exports.ComplexModelClient = ComplexModelClient;
+module.exports.ComplexModelModels = models;

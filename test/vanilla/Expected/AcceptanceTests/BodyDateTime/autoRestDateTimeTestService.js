@@ -53,3 +53,6 @@ class AutoRestDateTimeTestService extends ServiceClient {
 }
 
 module.exports = AutoRestDateTimeTestService;
+module.exports['default'] = AutoRestDateTimeTestService;
+module.exports.AutoRestDateTimeTestService = AutoRestDateTimeTestService;
+module.exports.AutoRestDateTimeTestServiceModels = models;

@@ -53,3 +53,6 @@ class AutoRestSwaggerBATHeaderService extends ServiceClient {
 }
 
 module.exports = AutoRestSwaggerBATHeaderService;
+module.exports['default'] = AutoRestSwaggerBATHeaderService;
+module.exports.AutoRestSwaggerBATHeaderService = AutoRestSwaggerBATHeaderService;
+module.exports.AutoRestSwaggerBATHeaderServiceModels = models;

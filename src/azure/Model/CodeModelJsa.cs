@@ -8,6 +8,7 @@ using AutoRest.Extensions.Azure;
 using AutoRest.NodeJS.Model;
 using Newtonsoft.Json;
 using AutoRest.Core.Utilities;
+using System.Text;
 
 namespace AutoRest.NodeJS.Azure.Model
 {
@@ -54,25 +55,12 @@ namespace AutoRest.NodeJS.Azure.Model
             }
         }
 
-        public override string ConstructImportTS()
-        {
-            IndentedStringBuilder builder = new IndentedStringBuilder(IndentedStringBuilder.TwoSpaces);
-            if (this.MethodTemplateModels.Any())
-            {
-                builder.Append("import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResponse, ServiceClientCredentials } from 'ms-rest';");
-            }
-            else
-            {
-                builder.Append("import { ServiceClientCredentials } from 'ms-rest';");
-            }
-            return builder.ToString();
-        }
+        public override string ConstructImportTS() =>
+            MethodTemplateModels.Any()
+                ? "import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResponse, ServiceClientCredentials } from 'ms-rest';"
+                : "import { ServiceClientCredentials } from 'ms-rest';";
 
-        public string ConstructImportTSAzure()
-        {
-            IndentedStringBuilder builder = new IndentedStringBuilder(IndentedStringBuilder.TwoSpaces);
-            builder.Append("import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';");
-            return builder.ToString();
-        }
+        public string ConstructImportTSAzure() =>
+            "import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';";
     }
 }

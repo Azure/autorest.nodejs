@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestSwaggerBATByteService extends ServiceClient {
+export default class AutoRestSwaggerBATByteService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestSwaggerBATByteService class.
@@ -35,4 +36,4 @@ declare class AutoRestSwaggerBATByteService extends ServiceClient {
   byteModel: operations.ByteModel;
 }
 
-export = AutoRestSwaggerBATByteService;
+export { AutoRestSwaggerBATByteService, models as AutoRestSwaggerBATByteServiceModels };

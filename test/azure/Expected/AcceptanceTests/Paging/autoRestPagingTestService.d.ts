@@ -10,9 +10,10 @@
 
 import { ServiceClientCredentials } from 'ms-rest';
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestPagingTestService extends AzureServiceClient {
+export default class AutoRestPagingTestService extends AzureServiceClient {
   /**
    * Initializes a new instance of the AutoRestPagingTestService class.
    * @constructor
@@ -52,4 +53,4 @@ declare class AutoRestPagingTestService extends AzureServiceClient {
   paging: operations.Paging;
 }
 
-export = AutoRestPagingTestService;
+export { AutoRestPagingTestService, models as AutoRestPagingTestServiceModels };

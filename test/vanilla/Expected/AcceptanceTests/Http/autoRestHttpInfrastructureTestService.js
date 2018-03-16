@@ -59,3 +59,6 @@ class AutoRestHttpInfrastructureTestService extends ServiceClient {
 }
 
 module.exports = AutoRestHttpInfrastructureTestService;
+module.exports['default'] = AutoRestHttpInfrastructureTestService;
+module.exports.AutoRestHttpInfrastructureTestService = AutoRestHttpInfrastructureTestService;
+module.exports.AutoRestHttpInfrastructureTestServiceModels = models;

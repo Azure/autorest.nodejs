@@ -81,3 +81,6 @@ class StorageManagementClient extends ServiceClient {
 }
 
 module.exports = StorageManagementClient;
+module.exports['default'] = StorageManagementClient;
+module.exports.StorageManagementClient = StorageManagementClient;
+module.exports.StorageManagementModels = models;

@@ -281,3 +281,6 @@ class AutoRestReportService extends ServiceClient {
 }
 
 module.exports = AutoRestReportService;
+module.exports['default'] = AutoRestReportService;
+module.exports.AutoRestReportService = AutoRestReportService;
+module.exports.AutoRestReportServiceModels = models;

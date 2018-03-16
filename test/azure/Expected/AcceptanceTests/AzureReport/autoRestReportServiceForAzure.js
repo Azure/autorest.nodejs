@@ -311,3 +311,6 @@ class AutoRestReportServiceForAzure extends ServiceClient {
 }
 
 module.exports = AutoRestReportServiceForAzure;
+module.exports['default'] = AutoRestReportServiceForAzure;
+module.exports.AutoRestReportServiceForAzure = AutoRestReportServiceForAzure;
+module.exports.AutoRestReportServiceForAzureModels = models;

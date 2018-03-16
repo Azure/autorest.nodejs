@@ -64,3 +64,6 @@ class AutoRestUrlTestService extends ServiceClient {
 }
 
 module.exports = AutoRestUrlTestService;
+module.exports['default'] = AutoRestUrlTestService;
+module.exports.AutoRestUrlTestService = AutoRestUrlTestService;
+module.exports.AutoRestUrlTestServiceModels = models;

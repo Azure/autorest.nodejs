@@ -11,7 +11,7 @@
 import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResponse } from 'ms-rest';
 import * as models from "./models";
 
-declare class ComplexModelClient extends ServiceClient {
+export default class ComplexModelClient extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the ComplexModelClient class.
@@ -237,4 +237,4 @@ declare class ComplexModelClient extends ServiceClient {
   update(subscriptionId: string, resourceGroupName: string, options: { productArrayOfDictionary? : { [propertyName: string]: models.Product }[], customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.CatalogArray>): void;
 }
 
-export = ComplexModelClient;
+export { ComplexModelClient, models as ComplexModelModels };

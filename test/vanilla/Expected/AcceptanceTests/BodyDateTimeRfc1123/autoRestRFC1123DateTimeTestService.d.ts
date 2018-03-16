@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestRFC1123DateTimeTestService extends ServiceClient {
+export default class AutoRestRFC1123DateTimeTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestRFC1123DateTimeTestService class.
@@ -35,4 +36,4 @@ declare class AutoRestRFC1123DateTimeTestService extends ServiceClient {
   datetimerfc1123: operations.Datetimerfc1123;
 }
 
-export = AutoRestRFC1123DateTimeTestService;
+export { AutoRestRFC1123DateTimeTestService, models as AutoRestRFC1123DateTimeTestServiceModels };

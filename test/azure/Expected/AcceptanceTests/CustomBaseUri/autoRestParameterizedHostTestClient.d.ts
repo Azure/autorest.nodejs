@@ -10,6 +10,7 @@
 
 import { ServiceClientCredentials } from 'ms-rest';
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
+import * as models from "./models";
 import * as operations from "./operations";
 
 /**
@@ -34,7 +35,7 @@ declare interface AutoRestParameterizedHostTestClientOptions extends AzureServic
   generateClientRequestId?: boolean;
 }
 
-declare class AutoRestParameterizedHostTestClient extends AzureServiceClient {
+export default class AutoRestParameterizedHostTestClient extends AzureServiceClient {
   /**
    * Initializes a new instance of the AutoRestParameterizedHostTestClient class.
    * @constructor
@@ -76,4 +77,4 @@ declare class AutoRestParameterizedHostTestClient extends AzureServiceClient {
   paths: operations.Paths;
 }
 
-export = AutoRestParameterizedHostTestClient;
+export { AutoRestParameterizedHostTestClient, models as AutoRestParameterizedHostTestModels };

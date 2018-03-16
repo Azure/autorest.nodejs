@@ -12,7 +12,7 @@ import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResp
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
 import * as models from "./models";
 
-declare class AutoRestReportServiceForAzure extends AzureServiceClient {
+export default class AutoRestReportServiceForAzure extends AzureServiceClient {
   /**
    * Initializes a new instance of the AutoRestReportServiceForAzure class.
    * @constructor
@@ -110,4 +110,4 @@ declare class AutoRestReportServiceForAzure extends AzureServiceClient {
   getReport(options: { qualifier? : string, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<{ [propertyName: string]: number }>): void;
 }
 
-export = AutoRestReportServiceForAzure;
+export { AutoRestReportServiceForAzure, models as AutoRestReportServiceForAzureModels };

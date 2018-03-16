@@ -53,3 +53,6 @@ class AutoRestRFC1123DateTimeTestService extends ServiceClient {
 }
 
 module.exports = AutoRestRFC1123DateTimeTestService;
+module.exports['default'] = AutoRestRFC1123DateTimeTestService;
+module.exports.AutoRestRFC1123DateTimeTestService = AutoRestRFC1123DateTimeTestService;
+module.exports.AutoRestRFC1123DateTimeTestServiceModels = models;

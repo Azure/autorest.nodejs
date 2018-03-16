@@ -4,8 +4,6 @@
 'use strict';
 
 var should = require('should');
-var http = require('http');
-var assert = require('assert');
 var msRest = require('ms-rest');
 var msRestAzure = require('ms-rest-azure');
 
@@ -13,7 +11,7 @@ var pagingClient = require('../Expected/AcceptanceTests/Paging/autoRestPagingTes
 
 var dummySubscriptionId = 'a878ae02-6106-429z-9397-58091ee45g98';
 var dummyToken = 'dummy12321343423';
-var credentials = new msRestAzure.TokenCredentials(dummyToken);
+var credentials = new msRest.TokenCredentials(dummyToken);
 
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
@@ -37,10 +35,10 @@ describe('nodejs', function () {
       });
 
       it('should get multiple pages', function (done) {
-          testClient.paging.getMultiplePages({'clientRequestId': 'client-id', 'pagingGetMultiplePagesOptions': null}, function (error, result) {
+        testClient.paging.getMultiplePages({ 'clientRequestId': 'client-id', 'pagingGetMultiplePagesOptions': null }, function (error, result) {
           var loop = function (nextLink, count) {
             if (nextLink !== null && nextLink !== undefined) {
-                testClient.paging.getMultiplePagesNext(nextLink, {'clientRequestId': 'client-id', 'pagingGetMultiplePagesOptions': null}, function (err, res) {
+              testClient.paging.getMultiplePagesNext(nextLink, { 'clientRequestId': 'client-id', 'pagingGetMultiplePagesOptions': null }, function (err, res) {
                 should.not.exist(err);
                 loop(res.nextLink, count + 1);
               });
@@ -57,30 +55,30 @@ describe('nodejs', function () {
       });
 
       it('should get multiple pages with odata kind nextLink', function (done) {
-          testClient.paging.getOdataMultiplePages({ 'clientRequestId': 'client-id', 'pagingGetOdataMultiplePagesOptions': null }, function (error, result) {
-              var loop = function (nextLink, count) {
-                  if (nextLink !== null && nextLink !== undefined) {
-                      testClient.paging.getOdataMultiplePagesNext(nextLink, { 'clientRequestId': 'client-id', 'pagingGetOdataMultiplePagesOptions': null }, function (err, res) {
-                          should.not.exist(err);
-                          loop(res.odatanextLink, count + 1);
-                      });
-                  } else {
-                      count.should.be.exactly(10);
-                      done();
-                  }
-              };
+        testClient.paging.getOdataMultiplePages({ 'clientRequestId': 'client-id', 'pagingGetOdataMultiplePagesOptions': null }, function (error, result) {
+          var loop = function (nextLink, count) {
+            if (nextLink !== null && nextLink !== undefined) {
+              testClient.paging.getOdataMultiplePagesNext(nextLink, { 'clientRequestId': 'client-id', 'pagingGetOdataMultiplePagesOptions': null }, function (err, res) {
+                should.not.exist(err);
+                loop(res.odatanextLink, count + 1);
+              });
+            } else {
+              count.should.be.exactly(10);
+              done();
+            }
+          };
 
-              should.not.exist(error);
-              should.exist(result.odatanextLink);
-              loop(result.odatanextLink, 1);
-          });
+          should.not.exist(error);
+          should.exist(result.odatanextLink);
+          loop(result.odatanextLink, 1);
+        });
       });
 
       it('should get multiple pages with offset', function (done) {
-          testClient.paging.getMultiplePagesWithOffset({'offset': 100}, {'clientRequestId': 'client-id'}, function (error, result) {
+        testClient.paging.getMultiplePagesWithOffset({ 'offset': 100 }, { 'clientRequestId': 'client-id' }, function (error, result) {
           var loop = function (nextLink, count) {
             if (nextLink !== null && nextLink !== undefined) {
-                testClient.paging.getMultiplePagesWithOffsetNext(nextLink, {'clientRequestId': 'client-id'}, function (err, res) {
+              testClient.paging.getMultiplePagesWithOffsetNext(nextLink, { 'clientRequestId': 'client-id' }, function (err, res) {
                 should.not.exist(err);
                 result = res;
                 loop(res.nextLink, count + 1);

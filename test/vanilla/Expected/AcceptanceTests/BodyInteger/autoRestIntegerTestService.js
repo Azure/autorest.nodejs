@@ -53,3 +53,6 @@ class AutoRestIntegerTestService extends ServiceClient {
 }
 
 module.exports = AutoRestIntegerTestService;
+module.exports['default'] = AutoRestIntegerTestService;
+module.exports.AutoRestIntegerTestService = AutoRestIntegerTestService;
+module.exports.AutoRestIntegerTestServiceModels = models;

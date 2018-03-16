@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestParameterFlattening extends ServiceClient {
+export default class AutoRestParameterFlattening extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestParameterFlattening class.
@@ -35,4 +36,4 @@ declare class AutoRestParameterFlattening extends ServiceClient {
   availabilitySets: operations.AvailabilitySets;
 }
 
-export = AutoRestParameterFlattening;
+export { AutoRestParameterFlattening, models as AutoRestParameterFlatteningModels };

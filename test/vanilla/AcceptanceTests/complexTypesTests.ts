@@ -7,10 +7,8 @@ var should = require('should');
 var assert = require('assert');
 import * as msRest from 'ms-rest';
 import * as moment from 'moment';
-import complexClient = require('../Expected/AcceptanceTests/BodyComplex/autoRestComplexTestService');
-import complexClientModels = require('../Expected/AcceptanceTests/BodyComplex/models');
-import additionalClient = require('../Expected/AcceptanceTests/AdditionalProperties/additionalPropertiesClient');
-import additionalClientModels = require('../Expected/AcceptanceTests/AdditionalProperties/models');
+import { AutoRestComplexTestService, AutoRestComplexTestServiceModels } from '../Expected/AcceptanceTests/BodyComplex/autoRestComplexTestService';
+import { AdditionalPropertiesClient, AdditionalPropertiesModels } from '../Expected/AcceptanceTests/AdditionalProperties/additionalPropertiesClient';
 
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
@@ -20,7 +18,7 @@ describe('nodejs', function () {
   describe('Swagger Complex Type BAT', function () {
 
     describe('Basic Types Operations', function () {
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it('should get and put valid basic type properties', function (done) {
         testClient.basicOperations.getValid(function (error, result) {
           should.not.exist(error);
@@ -71,7 +69,7 @@ describe('nodejs', function () {
     });
 
     describe('Primitive Types Operations', function () {
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it('should get and put valid int properties', function (done) {
         testClient.primitive.getInt(function (error, result) {
           should.not.exist(error);
@@ -150,7 +148,7 @@ describe('nodejs', function () {
           should.not.exist(error);
           assert.deepEqual(result.field, new Date('0001-01-01'));
           assert.deepEqual(result.leap, new Date('2016-02-29'));
-          var complexBody = <complexClientModels.DateWrapper>{ 'field': new Date('0001-01-01'), 'leap': new Date('2016-02-29') }
+          var complexBody = <AutoRestComplexTestServiceModels.DateWrapper>{ 'field': new Date('0001-01-01'), 'leap': new Date('2016-02-29') }
           testClient.primitive.putDate(complexBody, function (error) {
             should.not.exist(error);
             done();
@@ -215,7 +213,7 @@ describe('nodejs', function () {
     });
 
     describe('Array Types Operations', function () {
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it('should get valid array type properties', function (done) {
         var testArray = ['1, 2, 3, 4', '', null, '&S#$(*Y', 'The quick brown fox jumps over the lazy dog'];
         testClient.arrayModel.getValid(function (error, result) {
@@ -249,7 +247,7 @@ describe('nodejs', function () {
     });
 
     describe('Dictionary Types Operations', function () {
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it('should get and put valid dictionary type properties', function (done) {
         var testDictionary: { [propertyName: string]: string } =
           { 'txt': 'notepad', 'bmp': 'mspaint', 'xls': 'excel', 'exe': '', '': null };
@@ -294,7 +292,7 @@ describe('nodejs', function () {
 
     describe('Complex Types with Inheritance Operations', function () {
       var siamese = { "breed": "persian", "color": "green", "hates": [{ "food": "tomato", "id": 1, "name": "Potato" }, { "food": "french fries", "id": -1, "name": "Tomato" }], "id": 2, "name": "Siameeee" };
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it('should get valid basic type properties', function (done) {
         testClient.inheritance.getValid(function (error, result) {
           should.not.exist(error);
@@ -309,7 +307,7 @@ describe('nodejs', function () {
     });
 
     describe('Complex Types with ReadOnly Properties', function () {
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it('should get and put complex types with readonly properties', function (done) {
         testClient.readonlyproperty.getValid(function (error, result) {
           should.not.exist(error);
@@ -356,7 +354,7 @@ describe('nodejs', function () {
           }
         ]
       };
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it.only('should get valid polymorphic properties', function (done) {
         testClient.polymorphism.getValid(function (error, result) {
           should.not.exist(error);
@@ -401,18 +399,18 @@ describe('nodejs', function () {
         });
       });
 
-      var rawSalmon: complexClientModels.SmartSalmon = {
+      var rawSalmon: AutoRestComplexTestServiceModels.SmartSalmon = {
         "species": "king",
         "length": 1,
         "siblings": [
-          <complexClientModels.Shark>{
+          <AutoRestComplexTestServiceModels.Shark>{
             "species": "predator",
             "length": 20,
             "fishtype": "shark",
             "age": 6,
             "birthday": new Date("2012-01-05T01:00:00.000Z")
           },
-          <complexClientModels.Sawshark>{
+          <AutoRestComplexTestServiceModels.Sawshark>{
             "species": "dangerous",
             "length": 10,
             "fishtype": "sawshark",
@@ -420,7 +418,7 @@ describe('nodejs', function () {
             "birthday": new Date("1900-01-05T01:00:00.000Z"),
             "picture": new Buffer([255, 255, 255, 255, 254])
           },
-          <complexClientModels.Goblinshark>{
+          <AutoRestComplexTestServiceModels.Goblinshark>{
             "species": "scary",
             "length": 30,
             "fishtype": "goblin",
@@ -468,18 +466,18 @@ describe('nodejs', function () {
       });
 
       it('should put polymorphic types without discriminator property', function (done) {
-        var rawSalmon: complexClientModels.SmartSalmon = {
+        var rawSalmon: AutoRestComplexTestServiceModels.SmartSalmon = {
           "species": "king",
           "length": 1,
           "siblings": [
-            <complexClientModels.Shark>{
+            <AutoRestComplexTestServiceModels.Shark>{
               "species": "predator",
               "length": 20,
               "fishtype": "shark",
               "age": 6,
               "birthday": new Date("2012-01-05T01:00:00.000Z")
             },
-            <complexClientModels.Sawshark>{
+            <AutoRestComplexTestServiceModels.Sawshark>{
               "species": "dangerous",
               "length": 10,
               "fishtype": "sawshark",
@@ -487,7 +485,7 @@ describe('nodejs', function () {
               "birthday": new Date("1900-01-05T01:00:00.000Z"),
               "picture": new Buffer([255, 255, 255, 255, 254])
             },
-            <complexClientModels.Goblinshark>{
+            <AutoRestComplexTestServiceModels.Goblinshark>{
               "species": "scary",
               "length": 30,
               "fishtype": "goblin",
@@ -523,35 +521,35 @@ describe('nodejs', function () {
     });
 
     describe('Complex Types with recursive definitions', function () {
-      var bigfish = <complexClientModels.Fish>{
+      var bigfish = <AutoRestComplexTestServiceModels.Fish>{
         'fishtype': 'salmon',
         'location': 'alaska',
         'iswild': true,
         'species': 'king',
         'length': 1,
         'siblings': [
-          <complexClientModels.Shark>{
+          <AutoRestComplexTestServiceModels.Shark>{
             'fishtype': 'shark',
             'age': 6,
             'birthday': new Date('2012-01-05T01:00:00Z'),
             'species': 'predator',
             'length': 20,
             'siblings': [
-              <complexClientModels.Salmon>{
+              <AutoRestComplexTestServiceModels.Salmon>{
                 'fishtype': 'salmon',
                 'location': 'atlantic',
                 'iswild': true,
                 'species': 'coho',
                 'length': 2,
                 'siblings': [
-                  <complexClientModels.Shark>{
+                  <AutoRestComplexTestServiceModels.Shark>{
                     'fishtype': 'shark',
                     'age': 6,
                     'birthday': new Date('2012-01-05T01:00:00Z'),
                     'species': 'predator',
                     'length': 20
                   },
-                  <complexClientModels.Sawshark>{
+                  <AutoRestComplexTestServiceModels.Sawshark>{
                     'fishtype': 'sawshark',
                     'age': 105,
                     'birthday': new Date('1900-01-05T01:00:00Z'),
@@ -561,7 +559,7 @@ describe('nodejs', function () {
                   }
                 ]
               },
-              <complexClientModels.Sawshark>{
+              <AutoRestComplexTestServiceModels.Sawshark>{
                 'fishtype': 'sawshark',
                 'age': 105,
                 'birthday': new Date('1900-01-05T01:00:00Z'),
@@ -572,7 +570,7 @@ describe('nodejs', function () {
               }
             ]
           },
-          <complexClientModels.Sawshark>{
+          <AutoRestComplexTestServiceModels.Sawshark>{
             'fishtype': 'sawshark',
             'age': 105,
             'birthday': new Date('1900-01-05T01:00:00Z'),
@@ -583,7 +581,7 @@ describe('nodejs', function () {
           }
         ]
       };
-      var testClient = new complexClient(baseUri, clientOptions);
+      var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
       it('should get and put valid basic type properties', function (done) {
         testClient.polymorphicrecursive.getValid(function (error, result) {
           should.not.exist(error);
@@ -598,9 +596,9 @@ describe('nodejs', function () {
   });
 
   describe('Swagger additionalProperties BAT', function () {
-    var testClient = new additionalClient(baseUri, clientOptions);
+    var testClient = new AdditionalPropertiesClient(baseUri, clientOptions);
     it('should put object with additionalProperties true correctly', function (done) {
-      var apTrue: additionalClientModels.PetAPTrue = {
+      var apTrue: AdditionalPropertiesModels.PetAPTrue = {
         id: 1,
         name: 'Puppy',
         birthdate: new Date('2017-12-13T02:29:51Z'),
@@ -625,7 +623,7 @@ describe('nodejs', function () {
     });
 
     it('should put object with additionalProperties type object correctly', function (done) {
-      var apObject: additionalClientModels.PetAPTrue = {
+      var apObject: AdditionalPropertiesModels.PetAPTrue = {
         id: 2,
         name: 'Hira',
         siblings: [
@@ -664,7 +662,7 @@ describe('nodejs', function () {
     });
 
     it('should put object with additionalProperties type string correctly', function (done) {
-      var apString: additionalClientModels.PetAPString = {
+      var apString: AdditionalPropertiesModels.PetAPString = {
         id: 3,
         name: 'Tommy',
         color: 'red',
@@ -687,7 +685,7 @@ describe('nodejs', function () {
     });
 
     it('should put object with additionalProperties in properties correctly', function (done) {
-      var apInProperties: additionalClientModels.PetAPInProperties = {
+      var apInProperties: AdditionalPropertiesModels.PetAPInProperties = {
         id: 4,
         name: 'Bunny',
         additionalProperties: {
@@ -714,7 +712,7 @@ describe('nodejs', function () {
     });
 
     it('should put object with additionalProperties in properties and additionalProperties of type string correctly', function (done) {
-      var apInPropertiesWithAPString: additionalClientModels.PetAPInPropertiesWithAPString = {
+      var apInPropertiesWithAPString: AdditionalPropertiesModels.PetAPInPropertiesWithAPString = {
         id: 5,
         name: 'Funny',
         odatalocation: 'westus',

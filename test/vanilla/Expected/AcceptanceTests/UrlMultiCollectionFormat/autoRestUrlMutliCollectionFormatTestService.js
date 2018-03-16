@@ -53,3 +53,6 @@ class AutoRestUrlMutliCollectionFormatTestService extends ServiceClient {
 }
 
 module.exports = AutoRestUrlMutliCollectionFormatTestService;
+module.exports['default'] = AutoRestUrlMutliCollectionFormatTestService;
+module.exports.AutoRestUrlMutliCollectionFormatTestService = AutoRestUrlMutliCollectionFormatTestService;
+module.exports.AutoRestUrlMutliCollectionFormatTestServiceModels = models;

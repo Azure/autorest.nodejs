@@ -10,7 +10,7 @@ import * as msRest from 'ms-rest';
 import moment = require('moment');
 var _ = require('underscore');
 
-import headerClient = require('../Expected/AcceptanceTests/Header/autoRestSwaggerBATHeaderService');
+import AutoRestSwaggerBATHeaderService from '../Expected/AcceptanceTests/Header/autoRestSwaggerBATHeaderService';
 
 var dummyToken = 'dummy12321343423';
 var credentials = new msRest.TokenCredentials(dummyToken);
@@ -23,7 +23,7 @@ describe('nodejs', function () {
   describe('Swagger Header BAT', function () {
 
     describe('Basic Header Operations', function () {
-      var testClient = new headerClient(baseUri, clientOptions);
+      var testClient = new AutoRestSwaggerBATHeaderService(baseUri, clientOptions);
       it('should override existing headers', function (done) {
         testClient.header.paramExistingKey('overwrite', function (error, result, request, response) {
           should.not.exist(error);

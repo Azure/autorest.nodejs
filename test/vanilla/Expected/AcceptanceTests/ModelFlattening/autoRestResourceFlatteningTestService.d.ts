@@ -11,7 +11,7 @@
 import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResponse } from 'ms-rest';
 import * as models from "./models";
 
-declare class AutoRestResourceFlatteningTestService extends ServiceClient {
+export default class AutoRestResourceFlatteningTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestResourceFlatteningTestService class.
@@ -746,4 +746,4 @@ declare class AutoRestResourceFlatteningTestService extends ServiceClient {
   putSimpleProductWithGrouping(flattenParameterGroup: models.FlattenParameterGroup, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.SimpleProduct>): void;
 }
 
-export = AutoRestResourceFlatteningTestService;
+export { AutoRestResourceFlatteningTestService, models as AutoRestResourceFlatteningTestServiceModels };

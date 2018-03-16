@@ -77,3 +77,6 @@ class AutoRestLongRunningOperationTestService extends ServiceClient {
 }
 
 module.exports = AutoRestLongRunningOperationTestService;
+module.exports['default'] = AutoRestLongRunningOperationTestService;
+module.exports.AutoRestLongRunningOperationTestService = AutoRestLongRunningOperationTestService;
+module.exports.AutoRestLongRunningOperationTestServiceModels = models;

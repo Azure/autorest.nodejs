@@ -10,9 +10,10 @@
 
 import { ServiceClientCredentials } from 'ms-rest';
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestHeadTestService extends AzureServiceClient {
+export default class AutoRestHeadTestService extends AzureServiceClient {
   /**
    * Initializes a new instance of the AutoRestHeadTestService class.
    * @constructor
@@ -52,4 +53,4 @@ declare class AutoRestHeadTestService extends AzureServiceClient {
   httpSuccess: operations.HttpSuccess;
 }
 
-export = AutoRestHeadTestService;
+export { AutoRestHeadTestService, models as AutoRestHeadTestServiceModels };

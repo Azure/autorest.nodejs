@@ -11,7 +11,7 @@
 import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResponse } from 'ms-rest';
 import * as models from "./models";
 
-declare class AutoRestReportService extends ServiceClient {
+export default class AutoRestReportService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestReportService class.
@@ -92,4 +92,4 @@ declare class AutoRestReportService extends ServiceClient {
   getReport(options: { qualifier? : string, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<{ [propertyName: string]: number }>): void;
 }
 
-export = AutoRestReportService;
+export { AutoRestReportService, models as AutoRestReportServiceModels };

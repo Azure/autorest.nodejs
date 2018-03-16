@@ -53,3 +53,6 @@ class AutoRestSwaggerBATFormDataService extends ServiceClient {
 }
 
 module.exports = AutoRestSwaggerBATFormDataService;
+module.exports['default'] = AutoRestSwaggerBATFormDataService;
+module.exports.AutoRestSwaggerBATFormDataService = AutoRestSwaggerBATFormDataService;
+module.exports.AutoRestSwaggerBATFormDataServiceModels = models;

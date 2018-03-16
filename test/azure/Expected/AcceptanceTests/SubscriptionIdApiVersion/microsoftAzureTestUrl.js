@@ -80,3 +80,6 @@ class MicrosoftAzureTestUrl extends ServiceClient {
 }
 
 module.exports = MicrosoftAzureTestUrl;
+module.exports['default'] = MicrosoftAzureTestUrl;
+module.exports.MicrosoftAzureTestUrl = MicrosoftAzureTestUrl;
+module.exports.MicrosoftAzureTestUrlModels = models;

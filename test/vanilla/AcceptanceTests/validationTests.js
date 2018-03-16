@@ -4,14 +4,14 @@
 exports.__esModule = true;
 var should = require("should");
 var msRest = require("ms-rest");
-var validationClient = require("../Expected/AcceptanceTests/Validation/autoRestValidationTest");
+var autoRestValidationTest_1 = require("../Expected/AcceptanceTests/Validation/autoRestValidationTest");
 var dummyToken = 'dummy12321343423';
 var credentials = new msRest.TokenCredentials(dummyToken);
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
 describe('nodejs', function () {
     describe('Swagger BAT Validation', function () {
-        var testClient = new validationClient("abc123", "12-34-5678", baseUri, clientOptions);
+        var testClient = new autoRestValidationTest_1["default"]("abc123", "12-34-5678", baseUri, clientOptions);
         describe('Of Method Parameters', function () {
             it('should test the minimum length constraint on resourceGroupName', function (done) {
                 testClient.validationOfMethodParameters("1", 100, function (err, result) {
@@ -56,7 +56,7 @@ describe('nodejs', function () {
                 });
             });
             it('should test the pattern constraint on apiVersion', function (done) {
-                var testClient2 = new validationClient("abc123", "12345", baseUri, clientOptions);
+                var testClient2 = new autoRestValidationTest_1["default"]("abc123", "12345", baseUri, clientOptions);
                 testClient2.validationOfMethodParameters("123", 150, function (err, result) {
                     should.exist(err);
                     err.message.should.match(/.*apiVersion.*constraint.*Pattern.*/ig);

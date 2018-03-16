@@ -11,10 +11,7 @@
 @EmptyLine
 @Model.ConstructImportTS()
 @Model.ConstructImportTSAzure()
-@if (Model.MethodTemplateModels.Any())
-{
-@:import * as models from "./models";
-}
+import * as models from "./models";
 @if (Model.MethodGroupModels.Any()) {
 @:import * as operations from "./operations";
 }
@@ -38,7 +35,7 @@ foreach (var param in optionalParameters)
 @:}
 @EmptyLine
 }
-declare class @(Model.Name) extends AzureServiceClient {
+export default class @(Model.Name) extends AzureServiceClient {
   /**
    * Initializes a new instance of the @Model.Name class.
    * @@constructor
@@ -92,4 +89,4 @@ foreach (var methodGroup in Model.MethodGroupModels)
 }
 }
 @EmptyLine
-export = @(Model.Name);
+@Model.ConstructServiceClientDTSExports()

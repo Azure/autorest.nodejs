@@ -6,7 +6,7 @@
 import should = require('should');
 import * as msRest from 'ms-rest';
 
-import reqOptClient = require('../Expected/AcceptanceTests/RequiredOptional/autoRestRequiredOptionalTestService');
+import AutoRestRequiredOptionalTestService from '../Expected/AcceptanceTests/RequiredOptional/autoRestRequiredOptionalTestService';
 
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
@@ -17,7 +17,7 @@ describe('nodejs', function () {
   describe('Swagger Required Optional BAT', function () {
 
     describe('Basic Required Optional Operations', function () {
-      var testClient = new reqOptClient('', '', baseUri, clientOptions);
+      var testClient = new AutoRestRequiredOptionalTestService('', '', baseUri, clientOptions);
 
       it('should throw error on null path parameter', function (done) {
         testClient.implicit.getRequiredPath(null, function (error, result) {

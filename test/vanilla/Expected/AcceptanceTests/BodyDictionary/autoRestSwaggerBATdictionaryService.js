@@ -53,3 +53,6 @@ class AutoRestSwaggerBATdictionaryService extends ServiceClient {
 }
 
 module.exports = AutoRestSwaggerBATdictionaryService;
+module.exports['default'] = AutoRestSwaggerBATdictionaryService;
+module.exports.AutoRestSwaggerBATdictionaryService = AutoRestSwaggerBATdictionaryService;
+module.exports.AutoRestSwaggerBATdictionaryServiceModels = models;

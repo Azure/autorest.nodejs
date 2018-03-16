@@ -5,14 +5,14 @@ exports.__esModule = true;
 var should = require("should");
 var msRest = require("ms-rest");
 var _ = require('underscore');
-var reportClient = require("../Expected/AcceptanceTests/Report/autoRestReportService");
+var autoRestReportService_1 = require("../Expected/AcceptanceTests/Report/autoRestReportService");
 var dummyToken = 'dummy12321343423';
 var credentials = new msRest.TokenCredentials(dummyToken);
 var clientOptions = {};
 var baseUri = 'http://localhost:3000';
 describe('nodejs', function () {
     describe('Swagger BAT coverage report', function () {
-        var testClient = new reportClient(baseUri, clientOptions);
+        var testClient = new autoRestReportService_1["default"](baseUri, clientOptions);
         it('should have 100% coverage', function (done) {
             testClient.getReport(function (error, result) {
                 should.not.exist(error);

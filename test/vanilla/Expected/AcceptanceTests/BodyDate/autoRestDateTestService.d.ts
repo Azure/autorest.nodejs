@@ -9,9 +9,10 @@
  */
 
 import { ServiceClient, ServiceClientOptions } from 'ms-rest';
+import * as models from "./models";
 import * as operations from "./operations";
 
-declare class AutoRestDateTestService extends ServiceClient {
+export default class AutoRestDateTestService extends ServiceClient {
   /**
    * @class
    * Initializes a new instance of the AutoRestDateTestService class.
@@ -35,4 +36,4 @@ declare class AutoRestDateTestService extends ServiceClient {
   dateModel: operations.DateModel;
 }
 
-export = AutoRestDateTestService;
+export { AutoRestDateTestService, models as AutoRestDateTestServiceModels };

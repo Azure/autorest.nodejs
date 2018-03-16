@@ -54,3 +54,6 @@ class CompositeBoolInt extends ServiceClient {
 }
 
 module.exports = CompositeBoolInt;
+module.exports['default'] = CompositeBoolInt;
+module.exports.CompositeBoolInt = CompositeBoolInt;
+module.exports.CompositeBoolIntModels = models;

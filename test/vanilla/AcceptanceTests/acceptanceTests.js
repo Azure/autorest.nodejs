@@ -8,26 +8,26 @@ var assert = require("assert");
 var msRest = require("ms-rest");
 var moment = require("moment");
 var fs = require("fs");
-var boolClient = require("../Expected/AcceptanceTests/BodyBoolean/autoRestBoolTestService");
-var stringClient = require("../Expected/AcceptanceTests/BodyString/autoRestSwaggerBATService");
-var extensibleEnumClient = require("../Expected/AcceptanceTests/ExtensibleEnums/petStoreInc");
-var integerClient = require("../Expected/AcceptanceTests/BodyInteger/autoRestIntegerTestService");
-var compositeBoolIntClient = require("../Expected/AcceptanceTests/CompositeBoolIntClient/compositeBoolInt");
-var numberClient = require("../Expected/AcceptanceTests/BodyNumber/autoRestNumberTestService");
-var byteClient = require("../Expected/AcceptanceTests/BodyByte/autoRestSwaggerBATByteService");
-var dateClient = require("../Expected/AcceptanceTests/BodyDate/autoRestDateTestService");
-var dateTimeClient = require("../Expected/AcceptanceTests/BodyDateTime/autoRestDateTimeTestService");
-var dateTimeRfc1123Client = require("../Expected/AcceptanceTests/BodyDateTimeRfc1123/autoRestRFC1123DateTimeTestService");
-var durationClient = require("../Expected/AcceptanceTests/BodyDuration/autoRestDurationTestService");
-var urlClient = require("../Expected/AcceptanceTests/Url/autoRestUrlTestService");
-var urlMultiCollectionClient = require("../Expected/AcceptanceTests/UrlMultiCollectionFormat/autoRestUrlMutliCollectionFormatTestService");
-var fileClient = require("../Expected/AcceptanceTests/BodyFile/autoRestSwaggerBATFileService");
-var arrayClient = require("../Expected/AcceptanceTests/BodyArray/autoRestSwaggerBATArrayService");
-var dictionaryClient = require("../Expected/AcceptanceTests/BodyDictionary/autoRestSwaggerBATdictionaryService");
-var httpClient = require("../Expected/AcceptanceTests/Http/autoRestHttpInfrastructureTestService");
-var formDataClient = require("../Expected/AcceptanceTests/BodyFormData/autoRestSwaggerBATFormDataService");
-var customBaseUriClient = require("../Expected/AcceptanceTests/CustomBaseUri/autoRestParameterizedHostTestClient");
-var customBaseUriClientMoreOptions = require("../Expected/AcceptanceTests/CustomBaseUriMoreOptions/autoRestParameterizedCustomHostTestClient");
+var autoRestBoolTestService_1 = require("../Expected/AcceptanceTests/BodyBoolean/autoRestBoolTestService");
+var autoRestSwaggerBATService_1 = require("../Expected/AcceptanceTests/BodyString/autoRestSwaggerBATService");
+var petStoreInc_1 = require("../Expected/AcceptanceTests/ExtensibleEnums/petStoreInc");
+var autoRestIntegerTestService_1 = require("../Expected/AcceptanceTests/BodyInteger/autoRestIntegerTestService");
+var compositeBoolInt_1 = require("../Expected/AcceptanceTests/CompositeBoolIntClient/compositeBoolInt");
+var autoRestNumberTestService_1 = require("../Expected/AcceptanceTests/BodyNumber/autoRestNumberTestService");
+var autoRestSwaggerBATByteService_1 = require("../Expected/AcceptanceTests/BodyByte/autoRestSwaggerBATByteService");
+var autoRestDateTestService_1 = require("../Expected/AcceptanceTests/BodyDate/autoRestDateTestService");
+var autoRestDateTimeTestService_1 = require("../Expected/AcceptanceTests/BodyDateTime/autoRestDateTimeTestService");
+var autoRestRFC1123DateTimeTestService_1 = require("../Expected/AcceptanceTests/BodyDateTimeRfc1123/autoRestRFC1123DateTimeTestService");
+var autoRestDurationTestService_1 = require("../Expected/AcceptanceTests/BodyDuration/autoRestDurationTestService");
+var autoRestUrlTestService_1 = require("../Expected/AcceptanceTests/Url/autoRestUrlTestService");
+var autoRestUrlMutliCollectionFormatTestService_1 = require("../Expected/AcceptanceTests/UrlMultiCollectionFormat/autoRestUrlMutliCollectionFormatTestService");
+var autoRestSwaggerBATFileService_1 = require("../Expected/AcceptanceTests/BodyFile/autoRestSwaggerBATFileService");
+var autoRestSwaggerBATArrayService_1 = require("../Expected/AcceptanceTests/BodyArray/autoRestSwaggerBATArrayService");
+var autoRestSwaggerBATdictionaryService_1 = require("../Expected/AcceptanceTests/BodyDictionary/autoRestSwaggerBATdictionaryService");
+var autoRestHttpInfrastructureTestService_1 = require("../Expected/AcceptanceTests/Http/autoRestHttpInfrastructureTestService");
+var autoRestSwaggerBATFormDataService_1 = require("../Expected/AcceptanceTests/BodyFormData/autoRestSwaggerBATFormDataService");
+var autoRestParameterizedHostTestClient_1 = require("../Expected/AcceptanceTests/CustomBaseUri/autoRestParameterizedHostTestClient");
+var autoRestParameterizedCustomHostTestClient_1 = require("../Expected/AcceptanceTests/CustomBaseUriMoreOptions/autoRestParameterizedCustomHostTestClient");
 var dummyToken = 'dummy12321343423';
 var credentials = new msRest.TokenCredentials(dummyToken);
 // TODO: Check types
@@ -57,7 +57,7 @@ describe('nodejs', function () {
             var customOptions = {
                 host: 'host:3000'
             };
-            var testClient = new customBaseUriClient(customOptions);
+            var testClient = new autoRestParameterizedHostTestClient_1["default"](customOptions);
             it('should return 200', function (done) {
                 testClient.paths.getEmpty('local', function (error, result, request, response) {
                     should.not.exist(error);
@@ -87,7 +87,7 @@ describe('nodejs', function () {
             var customOptions = {
                 dnsSuffix: 'host:3000'
             };
-            var testClient = new customBaseUriClientMoreOptions('test12', customOptions);
+            var testClient = new autoRestParameterizedCustomHostTestClient_1["default"]('test12', customOptions);
             it('should return 200', function (done) {
                 testClient.paths.getEmpty('http://lo', 'cal', 'key1', function (error, result, request, response) {
                     should.not.exist(error);
@@ -97,7 +97,7 @@ describe('nodejs', function () {
             });
         });
         describe('Bool Client', function () {
-            var testClient = new boolClient(baseUri, clientOptions);
+            var testClient = new autoRestBoolTestService_1["default"](baseUri, clientOptions);
             it('should get valid boolean values', function (done) {
                 testClient.bool.getTrue(function (error, result) {
                     should.not.exist(error);
@@ -130,7 +130,7 @@ describe('nodejs', function () {
             });
         });
         describe('Integer Client', function () {
-            var testClient = new integerClient(baseUri, clientOptions);
+            var testClient = new autoRestIntegerTestService_1["default"](baseUri, clientOptions);
             it('should put max value for 32 and 64 bit Integers', function (done) {
                 testClient.intModel.putMax32((Math.pow(2, 32 - 1) - 1), function (error, result) {
                     should.not.exist(error);
@@ -204,7 +204,7 @@ describe('nodejs', function () {
             });
         });
         describe('CompositeBoolInt Client', function () {
-            var testClient = new compositeBoolIntClient(baseUri, clientOptions);
+            var testClient = new compositeBoolInt_1["default"](baseUri, clientOptions);
             it('should get valid boolean values', function (done) {
                 testClient.bool.getTrue(function (error, result) {
                     should.not.exist(error);
@@ -287,7 +287,7 @@ describe('nodejs', function () {
             });
         });
         describe('Number Client', function () {
-            var testClient = new numberClient(baseUri, clientOptions);
+            var testClient = new autoRestNumberTestService_1["default"](baseUri, clientOptions);
             it('should put big float and double values', function (done) {
                 testClient.number.putBigFloat(3.402823e+20, function (error, result) {
                     should.not.exist(error);
@@ -364,7 +364,7 @@ describe('nodejs', function () {
             });
         });
         describe('Extensible Enum Client', function () {
-            var testClient = new extensibleEnumClient(baseUri, clientOptions);
+            var testClient = new petStoreInc_1["default"](baseUri, clientOptions);
             it('should support expected enum', function (done) {
                 testClient.petOperations.getByPetId('tommy', function (err, result) {
                     should.not.exist(err);
@@ -403,7 +403,7 @@ describe('nodejs', function () {
             });
         });
         describe('String Client', function () {
-            var testClient = new stringClient(baseUri, clientOptions);
+            var testClient = new autoRestSwaggerBATService_1["default"](baseUri, clientOptions);
             it('should get and put referenced enum', function (done) {
                 testClient.enumModel.getReferenced(function (err, result) {
                     should.not.exist(err);
@@ -525,7 +525,7 @@ describe('nodejs', function () {
             });
         });
         describe('Byte Client', function () {
-            var testClient = new byteClient(baseUri, clientOptions);
+            var testClient = new autoRestSwaggerBATByteService_1["default"](baseUri, clientOptions);
             var bytes = new Buffer([255, 254, 253, 252, 251, 250, 249, 248, 247, 246]);
             it('should support valid null and empty value', function (done) {
                 testClient.byteModel.getNull(function (error, result) {
@@ -558,7 +558,7 @@ describe('nodejs', function () {
             });
         });
         describe('Date Client', function () {
-            var testClient = new dateClient(baseUri, clientOptions);
+            var testClient = new autoRestDateTestService_1["default"](baseUri, clientOptions);
             it('should get min and max date', function (done) {
                 testClient.dateModel.getMinDate(function (error, result) {
                     should.not.exist(error);
@@ -624,7 +624,7 @@ describe('nodejs', function () {
             });
         });
         describe('DateTime Client', function () {
-            var testClient = new dateTimeClient(baseUri, clientOptions);
+            var testClient = new autoRestDateTimeTestService_1["default"](baseUri, clientOptions);
             it('should properly handle null value for DateTime', function (done) {
                 testClient.datetime.getNull(function (error, result) {
                     should.not.exist(result);
@@ -822,7 +822,7 @@ describe('nodejs', function () {
             });
         });
         describe('DateTimeRfc1123 Client', function () {
-            var testClient = new dateTimeRfc1123Client(baseUri, clientOptions);
+            var testClient = new autoRestRFC1123DateTimeTestService_1["default"](baseUri, clientOptions);
             it('should properly handle null value for DateTimeRfc1123', function (done) {
                 testClient.datetimerfc1123.getNull(function (error, result) {
                     should.not.exist(result);
@@ -913,7 +913,7 @@ describe('nodejs', function () {
             });
         });
         describe('Duration Client', function () {
-            var testClient = new durationClient(baseUri, clientOptions);
+            var testClient = new autoRestDurationTestService_1["default"](baseUri, clientOptions);
             it('should properly handle null value for Duration', function (done) {
                 testClient.duration.getNull(function (error, result) {
                     should.not.exist(result);
@@ -949,7 +949,7 @@ describe('nodejs', function () {
         });
         describe('Array Client', function () {
             describe('for primitive types', function () {
-                var testClient = new arrayClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATArrayService_1["default"](baseUri, clientOptions);
                 it('should get and put empty arrays', function (done) {
                     testClient.arrayModel.getEmpty(function (error, result) {
                         should.not.exist(error);
@@ -1186,7 +1186,7 @@ describe('nodejs', function () {
                 });
             });
             describe('for complex types', function () {
-                var testClient = new arrayClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATArrayService_1["default"](baseUri, clientOptions);
                 it('should get null and empty complex types in array', function (done) {
                     testClient.arrayModel.getComplexEmpty(function (error, result) {
                         should.not.exist(error);
@@ -1224,7 +1224,7 @@ describe('nodejs', function () {
                 });
             });
             describe('for array of arrays', function () {
-                var testClient = new arrayClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATArrayService_1["default"](baseUri, clientOptions);
                 it('should get null and empty array in an array', function (done) {
                     testClient.arrayModel.getArrayNull(function (error, result) {
                         should.not.exist(error);
@@ -1262,7 +1262,7 @@ describe('nodejs', function () {
                 });
             });
             describe('for array of dictionaries', function () {
-                var testClient = new arrayClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATArrayService_1["default"](baseUri, clientOptions);
                 it('should get null and empty dictionary in an array', function (done) {
                     testClient.arrayModel.getDictionaryNull(function (error, result) {
                         should.not.exist(error);
@@ -1302,7 +1302,7 @@ describe('nodejs', function () {
         });
         describe('Dictionary Client', function () {
             describe('for primitive types', function () {
-                var testClient = new dictionaryClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATdictionaryService_1.AutoRestSwaggerBATdictionaryService(baseUri, clientOptions);
                 it('should get and put empty dictionaries', function (done) {
                     testClient.dictionary.getEmpty(function (error, result) {
                         should.not.exist(error);
@@ -1613,7 +1613,7 @@ describe('nodejs', function () {
                 });
             });
             describe('for complex types', function () {
-                var testClient = new dictionaryClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATdictionaryService_1.AutoRestSwaggerBATdictionaryService(baseUri, clientOptions);
                 it('should get null and empty complex types in dictionary', function (done) {
                     testClient.dictionary.getComplexEmpty(function (error, result) {
                         should.not.exist(error);
@@ -1651,7 +1651,7 @@ describe('nodejs', function () {
                 });
             });
             describe('for dictionary of arrays', function () {
-                var testClient = new dictionaryClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATdictionaryService_1.AutoRestSwaggerBATdictionaryService(baseUri, clientOptions);
                 it('should get null and empty array in dictionary', function (done) {
                     testClient.dictionary.getArrayNull(function (error, result) {
                         should.not.exist(error);
@@ -1689,7 +1689,7 @@ describe('nodejs', function () {
                 });
             });
             describe('for dictionary of dictionaries', function () {
-                var testClient = new dictionaryClient(baseUri, clientOptions);
+                var testClient = new autoRestSwaggerBATdictionaryService_1.AutoRestSwaggerBATdictionaryService(baseUri, clientOptions);
                 it('should get null and empty dictionary in dictionary', function (done) {
                     testClient.dictionary.getDictionaryNull(function (error, result) {
                         should.not.exist(error);
@@ -1728,7 +1728,7 @@ describe('nodejs', function () {
             });
         });
         describe('Files Client', function () {
-            var testClient = new fileClient(baseUri, clientOptions);
+            var testClient = new autoRestSwaggerBATFileService_1["default"](baseUri, clientOptions);
             it('should correctly deserialize binary streams', function (done) {
                 testClient.files.getFile(function (error, result) {
                     should.not.exist(error);
@@ -1764,7 +1764,7 @@ describe('nodejs', function () {
             });
         });
         describe('Form Data Client', function () {
-            var testClient = new formDataClient(baseUri, clientOptions);
+            var testClient = new autoRestSwaggerBATFormDataService_1["default"](baseUri, clientOptions);
             it('should correctly accept file via form-data', function (done) {
                 testClient.formdata.uploadFile(fs.createReadStream(__dirname + '/sample.png'), 'sample.png', function (error, result) {
                     should.not.exist(error);
@@ -1789,7 +1789,7 @@ describe('nodejs', function () {
             });
         });
         describe('Url Client', function () {
-            var testClient = new urlClient('globalStringPath', baseUri, clientOptions);
+            var testClient = new autoRestUrlTestService_1["default"]('globalStringPath', baseUri, clientOptions);
             testClient.globalStringQuery = 'globalStringQuery';
             it('should work when path has null, empty, and multi-byte byte values', function (done) {
                 testClient.paths.byteNull(null, function (error, result) {
@@ -2078,7 +2078,7 @@ describe('nodejs', function () {
             testOptions.requestOptions = { jar: true };
             testOptions.filters = [new msRest.ExponentialRetryPolicyFilter(3, 0, 0, 0)];
             testOptions.noRetryPolicy = true;
-            var testClient = new httpClient(baseUri, testOptions);
+            var testClient = new autoRestHttpInfrastructureTestService_1["default"](baseUri, testOptions);
             it('should work for all http success status codes with different verbs', function (done) {
                 testClient.httpSuccess.head200(function (error, result) {
                     should.not.exist(error);
@@ -2503,7 +2503,7 @@ describe('nodejs', function () {
             });
         });
         describe('Url MultiFormatCollection Client', function () {
-            var testClient = new urlMultiCollectionClient(baseUri, clientOptions);
+            var testClient = new autoRestUrlMutliCollectionFormatTestService_1["default"](baseUri, clientOptions);
             it('should work when query parameter with collection format multi is null', function (done) {
                 testClient.queries.arrayStringMultiNull(function (err, result, request, response) {
                     should.not.exist(err);

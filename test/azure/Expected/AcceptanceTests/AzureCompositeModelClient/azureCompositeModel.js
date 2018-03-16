@@ -837,3 +837,6 @@ class AzureCompositeModel extends ServiceClient {
 }
 
 module.exports = AzureCompositeModel;
+module.exports['default'] = AzureCompositeModel;
+module.exports.AzureCompositeModel = AzureCompositeModel;
+module.exports.AzureCompositeModelModels = models;

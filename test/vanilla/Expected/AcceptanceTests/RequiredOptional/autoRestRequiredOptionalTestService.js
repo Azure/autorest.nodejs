@@ -68,3 +68,6 @@ class AutoRestRequiredOptionalTestService extends ServiceClient {
 }
 
 module.exports = AutoRestRequiredOptionalTestService;
+module.exports['default'] = AutoRestRequiredOptionalTestService;
+module.exports.AutoRestRequiredOptionalTestService = AutoRestRequiredOptionalTestService;
+module.exports.AutoRestRequiredOptionalTestServiceModels = models;

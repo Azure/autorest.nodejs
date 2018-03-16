@@ -1055,3 +1055,6 @@ class AutoRestValidationTest extends ServiceClient {
 }
 
 module.exports = AutoRestValidationTest;
+module.exports['default'] = AutoRestValidationTest;
+module.exports.AutoRestValidationTest = AutoRestValidationTest;
+module.exports.AutoRestValidationTestModels = models;

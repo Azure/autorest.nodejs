@@ -16,7 +16,7 @@ namespace AutoRest.NodeJS.Model
    public class CodeModelJs : CodeModel
     {
         public CodeModelJs()
-        {
+        {   
         }
 
         public bool IsCustomBaseUri => Extensions.ContainsKey(SwaggerExtensions.ParameterizedHostExtension);
@@ -96,7 +96,7 @@ namespace AutoRest.NodeJS.Model
         {
             get
             {
-                IndentedStringBuilder builder = new IndentedStringBuilder(IndentedStringBuilder.TwoSpaces);
+                StringBuilder builder = new StringBuilder();
                 var polymorphicTypes = ModelTemplateModels.Where(m => m.BaseIsPolymorphic);
 
                 for (int i = 0; i < polymorphicTypes.Count(); i++ )
@@ -152,7 +152,7 @@ namespace AutoRest.NodeJS.Model
                     requireParams.Add("baseUri");
                 }
 
-                if(requireParams == null || requireParams.Count == 0)
+                if(NullOrEmpty(requireParams))
                 {
                     return string.Empty;
                 }
@@ -197,8 +197,8 @@ namespace AutoRest.NodeJS.Model
 
         public virtual string ConstructImportTS()
         {
-            IndentedStringBuilder builder = new IndentedStringBuilder(IndentedStringBuilder.TwoSpaces);
-            if (this.MethodTemplateModels.Any())
+            StringBuilder builder = new StringBuilder();
+            if (!NullOrEmpty(MethodTemplateModels))
             {
                 builder.Append("import { ServiceClient, ServiceClientOptions, ServiceCallback, HttpOperationResponse");
             }
@@ -226,5 +226,34 @@ namespace AutoRest.NodeJS.Model
         }
 
         public override IEnumerable<string> MyReservedNames => new[] { Name };
+
+        public string ConstructServiceClientJSExports()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine($"module.exports = {Name};");
+            builder.AppendLine($"module.exports['default'] = {Name};");
+            builder.AppendLine($"module.exports.{Name} = {Name};");
+            builder.AppendLine($"module.exports.{GetServiceModelsName(Name)} = models;");
+            return builder.ToString();
+        }
+
+        public string ConstructServiceClientDTSExports() =>
+            $"export {{ {Name}, models as {GetServiceModelsName(Name)} }};";
+
+        private static bool NullOrEmpty<T>(IEnumerable<T> values)
+            => values == null || !values.Any();
+
+        private static string GetServiceModelsName(string serviceClientName)
+        {
+            string serviceModelsName = serviceClientName;
+
+            const string clientSuffix = "Client";
+            if (serviceModelsName.EndsWith(clientSuffix))
+            {
+                serviceModelsName = serviceModelsName.Substring(0, serviceModelsName.Length - clientSuffix.Length);
+            }
+
+            return serviceModelsName + "Models";
+        }
     }
 }
