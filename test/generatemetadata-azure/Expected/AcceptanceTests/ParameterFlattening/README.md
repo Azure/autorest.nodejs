@@ -16,7 +16,7 @@ npm install
 ### Authentication, client creation and update availabilitySets as an example.
 
 ```javascript
-import * as msRest from "ms-rest-js";
+import * as msRest from "ms-rest";
 import { AutoRestParameterFlattening, AutoRestParameterFlatteningModels } from "";
 const subscriptionId = "<Subscription_Id>";
 const token = "<access_token>";

@@ -186,15 +186,16 @@ task 'regenerate-node', '', ['regenerate-nodecomposite'], (done) ->
   },done
   return null
 
-regenerateNodeOptions = [
-  'regenerate-node-generatemetadata'
+regenerateNodeOptionsDependencies = [
+  'regenerate-node-generatemetadata-azure',
+  'regenerate-node-generatemetadata-vanilla'
 ]
-task 'regenerate-node-options', '', regenerateNodeOptions, (done) ->
+task 'regenerate-node-options', '', regenerateNodeOptionsDependencies, (done) ->
   done();
 
-task 'regenerate-node-generatemetadata', '', [], (done) ->
+task 'regenerate-node-generatemetadata-vanilla', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatemetadata',
+    'outputBaseDir': 'test/generatemetadata-vanilla',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -204,6 +205,22 @@ task 'regenerate-node-generatemetadata', '', [], (done) ->
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
     'generateMetadata': true
+  },done
+  return null
+
+task 'regenerate-node-generatemetadata-azure', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/generatemetadata-azure',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'generateMetadata': true,
+    'azureArm': true
   },done
   return null
 

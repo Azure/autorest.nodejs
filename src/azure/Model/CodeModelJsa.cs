@@ -41,6 +41,14 @@ namespace AutoRest.NodeJS.Azure.Model
             return base.Add(item);
         }
 
+        public override IEnumerable<string> PackageDependencies()
+        {
+            return base.PackageDependencies().Concat(new[]
+            {
+                "\"ms-rest-azure\": \"^2.3.3\""
+            });
+        }
+
         public IList<PageCompositeTypeJsa> PageTemplateModels { get; set; } = new List<PageCompositeTypeJsa>();
 
         public bool shouldOptionsInterfaceBeDeclared

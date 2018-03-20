@@ -58,9 +58,17 @@ namespace AutoRest.NodeJS.Model
 
         public virtual string PackageVersion { get; set; }
 
-        public virtual string PackageDependencies()
+        public virtual IEnumerable<string> PackageDependencies()
         {
-            return "\"ms-rest\": \"^2.3.2\"";
+            return new[]
+            {
+                "\"ms-rest\": \"^2.3.2\""
+            };
+        }
+
+        public string PackageDependenciesString()
+        {
+            return string.Join(",\n", PackageDependencies());
         }
 
         public string ClientPrefix

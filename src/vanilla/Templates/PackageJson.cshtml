@@ -6,7 +6,7 @@
   "description": "@(Model.Name.ToPascalCase()) Library with typescript type definitions for node",
   "version": "@(Model.PackageVersion)",
   "dependencies": {
-@(Model.PackageDependencies())
+    @(Model.PackageDependenciesString())
   },
   "keywords": [ "node", "azure" ],
   "license": "MIT",

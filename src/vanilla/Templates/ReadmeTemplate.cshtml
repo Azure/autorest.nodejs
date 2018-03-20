@@ -1,5 +1,4 @@
-﻿@using AutoRest.Core.Utilities
-@using AutoRest.NodeJS.Model
+﻿@using AutoRest.NodeJS.Model
 @inherits AutoRest.Core.Template<CodeModelJs>
 # Microsoft Azure SDK for Node.js - @(Model.Name)
 This project provides a Node.js package for accessing Azure. Right now it supports:
@@ -19,7 +18,7 @@ npm install @(Model.PackageName)
 ### Authentication, client creation and @(Model.GetSampleMethod()?.Name) @(Model.GetSampleMethodGroupName()) as an example.
 @EmptyLine
 ```javascript
-import * as msRest from "ms-rest-js";
+import * as msRest from "ms-rest";
 import { @(Model.Name), @(Model.ServiceModelsName) } from "@(Model.PackageName)";
 const subscriptionId = "<Subscription_Id>";
 const token = "<access_token>";
