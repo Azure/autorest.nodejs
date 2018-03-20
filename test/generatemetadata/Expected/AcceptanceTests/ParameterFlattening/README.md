@@ -1,0 +1,40 @@
+# Microsoft Azure SDK for Node.js - AutoRestParameterFlattening
+This project provides a Node.js package for accessing Azure. Right now it supports:
+- **Node.js version 6.x.x or higher**
+
+## Features
+
+
+## How to Install
+
+```bash
+npm install
+```
+
+## How to use
+
+### Authentication, client creation and update availabilitySets as an example.
+
+```javascript
+import * as msRest from "ms-rest-js";
+import { AutoRestParameterFlattening, AutoRestParameterFlatteningModels } from "";
+const subscriptionId = "<Subscription_Id>";
+const token = "<access_token>";
+const creds = new msRest.TokenCredentials(token);
+const client = new AutoRestParameterFlattening(creds, subscriptionId);
+const resourceGroupName = "testresourceGroupName";
+const avset = "testavset";
+const tags1 = {
+  tags: { "key1": "testtags" }
+};
+client.availabilitySets.update(resourceGroupName, avset, tags1).then((result) => {
+  console.log("The result is:");
+  console.log(result);
+}).catch((err) => {
+  console.log('An error ocurred:');
+  console.dir(err, {depth: null, colors: true});
+});
+
+## Related projects
+
+- [Microsoft Azure SDK for Node.js](https://github.com/Azure/azure-sdk-for-node)

@@ -3,7 +3,6 @@
 // 
 
 using System;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,6 +23,16 @@ namespace AutoRest.NodeJS
 
         public override string UsageInstructions => $"The {ClientRuntimePackage} or higher npm package is required to execute the generated code.";
 
+        private static bool ReadSettingBool(string settingName, bool defaultValue = false)
+        {
+            bool settingValue;
+            if (!bool.TryParse(Settings.Instance.Host.GetValue(settingName).Result, out settingValue))
+            {
+                settingValue = defaultValue;
+            }
+            return settingValue;
+        }
+
         /// <summary>
         ///     Generate NodeJS client code 
         /// </summary>
@@ -31,7 +40,7 @@ namespace AutoRest.NodeJS
         /// <returns></returns>
         public override async Task Generate(CodeModel cm)
         {
-            var disableTypeScriptGeneration = Singleton<GeneratorSettingsJs>.Instance.DisableTypeScriptGeneration;
+            GeneratorSettingsJs generatorSettings = Singleton<GeneratorSettingsJs>.Instance;
 
             var codeModel = cm as CodeModelJs;
             if (codeModel == null)
@@ -43,11 +52,8 @@ namespace AutoRest.NodeJS
             var serviceClientTemplate = new ServiceClientTemplate {Model = codeModel};
             await Write(serviceClientTemplate, codeModel.Name.ToCamelCase() + ".js");
 
-            if (!disableTypeScriptGeneration)
-            {
-                var serviceClientTemplateTS = new ServiceClientTemplateTS {Model = codeModel};
-                await Write(serviceClientTemplateTS, codeModel.Name.ToCamelCase() + ".d.ts");
-            }
+            var serviceClientTemplateTS = new ServiceClientTemplateTS {Model = codeModel};
+            await Write(serviceClientTemplateTS, codeModel.Name.ToCamelCase() + ".d.ts");
 
             //Models
             if (codeModel.ModelTypes.Any())
@@ -55,11 +61,8 @@ namespace AutoRest.NodeJS
                 var modelIndexTemplate = new ModelIndexTemplate {Model = codeModel};
                 await Write(modelIndexTemplate, Path.Combine("models", "index.js"));
 
-                if (!disableTypeScriptGeneration)
-                {
-                    var modelIndexTemplateTS = new ModelIndexTemplateTS {Model = codeModel};
-                    await Write(modelIndexTemplateTS, Path.Combine("models", "index.d.ts"));
-                }
+                var modelIndexTemplateTS = new ModelIndexTemplateTS {Model = codeModel};
+                await Write(modelIndexTemplateTS, Path.Combine("models", "index.d.ts"));
 
                 foreach (var modelType in codeModel.ModelTemplateModels)
                 {
@@ -74,11 +77,8 @@ namespace AutoRest.NodeJS
                 var methodGroupIndexTemplate = new MethodGroupIndexTemplate {Model = codeModel};
                 await Write(methodGroupIndexTemplate, Path.Combine("operations", "index.js"));
 
-                if (!disableTypeScriptGeneration)
-                {
-                    var methodGroupIndexTemplateTS = new MethodGroupIndexTemplateTS {Model = codeModel};
-                    await Write(methodGroupIndexTemplateTS, Path.Combine("operations", "index.d.ts"));
-                }
+                var methodGroupIndexTemplateTS = new MethodGroupIndexTemplateTS {Model = codeModel};
+                await Write(methodGroupIndexTemplateTS, Path.Combine("operations", "index.d.ts"));
 
                 foreach (var methodGroupModel in codeModel.MethodGroupModels)
                 {
@@ -87,6 +87,20 @@ namespace AutoRest.NodeJS
                         Write(methodGroupTemplate,
                             Path.Combine("operations", methodGroupModel.TypeName.ToCamelCase() + ".js"));
                 }
+            }
+
+            await GenerateMetadata(generatorSettings, codeModel).ConfigureAwait(false);
+        }
+
+        protected async Task GenerateMetadata(GeneratorSettingsJs generatorSettings, CodeModelJs codeModel)
+        {
+            if (generatorSettings.GenerateMetadata)
+            {
+                var packageJson = new PackageJson { Model = codeModel };
+                await Write(packageJson, Path.Combine("package.json")).ConfigureAwait(false);
+
+                var readme = new ReadmeTemplate { Model = codeModel };
+                await Write(readme, Path.Combine("README.md")).ConfigureAwait(false);
             }
         }
     }

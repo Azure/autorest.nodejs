@@ -1,22 +1,20 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
+using AutoRest.Core.Model;
+using AutoRest.Core.Utilities;
+using AutoRest.NodeJS.azure.Templates;
+using AutoRest.NodeJS.Azure.Model;
+using AutoRest.NodeJS.vanilla.Templates;
 using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoRest.Core.Model;
-using AutoRest.Core.Utilities;
-using AutoRest.NodeJS.Azure.Model;
-using AutoRest.NodeJS.azure.Templates;
-using AutoRest.NodeJS.vanilla.Templates;
 using static AutoRest.Core.Utilities.DependencyInjection;
 
 namespace AutoRest.NodeJS.Azure
 {
-    public class CodeGeneratorJsa : NodeJS.CodeGeneratorJs
+    public class CodeGeneratorJsa : CodeGeneratorJs
     {
         private const string ClientRuntimePackage = "ms-rest-azure version 2.0.0";
 
@@ -32,7 +30,7 @@ namespace AutoRest.NodeJS.Azure
         /// <returns></returns>
         public override async Task Generate(CodeModel cm)
         {
-            var disableTypeScriptGeneration = Singleton<GeneratorSettingsJs>.Instance.DisableTypeScriptGeneration;
+            GeneratorSettingsJs generatorSettings = Singleton<GeneratorSettingsJs>.Instance;
 
             var codeModel = cm as CodeModelJsa;
             if (codeModel == null)
@@ -44,20 +42,14 @@ namespace AutoRest.NodeJS.Azure
             var serviceClientTemplate = new AzureServiceClientTemplate { Model = codeModel };
             await Write(serviceClientTemplate, codeModel.Name.ToCamelCase() + ".js");
 
-            if (!disableTypeScriptGeneration)
-            {
-                var serviceClientTemplateTS = new AzureServiceClientTemplateTS { Model = codeModel, };
-                await Write(serviceClientTemplateTS, codeModel.Name.ToCamelCase() + ".d.ts");
-            }
+            var serviceClientTemplateTS = new AzureServiceClientTemplateTS { Model = codeModel, };
+            await Write(serviceClientTemplateTS, codeModel.Name.ToCamelCase() + ".d.ts");
 
             var modelIndexTemplate = new AzureModelIndexTemplate { Model = codeModel };
             await Write(modelIndexTemplate, Path.Combine("models", "index.js"));
 
-            if (!disableTypeScriptGeneration)
-            {
-                var modelIndexTemplateTS = new AzureModelIndexTemplateTS { Model = codeModel };
-                await Write(modelIndexTemplateTS, Path.Combine("models", "index.d.ts"));
-            }
+            var modelIndexTemplateTS = new AzureModelIndexTemplateTS { Model = codeModel };
+            await Write(modelIndexTemplateTS, Path.Combine("models", "index.d.ts"));
 
             //Models
             if (codeModel.ModelTemplateModels.Any())
@@ -82,11 +74,8 @@ namespace AutoRest.NodeJS.Azure
                 var methodGroupIndexTemplate = new MethodGroupIndexTemplate { Model = codeModel };
                 await Write(methodGroupIndexTemplate, Path.Combine("operations", "index.js"));
 
-                if (!disableTypeScriptGeneration)
-                {
-                    var methodGroupIndexTemplateTS = new MethodGroupIndexTemplateTS { Model = codeModel };
-                    await Write(methodGroupIndexTemplateTS, Path.Combine("operations", "index.d.ts"));
-                }
+                var methodGroupIndexTemplateTS = new MethodGroupIndexTemplateTS { Model = codeModel };
+                await Write(methodGroupIndexTemplateTS, Path.Combine("operations", "index.d.ts"));
                 
                 foreach (var methodGroupModel in codeModel.MethodGroupModels)
                 {
@@ -94,6 +83,8 @@ namespace AutoRest.NodeJS.Azure
                     await Write(methodGroupTemplate, Path.Combine("operations", methodGroupModel.TypeName.ToCamelCase() + ".js"));
                 }
             }
+
+            await GenerateMetadata(generatorSettings, codeModel).ConfigureAwait(false);
         }
     }
 }

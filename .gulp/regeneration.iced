@@ -3,6 +3,9 @@
 # LEGACY 
 # Instead: have bunch of configuration files sitting in a well-known spot, discover them, feed them to AutoRest, done.
 
+path = require("path");
+repositoryLocalRoot = path.dirname(__dirname);
+
 regenExpected = (opts,done) ->
   outputDir = if !!opts.outputBaseDir then "#{opts.outputBaseDir}/#{opts.outputDir}" else opts.outputDir
   keys = Object.getOwnPropertyNames(opts.mappings)
@@ -39,6 +42,9 @@ regenExpected = (opts,done) ->
     if (opts.flatteningThreshold)
       args.push("--#{opts.language}.payload-flattening-threshold=#{opts.flatteningThreshold}")
 
+    if (opts.generateMetadata)
+      args.push("--#{opts.language}.generate-metadata=true")
+
     if (!!opts.nsPrefix)
       if (optsMappingsValue instanceof Array && optsMappingsValue[1] != undefined)
         args.push("--#{opts.language}.namespace=#{optsMappingsValue[1]}")
@@ -51,6 +57,8 @@ regenExpected = (opts,done) ->
       args.push("--override-info.title=#{opts['override-info.title']}")
     if (opts['override-info.description'])
       args.push("--override-info.description=#{opts['override-info.description']}")
+
+    args.push("--use=#{repositoryLocalRoot}")
 
     autorest args,() =>
       instances--
@@ -178,5 +186,26 @@ task 'regenerate-node', '', ['regenerate-nodecomposite'], (done) ->
   },done
   return null
 
-task 'regenerate', "regenerate expected code for tests", ['regenerate-node', 'regenerate-nodeazure'], (done) ->
+regenerateNodeOptions = [
+  'regenerate-node-generatemetadata'
+]
+task 'regenerate-node-options', '', regenerateNodeOptions, (done) ->
+  done();
+
+task 'regenerate-node-generatemetadata', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/generatemetadata',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'generateMetadata': true
+  },done
+  return null
+
+task 'regenerate', "regenerate expected code for tests", ['regenerate-node', 'regenerate-nodeazure', 'regenerate-node-options'], (done) ->
   done();

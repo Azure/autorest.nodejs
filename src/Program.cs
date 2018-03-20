@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using AutoRest.Core;
 using AutoRest.Core.Extensibility;
@@ -83,6 +84,12 @@ namespace AutoRest.NodeJS
             Settings.Instance.CustomSettings["ClientSideValidation"] = await GetValue<bool?>("client-side-validation") ?? false;
             Settings.Instance.MaximumCommentColumns = await GetValue<int?>("max-comment-columns") ?? Settings.DefaultMaximumCommentColumns;
             Settings.Instance.OutputFileName = await GetValue<string>("output-file");
+
+            foreach (PropertyInfo propertyInfo in typeof(GeneratorSettingsJs).GetProperties())
+            {
+                string propertyName = propertyInfo.Name;
+                Settings.Instance.CustomSettings[propertyName] = await GetValue<bool?>(propertyName.ToKebabCase()) ?? false;
+            }
 
             // process
             var plugin = await GetValue<bool?>("azure-arm") == true

@@ -13,22 +13,27 @@ using Newtonsoft.Json;
 
 namespace AutoRest.NodeJS.Model
 {
-   public class CodeModelJs : CodeModel
+    public class CodeModelJs : CodeModel
     {
         public CodeModelJs()
-        {   
+        {
+        }
+        public CodeModelJs(string packageName = "test-client", string packageVersion = "0.1.0")
+        {
+            PackageName = packageName;
+            PackageVersion = packageVersion;
         }
 
         public bool IsCustomBaseUri => Extensions.ContainsKey(SwaggerExtensions.ParameterizedHostExtension);
 
         [JsonIgnore]
-        public IEnumerable<MethodJs> MethodTemplateModels => Methods.Cast<MethodJs>().Where( each => each.MethodGroup.IsCodeModelMethodGroup);
+        public IEnumerable<MethodJs> MethodTemplateModels => Methods.Cast<MethodJs>().Where(each => each.MethodGroup.IsCodeModelMethodGroup);
 
         [JsonIgnore]
         public virtual IEnumerable<CompositeTypeJs> ModelTemplateModels => ModelTypes.Cast<CompositeTypeJs>();
 
         [JsonIgnore]
-        public virtual IEnumerable<MethodGroupJs> MethodGroupModels => Operations.Cast<MethodGroupJs>().Where( each => !each.IsCodeModelMethodGroup );
+        public virtual IEnumerable<MethodGroupJs> MethodGroupModels => Operations.Cast<MethodGroupJs>().Where(each => !each.IsCodeModelMethodGroup);
 
         /// <summary>
         /// Provides an ordered ModelTemplateModel list such that the parent 
@@ -36,7 +41,7 @@ namespace AutoRest.NodeJS.Model
         /// requiring models in index.js
         /// </summary>
         [JsonIgnore]
-        public virtual IEnumerable<CompositeTypeJs> OrderedModelTemplateModels 
+        public virtual IEnumerable<CompositeTypeJs> OrderedModelTemplateModels
         {
             get
             {
@@ -47,6 +52,103 @@ namespace AutoRest.NodeJS.Model
                 }
                 return orderedList;
             }
+        }
+
+        public virtual string PackageName { get; set; }
+
+        public virtual string PackageVersion { get; set; }
+
+        public virtual string PackageDependencies()
+        {
+            return "\"ms-rest\": \"^2.3.2\"";
+        }
+
+        public string ClientPrefix
+        {
+            get
+            {
+                string clientPrefix = Name;
+
+                const string clientSuffix = "Client";
+                if (clientPrefix.EndsWith(clientSuffix))
+                {
+                    clientPrefix = clientPrefix.Substring(0, clientPrefix.Length - clientSuffix.Length);
+                }
+
+                return clientPrefix;
+            }
+        }
+
+        public string ServiceModelsName => ClientPrefix + "Models";
+
+        public virtual Method GetSampleMethod()
+        {
+            var getMethod = Methods.Where(m => m.HttpMethod == HttpMethod.Get).FirstOrDefault();
+            return getMethod != null ? getMethod : Methods.FirstOrDefault();
+        }
+
+        public virtual string GetSampleMethodGroupName()
+        {
+            return GetSampleMethod()?.MethodGroup?.Name?.ToCamelCase();
+        }
+
+        public virtual string GenerateSampleMethod(bool isBrowser = false)
+        {
+            var method = GetSampleMethod();
+            var methodGroup = GetSampleMethodGroupName();
+            var requiredParameters = method.LogicalParameters.Where(
+                p => p != null && !p.IsClientProperty && !string.IsNullOrWhiteSpace(p.Name) && !p.IsConstant).OrderBy(item => !item.IsRequired).ToList();
+            var builder = new IndentedStringBuilder("  ");
+            var paramInit = InitializeParametersForSampleMethod(requiredParameters, isBrowser);
+            builder.AppendLine(paramInit);
+            var declaration = new StringBuilder();
+            bool first = true;
+            foreach (var param in requiredParameters)
+            {
+                if (!first)
+                    declaration.Append(", ");
+                declaration.Append(param.Name);
+                first = false;
+            }
+            var clientRef = "client.";
+            if (!string.IsNullOrEmpty(methodGroup))
+            {
+                clientRef = $"client.{methodGroup}.";
+            }
+            var methodRef = $"{clientRef}{method.Name.ToCamelCase()}({declaration.ToString()}).then((result) => {{";
+            builder.AppendLine(methodRef)
+                   .Indent()
+                   .AppendLine("console.log(\"The result is:\");")
+                   .AppendLine("console.log(result);")
+                   .Outdent();
+            if (isBrowser)
+            {
+                builder.Append("})");
+            }
+            else
+            {
+                builder.AppendLine("});");
+            }
+
+            return builder.ToString();
+        }
+
+        public string InitializeParametersForSampleMethod(List<Parameter> requiredParameters, bool isBrowser = false)
+        {
+            var builder = new IndentedStringBuilder("  ");
+            foreach (var param in requiredParameters)
+            {
+                var paramValue = "\"\"";
+                paramValue = param.ModelType.InitializeType(param.Name, isBrowser);
+                var paramDeclaration = $"const {param.Name}";
+                if (param.ModelType is CompositeType && !isBrowser)
+                {
+                    paramDeclaration += $": {ServiceModelsName}.{param.ModelTypeName}";
+                }
+                paramDeclaration += $" = {paramValue};";
+                builder.AppendLine(paramDeclaration);
+            }
+            return builder.ToString();
         }
 
         public bool ContainsDurationProperty()
@@ -64,13 +166,13 @@ namespace AutoRest.NodeJS.Model
             {
                 throw new ArgumentNullException(nameof(model));
             }
-            
+
             // BaseResource and CloudError are specified in the ClientRuntime. 
             // They are required explicitly in a different way. Hence, they
             // are not included in the ordered list.
             if (model.BaseModelType == null ||
-                (model.BaseModelType != null && 
-                 (model.BaseModelType.Name == "BaseResource" || 
+                (model.BaseModelType != null &&
+                 (model.BaseModelType.Name == "BaseResource" ||
                   model.BaseModelType.Name == "CloudError")))
             {
                 if (!orderedList.Contains(model))
@@ -99,7 +201,7 @@ namespace AutoRest.NodeJS.Model
                 StringBuilder builder = new StringBuilder();
                 var polymorphicTypes = ModelTemplateModels.Where(m => m.BaseIsPolymorphic);
 
-                for (int i = 0; i < polymorphicTypes.Count(); i++ )
+                for (int i = 0; i < polymorphicTypes.Count(); i++)
                 {
                     string discriminatorField = polymorphicTypes.ElementAt(i).SerializedName;
                     var polymorphicType = polymorphicTypes.ElementAt(i) as CompositeType;
@@ -124,13 +226,13 @@ namespace AutoRest.NodeJS.Model
                             discriminatorField,
                             polymorphicTypes.ElementAt(i).Name));
                     }
-                    
 
-                    if(i == polymorphicTypes.Count() -1)
+
+                    if (i == polymorphicTypes.Count() - 1)
                     {
                         builder.AppendLine();
                     }
-                    else 
+                    else
                     {
                         builder.AppendLine(",");
                     }
@@ -152,7 +254,7 @@ namespace AutoRest.NodeJS.Model
                     requireParams.Add("baseUri");
                 }
 
-                if(NullOrEmpty(requireParams))
+                if (NullOrEmpty(requireParams))
                 {
                     return string.Empty;
                 }
@@ -164,12 +266,15 @@ namespace AutoRest.NodeJS.Model
         /// <summary>
         /// Return the service client constructor required parameters, in TypeScript syntax.
         /// </summary>
-        public string RequiredConstructorParametersTS {
-            get {
+        public string RequiredConstructorParametersTS
+        {
+            get
+            {
                 StringBuilder requiredParams = new StringBuilder();
 
                 bool first = true;
-                foreach (var p in this.Properties) {
+                foreach (var p in this.Properties)
+                {
                     if (!p.IsRequired || p.IsConstant || (p.IsRequired && !string.IsNullOrEmpty(p.DefaultValue)))
                         continue;
 
@@ -233,27 +338,14 @@ namespace AutoRest.NodeJS.Model
             builder.AppendLine($"module.exports = {Name};");
             builder.AppendLine($"module.exports['default'] = {Name};");
             builder.AppendLine($"module.exports.{Name} = {Name};");
-            builder.AppendLine($"module.exports.{GetServiceModelsName(Name)} = models;");
+            builder.AppendLine($"module.exports.{ServiceModelsName} = models;");
             return builder.ToString();
         }
 
         public string ConstructServiceClientDTSExports() =>
-            $"export {{ {Name}, models as {GetServiceModelsName(Name)} }};";
+            $"export {{ {Name}, models as {ServiceModelsName} }};";
 
         private static bool NullOrEmpty<T>(IEnumerable<T> values)
             => values == null || !values.Any();
-
-        private static string GetServiceModelsName(string serviceClientName)
-        {
-            string serviceModelsName = serviceClientName;
-
-            const string clientSuffix = "Client";
-            if (serviceModelsName.EndsWith(clientSuffix))
-            {
-                serviceModelsName = serviceModelsName.Substring(0, serviceModelsName.Length - clientSuffix.Length);
-            }
-
-            return serviceModelsName + "Models";
-        }
     }
 }

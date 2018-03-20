@@ -2,7 +2,6 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // 
 
-using AutoRest.Core;
 using AutoRest.Core.Extensibility;
 
 namespace AutoRest.NodeJS
@@ -10,9 +9,8 @@ namespace AutoRest.NodeJS
     public class GeneratorSettingsJs : IGeneratorSettings
     {
         /// <summary>
-        ///     Change to true if you want to no longer generate the 3 d.ts files, for some reason
+        /// Change to true if you want to generate new package.json and README.md files.
         /// </summary>
-        public bool DisableTypeScriptGeneration { get; set; }
-
+        public bool GenerateMetadata { get; set; }
     }
 }
