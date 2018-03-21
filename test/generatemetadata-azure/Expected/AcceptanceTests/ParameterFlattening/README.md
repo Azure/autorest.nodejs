@@ -8,7 +8,7 @@ This project provides a Node.js package for accessing Azure. Right now it suppor
 ## How to Install
 
 ```bash
-npm install
+npm install azure-arm-parameterflattening
 ```
 
 ## How to use
@@ -17,7 +17,7 @@ npm install
 
 ```javascript
 import * as msRest from "ms-rest";
-import { AutoRestParameterFlattening, AutoRestParameterFlatteningModels } from "";
+import { AutoRestParameterFlattening, AutoRestParameterFlatteningModels } from "azure-arm-parameterflattening";
 const subscriptionId = "<Subscription_Id>";
 const token = "<access_token>";
 const creds = new msRest.TokenCredentials(token);

@@ -12,5 +12,15 @@ namespace AutoRest.NodeJS
         /// Change to true if you want to generate new package.json and README.md files.
         /// </summary>
         public bool GenerateMetadata { get; set; }
+
+        /// <summary>
+        /// The name of the package to generate.
+        /// </summary>
+        public string PackageName { get; set; }
+
+        /// <summary>
+        /// The version of the package to generate.
+        /// </summary>
+        public string PackageVersion { get; set; }
     }
 }

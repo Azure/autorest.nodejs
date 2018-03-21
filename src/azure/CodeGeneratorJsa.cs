@@ -38,6 +38,9 @@ namespace AutoRest.NodeJS.Azure
                 throw new InvalidCastException("CodeModel is not a Azure NodeJS code model.");
             }
 
+            codeModel.PackageName = generatorSettings.PackageName;
+            codeModel.PackageVersion = generatorSettings.PackageVersion;
+
             // Service client
             var serviceClientTemplate = new AzureServiceClientTemplate { Model = codeModel };
             await Write(serviceClientTemplate, codeModel.Name.ToCamelCase() + ".js");

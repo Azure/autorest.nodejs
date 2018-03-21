@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "azure-arm-parameterflattening",
   "author": "Microsoft Corporation",
   "description": "AutoRestParameterFlattening Library with typescript type definitions for node",
-  "version": "",
+  "version": "1.0.0-preview",
   "dependencies": {
     "ms-rest": "^2.3.2",
     "ms-rest-azure": "^2.3.3"

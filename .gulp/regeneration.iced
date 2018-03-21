@@ -45,6 +45,12 @@ regenExpected = (opts,done) ->
     if (opts.generateMetadata)
       args.push("--#{opts.language}.generate-metadata=true")
 
+    if (opts.packageName)
+      args.push("--#{opts.language}.package-name=#{opts.packageName}")
+
+    if (opts.packageVersion)
+      args.push("--#{opts.language}.package-version=#{opts.packageVersion}")
+
     if (!!opts.nsPrefix)
       if (optsMappingsValue instanceof Array && optsMappingsValue[1] != undefined)
         args.push("--#{opts.language}.namespace=#{optsMappingsValue[1]}")
@@ -204,7 +210,9 @@ task 'regenerate-node-generatemetadata-vanilla', '', [], (done) ->
     'language': 'nodejs',
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
-    'generateMetadata': true
+    'generateMetadata': true,
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.2.3'
   },done
   return null
 
@@ -220,7 +228,9 @@ task 'regenerate-node-generatemetadata-azure', '', [], (done) ->
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
     'generateMetadata': true,
-    'azureArm': true
+    'azureArm': true,
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.0.0-preview'
   },done
   return null
 

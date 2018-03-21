@@ -88,7 +88,20 @@ namespace AutoRest.NodeJS
             foreach (PropertyInfo propertyInfo in typeof(GeneratorSettingsJs).GetProperties())
             {
                 string propertyName = propertyInfo.Name;
-                Settings.Instance.CustomSettings[propertyName] = await GetValue<bool?>(propertyName.ToKebabCase()) ?? false;
+                string kebabCasePropertyName = propertyName.ToKebabCase();
+                Type propertyType = propertyInfo.PropertyType;
+                if (propertyType == typeof(bool))
+                {
+                    Settings.Instance.CustomSettings[propertyName] = await GetValue<bool?>(kebabCasePropertyName) ?? false;
+                }
+                else if (propertyType == typeof(string))
+                {
+                    Settings.Instance.CustomSettings[propertyName] = await GetValue(kebabCasePropertyName);
+                }
+                else
+                {
+                    throw new NotSupportedException($"Cannot convert command line argument --{kebabCasePropertyName} to {nameof(GeneratorSettingsJs)}.{propertyName} because type {propertyType} is not supported.");
+                }
             }
 
             // process
