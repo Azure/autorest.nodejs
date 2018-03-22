@@ -87,7 +87,14 @@ namespace AutoRest.NodeJS.Azure
                 }
             }
 
-            await GenerateMetadata(generatorSettings, codeModel).ConfigureAwait(false);
+            if (generatorSettings.GenerateMetadata)
+            {
+                var packageJson = new PackageJson { Model = codeModel };
+                await Write(packageJson, "package.json");
+
+                var readme = new AzureReadmeTemplate { Model = codeModel };
+                await Write(readme, "README.md");
+            }
         }
     }
 }

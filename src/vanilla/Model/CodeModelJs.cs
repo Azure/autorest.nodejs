@@ -62,7 +62,7 @@ namespace AutoRest.NodeJS.Model
         {
             return new[]
             {
-                "\"ms-rest\": \"^2.3.2\""
+                "\"ms-rest\": \"^2.3.3\""
             };
         }
 
@@ -89,6 +89,28 @@ namespace AutoRest.NodeJS.Model
 
         public string ServiceModelsName => ClientPrefix + "Models";
 
+        public string GetSampleClientImport()
+        {
+            return $"const {Name} = require(\"{PackageName}\");";
+        }
+
+        public string GetSampleSubscriptionVariable()
+        {
+            return "const subscriptionId = \"<Subscription_Id>\";";
+        }
+
+        public string GetSampleCatchBlock()
+        {
+            IndentedStringBuilder builder = new IndentedStringBuilder("  ");
+            builder.AppendLine(".catch((err) => {");
+            builder.Indent();
+            builder.AppendLine("console.log('An error ocurred:');");
+            builder.AppendLine("console.dir(err, {depth: null, colors: true});");
+            builder.Outdent();
+            builder.AppendLine("});");
+            return builder.ToString();
+        }
+
         public virtual Method GetSampleMethod()
         {
             var getMethod = Methods.Where(m => m.HttpMethod == HttpMethod.Get).FirstOrDefault();
@@ -100,14 +122,14 @@ namespace AutoRest.NodeJS.Model
             return GetSampleMethod()?.MethodGroup?.Name?.ToCamelCase();
         }
 
-        public virtual string GenerateSampleMethod(bool isBrowser = false)
+        public string GenerateSampleMethod(bool returnPromise, bool isBrowser = false)
         {
-            var method = GetSampleMethod();
-            var methodGroup = GetSampleMethodGroupName();
-            var requiredParameters = method.LogicalParameters.Where(
+            Method method = GetSampleMethod();
+            string methodGroup = GetSampleMethodGroupName();
+            List<Parameter> requiredParameters = method.LogicalParameters.Where(
                 p => p != null && !p.IsClientProperty && !string.IsNullOrWhiteSpace(p.Name) && !p.IsConstant).OrderBy(item => !item.IsRequired).ToList();
             var builder = new IndentedStringBuilder("  ");
-            var paramInit = InitializeParametersForSampleMethod(requiredParameters, isBrowser);
+            string paramInit = InitializeParametersForSampleMethod(requiredParameters, isBrowser);
             builder.AppendLine(paramInit);
             var declaration = new StringBuilder();
             bool first = true;
@@ -118,13 +140,12 @@ namespace AutoRest.NodeJS.Model
                 declaration.Append(param.Name);
                 first = false;
             }
-            var clientRef = "client.";
+            string clientRef = "client.";
             if (!string.IsNullOrEmpty(methodGroup))
             {
                 clientRef = $"client.{methodGroup}.";
             }
-            var methodRef = $"{clientRef}{method.Name.ToCamelCase()}({declaration.ToString()}).then((result) => {{";
-            builder.AppendLine(methodRef)
+            builder.AppendLine($"{(returnPromise ? "return " : "")}{clientRef}{method.Name.ToCamelCase()}({declaration.ToString()}).then((result) => {{")
                    .Indent()
                    .AppendLine("console.log(\"The result is:\");")
                    .AppendLine("console.log(result);")

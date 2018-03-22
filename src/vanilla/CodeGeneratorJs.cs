@@ -86,24 +86,17 @@ namespace AutoRest.NodeJS
                 foreach (var methodGroupModel in codeModel.MethodGroupModels)
                 {
                     var methodGroupTemplate = new MethodGroupTemplate {Model = methodGroupModel};
-                    await
-                        Write(methodGroupTemplate,
-                            Path.Combine("operations", methodGroupModel.TypeName.ToCamelCase() + ".js"));
+                    await Write(methodGroupTemplate, Path.Combine("operations", methodGroupModel.TypeName.ToCamelCase() + ".js"));
                 }
             }
 
-            await GenerateMetadata(generatorSettings, codeModel).ConfigureAwait(false);
-        }
-
-        protected async Task GenerateMetadata(GeneratorSettingsJs generatorSettings, CodeModelJs codeModel)
-        {
             if (generatorSettings.GenerateMetadata)
             {
                 var packageJson = new PackageJson { Model = codeModel };
-                await Write(packageJson, Path.Combine("package.json")).ConfigureAwait(false);
+                await Write(packageJson, "package.json").ConfigureAwait(false);
 
                 var readme = new ReadmeTemplate { Model = codeModel };
-                await Write(readme, Path.Combine("README.md")).ConfigureAwait(false);
+                await Write(readme, "README.md").ConfigureAwait(false);
             }
         }
     }

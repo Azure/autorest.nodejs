@@ -8,7 +8,6 @@ using AutoRest.Extensions.Azure;
 using AutoRest.NodeJS.Model;
 using Newtonsoft.Json;
 using AutoRest.Core.Utilities;
-using System.Text;
 
 namespace AutoRest.NodeJS.Azure.Model
 {
@@ -45,7 +44,7 @@ namespace AutoRest.NodeJS.Azure.Model
         {
             return base.PackageDependencies().Concat(new[]
             {
-                "\"ms-rest-azure\": \"^2.3.3\""
+                "\"ms-rest-azure\": \"^2.5.5\""
             });
         }
 

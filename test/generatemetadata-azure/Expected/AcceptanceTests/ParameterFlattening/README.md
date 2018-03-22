@@ -16,20 +16,20 @@ npm install azure-arm-parameterflattening
 ### Authentication, client creation and update availabilitySets as an example.
 
 ```javascript
-import * as msRest from "ms-rest";
-import { AutoRestParameterFlattening, AutoRestParameterFlatteningModels } from "azure-arm-parameterflattening";
-const subscriptionId = "<Subscription_Id>";
-const token = "<access_token>";
-const creds = new msRest.TokenCredentials(token);
-const client = new AutoRestParameterFlattening(creds, subscriptionId);
-const resourceGroupName = "testresourceGroupName";
-const avset = "testavset";
-const tags1 = {
-  tags: { "key1": "testtags" }
-};
-client.availabilitySets.update(resourceGroupName, avset, tags1).then((result) => {
-  console.log("The result is:");
-  console.log(result);
+const msRestAzure = require("ms-rest-azure");
+const AutoRestParameterFlattening = require("azure-arm-parameterflattening");
+msRestAzure.interactiveLogin().then((creds) => {
+    const subscriptionId = "<Subscription_Id>";
+    const client = new AutoRestParameterFlattening(creds, subscriptionId);
+    const resourceGroupName = "testresourceGroupName";
+    const avset = "testavset";
+    const tags1 = {
+      tags: { "key1": "testtags" }
+    };
+    return client.availabilitySets.update(resourceGroupName, avset, tags1).then((result) => {
+      console.log("The result is:");
+      console.log(result);
+    });
 }).catch((err) => {
   console.log('An error ocurred:');
   console.dir(err, {depth: null, colors: true});

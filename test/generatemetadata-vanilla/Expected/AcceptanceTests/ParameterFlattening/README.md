@@ -16,11 +16,11 @@ npm install azure-arm-parameterflattening
 ### Authentication, client creation and update availabilitySets as an example.
 
 ```javascript
-import * as msRest from "ms-rest";
-import { AutoRestParameterFlattening, AutoRestParameterFlatteningModels } from "azure-arm-parameterflattening";
-const subscriptionId = "<Subscription_Id>";
+const msRest = require("ms-rest");
+const AutoRestParameterFlattening = require("azure-arm-parameterflattening");
 const token = "<access_token>";
 const creds = new msRest.TokenCredentials(token);
+const subscriptionId = "<Subscription_Id>";
 const client = new AutoRestParameterFlattening(creds, subscriptionId);
 const resourceGroupName = "testresourceGroupName";
 const avset = "testavset";

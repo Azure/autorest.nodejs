@@ -79,5 +79,8 @@
   <ItemGroup>
     <DotnetRazor Remove="vanilla\Templates\ReadmeTemplate.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <DotnetRazor Remove="azure\Templates\AzureReadmeTemplate.cshtml" />
+  </ItemGroup>
 
 </Project>
