@@ -102,7 +102,7 @@ namespace AutoRest.NodeJS
                 await Write(readme, "README.md").ConfigureAwait(false);
             }
 
-            if (generatorSettings.GenerateLicense)
+            if (generatorSettings.GenerateLicenseTxt)
             {
                 LicenseTemplate license = new LicenseTemplate { Model = codeModel };
                 await Write(license, "LICENSE.txt").ConfigureAwait(false);

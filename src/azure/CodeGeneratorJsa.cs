@@ -99,7 +99,7 @@ namespace AutoRest.NodeJS.Azure
                 await Write(readme, "README.md");
             }
 
-            if (generatorSettings.GenerateLicense)
+            if (generatorSettings.GenerateLicenseTxt)
             {
                 LicenseTemplate license = new LicenseTemplate { Model = codeModel };
                 await Write(license, "LICENSE.txt").ConfigureAwait(false);

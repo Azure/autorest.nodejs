@@ -21,7 +21,7 @@ namespace AutoRest.NodeJS
         /// <summary>
         /// Whether or not to generate the LICENSE.txt file.
         /// </summary>
-        public bool GenerateLicense { get; set; }
+        public bool GenerateLicenseTxt { get; set; }
 
         /// <summary>
         /// The name of the package to generate.

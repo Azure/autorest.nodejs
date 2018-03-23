@@ -48,8 +48,8 @@ regenExpected = (opts,done) ->
     if (opts.generateReadmeMd)
       args.push("--#{opts.language}.generate-readme-md=true")
 
-    if (opts.generateLicense)
-      args.push("--#{opts.language}.generate-license=true")
+    if (opts.generateLicenseTxt)
+      args.push("--#{opts.language}.generate-license-txt=true")
 
     if (opts.packageName)
       args.push("--#{opts.language}.package-name=#{opts.packageName}")
@@ -289,7 +289,7 @@ task 'regenerate-node-generatelicense-vanilla', '', [], (done) ->
     'language': 'nodejs',
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
-    'generateLicense': true,
+    'generateLicenseTxt': true,
     'packageName': 'azure-arm-parameterflattening',
     'packageVersion': '1.0.0-preview'
   },done
