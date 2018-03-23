@@ -27,7 +27,7 @@ namespace AutoRest.NodeJS
         {
             ReservedWords.AddRange(new[]
             {
-                "array", "await", "abstract", "boolean", "buffer",
+                "array", "await", "abstract", "arguments", "boolean", "buffer",
                 "break", "byte", "case", "catch", "char", "class",
                 "const", "continue", "debugger", "default", "delete",
                 "do", "double", "date", "else", "enum", "error",
