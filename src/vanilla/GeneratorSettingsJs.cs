@@ -9,9 +9,14 @@ namespace AutoRest.NodeJS
     public class GeneratorSettingsJs : IGeneratorSettings
     {
         /// <summary>
-        /// Change to true if you want to generate new package.json and README.md files.
+        /// Whether or not to generate a new package.json file.
         /// </summary>
-        public bool GenerateMetadata { get; set; }
+        public bool GeneratePackageJson { get; set; }
+
+        /// <summary>
+        /// Whether or not to generate a new readme.md file.
+        /// </summary>
+        public bool GenerateReadmeMd { get; set; }
 
         /// <summary>
         /// The name of the package to generate.

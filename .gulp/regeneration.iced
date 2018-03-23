@@ -42,8 +42,11 @@ regenExpected = (opts,done) ->
     if (opts.flatteningThreshold)
       args.push("--#{opts.language}.payload-flattening-threshold=#{opts.flatteningThreshold}")
 
-    if (opts.generateMetadata)
-      args.push("--#{opts.language}.generate-metadata=true")
+    if (opts.generatePackageJson)
+      args.push("--#{opts.language}.generate-package-json=true")
+
+    if (opts.generateReadmeMd)
+      args.push("--#{opts.language}.generate-readme-md=true")
 
     if (opts.packageName)
       args.push("--#{opts.language}.package-name=#{opts.packageName}")
@@ -193,15 +196,17 @@ task 'regenerate-node', '', ['regenerate-nodecomposite'], (done) ->
   return null
 
 regenerateNodeOptionsDependencies = [
-  'regenerate-node-generatemetadata-azure',
-  'regenerate-node-generatemetadata-vanilla'
+  'regenerate-node-generatepackagejson-azure',
+  'regenerate-node-generatepackagejson-vanilla',
+  'regenerate-node-generatereadmemd-azure',
+  'regenerate-node-generatereadmemd-vanilla'
 ]
 task 'regenerate-node-options', '', regenerateNodeOptionsDependencies, (done) ->
   done();
 
-task 'regenerate-node-generatemetadata-vanilla', '', [], (done) ->
+task 'regenerate-node-generatepackagejson-vanilla', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatemetadata-vanilla',
+    'outputBaseDir': 'test/generatepackagejson-vanilla',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -210,15 +215,15 @@ task 'regenerate-node-generatemetadata-vanilla', '', [], (done) ->
     'language': 'nodejs',
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
-    'generateMetadata': true,
+    'generatePackageJson': true,
     'packageName': 'azure-arm-parameterflattening',
     'packageVersion': '1.2.3'
   },done
   return null
 
-task 'regenerate-node-generatemetadata-azure', '', [], (done) ->
+task 'regenerate-node-generatepackagejson-azure', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatemetadata-azure',
+    'outputBaseDir': 'test/generatepackagejson-azure',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -227,7 +232,42 @@ task 'regenerate-node-generatemetadata-azure', '', [], (done) ->
     'language': 'nodejs',
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
-    'generateMetadata': true,
+    'generatePackageJson': true,
+    'azureArm': true,
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.0.0-preview'
+  },done
+  return null
+
+task 'regenerate-node-generatereadmemd-vanilla', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/generatereadmemd-vanilla',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'generateReadmeMd': true,
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.2.3'
+  },done
+  return null
+
+task 'regenerate-node-generatereadmemd-azure', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/generatereadmemd-azure',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'generateReadmeMd': true,
     'azureArm': true,
     'packageName': 'azure-arm-parameterflattening',
     'packageVersion': '1.0.0-preview'

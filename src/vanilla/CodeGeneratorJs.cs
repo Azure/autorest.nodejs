@@ -90,11 +90,14 @@ namespace AutoRest.NodeJS
                 }
             }
 
-            if (generatorSettings.GenerateMetadata)
+            if (generatorSettings.GeneratePackageJson)
             {
                 var packageJson = new PackageJson { Model = codeModel };
                 await Write(packageJson, "package.json").ConfigureAwait(false);
+            }
 
+            if (generatorSettings.GenerateReadmeMd)
+            {
                 var readme = new ReadmeTemplate { Model = codeModel };
                 await Write(readme, "README.md").ConfigureAwait(false);
             }
