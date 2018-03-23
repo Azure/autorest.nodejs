@@ -101,6 +101,12 @@ namespace AutoRest.NodeJS
                 var readme = new ReadmeTemplate { Model = codeModel };
                 await Write(readme, "README.md").ConfigureAwait(false);
             }
+
+            if (generatorSettings.GenerateLicense)
+            {
+                LicenseTemplate license = new LicenseTemplate { Model = codeModel };
+                await Write(license, "LICENSE.txt").ConfigureAwait(false);
+            }
         }
     }
 }

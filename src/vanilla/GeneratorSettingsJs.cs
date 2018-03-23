@@ -19,6 +19,11 @@ namespace AutoRest.NodeJS
         public bool GenerateReadmeMd { get; set; }
 
         /// <summary>
+        /// Whether or not to generate the LICENSE.txt file.
+        /// </summary>
+        public bool GenerateLicense { get; set; }
+
+        /// <summary>
         /// The name of the package to generate.
         /// </summary>
         public string PackageName { get; set; }

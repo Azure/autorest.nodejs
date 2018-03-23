@@ -48,6 +48,9 @@ regenExpected = (opts,done) ->
     if (opts.generateReadmeMd)
       args.push("--#{opts.language}.generate-readme-md=true")
 
+    if (opts.generateLicense)
+      args.push("--#{opts.language}.generate-license=true")
+
     if (opts.packageName)
       args.push("--#{opts.language}.package-name=#{opts.packageName}")
 
@@ -199,7 +202,8 @@ regenerateNodeOptionsDependencies = [
   'regenerate-node-generatepackagejson-azure',
   'regenerate-node-generatepackagejson-vanilla',
   'regenerate-node-generatereadmemd-azure',
-  'regenerate-node-generatereadmemd-vanilla'
+  'regenerate-node-generatereadmemd-vanilla',
+  'regenerate-node-generatelicense-vanilla'
 ]
 task 'regenerate-node-options', '', regenerateNodeOptionsDependencies, (done) ->
   done();
@@ -269,6 +273,23 @@ task 'regenerate-node-generatereadmemd-azure', '', [], (done) ->
     'flatteningThreshold': '1',
     'generateReadmeMd': true,
     'azureArm': true,
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.0.0-preview'
+  },done
+  return null
+
+task 'regenerate-node-generatelicense-vanilla', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/generatelicense-vanilla',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'generateLicense': true,
     'packageName': 'azure-arm-parameterflattening',
     'packageVersion': '1.0.0-preview'
   },done

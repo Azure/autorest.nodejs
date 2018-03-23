@@ -98,6 +98,12 @@ namespace AutoRest.NodeJS.Azure
                 var readme = new AzureReadmeTemplate { Model = codeModel };
                 await Write(readme, "README.md");
             }
+
+            if (generatorSettings.GenerateLicense)
+            {
+                LicenseTemplate license = new LicenseTemplate { Model = codeModel };
+                await Write(license, "LICENSE.txt").ConfigureAwait(false);
+            }
         }
     }
 }
