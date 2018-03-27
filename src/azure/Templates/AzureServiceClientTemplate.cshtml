@@ -29,7 +29,10 @@ const ServiceClient = msRestAzure.AzureServiceClient;
 }
 
 @EmptyLine
-const models = require('./models');
+@if (Model.ModelTypes.Any())
+{
+@:const models = require('./models');
+}
 @if (Model.MethodGroupModels.Any())
 {
 @:const operations = require('./operations');
@@ -101,19 +104,21 @@ else
     @EmptyLine
     let packageInfo = this.getPackageJsonInfo(__dirname);
     this.addUserAgentInfo(`${packageInfo.name}/${packageInfo.version}`);
-  @foreach (var property in optionalParameters)
-  { 
+@foreach (var property in optionalParameters)
+{ 
     @:if(options.@(property.Name) !== null && options.@(property.Name) !== undefined) { 
     @:  this.@(property.Name) = options.@(property.Name);
     @:}
-  }
+}
   
-  @foreach (var methodGroup in Model.MethodGroupModels)
-  {
+@foreach (var methodGroup in Model.MethodGroupModels)
+{
     @:this.@(methodGroup.NameForProperty) = new operations.@(methodGroup.TypeName)(this);
-  }
-  
-    this.models = models;
+}
+@if (Model.ModelTypes.Any())
+{
+    @:this.models = models;
+}
 @foreach (var method in Model.MethodTemplateModels)
 {
     @:this._@(method.Name) = _@(method.Name);

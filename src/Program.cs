@@ -92,11 +92,19 @@ namespace AutoRest.NodeJS
                 Type propertyType = propertyInfo.PropertyType;
                 if (propertyType == typeof(bool))
                 {
-                    Settings.Instance.CustomSettings[propertyName] = await GetValue<bool?>(kebabCasePropertyName) ?? false;
+                    bool? propertyValue = await GetValue<bool?>(kebabCasePropertyName);
+                    if (propertyValue.HasValue)
+                    {
+                        Settings.Instance.CustomSettings[propertyName] = propertyValue.Value;
+                    }
                 }
                 else if (propertyType == typeof(string))
                 {
-                    Settings.Instance.CustomSettings[propertyName] = await GetValue(kebabCasePropertyName);
+                    string propertyValue = await GetValue<string>(kebabCasePropertyName);
+                    if (propertyValue != null)
+                    {
+                        Settings.Instance.CustomSettings[propertyName] = propertyValue;
+                    }
                 }
                 else
                 {

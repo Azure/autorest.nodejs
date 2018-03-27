@@ -1,15 +1,15 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
+using AutoRest.Core.Model;
+using AutoRest.Core.Utilities;
+using AutoRest.Extensions;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using AutoRest.Core.Model;
-using AutoRest.Core.Utilities;
-using AutoRest.Extensions;
-using Newtonsoft.Json;
 
 namespace AutoRest.NodeJS.Model
 {
@@ -18,6 +18,7 @@ namespace AutoRest.NodeJS.Model
         public CodeModelJs()
         {
         }
+
         public CodeModelJs(string packageName = "test-client", string packageVersion = "0.1.0")
         {
             PackageName = packageName;
@@ -54,9 +55,9 @@ namespace AutoRest.NodeJS.Model
             }
         }
 
-        public virtual string PackageName { get; set; }
+        public virtual string PackageName { get; private set; }
 
-        public virtual string PackageVersion { get; set; }
+        public virtual string PackageVersion { get; private set; }
 
         public virtual IEnumerable<string> PackageDependencies()
         {
@@ -69,6 +70,12 @@ namespace AutoRest.NodeJS.Model
         public string PackageDependenciesString()
         {
             return string.Join(",\n", PackageDependencies());
+        }
+
+        public void PopulateFromSettings(GeneratorSettingsJs generatorSettings)
+        {
+            PackageName = generatorSettings.PackageName;
+            PackageVersion = generatorSettings.PackageVersion;
         }
 
         public string ClientPrefix
@@ -367,12 +374,17 @@ namespace AutoRest.NodeJS.Model
             builder.AppendLine($"module.exports = {Name};");
             builder.AppendLine($"module.exports['default'] = {Name};");
             builder.AppendLine($"module.exports.{Name} = {Name};");
-            builder.AppendLine($"module.exports.{ServiceModelsName} = models;");
+            if (ModelTypes.Any())
+            {
+                builder.AppendLine($"module.exports.{ServiceModelsName} = models;");
+            }
             return builder.ToString();
         }
 
         public string ConstructServiceClientDTSExports() =>
-            $"export {{ {Name}, models as {ServiceModelsName} }};";
+            ModelTypes.Any()
+                ? $"export {{ {Name}, models as {ServiceModelsName} }};"
+                : "";
 
         private static bool NullOrEmpty<T>(IEnumerable<T> values)
             => values == null || !values.Any();

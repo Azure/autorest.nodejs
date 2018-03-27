@@ -5,12 +5,9 @@
   "scripts": {
     "autorest": "autorest",
     "start": "dotnet src/bin/netcoreapp2.0/autorest.nodejs.dll --server",
-    "test": "npm run build-tests && gulp test",
+    "test": "gulp test",
     "testci": "gulp testci",
     "build": "gulp build",
-    "build-tests": "npm run build-vanilla-tests && npm run build-azure-tests",
-    "build-vanilla-tests": "npm --prefix test/vanilla run build",
-    "build-azure-tests": "npm --prefix test/azure run build",
     "prepare": "gulp build",
     "publish-preview": "gulp publish-preview",
     "regenerate": "gulp regenerate",

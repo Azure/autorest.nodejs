@@ -5,9 +5,7 @@ using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using AutoRest.NodeJS.azure.Templates;
 using AutoRest.NodeJS.Azure.Model;
-using AutoRest.NodeJS.vanilla.Templates;
 using System;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using static AutoRest.Core.Utilities.DependencyInjection;
@@ -38,72 +36,51 @@ namespace AutoRest.NodeJS.Azure
                 throw new InvalidCastException("CodeModel is not a Azure NodeJS code model.");
             }
 
-            codeModel.PackageName = generatorSettings.PackageName;
-            codeModel.PackageVersion = generatorSettings.PackageVersion;
+            codeModel.PopulateFromSettings(generatorSettings);
 
             // Service client
-            var serviceClientTemplate = new AzureServiceClientTemplate { Model = codeModel };
-            await Write(serviceClientTemplate, codeModel.Name.ToCamelCase() + ".js");
+            await GenerateServiceClientJs(() => new AzureServiceClientTemplate { Model = codeModel }, generatorSettings).ConfigureAwait(false);
 
-            var serviceClientTemplateTS = new AzureServiceClientTemplateTS { Model = codeModel, };
-            await Write(serviceClientTemplateTS, codeModel.Name.ToCamelCase() + ".d.ts");
-
-            var modelIndexTemplate = new AzureModelIndexTemplate { Model = codeModel };
-            await Write(modelIndexTemplate, Path.Combine("models", "index.js"));
-
-            var modelIndexTemplateTS = new AzureModelIndexTemplateTS { Model = codeModel };
-            await Write(modelIndexTemplateTS, Path.Combine("models", "index.d.ts"));
+            await GenerateServiceClientDts(() => new AzureServiceClientTemplateTS { Model = codeModel }, generatorSettings).ConfigureAwait(false);
 
             //Models
-            if (codeModel.ModelTemplateModels.Any())
+            if (codeModel.ModelTypes.Any())
             {
+                await GenerateModelIndexJs(() => new AzureModelIndexTemplate { Model = codeModel }, generatorSettings).ConfigureAwait(false);
+
+                await GenerateModelIndexDts(() => new AzureModelIndexTemplateTS { Model = codeModel }, generatorSettings).ConfigureAwait(false);
+
                 // Paged Models
                 foreach (var pageModel in codeModel.PageTemplateModels)
                 {
                     var pageTemplate = new PageModelTemplate { Model = pageModel };
-                    await Write(pageTemplate, Path.Combine("models", pageModel.Name.ToCamelCase() + ".js"));
+                    await Write(pageTemplate, GetModelSourceCodeFilePath(generatorSettings, pageModel.Name.ToCamelCase() + ".js")).ConfigureAwait(false);
                 }
                 
                 foreach (var modelType in codeModel.ModelTemplateModels)
                 {
-                    var modelTemplate = new ModelTemplate { Model = modelType };
-                    await Write(modelTemplate, Path.Combine("models", modelType.NameAsFileName.ToCamelCase() + ".js"));
+                    await GenerateModelJs(modelType, generatorSettings).ConfigureAwait(false);
                 }
             }
 
             //MethodGroups
             if (codeModel.MethodGroupModels.Any())
             {
-                var methodGroupIndexTemplate = new MethodGroupIndexTemplate { Model = codeModel };
-                await Write(methodGroupIndexTemplate, Path.Combine("operations", "index.js"));
+                await GenerateMethodGroupIndexTemplateJs(codeModel, generatorSettings).ConfigureAwait(false);
 
-                var methodGroupIndexTemplateTS = new MethodGroupIndexTemplateTS { Model = codeModel };
-                await Write(methodGroupIndexTemplateTS, Path.Combine("operations", "index.d.ts"));
-                
+                await GenerateMethodGroupIndexTemplateDts(codeModel, generatorSettings).ConfigureAwait(false);
+
                 foreach (var methodGroupModel in codeModel.MethodGroupModels)
                 {
-                    var methodGroupTemplate = new AzureMethodGroupTemplate { Model = methodGroupModel };
-                    await Write(methodGroupTemplate, Path.Combine("operations", methodGroupModel.TypeName.ToCamelCase() + ".js"));
+                    await GenerateMethodGroupJs(() => new AzureMethodGroupTemplate { Model = methodGroupModel }, generatorSettings).ConfigureAwait(false);
                 }
             }
 
-            if (generatorSettings.GeneratePackageJson)
-            {
-                var packageJson = new PackageJson { Model = codeModel };
-                await Write(packageJson, "package.json");
-            }
+            await GeneratePackageJson(codeModel, generatorSettings).ConfigureAwait(false);
 
-            if (generatorSettings.GenerateReadmeMd)
-            {
-                var readme = new AzureReadmeTemplate { Model = codeModel };
-                await Write(readme, "README.md");
-            }
+            await GenerateReadmeMd(() => new AzureReadmeTemplate { Model = codeModel }, generatorSettings).ConfigureAwait(false);
 
-            if (generatorSettings.GenerateLicenseTxt)
-            {
-                LicenseTemplate license = new LicenseTemplate { Model = codeModel };
-                await Write(license, "LICENSE.txt").ConfigureAwait(false);
-            }
+            await GenerateLicenseTxt(codeModel, generatorSettings).ConfigureAwait(false);
         }
     }
 }

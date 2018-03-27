@@ -1,5 +1,4 @@
 ﻿@using System.Linq
-@using AutoRest.Core.Model
 @using AutoRest.Core.Utilities
 @using AutoRest.NodeJS
 @using AutoRest.NodeJS.vanilla.Templates
@@ -9,7 +8,10 @@
  */
 @EmptyLine
 @Model.ConstructImportTS()
-import * as models from "./models";
+@if (Model.ModelTypes.Any())
+{
+@:import * as models from "./models";
+}
 @if (Model.MethodGroupModels.Any()) {
 @:import * as operations from "./operations";
 }

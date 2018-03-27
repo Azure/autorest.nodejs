@@ -23,6 +23,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+test/vanilla/AcceptanceTests/*.js
+test/vanilla/AcceptanceTests/*.js.map
 
 # Visual Studio 2015 cache/options directory
 .vs/

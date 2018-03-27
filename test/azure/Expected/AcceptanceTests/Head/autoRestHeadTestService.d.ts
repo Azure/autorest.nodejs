@@ -10,7 +10,6 @@
 
 import { ServiceClientCredentials } from 'ms-rest';
 import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';
-import * as models from "./models";
 import * as operations from "./operations";
 
 export default class AutoRestHeadTestService extends AzureServiceClient {
@@ -53,4 +52,3 @@ export default class AutoRestHeadTestService extends AzureServiceClient {
   httpSuccess: operations.HttpSuccess;
 }
 
-export { AutoRestHeadTestService, models as AutoRestHeadTestServiceModels };

@@ -18,10 +18,17 @@ Import
 
 task 'init', "" ,(done)->
   Fail "YOU MUST HAVE NODEJS VERSION GREATER THAN 7.10.0" if semver.lt( process.versions.node , "7.10.0" )
+  await execute "npm install", { cwd: './test/vanilla' }, defer code, stderr, stdout
+  await execute "npm install", { cwd: './test/azure' }, defer code, stderr, stdout
   done()
   
 # Run language-specific tests:
-task 'test', "", [], (done) ->
+task 'build', 'tests', ['init'], (done) ->
+  await execute "npm run build", { cwd: './test/vanilla' }, defer code, stderr, stdout
+  await execute "npm run build", { cwd: './test/azure' }, defer code, stderr, stdout
+  done();
+
+task 'test', '', ['build/tests'], (done) ->
   await execute "npm test", { cwd: './test/vanilla/' }, defer code, stderr, stdout
   await execute "npm test", { cwd: './test/azure/' }, defer code, stderr, stdout
   done();

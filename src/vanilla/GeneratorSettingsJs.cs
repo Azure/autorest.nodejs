@@ -11,17 +11,22 @@ namespace AutoRest.NodeJS
         /// <summary>
         /// Whether or not to generate a new package.json file.
         /// </summary>
-        public bool GeneratePackageJson { get; set; }
+        public bool GeneratePackageJson { get; set; } = true;
 
         /// <summary>
         /// Whether or not to generate a new readme.md file.
         /// </summary>
-        public bool GenerateReadmeMd { get; set; }
+        public bool GenerateReadmeMd { get; set; } = false;
 
         /// <summary>
         /// Whether or not to generate the LICENSE.txt file.
         /// </summary>
-        public bool GenerateLicenseTxt { get; set; }
+        public bool GenerateLicenseTxt { get; set; } = true;
+
+        /// <summary>
+        /// The sub-folder path where source code will be generated.
+        /// </summary>
+        public string SourceCodeFolderPath { get; set; } = "lib";
 
         /// <summary>
         /// The name of the package to generate.

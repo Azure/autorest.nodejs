@@ -9,7 +9,6 @@
 */
 
 import { ServiceClientOptions, RequestOptions, ServiceCallback, HttpOperationResponse } from 'ms-rest';
-import * as models from '../models';
 
 
 /**

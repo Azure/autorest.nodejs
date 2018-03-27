@@ -42,14 +42,17 @@ regenExpected = (opts,done) ->
     if (opts.flatteningThreshold)
       args.push("--#{opts.language}.payload-flattening-threshold=#{opts.flatteningThreshold}")
 
-    if (opts.generatePackageJson)
-      args.push("--#{opts.language}.generate-package-json=true")
+    if (opts.generatePackageJson != undefined && opts.generatePackageJson != null)
+      args.push("--#{opts.language}.generate-package-json=#{opts.generatePackageJson}")
 
-    if (opts.generateReadmeMd)
-      args.push("--#{opts.language}.generate-readme-md=true")
+    if (opts.generateReadmeMd != undefined && opts.generateReadmeMd != null)
+      args.push("--#{opts.language}.generate-readme-md=#{opts.generateReadmeMd}")
 
-    if (opts.generateLicenseTxt)
-      args.push("--#{opts.language}.generate-license-txt=true")
+    if (opts.generateLicenseTxt != undefined && opts.generateLicenseTxt != null)
+      args.push("--#{opts.language}.generate-license-txt=#{opts.generateLicenseTxt}")
+
+    if (opts.sourceCodeFolderPath != undefined && opts.sourceCodeFolderPath != null)
+      args.push("--#{opts.language}.source-code-folder-path=\'#{opts.sourceCodeFolderPath}\'")
 
     if (opts.packageName)
       args.push("--#{opts.language}.package-name=#{opts.packageName}")
@@ -148,7 +151,11 @@ task 'regenerate-nodecomposite', '', (done) ->
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
     'override-info.title': "Composite Bool Int",
-    'override-info.description': "Composite Swagger Client that represents merging body boolean and body integer swagger clients"
+    'override-info.description': "Composite Swagger Client that represents merging body boolean and body integer swagger clients",
+    'generatePackageJson': false,
+    'generateReadmeMd': false,
+    'generateLicenseTxt': false,
+    'sourceCodeFolderPath': ''
   },done
   return null
 
@@ -165,7 +172,11 @@ task 'regenerate-nodeazurecomposite', '', (done) ->
     'flatteningThreshold': '1',
     'override-info.version': "1.0.0",
     'override-info.title': "Azure Composite Model",
-    'override-info.description': "Composite Swagger Client that represents merging body complex and complex model swagger clients"
+    'override-info.description': "Composite Swagger Client that represents merging body complex and complex model swagger clients",
+    'generatePackageJson': false,
+    'generateReadmeMd': false,
+    'generateLicenseTxt': false,
+    'sourceCodeFolderPath': ''
   },done
   return null
 
@@ -180,7 +191,11 @@ task 'regenerate-nodeazure', '', ['regenerate-nodeazurecomposite'], (done) ->
     'language': 'nodejs',
     'azureArm': true,
     'nsPrefix': 'Fixtures',
-    'flatteningThreshold': '1'
+    'flatteningThreshold': '1',
+    'generatePackageJson': false,
+    'generateReadmeMd': false,
+    'generateLicenseTxt': false,
+    'sourceCodeFolderPath': ''
   },done
   return null
 
@@ -194,23 +209,30 @@ task 'regenerate-node', '', ['regenerate-nodecomposite'], (done) ->
     'outputDir': 'Expected',
     'language': 'nodejs',
     'nsPrefix': 'Fixtures',
-    'flatteningThreshold': '1'
+    'flatteningThreshold': '1',
+    'generatePackageJson': false,
+    'generateReadmeMd': false,
+    'generateLicenseTxt': false,
+    'sourceCodeFolderPath': ''
   },done
   return null
 
 regenerateNodeOptionsDependencies = [
-  'regenerate-node-generatepackagejson-azure',
-  'regenerate-node-generatepackagejson-vanilla',
-  'regenerate-node-generatereadmemd-azure',
-  'regenerate-node-generatereadmemd-vanilla',
-  'regenerate-node-generatelicense-vanilla'
+  'regenerate-node-generatepackagejson-vanilla-false',
+  'regenerate-node-generatepackagejson-azure-false',
+  'regenerate-node-generatereadmemd-vanilla-true',
+  'regenerate-node-generatereadmemd-azure-true',
+  'regenerate-node-generatelicense-vanilla-true'
+  'regenerate-node-generatelicense-vanilla-false',
+  'regenerate-node-sourcecodefolderpath-vanilla-sources',
+  'regenerate-node-sourcecodefolderpath-azure-sources'
 ]
 task 'regenerate-node-options', '', regenerateNodeOptionsDependencies, (done) ->
   done();
 
-task 'regenerate-node-generatepackagejson-vanilla', '', [], (done) ->
+task 'regenerate-node-generatepackagejson-vanilla-false', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatepackagejson-vanilla',
+    'outputBaseDir': 'test/options/generatepackagejson-vanilla-false',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -219,15 +241,15 @@ task 'regenerate-node-generatepackagejson-vanilla', '', [], (done) ->
     'language': 'nodejs',
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
-    'generatePackageJson': true,
+    'generatePackageJson': false,
     'packageName': 'azure-arm-parameterflattening',
     'packageVersion': '1.2.3'
   },done
   return null
 
-task 'regenerate-node-generatepackagejson-azure', '', [], (done) ->
+task 'regenerate-node-generatepackagejson-azure-false', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatepackagejson-azure',
+    'outputBaseDir': 'test/options/generatepackagejson-azure-false',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -236,16 +258,16 @@ task 'regenerate-node-generatepackagejson-azure', '', [], (done) ->
     'language': 'nodejs',
     'nsPrefix': 'Fixtures',
     'flatteningThreshold': '1',
-    'generatePackageJson': true,
+    'generatePackageJson': false,
     'azureArm': true,
     'packageName': 'azure-arm-parameterflattening',
     'packageVersion': '1.0.0-preview'
   },done
   return null
 
-task 'regenerate-node-generatereadmemd-vanilla', '', [], (done) ->
+task 'regenerate-node-generatereadmemd-vanilla-true', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatereadmemd-vanilla',
+    'outputBaseDir': 'test/options/generatereadmemd-vanilla-true',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -260,9 +282,9 @@ task 'regenerate-node-generatereadmemd-vanilla', '', [], (done) ->
   },done
   return null
 
-task 'regenerate-node-generatereadmemd-azure', '', [], (done) ->
+task 'regenerate-node-generatereadmemd-azure-true', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatereadmemd-azure',
+    'outputBaseDir': 'test/options/generatereadmemd-azure-true',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -278,9 +300,26 @@ task 'regenerate-node-generatereadmemd-azure', '', [], (done) ->
   },done
   return null
 
-task 'regenerate-node-generatelicense-vanilla', '', [], (done) ->
+task 'regenerate-node-generatelicense-vanilla-false', '', [], (done) ->
   regenExpected {
-    'outputBaseDir': 'test/generatelicense-vanilla',
+    'outputBaseDir': 'test/options/generatelicense-vanilla-false',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'generateLicenseTxt': false,
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.0.0-preview'
+  },done
+  return null
+
+task 'regenerate-node-generatelicense-vanilla-true', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/options/generatelicense-vanilla-true',
     'inputBaseDir': swaggerDir,
     'mappings': {
       'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
@@ -292,6 +331,41 @@ task 'regenerate-node-generatelicense-vanilla', '', [], (done) ->
     'generateLicenseTxt': true,
     'packageName': 'azure-arm-parameterflattening',
     'packageVersion': '1.0.0-preview'
+  },done
+  return null
+
+task 'regenerate-node-sourcecodefolderpath-vanilla-sources', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/options/sourcecodefolderpath-vanilla-sources',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.0.0-preview',
+    'sourceCodeFolderPath': 'sources'
+  },done
+  return null
+
+task 'regenerate-node-sourcecodefolderpath-azure-sources', '', [], (done) ->
+  regenExpected {
+    'outputBaseDir': 'test/options/sourcecodefolderpath-azure-sources',
+    'inputBaseDir': swaggerDir,
+    'mappings': {
+      'AcceptanceTests/ParameterFlattening': 'parameter-flattening.json',
+    },
+    'outputDir': 'Expected',
+    'language': 'nodejs',
+    'nsPrefix': 'Fixtures',
+    'flatteningThreshold': '1',
+    'azureArm': true,
+    'packageName': 'azure-arm-parameterflattening',
+    'packageVersion': '1.0.0-preview',
+    'sourceCodeFolderPath': 'sources'
   },done
   return null
 

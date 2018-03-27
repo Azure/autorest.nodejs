@@ -18,7 +18,6 @@ const msRest = require('ms-rest');
 const msRestAzure = require('ms-rest-azure');
 const ServiceClient = msRestAzure.AzureServiceClient;
 
-const models = require('./models');
 const operations = require('./operations');
 
 
@@ -67,7 +66,6 @@ class AutoRestHeadExceptionTestService extends ServiceClient {
       this.generateClientRequestId = options.generateClientRequestId;
     }
     this.headException = new operations.HeadException(this);
-    this.models = models;
     msRest.addSerializationMixin(this);
   }
 
@@ -76,4 +74,3 @@ class AutoRestHeadExceptionTestService extends ServiceClient {
 module.exports = AutoRestHeadExceptionTestService;
 module.exports['default'] = AutoRestHeadExceptionTestService;
 module.exports.AutoRestHeadExceptionTestService = AutoRestHeadExceptionTestService;
-module.exports.AutoRestHeadExceptionTestServiceModels = models;
