@@ -20,7 +20,6 @@ namespace AutoRest.NodeJS.Azure
 
         public override string ImplementationFileExtension => ".js";
 
-
         /// <summary>
         /// Generate Azure NodeJS client code 
         /// </summary>

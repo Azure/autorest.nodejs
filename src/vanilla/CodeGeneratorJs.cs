@@ -23,16 +23,6 @@ namespace AutoRest.NodeJS
 
         public override string UsageInstructions => $"The {ClientRuntimePackage} or higher npm package is required to execute the generated code.";
 
-        private static bool ReadSettingBool(string settingName, bool defaultValue = false)
-        {
-            bool settingValue;
-            if (!bool.TryParse(Settings.Instance.Host.GetValue(settingName).Result, out settingValue))
-            {
-                settingValue = defaultValue;
-            }
-            return settingValue;
-        }
-
         /// <summary>
         ///     Generate NodeJS client code 
         /// </summary>
