@@ -853,53 +853,27 @@ namespace AutoRest.NodeJS
                     builder.AppendLine("className: '{0}',", composite.Name)
                            .AppendLine("modelProperties: {").Indent();
                     var composedPropertyList = new List<Property>(composite.ComposedProperties);
+                    PropertyInfo itemName = composite.GetType().GetProperty("ItemName");
+                    string itemNameValue = (string)itemName?.GetValue(composite);
+                    PropertyInfo nextLinkName = composite.GetType().GetProperty("NextLinkName");
+                    bool writeAllModelProperties = !isPageable || nextLinkName == null || (string)nextLinkName.GetValue(composite) != null;
                     for (var i = 0; i < composedPropertyList.Count; i++)
                     {
-                        var prop = composedPropertyList[i];
-                        var serializedPropertyName = prop.SerializedName;
-                        PropertyInfo nextLinkName = null;
-                        string nextLinkNameValue = null;
-                        if (isPageable)
+                        Property prop = composedPropertyList[i];
+
+                        if (ShouldWriteProperty(writeAllModelProperties, prop))
                         {
-                            var itemName = composite.GetType().GetProperty("ItemName");
-                            nextLinkName = composite.GetType().GetProperty("NextLinkName");
-                            nextLinkNameValue = (string)nextLinkName.GetValue(composite);
-                            if (itemName != null && ((string)itemName.GetValue(composite) == prop.Name))
+                            string serializedPropertyName = prop.SerializedName;
+                            if (isPageable && itemNameValue == prop.Name)
                             {
                                 serializedPropertyName = "";
                             }
 
-                            if (prop.Name.Contains("nextLink") && nextLinkName != null && nextLinkNameValue == null)
-                            {
-                                continue;
-                            }
-                        }
-
-                        if (i != composedPropertyList.Count - 1)
-                        {
-                            if (!isPageable)
-                            {
-                                builder.AppendLine("{0}: {{{1}}},", prop.Name, prop.ModelType.ConstructMapper(serializedPropertyName, prop, false, false));
-                            }
-                            else
-                            {
-                                // if pageable and nextlink is also present then we need a comma as nextLink would be the next one to be added
-                                if (nextLinkNameValue != null)
-                                {
-                                    builder.AppendLine("{0}: {{{1}}},", prop.Name, prop.ModelType.ConstructMapper(serializedPropertyName, prop, false, false));
-                                }
-                                else
-                                {
-                                    builder.AppendLine("{0}: {{{1}}}", prop.Name, prop.ModelType.ConstructMapper(serializedPropertyName, prop, false, false));
-                                }
-                                    
-                            }   
-                        }
-                        else
-                        {
-                            builder.AppendLine("{0}: {{{1}}}", prop.Name, prop.ModelType.ConstructMapper(serializedPropertyName, prop, false, false));
+                            bool shouldWriteNextProperty = (i < composedPropertyList.Count - 1 && ShouldWriteProperty(writeAllModelProperties, composedPropertyList[i + 1]));
+                            builder.AppendLine($"{prop.Name}: {{{prop.ModelType.ConstructMapper(serializedPropertyName, prop, false, false)}}}{(shouldWriteNextProperty ? "," : "")}");
                         }
                     }
+
                     // end of modelProperties and type
                     builder.Outdent().AppendLine("}").Outdent().AppendLine("}");
                 }
@@ -910,6 +884,9 @@ namespace AutoRest.NodeJS
             }
             return builder.ToString();
         }
+
+        private static bool ShouldWriteProperty(bool writeAllModelProperties, Property property)
+            => writeAllModelProperties || !property.Name.Contains("nextLink");
 
         public static IndentedStringBuilder ConstructPolymorphicDiscriminator(CompositeType composite, IndentedStringBuilder builder)
         {
