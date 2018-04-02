@@ -388,5 +388,18 @@ namespace AutoRest.NodeJS.Model
 
         private static bool NullOrEmpty<T>(IEnumerable<T> values)
             => values == null || !values.Any();
+
+        public string ConstructDocsHeader(string emptyLine)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            builder.AppendLine($"---");
+            builder.AppendLine($"uid: {PackageName}");
+            builder.AppendLine($"summary: *content");
+            builder.AppendLine(emptyLine);
+            builder.AppendLine($"---");
+
+            return builder.ToString();
+        }
     }
 }
