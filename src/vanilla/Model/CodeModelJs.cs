@@ -63,7 +63,7 @@ namespace AutoRest.NodeJS.Model
         {
             return new[]
             {
-                "\"ms-rest\": \"^2.3.3\""
+                "\"ms-rest\": \"^2.3.2\""
             };
         }
 
