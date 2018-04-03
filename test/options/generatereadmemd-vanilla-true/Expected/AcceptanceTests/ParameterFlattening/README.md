@@ -36,7 +36,7 @@ client.availabilitySets.update(resourceGroupName, avset, tags1).then((result) =>
   console.log("The result is:");
   console.log(result);
 }).catch((err) => {
-  console.log('An error ocurred:');
+  console.log('An error occurred:');
   console.dir(err, {depth: null, colors: true});
 });
 

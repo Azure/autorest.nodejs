@@ -111,7 +111,7 @@ namespace AutoRest.NodeJS.Model
             IndentedStringBuilder builder = new IndentedStringBuilder("  ");
             builder.AppendLine(".catch((err) => {");
             builder.Indent();
-            builder.AppendLine("console.log('An error ocurred:');");
+            builder.AppendLine("console.log('An error occurred:');");
             builder.AppendLine("console.dir(err, {depth: null, colors: true});");
             builder.Outdent();
             builder.AppendLine("});");
