@@ -6,7 +6,10 @@
   "dependencies": {
     "ms-rest": "^2.3.2"
   },
-  "keywords": [ "node", "azure" ],
+  "keywords": [
+    "node",
+    "azure"
+  ],
   "license": "MIT",
   "main": "./lib/autoRestParameterFlattening.js",
   "types": "./lib/autoRestParameterFlattening.d.ts",
