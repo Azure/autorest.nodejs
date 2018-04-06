@@ -42,16 +42,16 @@ regenExpected = (opts,done) ->
     if (opts.flatteningThreshold)
       args.push("--#{opts.language}.payload-flattening-threshold=#{opts.flatteningThreshold}")
 
-    if (opts.generatePackageJson != undefined && opts.generatePackageJson != null)
+    if (opts.generatePackageJson?)
       args.push("--#{opts.language}.generate-package-json=#{opts.generatePackageJson}")
 
-    if (opts.generateReadmeMd != undefined && opts.generateReadmeMd != null)
+    if (opts.generateReadmeMd?)
       args.push("--#{opts.language}.generate-readme-md=#{opts.generateReadmeMd}")
 
-    if (opts.generateLicenseTxt != undefined && opts.generateLicenseTxt != null)
+    if (opts.generateLicenseTxt?)
       args.push("--#{opts.language}.generate-license-txt=#{opts.generateLicenseTxt}")
 
-    if (opts.sourceCodeFolderPath != undefined && opts.sourceCodeFolderPath != null)
+    if (opts.sourceCodeFolderPath?)
       args.push("--#{opts.language}.source-code-folder-path=\'#{opts.sourceCodeFolderPath}\'")
 
     if (opts.packageName)
