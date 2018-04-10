@@ -491,7 +491,8 @@ describe('nodejs', function () {
               "fishtype": "goblin",
               "age": 1,
               "birthday": new Date("2015-08-08T00:00:00.000Z"),
-              "jawsize": 5
+              "jawsize": 5,
+              "color": "pinkish-gray"
             }
           ],
           "location": "alaska",
