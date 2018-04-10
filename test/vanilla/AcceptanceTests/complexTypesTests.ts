@@ -355,7 +355,7 @@ describe('nodejs', function () {
         ]
       };
       var testClient = new AutoRestComplexTestService(baseUri, clientOptions);
-      it.only('should get valid polymorphic properties', function (done) {
+      it('should get valid polymorphic properties', function (done) {
         testClient.polymorphism.getValid(function (error, result) {
           should.not.exist(error);
           assert.deepEqual(result, fish);
@@ -424,7 +424,8 @@ describe('nodejs', function () {
             "fishtype": "goblin",
             "age": 1,
             "birthday": new Date("2015-08-08T00:00:00.000Z"),
-            "jawsize": 5
+            "jawsize": 5,
+            "color": "pinkish-gray"
           }
         ],
         "fishtype": "smart_salmon",
@@ -491,7 +492,8 @@ describe('nodejs', function () {
               "fishtype": "goblin",
               "age": 1,
               "birthday": new Date("2015-08-08T00:00:00.000Z"),
-              "jawsize": 5
+              "jawsize": 5,
+              "color": "pinkish-gray"
             }
           ],
           "location": "alaska",

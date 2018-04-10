@@ -17,6 +17,7 @@ if  (!fs.existsSync) {
 
 fileContent = fs.readFileSync('./AcceptanceTests/' + testList).toString();
 var files = fileContent.split('\n');
+args.push('--forbid-only');
 args.push('--require');
 args.push('source-map-support/register');
 args.push('-u');
