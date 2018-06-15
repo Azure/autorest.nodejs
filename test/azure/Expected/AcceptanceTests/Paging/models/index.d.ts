@@ -123,6 +123,23 @@ export interface CustomParameterGroup {
 
 /**
  * @class
+ * Initializes a new instance of the PagingGetMultiplePagesLROOptions class.
+ * @constructor
+ * Additional parameters for getMultiplePagesLRO operation.
+ *
+ * @member {number} [maxresults] Sets the maximum number of items to return in
+ * the response.
+ * @member {number} [timeout] Sets the maximum time that the server can spend
+ * processing the request, in seconds. The default is 30 seconds. Default
+ * value: 30 .
+ */
+export interface PagingGetMultiplePagesLROOptions {
+  maxresults?: number;
+  timeout?: number;
+}
+
+/**
+ * @class
  * Initializes a new instance of the PagingGetMultiplePagesWithOffsetNextOptions class.
  * @constructor
  * Additional parameters for getMultiplePagesWithOffsetNext operation.

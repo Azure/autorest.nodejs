@@ -50,6 +50,8 @@ exports.ByteWrapper = require('./byteWrapper');
 exports.ArrayWrapper = require('./arrayWrapper');
 exports.DictionaryWrapper = require('./dictionaryWrapper');
 exports.ReadonlyObj = require('./readonlyObj');
+exports.MyBaseType = require('./myBaseType');
+exports.MyDerivedType = require('./myDerivedType');
 exports.discriminators = {
   'Fish' : exports.Fish,
   'Fish.salmon' : exports.Salmon,
@@ -57,5 +59,7 @@ exports.discriminators = {
   'Fish.shark' : exports.Shark,
   'Fish.sawshark' : exports.Sawshark,
   'Fish.goblin' : exports.Goblinshark,
-  'Fish.cookiecuttershark' : exports.Cookiecuttershark
+  'Fish.cookiecuttershark' : exports.Cookiecuttershark,
+  'MyBaseType' : exports.MyBaseType,
+  'MyBaseType.Kind1' : exports.MyDerivedType
 };

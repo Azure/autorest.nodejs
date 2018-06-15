@@ -3202,3 +3202,59 @@ export interface Readonlyproperty {
     putValid(callback: ServiceCallback<void>): void;
     putValid(options: { size? : number, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<void>): void;
 }
+
+/**
+ * @class
+ * Flattencomplex
+ * __NOTE__: An instance of this class is automatically created for an
+ * instance of the AutoRestComplexTestService.
+ */
+export interface Flattencomplex {
+
+
+    /**
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<MyBaseType>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    getValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.MyBaseType>>;
+
+    /**
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {MyBaseType} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {MyBaseType} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link MyBaseType} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    getValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.MyBaseType>;
+    getValid(callback: ServiceCallback<models.MyBaseType>): void;
+    getValid(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.MyBaseType>): void;
+}
