@@ -22,15 +22,15 @@ declare interface AutoRestParameterizedHostTestClientOptions extends AzureServic
    */
   host?: string;
   /**
-   * @property {string} [acceptLanguage] - Gets or sets the preferred language for the response.
+   * @property {string} [acceptLanguage] - The preferred language for the response.
    */
   acceptLanguage?: string;
   /**
-   * @property {number} [longRunningOperationRetryTimeout] - Gets or sets the retry timeout in seconds for Long Running Operations. Default value is 30.
+   * @property {number} [longRunningOperationRetryTimeout] - The retry timeout in seconds for Long Running Operations. Default value is 30.
    */
   longRunningOperationRetryTimeout?: number;
   /**
-   * @property {boolean} [generateClientRequestId] - When set to true a unique x-ms-client-request-id value is generated and included in each request. Default is true.
+   * @property {boolean} [generateClientRequestId] - Whether a unique x-ms-client-request-id should be generated. When set to true a unique x-ms-client-request-id value is generated and included in each request. Default is true.
    */
   generateClientRequestId?: boolean;
 }
@@ -54,11 +54,11 @@ export default class AutoRestParameterizedHostTestClient extends AzureServiceCli
    *
    * @param {string} [options.host] - A string value that is used as a global part of the parameterized host
    *
-   * @param {string} [options.acceptLanguage] - Gets or sets the preferred language for the response.
+   * @param {string} [options.acceptLanguage] - The preferred language for the response.
    *
-   * @param {number} [options.longRunningOperationRetryTimeout] - Gets or sets the retry timeout in seconds for Long Running Operations. Default value is 30.
+   * @param {number} [options.longRunningOperationRetryTimeout] - The retry timeout in seconds for Long Running Operations. Default value is 30.
    *
-   * @param {boolean} [options.generateClientRequestId] - When set to true a unique x-ms-client-request-id value is generated and included in each request. Default is true.
+   * @param {boolean} [options.generateClientRequestId] - Whether a unique x-ms-client-request-id should be generated. When set to true a unique x-ms-client-request-id value is generated and included in each request. Default is true.
    *
    */
   constructor(credentials: ServiceClientCredentials, options?: AutoRestParameterizedHostTestClientOptions);
