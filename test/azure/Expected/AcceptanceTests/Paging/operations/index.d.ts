@@ -691,6 +691,81 @@ export interface Paging {
 
 
     /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<ProductResult>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    getMultiplePagesLROWithHttpOperationResponse(options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ProductResult>>;
+
+    /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {ProductResult} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {ProductResult} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link ProductResult} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    getMultiplePagesLRO(options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<models.ProductResult>;
+    getMultiplePagesLRO(callback: ServiceCallback<models.ProductResult>): void;
+    getMultiplePagesLRO(options: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.ProductResult>): void;
+
+
+    /**
      * A paging operation that doesn't return a full URL, just a fragment
      *
      * @param {string} apiVersion Sets the api version to use.
@@ -818,6 +893,81 @@ export interface Paging {
     nextFragmentWithGrouping(nextLink: string, customParameterGroup: models.CustomParameterGroup, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.OdataProductResult>;
     nextFragmentWithGrouping(nextLink: string, customParameterGroup: models.CustomParameterGroup, callback: ServiceCallback<models.OdataProductResult>): void;
     nextFragmentWithGrouping(nextLink: string, customParameterGroup: models.CustomParameterGroup, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.OdataProductResult>): void;
+
+
+    /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<ProductResult>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    beginGetMultiplePagesLROWithHttpOperationResponse(options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ProductResult>>;
+
+    /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {ProductResult} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {ProductResult} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link ProductResult} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    beginGetMultiplePagesLRO(options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<models.ProductResult>;
+    beginGetMultiplePagesLRO(callback: ServiceCallback<models.ProductResult>): void;
+    beginGetMultiplePagesLRO(options: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.ProductResult>): void;
 
 
     /**
@@ -1415,4 +1565,166 @@ export interface Paging {
     getMultiplePagesFailureUriNext(nextPageLink: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ProductResult>;
     getMultiplePagesFailureUriNext(nextPageLink: string, callback: ServiceCallback<models.ProductResult>): void;
     getMultiplePagesFailureUriNext(nextPageLink: string, options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.ProductResult>): void;
+
+
+    /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {string} nextPageLink The NextLink from the previous successful call
+     * to List operation.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<ProductResult>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    getMultiplePagesLRONextWithHttpOperationResponse(nextPageLink: string, options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ProductResult>>;
+
+    /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {string} nextPageLink The NextLink from the previous successful call
+     * to List operation.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {ProductResult} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {ProductResult} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link ProductResult} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    getMultiplePagesLRONext(nextPageLink: string, options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<models.ProductResult>;
+    getMultiplePagesLRONext(nextPageLink: string, callback: ServiceCallback<models.ProductResult>): void;
+    getMultiplePagesLRONext(nextPageLink: string, options: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.ProductResult>): void;
+
+
+    /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {string} nextPageLink The NextLink from the previous successful call
+     * to List operation.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<ProductResult>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    beginGetMultiplePagesLRONextWithHttpOperationResponse(nextPageLink: string, options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ProductResult>>;
+
+    /**
+     * A long-running paging operation that includes a nextLink that has 10 pages
+     *
+     * @param {string} nextPageLink The NextLink from the previous successful call
+     * to List operation.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {string} [options.clientRequestId]
+     *
+     * @param {object} [options.pagingGetMultiplePagesLROOptions] Additional
+     * parameters for the operation
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.maxresults] Sets
+     * the maximum number of items to return in the response.
+     *
+     * @param {number} [options.pagingGetMultiplePagesLROOptions.timeout] Sets the
+     * maximum time that the server can spend processing the request, in seconds.
+     * The default is 30 seconds.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {ProductResult} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {ProductResult} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link ProductResult} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    beginGetMultiplePagesLRONext(nextPageLink: string, options?: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }): Promise<models.ProductResult>;
+    beginGetMultiplePagesLRONext(nextPageLink: string, callback: ServiceCallback<models.ProductResult>): void;
+    beginGetMultiplePagesLRONext(nextPageLink: string, options: { clientRequestId? : string, pagingGetMultiplePagesLROOptions? : models.PagingGetMultiplePagesLROOptions, customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.ProductResult>): void;
 }

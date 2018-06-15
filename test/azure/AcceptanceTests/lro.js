@@ -276,7 +276,7 @@ describe('nodejs', function () {
     it('should work with Post200WithPayload', function (done) {
       testClient.lROs.post200WithPayload(function (error, result) {
         should.not.exist(error);
-        result.id.should.equal(1);
+        result.id.should.equal('1');
         done();
       });
     });
