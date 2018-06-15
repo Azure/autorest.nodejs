@@ -37,11 +37,14 @@
     {
 @:export interface @(Model.Name) {
     }
-    
+
     var propertyList = new List<AutoRest.Core.Model.Property>(Model.Properties.Where(p => !p.IsConstant));
     for (int i = 0; i < propertyList.Count; i++)
     {
+        if (!propertyList.Take(i).Any(property => property.Name == propertyList[i].Name))
+        {
   @:@(CompositeTypeJs.PropertyTS(propertyList[i], true));
+        }
     }
     if (Model.AdditionalProperties != null)
     {

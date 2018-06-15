@@ -60,6 +60,7 @@ export default class AzureCompositeModel extends AzureServiceClient {
   polymorphism: operations.Polymorphism;
   polymorphicrecursive: operations.Polymorphicrecursive;
   readonlyproperty: operations.Readonlyproperty;
+  flattencomplex: operations.Flattencomplex;
 
 
   /**

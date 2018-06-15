@@ -400,3 +400,28 @@ export interface ReadonlyObj {
   size?: number;
 }
 
+/**
+ * @class
+ * Initializes a new instance of the MyBaseType class.
+ * @constructor
+ * @member {string} [propB1]
+ * @member {string} kind Polymorphic Discriminator
+ * @member {string} [propBH1]
+ * @member {string} kind Polymorphic Discriminator
+ */
+export interface MyBaseType {
+  propB1?: string;
+  kind: string;
+  propBH1?: string;
+}
+
+/**
+ * @class
+ * Initializes a new instance of the MyDerivedType class.
+ * @constructor
+ * @member {string} [propD1]
+ */
+export interface MyDerivedType extends MyBaseType {
+  propD1?: string;
+}
+

@@ -25,6 +25,7 @@ exports.PagingGetMultiplePagesOptions = require('./pagingGetMultiplePagesOptions
 exports.PagingGetOdataMultiplePagesOptions = require('./pagingGetOdataMultiplePagesOptions');
 exports.PagingGetMultiplePagesWithOffsetOptions = require('./pagingGetMultiplePagesWithOffsetOptions');
 exports.CustomParameterGroup = require('./customParameterGroup');
+exports.PagingGetMultiplePagesLROOptions = require('./pagingGetMultiplePagesLROOptions');
 exports.PagingGetMultiplePagesWithOffsetNextOptions = require('./pagingGetMultiplePagesWithOffsetNextOptions');
 exports.ProductResult = require('./productResult');
 exports.OdataProductResult = require('./odataProductResult');

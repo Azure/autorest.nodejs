@@ -22,3 +22,4 @@ exports.Inheritance = require('./inheritance');
 exports.Polymorphism = require('./polymorphism');
 exports.Polymorphicrecursive = require('./polymorphicrecursive');
 exports.Readonlyproperty = require('./readonlyproperty');
+exports.Flattencomplex = require('./flattencomplex');

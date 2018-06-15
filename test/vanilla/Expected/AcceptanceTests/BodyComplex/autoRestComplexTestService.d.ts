@@ -43,6 +43,7 @@ export default class AutoRestComplexTestService extends ServiceClient {
   polymorphism: operations.Polymorphism;
   polymorphicrecursive: operations.Polymorphicrecursive;
   readonlyproperty: operations.Readonlyproperty;
+  flattencomplex: operations.Flattencomplex;
 }
 
 export { AutoRestComplexTestService, models as AutoRestComplexTestServiceModels };

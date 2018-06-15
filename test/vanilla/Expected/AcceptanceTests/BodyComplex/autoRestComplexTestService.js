@@ -54,6 +54,7 @@ class AutoRestComplexTestService extends ServiceClient {
     this.polymorphism = new operations.Polymorphism(this);
     this.polymorphicrecursive = new operations.Polymorphicrecursive(this);
     this.readonlyproperty = new operations.Readonlyproperty(this);
+    this.flattencomplex = new operations.Flattencomplex(this);
     this.models = models;
     msRest.addSerializationMixin(this);
   }
