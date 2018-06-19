@@ -2136,6 +2136,63 @@ export interface LROs {
 
 
     /**
+     * Long running post request, service returns a 202 to the initial request with
+     * both Location and Azure-Async header. Poll Azure-Async and it's success.
+     * Should NOT poll Location to get the final object if you support initial
+     * Autorest behavior.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    postDoubleHeadersFinalAzureHeaderGetDefaultWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
+
+    /**
+     * Long running post request, service returns a 202 to the initial request with
+     * both Location and Azure-Async header. Poll Azure-Async and it's success.
+     * Should NOT poll Location to get the final object if you support initial
+     * Autorest behavior.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {Product} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {Product} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link Product} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    postDoubleHeadersFinalAzureHeaderGetDefault(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
+    postDoubleHeadersFinalAzureHeaderGetDefault(callback: ServiceCallback<models.Product>): void;
+    postDoubleHeadersFinalAzureHeaderGetDefault(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.Product>): void;
+
+
+    /**
      * Long running post request, service returns a 202 to the initial request,
      * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
      * indicated in the Azure-AsyncOperation header for operation status
@@ -4529,6 +4586,63 @@ export interface LROs {
     beginPostDoubleHeadersFinalAzureHeaderGet(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPostDoubleHeadersFinalAzureHeaderGet(callback: ServiceCallback<models.Product>): void;
     beginPostDoubleHeadersFinalAzureHeaderGet(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.Product>): void;
+
+
+    /**
+     * Long running post request, service returns a 202 to the initial request with
+     * both Location and Azure-Async header. Poll Azure-Async and it's success.
+     * Should NOT poll Location to get the final object if you support initial
+     * Autorest behavior.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @returns {Promise} A promise is returned
+     *
+     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
+     *
+     * @reject {Error|ServiceError} - The error object.
+     */
+    beginPostDoubleHeadersFinalAzureHeaderGetDefaultWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
+
+    /**
+     * Long running post request, service returns a 202 to the initial request with
+     * both Location and Azure-Async header. Poll Azure-Async and it's success.
+     * Should NOT poll Location to get the final object if you support initial
+     * Autorest behavior.
+     *
+     * @param {object} [options] Optional Parameters.
+     *
+     * @param {object} [options.customHeaders] Headers that will be added to the
+     * request
+     *
+     * @param {ServiceCallback} [optionalCallback] - The optional callback.
+     *
+     * @returns {ServiceCallback|Promise} If a callback was passed as the last
+     * parameter then it returns the callback else returns a Promise.
+     *
+     * {Promise} A promise is returned.
+     *
+     *                      @resolve {Product} - The deserialized result object.
+     *
+     *                      @reject {Error|ServiceError} - The error object.
+     *
+     * {ServiceCallback} optionalCallback(err, result, request, response)
+     *
+     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
+     *
+     *                      {Product} [result]   - The deserialized result object if an error did not occur.
+     *                      See {@link Product} for more information.
+     *
+     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
+     *
+     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     */
+    beginPostDoubleHeadersFinalAzureHeaderGetDefault(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
+    beginPostDoubleHeadersFinalAzureHeaderGetDefault(callback: ServiceCallback<models.Product>): void;
+    beginPostDoubleHeadersFinalAzureHeaderGetDefault(options: { customHeaders? : { [headerName: string]: string; } }, callback: ServiceCallback<models.Product>): void;
 
 
     /**
