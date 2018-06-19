@@ -755,7 +755,7 @@ namespace AutoRest.NodeJS.Model
                 if (ReturnType.Body is EnumType)
                 {
                     var returnBodyType = ReturnType.Body as EnumType;
-                    if (!returnBodyType.ModelAsString && !returnBodyType.ModelAsExtensible)
+                    if (!returnBodyType.ModelAsString)
                     {
                         string enumValues = "";
                         for (var i = 0; i < returnBodyType.Values.Count; i++)

@@ -22,6 +22,11 @@ task 'init', "" ,(done)->
   await execute "npm install", { cwd: './test/azure' }, defer code, stderr, stdout
   done()
   
+task 'install_common',"", (done) ->
+  # global.verbose = true
+  execute "npm install",{cwd:"#{basefolder}/autorest.common", silent:false }, done
+      
+
 # Run language-specific tests:
 task 'build', 'tests', ['init'], (done) ->
   await execute "npm run build", { cwd: './test/vanilla' }, defer code, stderr, stdout

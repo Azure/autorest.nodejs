@@ -49,7 +49,7 @@ namespace AutoRest.NodeJS
 
             PrimaryType primaryType = sequence.ElementType as PrimaryType;
             EnumType enumType = sequence.ElementType as EnumType;
-            if (enumType != null && (enumType.ModelAsString || enumType.ModelAsExtensible))
+            if (enumType != null && (enumType.ModelAsString))
             {
                 primaryType = New<PrimaryType>(KnownPrimaryType.String);
             }
@@ -480,7 +480,7 @@ namespace AutoRest.NodeJS
             }
             else if (enumType != null && enumType.Values.Any())
             {
-                if (enumType.ModelAsString || enumType.ModelAsExtensible)
+                if (enumType.ModelAsString )
                 {
                     return New<PrimaryType>(KnownPrimaryType.String).ValidatePrimaryType(scope, valueReference, isRequired);
                 }
@@ -786,7 +786,7 @@ namespace AutoRest.NodeJS
             }
             else if (enumType != null)
             {
-                if (enumType.ModelAsString || enumType.ModelAsExtensible)
+                if (enumType.ModelAsString)
                 {
                     builder.AppendLine("type: {").Indent().AppendLine("name: 'String'").Outdent().AppendLine("}");
                 }
