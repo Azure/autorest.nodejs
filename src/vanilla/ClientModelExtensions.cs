@@ -687,9 +687,16 @@ namespace AutoRest.NodeJS
                 builder.AppendLine("required: false,");
             }
 
-            if (parameter?.IsXNullable == false)
+            if (parameter?.IsXNullable != null)
             {
-                builder.AppendLine("nullable: false");
+                if (parameter.IsXNullable.Value)
+                {
+                    builder.AppendLine("nullable: true,");
+                }
+                else
+                {
+                    builder.AppendLine("nullable: false,");
+                }
             }
 
             if (isReadOnly)
