@@ -1251,7 +1251,7 @@ describe('nodejs', function () {
           var testArray = [moment.duration('P123DT22H14M12.011S'), moment.duration('P5DT1H')];
           testClient.arrayModel.getDurationValid(function (error, result) {
             should.not.exist(error);
-            assert.deepEqual(result, testArray);
+            assert.strictEqual(JSON.stringify(result), JSON.stringify(testArray));
             testClient.arrayModel.putDurationValid(testArray, function (error, result) {
               should.not.exist(error);
               done();
@@ -1707,7 +1707,7 @@ describe('nodejs', function () {
             { 0: moment.duration('P123DT22H14M12.011S'), 1: moment.duration('P5DT1H') };
           testClient.dictionary.getDurationValid(function (error, result) {
             should.not.exist(error);
-            assert.deepEqual(result, dictionary);
+            assert.strictEqual(JSON.stringify(result), JSON.stringify(dictionary));
             testClient.dictionary.putDurationValid(dictionary, function (error, result) {
               should.not.exist(error);
               done();
