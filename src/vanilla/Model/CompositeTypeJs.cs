@@ -69,7 +69,7 @@ namespace AutoRest.NodeJS.Model
                 var type = AdditionalProperties.TSType(true);
                 if (type != "any")
                 {
-                    result += $"The value of an unknown property MUST be of type \"{type}\". Due to valid TS constraints " + 
+                    result += $"The value of an unknown property MUST be of type \"{type}\". Due to valid TS constraints " +
                         $"we have modeled this as a union of `{type} | any`.";
                 }
                 else
@@ -167,7 +167,7 @@ namespace AutoRest.NodeJS.Model
                                         Property = individualProperty,
                                         RecursiveTypes = recursiveList
                                     };
-                                    
+
                                     traversalStack.Push(subPropertyWrapper);
                                 }
                             }
@@ -197,7 +197,7 @@ namespace AutoRest.NodeJS.Model
 
         public bool ContainsPropertiesInSequenceType()
         {
-            var sample = ComposedProperties.FirstOrDefault(p => 
+            var sample = ComposedProperties.FirstOrDefault(p =>
             p.ModelType is Core.Model.SequenceType ||
             p.ModelType is Core.Model.DictionaryType && (p.ModelType as Core.Model.DictionaryType).ValueType is Core.Model.SequenceType);
             return sample != null;
@@ -213,8 +213,8 @@ namespace AutoRest.NodeJS.Model
         {
             bool result = false;
             //base condition
-            if (type is CompositeType || 
-                type is Core.Model.SequenceType && (type as Core.Model.SequenceType).ElementType is CompositeType || 
+            if (type is CompositeType ||
+                type is Core.Model.SequenceType && (type as Core.Model.SequenceType).ElementType is CompositeType ||
                 type is Core.Model.DictionaryType && (type as Core.Model.DictionaryType).ValueType is CompositeType)
             {
                 result = true;
@@ -245,9 +245,9 @@ namespace AutoRest.NodeJS.Model
         /// <param name="property">Model property to query</param>
         /// <param name="inModelsModule">Pass true if generating the code for the models module, thus model types don't need a "models." prefix</param>
         /// <returns>TypeScript property definition</returns>
-        public static string PropertyTS(Core.Model.Property property, bool inModelsModule) 
+        public static string PropertyTS(Core.Model.Property property, bool inModelsModule)
         {
-            if (property == null) 
+            if (property == null)
             {
                 throw new ArgumentNullException(nameof(property));
             }
@@ -272,7 +272,7 @@ namespace AutoRest.NodeJS.Model
         }
 
         /// <summary>
-        /// Provides the property name in the correct jsdoc notation depending on 
+        /// Provides the property name in the correct jsdoc notation depending on
         /// whether it is required or optional
         /// </summary>
         /// <param name="property">Parameter to be documented</param>
@@ -291,7 +291,7 @@ namespace AutoRest.NodeJS.Model
         /// Provides the property documentation string along with default value if any.
         /// </summary>
         /// <param name="property">Parameter to be documented</param>
-        /// <returns>Parameter documentation string along with default value if any 
+        /// <returns>Parameter documentation string along with default value if any
         /// in correct jsdoc notation</returns>
         public static string GetPropertyDocumentationString(Core.Model.Property property)
         {
@@ -301,7 +301,7 @@ namespace AutoRest.NodeJS.Model
             }
 
             return property.DefaultValue.IsNullOrEmpty() ?
-                $"{property.Summary.EnsureEndsWith(".")} {property.Documentation}".Trim() : 
+                $"{property.Summary.EnsureEndsWith(".")} {property.Documentation}".Trim() :
                 $"{property.Summary.EnsureEndsWith(".")} {property.Documentation.EnsureEndsWith(".")} Default value: {property.DefaultValue} .".Trim();
         }
 

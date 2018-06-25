@@ -232,7 +232,7 @@ namespace AutoRest.NodeJS
                 builder.AppendLine("if ({0} && !Buffer.isBuffer({0})) {{", valueReference, lowercaseTypeName);
                 return ConstructValidationCheck(builder, typeErrorMessage, valueReference, primary.Name).ToString();
             }
-            else if (primary.KnownPrimaryType == KnownPrimaryType.DateTime || primary.KnownPrimaryType == KnownPrimaryType.Date || 
+            else if (primary.KnownPrimaryType == KnownPrimaryType.DateTime || primary.KnownPrimaryType == KnownPrimaryType.Date ||
                 primary.KnownPrimaryType == KnownPrimaryType.DateTimeRfc1123 || primary.KnownPrimaryType == KnownPrimaryType.UnixTime)
             {
                 if (isRequired)
@@ -272,7 +272,7 @@ namespace AutoRest.NodeJS
         /// </summary>
         /// <param name="primary">primary.KnownPrimaryType to query</param>
         /// <returns>The TypeScript type correspoinding to this model primary.KnownPrimaryType</returns>
-        private static string PrimaryTSType(this PrimaryType primary) 
+        private static string PrimaryTSType(this PrimaryType primary)
         {
             if (primary == null)
             {
@@ -281,19 +281,19 @@ namespace AutoRest.NodeJS
 
             if (primary.KnownPrimaryType == KnownPrimaryType.Boolean)
                 return "boolean";
-            else if (primary.KnownPrimaryType == KnownPrimaryType.Double || primary.KnownPrimaryType == KnownPrimaryType.Decimal || 
+            else if (primary.KnownPrimaryType == KnownPrimaryType.Double || primary.KnownPrimaryType == KnownPrimaryType.Decimal ||
                 primary.KnownPrimaryType == KnownPrimaryType.Int || primary.KnownPrimaryType == KnownPrimaryType.Long)
                 return "number";
             else if (primary.KnownPrimaryType == KnownPrimaryType.String || primary.KnownPrimaryType == KnownPrimaryType.Uuid)
                 return "string";
-            else if (primary.KnownPrimaryType == KnownPrimaryType.Date || primary.KnownPrimaryType == KnownPrimaryType.DateTime || 
+            else if (primary.KnownPrimaryType == KnownPrimaryType.Date || primary.KnownPrimaryType == KnownPrimaryType.DateTime ||
                 primary.KnownPrimaryType == KnownPrimaryType.DateTimeRfc1123 || primary.KnownPrimaryType == KnownPrimaryType.UnixTime)
                 return "Date";
             else if (primary.KnownPrimaryType == KnownPrimaryType.Object)
                 return "any";   // TODO: test this
-            else if (primary.KnownPrimaryType == KnownPrimaryType.ByteArray || primary.KnownPrimaryType == KnownPrimaryType.Base64Url)  
-                return "Buffer";  
-            else if (primary.KnownPrimaryType == KnownPrimaryType.Stream)  
+            else if (primary.KnownPrimaryType == KnownPrimaryType.ByteArray || primary.KnownPrimaryType == KnownPrimaryType.Base64Url)
+                return "Buffer";
+            else if (primary.KnownPrimaryType == KnownPrimaryType.Stream)
                 return "stream.Readable";
             else if (primary.KnownPrimaryType == KnownPrimaryType.TimeSpan)
                 return "moment.Duration"; //TODO: test this, add include for it
@@ -343,7 +343,7 @@ namespace AutoRest.NodeJS
             {
                 builder.Outdent().AppendLine("}");
             }
-            
+
             return builder.ToString();
         }
 
@@ -501,7 +501,7 @@ namespace AutoRest.NodeJS
 
             return null;
         }
-		
+
         /// <summary>
         /// Return the TypeScript type (as a string) for specified type.
         /// </summary>
@@ -551,7 +551,7 @@ namespace AutoRest.NodeJS
             return tsType;
         }
 
-        public static IndentedStringBuilder AppendConstraintValidations(this IModelType type, string valueReference, Dictionary<Constraint, string> constraints, 
+        public static IndentedStringBuilder AppendConstraintValidations(this IModelType type, string valueReference, Dictionary<Constraint, string> constraints,
             IndentedStringBuilder builder)
         {
             if (valueReference == null)
@@ -686,6 +686,19 @@ namespace AutoRest.NodeJS
             {
                 builder.AppendLine("required: false,");
             }
+
+            if (parameter?.IsXNullable != null)
+            {
+                if (parameter.IsXNullable.Value)
+                {
+                    builder.AppendLine("nullable: true,");
+                }
+                else
+                {
+                    builder.AppendLine("nullable: false,");
+                }
+            }
+
             if (isReadOnly)
             {
                 builder.AppendLine("readOnly: true,");
@@ -728,7 +741,7 @@ namespace AutoRest.NodeJS
                 }
                 builder.Outdent().AppendLine("},");
             }
-            // Add type information 
+            // Add type information
             if (primary != null)
             {
                 switch (primary.KnownPrimaryType)
@@ -749,7 +762,7 @@ namespace AutoRest.NodeJS
                     case KnownPrimaryType.Uuid:
                        builder.AppendLine("type: {").Indent().AppendLine("name: 'String'").Outdent().AppendLine("}");
                         break;
-                  
+
                     // case KnownPrimaryType.Uuid:
                        //  builder.AppendLine("type: {").Indent().AppendLine("name: 'Uuid'").Outdent().AppendLine("}");
                         //break;
@@ -898,11 +911,11 @@ namespace AutoRest.NodeJS
             {
                 throw new ArgumentNullException("builder");
             }
-            // Note: If the polymorphicDiscriminator has a dot in it's name then do not escape that dot for 
-            // it's serializedName, the way it is done for other properties. This makes it easy to find the 
-            // discriminator property from the responseBody during deserialization. Please, do not get confused  
-            // between the definition of the discriminator and the definition of the property that is  
-            // marked as the discriminator. 
+            // Note: If the polymorphicDiscriminator has a dot in it's name then do not escape that dot for
+            // it's serializedName, the way it is done for other properties. This makes it easy to find the
+            // discriminator property from the responseBody during deserialization. Please, do not get confused
+            // between the definition of the discriminator and the definition of the property that is
+            // marked as the discriminator.
             builder.AppendLine("polymorphicDiscriminator: {")
                      .Indent()
                      .AppendLine("serializedName: '{0}',", composite.BasePolymorphicDiscriminator)
