@@ -13,7 +13,7 @@ namespace AutoRest.NodeJS.Model
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = null;
-            Assert.Equal("http://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
+            Assert.Equal("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
         }
 
         [Fact]
@@ -21,7 +21,7 @@ namespace AutoRest.NodeJS.Model
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "";
-            Assert.Equal("http://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
+            Assert.Equal("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace AutoRest.NodeJS.Model
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "test/azure/generated/StorageManagementClient";
-            Assert.Equal("http://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
+            Assert.Equal("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
         }
 
         [Fact]
@@ -37,7 +37,7 @@ namespace AutoRest.NodeJS.Model
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "C:\\Users\\daschult\\Sources\\azure-sdk-for-node\\lib\\services\\batchManagement";
-            Assert.Equal("http://github.com/azure/azure-sdk-for-node/lib/services/batchManagement", codeModel.HomePageUrl);
+            Assert.Equal("https://github.com/azure/azure-sdk-for-node/lib/services/batchManagement", codeModel.HomePageUrl);
         }
 
         [Fact]
@@ -45,7 +45,7 @@ namespace AutoRest.NodeJS.Model
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "C:/Users/daschult/Sources/azure-sdk-for-node/lib/services/batchManagement";
-            Assert.Equal("http://github.com/azure/azure-sdk-for-node/lib/services/batchManagement", codeModel.HomePageUrl);
+            Assert.Equal("https://github.com/azure/azure-sdk-for-node/lib/services/batchManagement", codeModel.HomePageUrl);
         }
     }
 }

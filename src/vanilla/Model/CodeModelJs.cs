@@ -16,7 +16,7 @@ namespace AutoRest.NodeJS.Model
     public class CodeModelJs : CodeModel
     {
         private const string defaultGitHubRepositoryName = "azure-sdk-for-node";
-        private const string defaultGitHubUrl = "http://github.com/azure/" + defaultGitHubRepositoryName;
+        private const string defaultGitHubUrl = "https://github.com/azure/" + defaultGitHubRepositoryName;
         private const string searchStringSuffix = "/lib/services/";
         private const string outputFolderSearchString = "/" + defaultGitHubRepositoryName + searchStringSuffix;
 
