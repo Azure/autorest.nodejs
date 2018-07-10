@@ -33,10 +33,13 @@ task 'build', 'tests', ['init'], (done) ->
   done();
 
 task 'test', '', ['build/tests'], (done) ->
-  await execute "dotnet test #{basefolder}/unittests/autorest.nodejs.tests.csproj /nologo", defer _
   await execute "npm test", { cwd: './test/vanilla/' }, defer code, stderr, stdout
   await execute "npm test", { cwd: './test/azure/' }, defer code, stderr, stdout
   done();
+
+task 'test/generator-unit', 'run generator unit tests', [], (done) ->
+  await execute "dotnet test #{basefolder}/unittests/autorest.nodejs.tests.csproj /nologo", defer _
+  done()
 
 # CI job
 task 'testci', "more", [], (done) ->
