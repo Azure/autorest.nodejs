@@ -6,7 +6,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "autorest.nodejs", "src\auto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "autorest.common", "autorest.common\src\autorest.common.csproj", "{9E857E16-1000-2000-3000-CFA9D292D0B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "autorest.nodejs.tests", "unittests\autorest.nodejs.tests.csproj", "{37C82921-56D5-4E61-9B29-34BED9890352}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "autorest.nodejs.tests", "unittests\autorest.nodejs.tests.csproj", "{37C82921-56D5-4E61-9B29-34BED9890352}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -32,7 +32,7 @@ task 'build', 'tests', ['init'], (done) ->
   await execute "npm run build", { cwd: './test/azure' }, defer code, stderr, stdout
   done();
 
-task 'test', '', ['build/tests'], (done) ->
+task 'test', '', ['test/generator-unit', 'build/tests'], (done) ->
   await execute "npm test", { cwd: './test/vanilla/' }, defer code, stderr, stdout
   await execute "npm test", { cwd: './test/azure/' }, defer code, stderr, stdout
   done();
