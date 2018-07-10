@@ -37,5 +37,10 @@ namespace AutoRest.NodeJS
         /// The version of the package to generate.
         /// </summary>
         public string PackageVersion { get; set; }
+
+        /// <summary>
+        /// The folder where the generated files will be output to.
+        /// </summary>
+        public string OutputFolder { get; set; }
     }
 }

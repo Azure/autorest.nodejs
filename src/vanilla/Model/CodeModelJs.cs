@@ -15,6 +15,11 @@ namespace AutoRest.NodeJS.Model
 {
     public class CodeModelJs : CodeModel
     {
+        private const string defaultGitHubRepositoryName = "azure-sdk-for-node";
+        private const string defaultGitHubUrl = "https://github.com/azure/" + defaultGitHubRepositoryName;
+        private const string searchStringSuffix = "/lib/services/";
+        private const string outputFolderSearchString = "/" + defaultGitHubRepositoryName + searchStringSuffix;
+
         public CodeModelJs()
         {
         }
@@ -59,6 +64,30 @@ namespace AutoRest.NodeJS.Model
 
         public virtual string PackageVersion { get; private set; }
 
+        public string OutputFolder { get; set; }
+
+        public string HomePageUrl
+        {
+            get
+            {
+                string result = defaultGitHubUrl;
+                if (!string.IsNullOrEmpty(OutputFolder))
+                {
+                    string outputFolder = OutputFolder.Replace('\\', '/');
+                    int searchStringIndex = outputFolder.IndexOf(outputFolderSearchString, StringComparison.OrdinalIgnoreCase);
+                    if (0 <= searchStringIndex)
+                    {
+                        result += searchStringSuffix + outputFolder.Substring(searchStringIndex + outputFolderSearchString.Length);
+                    }
+                }
+                return result;
+            }
+        }
+
+        public string RepositoryUrl => $"{defaultGitHubUrl}.git";
+
+        public string BugsUrl => $"{defaultGitHubUrl}/issues";
+
         public virtual IEnumerable<string> PackageDependencies()
         {
             return new[]
@@ -76,6 +105,7 @@ namespace AutoRest.NodeJS.Model
         {
             PackageName = generatorSettings.PackageName;
             PackageVersion = generatorSettings.PackageVersion;
+            OutputFolder = generatorSettings.OutputFolder;
         }
 
         public string ClientPrefix
