@@ -21,11 +21,10 @@ task 'init', "" ,(done)->
   await execute "npm install", { cwd: './test/vanilla' }, defer code, stderr, stdout
   await execute "npm install", { cwd: './test/azure' }, defer code, stderr, stdout
   done()
-  
+
 task 'install_common',"", (done) ->
   # global.verbose = true
   execute "npm install",{cwd:"#{basefolder}/autorest.common", silent:false }, done
-      
 
 # Run language-specific tests:
 task 'build', 'tests', ['init'], (done) ->
@@ -34,6 +33,7 @@ task 'build', 'tests', ['init'], (done) ->
   done();
 
 task 'test', '', ['build/tests'], (done) ->
+  await execute "dotnet test #{basefolder}/unittests/autorest.nodejs.tests.csproj /nologo", defer code, stderr, stdout
   await execute "npm test", { cwd: './test/vanilla/' }, defer code, stderr, stdout
   await execute "npm test", { cwd: './test/azure/' }, defer code, stderr, stdout
   done();

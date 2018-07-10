@@ -17,9 +17,9 @@
   "homepage": "http://github.com/azure/azure-sdk-for-node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/azure/azure-sdk-for-node.git"
+    "url": "http://github.com/azure/azure-sdk-for-node.git"
   },
   "bugs": {
-    "url": "http://github.com/Azure/azure-sdk-for-node/issues"
+    "url": "http://github.com/azure/azure-sdk-for-node/issues"
   }
 }
