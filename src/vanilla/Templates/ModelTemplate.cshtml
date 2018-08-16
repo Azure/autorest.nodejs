@@ -7,11 +7,8 @@
 @EmptyLine
 'use strict';
 @EmptyLine
-@if (Model.ContainsPropertiesInCompositeType() || Model.BaseModelType != null)
-{
-@:const models = require('./index');
-@EmptyLine
-}
+
+@Model.GenerateModelImports(EmptyLine)
 
 @{ 
     bool isInherited = Model.BaseModelType != null;

@@ -1,7 +1,6 @@
 ﻿@using System
 @using System.Linq
 @using System.Collections.Generic
-@using AutoRest.Core.Model
 @using AutoRest.NodeJS.Model
 @inherits AutoRest.Core.Template<AutoRest.NodeJS.Model.CompositeTypeJs>
 
@@ -49,9 +48,9 @@
     if (Model.AdditionalProperties != null)
     {
   @:/**
-  @:@WrapComment(" * ", $"@property {Model.AdditionaPropertiesDocumentation()}")
+  @:@WrapComment(" * ", $"@property {Model.AdditionalPropertiesDocumentation()}")
   @: */
-  @:[property: string]: @(Model.AdditionaPropertiesTSType());
+  @:[property: string]: @(Model.AdditionalPropertiesTSType());
     }
 @:}
 }

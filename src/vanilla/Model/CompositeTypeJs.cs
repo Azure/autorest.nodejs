@@ -1,14 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using static AutoRest.Core.Utilities.DependencyInjection;
-using AutoRest.Extensions;
 
 namespace AutoRest.NodeJS.Model
 {
@@ -21,6 +20,15 @@ namespace AutoRest.NodeJS.Model
 
         public CompositeTypeJs(string name) : base(name)
         {
+        }
+
+        public bool ContainsTimeSpanPropertyWithValue()
+        {
+            return Properties.Any((Property property) =>
+                !string.IsNullOrEmpty(property.DefaultValue) &&
+                (property.ModelType.IsPrimaryType(KnownPrimaryType.TimeSpan) ||
+                    (property.ModelType is SequenceType sequencePropertyType && sequencePropertyType.ElementType.IsPrimaryType(KnownPrimaryType.TimeSpan)) ||
+                    (property.ModelType is DictionaryType dictionaryPropertyType && dictionaryPropertyType.ValueType.IsPrimaryType(KnownPrimaryType.TimeSpan))));
         }
 
         public override Property Add(Property item)
@@ -50,7 +58,7 @@ namespace AutoRest.NodeJS.Model
             }
         }
 
-        public string AdditionaPropertiesTSType()
+        public string AdditionalPropertiesTSType()
         {
             string result = "any";
             if (AdditionalProperties != null)
@@ -61,7 +69,7 @@ namespace AutoRest.NodeJS.Model
             return result;
         }
 
-        public string AdditionaPropertiesDocumentation()
+        public string AdditionalPropertiesDocumentation()
         {
             string result = "Describes unknown properties. ";
             if (AdditionalProperties != null)
@@ -80,10 +88,10 @@ namespace AutoRest.NodeJS.Model
             return result;
         }
 
-            /// <summary>
-            /// If PolymorphicDiscriminator is set, makes sure we have a PolymorphicDiscriminator property.
-            /// </summary>
-            private void AddPolymorphicPropertyIfNecessary()
+        /// <summary>
+        /// If PolymorphicDiscriminator is set, makes sure we have a PolymorphicDiscriminator property.
+        /// </summary>
+        private void AddPolymorphicPropertyIfNecessary()
         {
             if (!string.IsNullOrEmpty(PolymorphicDiscriminator) &&
                 Properties.All(p => p.Name != PolymorphicDiscriminator))
@@ -97,11 +105,6 @@ namespace AutoRest.NodeJS.Model
                     ModelType = New<PrimaryType>(KnownPrimaryType.String)
                 }));
             }
-        }
-
-        public IEnumerable<Core.Model.Property> SerializableProperties
-        {
-            get { return this.Properties.Where(p => !string.IsNullOrEmpty(p.SerializedName)); }
         }
 
         private class PropertyWrapper
@@ -195,20 +198,6 @@ namespace AutoRest.NodeJS.Model
             return builder.AppendLine(propertyDocumentation).ToString();
         }
 
-        public bool ContainsPropertiesInSequenceType()
-        {
-            var sample = ComposedProperties.FirstOrDefault(p =>
-            p.ModelType is Core.Model.SequenceType ||
-            p.ModelType is Core.Model.DictionaryType && (p.ModelType as Core.Model.DictionaryType).ValueType is Core.Model.SequenceType);
-            return sample != null;
-        }
-
-        public bool ContainsPropertiesInCompositeType()
-        {
-            var sample = ComposedProperties.FirstOrDefault(p => ContainsCompositeType(p.ModelType));
-            return sample != null;
-        }
-
         private bool ContainsCompositeType(IModelType type)
         {
             bool result = false;
@@ -228,15 +217,6 @@ namespace AutoRest.NodeJS.Model
                 result = ContainsCompositeType((type as Core.Model.DictionaryType).ValueType);
             }
             return result;
-        }
-
-        public bool ContainsDurationProperty()
-        {
-            Core.Model.Property prop = ComposedProperties.FirstOrDefault(p =>
-                (p.ModelType is PrimaryTypeJs && (p.ModelType as PrimaryTypeJs).KnownPrimaryType == KnownPrimaryType.TimeSpan) ||
-                (p.ModelType is Core.Model.SequenceType && (p.ModelType as Core.Model.SequenceType).ElementType.IsPrimaryType(KnownPrimaryType.TimeSpan)) ||
-                (p.ModelType is Core.Model.DictionaryType && (p.ModelType as Core.Model.DictionaryType).ValueType.IsPrimaryType(KnownPrimaryType.TimeSpan)));
-            return prop != null;
         }
 
         /// <summary>
@@ -332,6 +312,32 @@ namespace AutoRest.NodeJS.Model
             }
 
             return typeName.ToLowerInvariant();
+        }
+
+        public string GenerateModelImports(string emptyLine)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            bool addEmptyLine = false;
+
+            if (BaseModelType != null)
+            {
+                builder.AppendLine("const models = require('./index');");
+                addEmptyLine = true;
+            }
+
+            if (ContainsTimeSpanPropertyWithValue())
+            {
+                builder.AppendLine("const moment = require('moment');");
+                addEmptyLine = true;
+            }
+
+            if (addEmptyLine)
+            {
+                builder.AppendLine(emptyLine);
+            }
+
+            return builder.ToString();
         }
     }
 }
