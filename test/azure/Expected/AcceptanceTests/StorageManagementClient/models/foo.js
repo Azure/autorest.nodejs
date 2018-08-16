@@ -10,8 +10,6 @@
 
 'use strict';
 
-const models = require('./index');
-
 /**
  * The URIs that are used to perform a retrieval of a public blob, queue or
  * table object.
