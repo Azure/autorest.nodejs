@@ -245,7 +245,6 @@ namespace AutoRest.NodeJS.Model
 
         public virtual string ConstructModelMapper()
         {
-            string className = this.ClassName;
             var modelMapper = this.ConstructMapper(SerializedName, null, false, true);
             var builder = new IndentedStringBuilder("  ");
             builder.AppendLine("return {{{0}}};", modelMapper);
