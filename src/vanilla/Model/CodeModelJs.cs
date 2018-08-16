@@ -77,7 +77,7 @@ namespace AutoRest.NodeJS.Model
                     int searchStringIndex = outputFolder.IndexOf(outputFolderSearchString, StringComparison.OrdinalIgnoreCase);
                     if (0 <= searchStringIndex)
                     {
-                        result += searchStringSuffix + outputFolder.Substring(searchStringIndex + outputFolderSearchString.Length);
+                        result += "/tree/master" + searchStringSuffix + outputFolder.Substring(searchStringIndex + outputFolderSearchString.Length);
                     }
                 }
                 return result;
