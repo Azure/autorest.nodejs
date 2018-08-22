@@ -167,7 +167,7 @@ namespace AutoRest.NodeJS
             {
                 totalPathSegments[1 + i] = pathSegments[i];
             }
-            return Path.Combine(totalPathSegments);
+            return Path.Combine(totalPathSegments).Replace('\\', '/');
         }
     }
 }
