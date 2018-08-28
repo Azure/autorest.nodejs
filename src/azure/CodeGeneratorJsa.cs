@@ -35,6 +35,7 @@ namespace AutoRest.NodeJS.Azure
                 throw new InvalidCastException("CodeModel is not a Azure NodeJS code model.");
             }
 
+            generatorSettings.UpdatePackageVersion();
             codeModel.PopulateFromSettings(generatorSettings);
 
             // Service client

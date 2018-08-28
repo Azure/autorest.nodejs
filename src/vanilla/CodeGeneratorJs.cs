@@ -38,6 +38,7 @@ namespace AutoRest.NodeJS
                 throw new InvalidCastException("CodeModel is not a NodeJS code model.");
             }
 
+            generatorSettings.UpdatePackageVersion();
             codeModel.PopulateFromSettings(generatorSettings);
 
             // Service client
