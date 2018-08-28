@@ -129,7 +129,7 @@ namespace AutoRest.NodeJS
             StringBuilder output = new StringBuilder();
             StringBuilder error = new StringBuilder();
 
-            Log(Category.Information, $"Executing \"{filePath} {arguments}\".");
+            Log(Category.Debug, $"Executing \"{filePath} {arguments}\".");
             
             Process npmProcess = new Process()
             {
@@ -158,10 +158,25 @@ namespace AutoRest.NodeJS
                 throw new Exception(errorMessage);
             }
 
+            string packageVersion = null;
             JObject packageDetails = JObject.Parse(output.ToString());
             JToken distTags = packageDetails["dist-tags"];
-            JToken latest = distTags["latest"];
-            string packageVersion = latest.ToString();
+            if (distTags == null)
+            {
+                Log(Category.Debug, "No \"dist-tags\" property found in the NPM command's output.");
+            }
+            else
+            {
+                JToken latest = distTags["latest"];
+                if (latest == null)
+                {
+                    Log(Category.Debug, "No \"dist-tags.latest\" property found in the NPM command's output.");
+                }
+                else
+                {
+                    packageVersion = latest.ToString();
+                }
+            }
 
             return packageVersion;
         }
@@ -179,14 +194,13 @@ namespace AutoRest.NodeJS
             string filePath = null;
             if (Path.IsPathRooted(fileName))
             {
-                Log(Category.Information, $"\"{fileName}\" is already rooted. No resolution needed.");
+                Log(Category.Debug, $"\"{fileName}\" is already rooted. No resolution needed.");
                 filePath = fileName;
             }
             else
             {
                 string path = Environment.GetEnvironmentVariable("PATH");
-                Log(Category.Information, $"PATH: \"{path}\"");
-                string[] pathSegments = path.Split(';', ':');
+                string[] pathSegments = path.Split(isWindows ? ';' : ':');
                 foreach (string pathSegment in pathSegments)
                 {
                     foreach (string possibleFileExtension in possibleFileExtensions)
@@ -197,11 +211,10 @@ namespace AutoRest.NodeJS
                             possibleFilePath += possibleFileExtension;
                         }
 
-                        Log(Category.Information, $"Checking if \"{possibleFilePath}\" exists.");
                         if (File.Exists(possibleFilePath))
                         {
                             filePath = possibleFilePath;
-                            Log(Category.Information, $"Resolved \"{fileName}\" to \"{filePath}\".");
+                            Log(Category.Debug, $"Resolved \"{fileName}\" to \"{filePath}\".");
                             break;
                         }
                     }
