@@ -177,30 +177,40 @@ namespace AutoRest.NodeJS
             string[] possibleFileExtensions = (isWindows ? new string[] { ".bat", ".cmd", ".exe" } : new string[] { "" });
 
             string filePath = null;
-            string path = Environment.GetEnvironmentVariable("PATH");
-            Log(Category.Information, $"PATH: \"{path}\"");
-            string[] pathSegments = path.Split(';');
-            foreach (string pathSegment in pathSegments)
+            if (Path.IsPathRooted(fileName))
             {
-                foreach (string possibleFileExtension in possibleFileExtensions)
+                Log(Category.Information, $"\"{fileName}\" is already rooted. No resolution needed.");
+                filePath = fileName;
+            }
+            else
+            {
+                string path = Environment.GetEnvironmentVariable("PATH");
+                Log(Category.Information, $"PATH: \"{path}\"");
+                string[] pathSegments = path.Split(';', ':');
+                foreach (string pathSegment in pathSegments)
                 {
-                    string possibleFilePath = Path.Combine(pathSegment, fileName);
-                    if (!string.IsNullOrEmpty(possibleFileExtension) && !possibleFilePath.EndsWith(possibleFileExtension))
+                    foreach (string possibleFileExtension in possibleFileExtensions)
                     {
-                        possibleFilePath += possibleFileExtension;
-                    }
+                        string possibleFilePath = Path.Combine(pathSegment, fileName);
+                        if (!string.IsNullOrEmpty(possibleFileExtension) && !possibleFilePath.EndsWith(possibleFileExtension))
+                        {
+                            possibleFilePath += possibleFileExtension;
+                        }
 
-                    if (File.Exists(possibleFilePath))
-                    {
-                        filePath = possibleFilePath;
-                        break;
+                        Log(Category.Information, $"Checking if \"{possibleFilePath}\" exists.");
+                        if (File.Exists(possibleFilePath))
+                        {
+                            filePath = possibleFilePath;
+                            Log(Category.Information, $"Resolved \"{fileName}\" to \"{filePath}\".");
+                            break;
+                        }
                     }
                 }
-            }
 
-            if (filePath == null)
-            {
-                throw new FileNotFoundException($"Could not resolve \"{fileName}\" using the current PATH environment variable.");
+                if (filePath == null)
+                {
+                    Log(Category.Warning, $"Could not resolve \"{fileName}\" using the current PATH environment variable.");
+                }
             }
 
             return filePath;
