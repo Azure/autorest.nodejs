@@ -219,17 +219,7 @@ namespace AutoRest.NodeJS
             }
             else
             {
-                switch (category)
-                {
-                    case Category.Debug:
-                    case Category.Information:
-                        Console.WriteLine($"{category}: {logMessage}");
-                        break;
-
-                    default:
-                        Console.Error.WriteLine($"{category}: {logMessage}");
-                        break;
-                }
+                Console.WriteLine($"{category}: {logMessage}");
             }
         }
     }
