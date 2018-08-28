@@ -178,6 +178,7 @@ namespace AutoRest.NodeJS
 
             string filePath = null;
             string path = Environment.GetEnvironmentVariable("PATH");
+            Log(Category.Information, $"PATH: \"{path}\"");
             string[] pathSegments = path.Split(';');
             foreach (string pathSegment in pathSegments)
             {
