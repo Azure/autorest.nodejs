@@ -107,7 +107,21 @@ namespace AutoRest.NodeJS
                 }
                 catch (Exception e)
                 {
-                    Log(Category.Error, $"{e.GetType().Name} - {e.Message}");
+                    if (e.Message.ToLowerInvariant().Contains("404 not found"))
+                    {
+                        string newPackageVersion = "1.0.0";
+                        string[] inputFilePaths = host?.GetValue<string[]>("input-file").Result;
+                        if (inputFilePaths != null && inputFilePaths.Any((string inputFilePath) => inputFilePath.Replace('\\', '/').ToLowerInvariant().Contains("/preview/")))
+                        {
+                            newPackageVersion += "-preview";
+                        }
+                        Log(Category.Information, $"Package doesn't exist on NPM, so setting its initial version to \"{newPackageVersion}\".");
+                        PackageVersion = newPackageVersion;
+                    }
+                    else
+                    {
+                        Log(Category.Error, $"{e.GetType().Name} - {e.Message}");
+                    }
                 }
             }
         }
@@ -155,16 +169,7 @@ namespace AutoRest.NodeJS
 
             if (error.Length != 0)
             {
-                string errorMessage = $"Failed to run \"{filePath} {arguments}\":{Environment.NewLine}{error}";
-                if (errorMessage.ToLowerInvariant().Contains("404 not found"))
-                {
-                    packageVersion = "1.0.0-preview";
-                }
-                else
-                {
-                    Log(Category.Error, errorMessage);
-                    throw new Exception(errorMessage);
-                }
+                throw new Exception($"Failed to run \"{filePath} {arguments}\":{Environment.NewLine}{error}");
             }
             else
             {
