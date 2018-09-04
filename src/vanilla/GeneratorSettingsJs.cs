@@ -151,30 +151,40 @@ namespace AutoRest.NodeJS
             
             npmProcess.WaitForExit();
 
+            string packageVersion = null;
+
             if (error.Length != 0)
             {
                 string errorMessage = $"Failed to run \"{filePath} {arguments}\":{Environment.NewLine}{error}";
-                Log(Category.Error, errorMessage);
-                throw new Exception(errorMessage);
-            }
-
-            string packageVersion = null;
-            JObject packageDetails = JObject.Parse(output.ToString());
-            JToken distTags = packageDetails["dist-tags"];
-            if (distTags == null)
-            {
-                Log(Category.Debug, "No \"dist-tags\" property found in the NPM command's output.");
-            }
-            else
-            {
-                JToken latest = distTags["latest"];
-                if (latest == null)
+                if (errorMessage.ToLowerInvariant().Contains("404 not found"))
                 {
-                    Log(Category.Debug, "No \"dist-tags.latest\" property found in the NPM command's output.");
+                    packageVersion = "1.0.0-preview";
                 }
                 else
                 {
-                    packageVersion = latest.ToString();
+                    Log(Category.Error, errorMessage);
+                    throw new Exception(errorMessage);
+                }
+            }
+            else
+            {
+                JObject packageDetails = JObject.Parse(output.ToString());
+                JToken distTags = packageDetails["dist-tags"];
+                if (distTags == null)
+                {
+                    Log(Category.Debug, "No \"dist-tags\" property found in the NPM command's output.");
+                }
+                else
+                {
+                    JToken latest = distTags["latest"];
+                    if (latest == null)
+                    {
+                        Log(Category.Debug, "No \"dist-tags.latest\" property found in the NPM command's output.");
+                    }
+                    else
+                    {
+                        packageVersion = latest.ToString();
+                    }
                 }
             }
 
