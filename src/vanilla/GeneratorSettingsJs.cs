@@ -107,7 +107,21 @@ namespace AutoRest.NodeJS
                 }
                 catch (Exception e)
                 {
-                    Log(Category.Error, $"{e.GetType().Name} - {e.Message}");
+                    if (e.Message.ToLowerInvariant().Contains("404 not found"))
+                    {
+                        string newPackageVersion = "1.0.0";
+                        string[] inputFilePaths = host?.GetValue<string[]>("input-file").Result;
+                        if (inputFilePaths != null && inputFilePaths.Any((string inputFilePath) => inputFilePath.Replace('\\', '/').ToLowerInvariant().Contains("/preview/")))
+                        {
+                            newPackageVersion += "-preview";
+                        }
+                        Log(Category.Information, $"Package doesn't exist on NPM, so setting its initial version to \"{newPackageVersion}\".");
+                        PackageVersion = newPackageVersion;
+                    }
+                    else
+                    {
+                        Log(Category.Error, $"{e.GetType().Name} - {e.Message}");
+                    }
                 }
             }
         }
@@ -151,30 +165,31 @@ namespace AutoRest.NodeJS
             
             npmProcess.WaitForExit();
 
+            string packageVersion = null;
+
             if (error.Length != 0)
             {
-                string errorMessage = $"Failed to run \"{filePath} {arguments}\":{Environment.NewLine}{error}";
-                Log(Category.Error, errorMessage);
-                throw new Exception(errorMessage);
-            }
-
-            string packageVersion = null;
-            JObject packageDetails = JObject.Parse(output.ToString());
-            JToken distTags = packageDetails["dist-tags"];
-            if (distTags == null)
-            {
-                Log(Category.Debug, "No \"dist-tags\" property found in the NPM command's output.");
+                throw new Exception($"Failed to run \"{filePath} {arguments}\":{Environment.NewLine}{error}");
             }
             else
             {
-                JToken latest = distTags["latest"];
-                if (latest == null)
+                JObject packageDetails = JObject.Parse(output.ToString());
+                JToken distTags = packageDetails["dist-tags"];
+                if (distTags == null)
                 {
-                    Log(Category.Debug, "No \"dist-tags.latest\" property found in the NPM command's output.");
+                    Log(Category.Debug, "No \"dist-tags\" property found in the NPM command's output.");
                 }
                 else
                 {
-                    packageVersion = latest.ToString();
+                    JToken latest = distTags["latest"];
+                    if (latest == null)
+                    {
+                        Log(Category.Debug, "No \"dist-tags.latest\" property found in the NPM command's output.");
+                    }
+                    else
+                    {
+                        packageVersion = latest.ToString();
+                    }
                 }
             }
 

@@ -44,7 +44,7 @@ namespace AutoRest.NodeJS
             settings.UpdatePackageVersion();
 
             Assert.Equal("idontexistandyoucantinstallme", settings.PackageName);
-            Assert.Null(settings.PackageVersion);
+            Assert.Equal("1.0.0", settings.PackageVersion);
         }
 
         [Fact]
