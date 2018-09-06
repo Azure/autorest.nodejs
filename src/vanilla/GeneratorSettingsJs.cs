@@ -25,12 +25,12 @@ namespace AutoRest.NodeJS
         /// <summary>
         /// Whether or not to generate a new readme.md file.
         /// </summary>
-        public bool GenerateReadmeMd { get; set; } = false;
+        public bool GenerateReadmeMd { get; set; }
 
         /// <summary>
         /// Whether or not to generate the LICENSE.txt file.
         /// </summary>
-        public bool GenerateLicenseTxt { get; set; } = true;
+        public bool GenerateLicenseTxt { get; set; }
 
         /// <summary>
         /// The sub-folder path where source code will be generated.
@@ -99,29 +99,22 @@ namespace AutoRest.NodeJS
             if (string.IsNullOrEmpty(PackageVersion) && !string.IsNullOrEmpty(PackageName))
             {
                 Log(Category.Information, $"Getting the package version for package \"{PackageName}\" from NPM.");
-                try
+                string npmPackageVersion = GetNPMPackageVersion(PackageName);
+                if (!string.IsNullOrEmpty(npmPackageVersion))
                 {
-                    string npmPackageVersion = GetNPMPackageVersion(PackageName);
                     Log(Category.Information, $"Got version \"{npmPackageVersion}\" for package \"{PackageName}\" from NPM.");
                     PackageVersion = npmPackageVersion;
                 }
-                catch (Exception e)
+                else
                 {
-                    if (e.Message.ToLowerInvariant().Contains("404 not found"))
+                    string newPackageVersion = "1.0.0";
+                    string[] inputFilePaths = host?.GetValue<string[]>("input-file").Result;
+                    if (inputFilePaths != null && inputFilePaths.Any((string inputFilePath) => inputFilePath.Replace('\\', '/').ToLowerInvariant().Contains("/preview/")))
                     {
-                        string newPackageVersion = "1.0.0";
-                        string[] inputFilePaths = host?.GetValue<string[]>("input-file").Result;
-                        if (inputFilePaths != null && inputFilePaths.Any((string inputFilePath) => inputFilePath.Replace('\\', '/').ToLowerInvariant().Contains("/preview/")))
-                        {
-                            newPackageVersion += "-preview";
-                        }
-                        Log(Category.Information, $"Package doesn't exist on NPM, so setting its initial version to \"{newPackageVersion}\".");
-                        PackageVersion = newPackageVersion;
+                        newPackageVersion += "-preview";
                     }
-                    else
-                    {
-                        Log(Category.Error, $"{e.GetType().Name} - {e.Message}");
-                    }
+                    Log(Category.Information, $"Package doesn't exist on NPM, so setting its initial version to \"{newPackageVersion}\".");
+                    PackageVersion = newPackageVersion;
                 }
             }
         }
@@ -167,13 +160,14 @@ namespace AutoRest.NodeJS
 
             string packageVersion = null;
 
-            if (error.Length != 0)
+            JObject packageDetails = JObject.Parse(output.ToString());
+            JToken errorObject = packageDetails["error"];
+            if (errorObject != null)
             {
-                throw new Exception($"Failed to run \"{filePath} {arguments}\":{Environment.NewLine}{error}");
+                Log(Category.Debug, "NPM returned an error: ...");
             }
             else
             {
-                JObject packageDetails = JObject.Parse(output.ToString());
                 JToken distTags = packageDetails["dist-tags"];
                 if (distTags == null)
                 {
