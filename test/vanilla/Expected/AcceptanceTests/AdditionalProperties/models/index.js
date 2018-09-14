@@ -16,6 +16,7 @@
 
 exports.ErrorModel = require('./errorModel');
 exports.PetAPTrue = require('./petAPTrue');
+exports.CatAPTrue = require('./catAPTrue');
 exports.PetAPObject = require('./petAPObject');
 exports.PetAPString = require('./petAPString');
 exports.PetAPInProperties = require('./petAPInProperties');

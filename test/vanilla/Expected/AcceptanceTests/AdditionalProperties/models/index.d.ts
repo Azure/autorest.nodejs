@@ -44,6 +44,16 @@ export interface PetAPTrue {
 
 /**
  * @class
+ * Initializes a new instance of the CatAPTrue class.
+ * @constructor
+ * @member {boolean} [friendly]
+ */
+export interface CatAPTrue extends PetAPTrue {
+  friendly?: boolean;
+}
+
+/**
+ * @class
  * Initializes a new instance of the PetAPObject class.
  * @constructor
  * @member {number} id
