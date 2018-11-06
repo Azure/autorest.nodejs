@@ -19,9 +19,9 @@ const models = require('./index');
 class FlattenedProduct extends models['Resource'] {
   /**
    * Create a FlattenedProduct.
-   * @member {string} [pname]
-   * @member {number} [lsize]
-   * @member {string} [provisioningState]
+   * @property {string} [pname]
+   * @property {number} [lsize]
+   * @property {string} [provisioningState]
    */
   constructor() {
     super();

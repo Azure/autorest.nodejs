@@ -16,9 +16,9 @@
 class StringWrapper {
   /**
    * Create a StringWrapper.
-   * @member {string} [field]
-   * @member {string} [empty]
-   * @member {string} [nullProperty]
+   * @property {string} [field]
+   * @property {string} [empty]
+   * @property {string} [nullProperty]
    */
   constructor() {
   }

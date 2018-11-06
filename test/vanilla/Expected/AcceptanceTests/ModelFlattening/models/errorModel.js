@@ -16,9 +16,9 @@
 class ErrorModel {
   /**
    * Create a ErrorModel.
-   * @member {number} [status]
-   * @member {string} [message]
-   * @member {object} [parentError]
+   * @property {number} [status]
+   * @property {string} [message]
+   * @property {object} [parentError]
    */
   constructor() {
   }

@@ -19,7 +19,7 @@ const models = require('./index');
 class B extends models['A'] {
   /**
    * Create a B.
-   * @member {string} [textStatusCode]
+   * @property {string} [textStatusCode]
    */
   constructor() {
     super();

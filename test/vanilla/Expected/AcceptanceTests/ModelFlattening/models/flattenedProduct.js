@@ -20,12 +20,12 @@ const models = require('./index');
 class FlattenedProduct extends models['Resource'] {
   /**
    * Create a FlattenedProduct.
-   * @member {string} [pname]
-   * @member {string} [flattenedProductType]
-   * @member {string} [provisioningStateValues] Possible values include:
+   * @property {string} [pname]
+   * @property {string} [flattenedProductType]
+   * @property {string} [provisioningStateValues] Possible values include:
    * 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating', 'Created',
    * 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
-   * @member {string} [provisioningState]
+   * @property {string} [provisioningState]
    */
   constructor() {
     super();

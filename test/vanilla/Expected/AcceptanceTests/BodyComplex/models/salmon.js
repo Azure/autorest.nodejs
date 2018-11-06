@@ -19,8 +19,8 @@ const models = require('./index');
 class Salmon extends models['Fish'] {
   /**
    * Create a Salmon.
-   * @member {string} [location]
-   * @member {boolean} [iswild]
+   * @property {string} [location]
+   * @property {boolean} [iswild]
    */
   constructor() {
     super();

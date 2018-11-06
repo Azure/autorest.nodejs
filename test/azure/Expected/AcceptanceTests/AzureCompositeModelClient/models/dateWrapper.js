@@ -16,8 +16,8 @@
 class DateWrapper {
   /**
    * Create a DateWrapper.
-   * @member {date} [field]
-   * @member {date} [leap]
+   * @property {date} [field]
+   * @property {date} [leap]
    */
   constructor() {
   }

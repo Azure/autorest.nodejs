@@ -16,10 +16,10 @@
 class Fish {
   /**
    * Create a Fish.
-   * @member {string} [species]
-   * @member {number} length
-   * @member {array} [siblings]
-   * @member {string} fishtype Polymorphic Discriminator
+   * @property {string} [species]
+   * @property {number} length
+   * @property {array} [siblings]
+   * @property {string} fishtype Polymorphic Discriminator
    */
   constructor() {
   }

@@ -16,8 +16,8 @@
 class ReadonlyObj {
   /**
    * Create a ReadonlyObj.
-   * @member {string} [id]
-   * @member {number} [size]
+   * @property {string} [id]
+   * @property {number} [size]
    */
   constructor() {
   }

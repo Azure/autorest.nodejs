@@ -16,7 +16,7 @@
 class D {
   /**
    * Create a D.
-   * @member {string} [httpStatusCode]
+   * @property {string} [httpStatusCode]
    */
   constructor() {
   }

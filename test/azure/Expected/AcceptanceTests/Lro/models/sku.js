@@ -16,8 +16,8 @@
 class Sku {
   /**
    * Create a Sku.
-   * @member {string} [name]
-   * @member {string} [id]
+   * @property {string} [name]
+   * @property {string} [id]
    */
   constructor() {
   }

@@ -16,15 +16,15 @@
 class ResourceCollection {
   /**
    * Create a ResourceCollection.
-   * @member {object} [productresource]
-   * @member {string} [productresource.pname]
-   * @member {string} [productresource.flattenedProductType]
-   * @member {string} [productresource.provisioningStateValues] Possible values
-   * include: 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating',
+   * @property {object} [productresource]
+   * @property {string} [productresource.pname]
+   * @property {string} [productresource.flattenedProductType]
+   * @property {string} [productresource.provisioningStateValues] Possible
+   * values include: 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating',
    * 'Created', 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
-   * @member {string} [productresource.provisioningState]
-   * @member {array} [arrayofresources]
-   * @member {object} [dictionaryofresources]
+   * @property {string} [productresource.provisioningState]
+   * @property {array} [arrayofresources]
+   * @property {object} [dictionaryofresources]
    */
   constructor() {
   }

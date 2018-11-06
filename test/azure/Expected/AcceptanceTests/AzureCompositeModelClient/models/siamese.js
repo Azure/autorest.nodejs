@@ -19,7 +19,7 @@ const models = require('./index');
 class Siamese extends models['Cat'] {
   /**
    * Create a Siamese.
-   * @member {string} [breed]
+   * @property {string} [breed]
    */
   constructor() {
     super();

@@ -15,8 +15,8 @@ import * as moment from "moment";
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [status]
- * @member {string} [message]
+ * @property {number} [status]
+ * @property {string} [message]
  */
 export interface ErrorModel {
   status?: number;
@@ -27,9 +27,9 @@ export interface ErrorModel {
  * @class
  * Initializes a new instance of the PetAPTrue class.
  * @constructor
- * @member {number} id
- * @member {string} [name]
- * @member {boolean} [status]
+ * @property {number} id
+ * @property {string} [name]
+ * @property {boolean} [status]
  */
 export interface PetAPTrue {
   id: number;
@@ -46,7 +46,7 @@ export interface PetAPTrue {
  * @class
  * Initializes a new instance of the CatAPTrue class.
  * @constructor
- * @member {boolean} [friendly]
+ * @property {boolean} [friendly]
  */
 export interface CatAPTrue extends PetAPTrue {
   friendly?: boolean;
@@ -56,9 +56,9 @@ export interface CatAPTrue extends PetAPTrue {
  * @class
  * Initializes a new instance of the PetAPObject class.
  * @constructor
- * @member {number} id
- * @member {string} [name]
- * @member {boolean} [status]
+ * @property {number} id
+ * @property {string} [name]
+ * @property {boolean} [status]
  */
 export interface PetAPObject {
   id: number;
@@ -75,9 +75,9 @@ export interface PetAPObject {
  * @class
  * Initializes a new instance of the PetAPString class.
  * @constructor
- * @member {number} id
- * @member {string} [name]
- * @member {boolean} [status]
+ * @property {number} id
+ * @property {string} [name]
+ * @property {boolean} [status]
  */
 export interface PetAPString {
   id: number;
@@ -95,10 +95,10 @@ export interface PetAPString {
  * @class
  * Initializes a new instance of the PetAPInProperties class.
  * @constructor
- * @member {number} id
- * @member {string} [name]
- * @member {boolean} [status]
- * @member {object} [additionalProperties]
+ * @property {number} id
+ * @property {string} [name]
+ * @property {boolean} [status]
+ * @property {object} [additionalProperties]
  */
 export interface PetAPInProperties {
   id: number;
@@ -111,11 +111,11 @@ export interface PetAPInProperties {
  * @class
  * Initializes a new instance of the PetAPInPropertiesWithAPString class.
  * @constructor
- * @member {number} id
- * @member {string} [name]
- * @member {boolean} [status]
- * @member {string} odatalocation
- * @member {object} [additionalProperties1]
+ * @property {number} id
+ * @property {string} [name]
+ * @property {boolean} [status]
+ * @property {string} odatalocation
+ * @property {object} [additionalProperties1]
  */
 export interface PetAPInPropertiesWithAPString {
   id: number;

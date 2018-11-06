@@ -16,9 +16,9 @@
 class ClassOptionalWrapper {
   /**
    * Create a ClassOptionalWrapper.
-   * @member {object} [value]
-   * @member {number} [value.id]
-   * @member {string} [value.name]
+   * @property {object} [value]
+   * @property {number} [value.id]
+   * @property {string} [value.name]
    */
   constructor() {
   }

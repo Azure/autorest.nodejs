@@ -17,7 +17,7 @@
 class GenericUrl {
   /**
    * Create a GenericUrl.
-   * @member {string} [genericValue] Generic URL value.
+   * @property {string} [genericValue] Generic URL value.
    */
   constructor() {
   }

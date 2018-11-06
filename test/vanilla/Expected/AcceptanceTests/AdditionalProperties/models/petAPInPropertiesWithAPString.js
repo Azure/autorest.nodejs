@@ -16,11 +16,11 @@
 class PetAPInPropertiesWithAPString {
   /**
    * Create a PetAPInPropertiesWithAPString.
-   * @member {number} id
-   * @member {string} [name]
-   * @member {boolean} [status]
-   * @member {string} odatalocation
-   * @member {object} [additionalProperties1]
+   * @property {number} id
+   * @property {string} [name]
+   * @property {boolean} [status]
+   * @property {string} odatalocation
+   * @property {object} [additionalProperties1]
    */
   constructor() {
   }

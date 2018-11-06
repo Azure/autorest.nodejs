@@ -17,7 +17,7 @@
 class WrappedProduct {
   /**
    * Create a WrappedProduct.
-   * @member {string} [value] the product value
+   * @property {string} [value] the product value
    */
   constructor() {
   }

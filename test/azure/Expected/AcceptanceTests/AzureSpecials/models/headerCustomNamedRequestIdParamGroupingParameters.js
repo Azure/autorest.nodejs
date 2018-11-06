@@ -17,7 +17,7 @@
 class HeaderCustomNamedRequestIdParamGroupingParameters {
   /**
    * Create a HeaderCustomNamedRequestIdParamGroupingParameters.
-   * @member {string} fooClientRequestId The fooRequestId
+   * @property {string} fooClientRequestId The fooRequestId
    */
   constructor() {
   }

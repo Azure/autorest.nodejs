@@ -16,9 +16,9 @@
 class ErrorModel {
   /**
    * Create a ErrorModel.
-   * @member {number} [code]
-   * @member {string} [message]
-   * @member {string} [fields]
+   * @property {number} [code]
+   * @property {string} [message]
+   * @property {string} [fields]
    */
   constructor() {
   }

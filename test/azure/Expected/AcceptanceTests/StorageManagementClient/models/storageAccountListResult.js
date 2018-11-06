@@ -16,7 +16,7 @@
 class StorageAccountListResult extends Array {
   /**
    * Create a StorageAccountListResult.
-   * @member {string} [nextLink] Gets the link to the next set of results.
+   * @property {string} [nextLink] Gets the link to the next set of results.
    * Currently this will always be empty as the API does not support
    * pagination.
    */

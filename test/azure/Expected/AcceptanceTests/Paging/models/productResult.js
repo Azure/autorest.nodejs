@@ -16,8 +16,8 @@
 class ProductResult extends Array {
   /**
    * Create a ProductResult.
-   * @member {array} [values]
-   * @member {string} [nextLink]
+   * @property {array} [values]
+   * @property {string} [nextLink]
    */
   constructor() {
     super();

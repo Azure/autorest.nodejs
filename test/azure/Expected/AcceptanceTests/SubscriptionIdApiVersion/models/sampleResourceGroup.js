@@ -16,8 +16,8 @@
 class SampleResourceGroup {
   /**
    * Create a SampleResourceGroup.
-   * @member {string} [name] resource group name 'testgroup101'
-   * @member {string} [location] resource group location 'West US'
+   * @property {string} [name] resource group name 'testgroup101'
+   * @property {string} [location] resource group location 'West US'
    */
   constructor() {
   }

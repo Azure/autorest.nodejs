@@ -16,7 +16,7 @@
 class DictionaryWrapper {
   /**
    * Create a DictionaryWrapper.
-   * @member {object} [defaultProgram]
+   * @property {object} [defaultProgram]
    */
   constructor() {
   }

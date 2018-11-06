@@ -20,7 +20,7 @@ const models = require('./index');
 class StorageAccountCreateParameters extends models['Resource'] {
   /**
    * Create a StorageAccountCreateParameters.
-   * @member {string} [accountType] Gets or sets the account type. Possible
+   * @property {string} [accountType] Gets or sets the account type. Possible
    * values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS',
    * 'Standard_RAGRS', 'Premium_LRS'
    */

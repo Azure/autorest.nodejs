@@ -16,7 +16,7 @@
 class ArrayWrapper {
   /**
    * Create a ArrayWrapper.
-   * @member {array} [arrayProperty]
+   * @property {array} [arrayProperty]
    */
   constructor() {
   }

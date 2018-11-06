@@ -15,8 +15,8 @@ import * as moment from "moment";
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [status]
- * @member {string} [message]
+ * @property {number} [status]
+ * @property {string} [message]
  */
 export interface ErrorModel {
   status?: number;
@@ -27,7 +27,7 @@ export interface ErrorModel {
  * @class
  * Initializes a new instance of the A class.
  * @constructor
- * @member {string} [statusCode]
+ * @property {string} [statusCode]
  */
 export interface A {
   statusCode?: string;
@@ -37,7 +37,7 @@ export interface A {
  * @class
  * Initializes a new instance of the B class.
  * @constructor
- * @member {string} [textStatusCode]
+ * @property {string} [textStatusCode]
  */
 export interface B extends A {
   textStatusCode?: string;
@@ -47,7 +47,7 @@ export interface B extends A {
  * @class
  * Initializes a new instance of the C class.
  * @constructor
- * @member {string} [httpCode]
+ * @property {string} [httpCode]
  */
 export interface C {
   httpCode?: string;
@@ -57,7 +57,7 @@ export interface C {
  * @class
  * Initializes a new instance of the D class.
  * @constructor
- * @member {string} [httpStatusCode]
+ * @property {string} [httpStatusCode]
  */
 export interface D {
   httpStatusCode?: string;

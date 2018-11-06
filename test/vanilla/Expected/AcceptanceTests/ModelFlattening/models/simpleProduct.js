@@ -20,9 +20,9 @@ const models = require('./index');
 class SimpleProduct extends models['BaseProduct'] {
   /**
    * Create a SimpleProduct.
-   * @member {string} maxProductDisplayName Display name of product.
-   * @member {string} [genericValue] Generic URL value.
-   * @member {string} [odatavalue] URL value.
+   * @property {string} maxProductDisplayName Display name of product.
+   * @property {string} [genericValue] Generic URL value.
+   * @property {string} [odatavalue] URL value.
    */
   constructor() {
     super();

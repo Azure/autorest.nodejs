@@ -19,8 +19,8 @@
 class CustomParameterGroup {
   /**
    * Create a CustomParameterGroup.
-   * @member {string} apiVersion Sets the api version to use.
-   * @member {string} tenant Sets the tenant to use.
+   * @property {string} apiVersion Sets the api version to use.
+   * @property {string} tenant Sets the tenant to use.
    */
   constructor() {
   }

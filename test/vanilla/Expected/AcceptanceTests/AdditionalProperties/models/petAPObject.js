@@ -16,9 +16,9 @@
 class PetAPObject {
   /**
    * Create a PetAPObject.
-   * @member {number} id
-   * @member {string} [name]
-   * @member {boolean} [status]
+   * @property {number} id
+   * @property {string} [name]
+   * @property {boolean} [status]
    */
   constructor() {
   }

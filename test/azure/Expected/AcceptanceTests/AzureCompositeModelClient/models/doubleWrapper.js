@@ -16,8 +16,8 @@
 class DoubleWrapper {
   /**
    * Create a DoubleWrapper.
-   * @member {number} [field1]
-   * @member {number}
+   * @property {number} [field1]
+   * @property {number}
    * [field56ZerosAfterTheDotAndNegativeZeroBeforeDotAndThisIsALongFieldNameOnPurpose]
    */
   constructor() {

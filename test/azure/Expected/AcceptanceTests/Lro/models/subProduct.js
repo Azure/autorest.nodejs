@@ -19,8 +19,8 @@ const models = require('./index');
 class SubProduct extends models['SubResource'] {
   /**
    * Create a SubProduct.
-   * @member {string} [provisioningState]
-   * @member {string} [provisioningStateValues] Possible values include:
+   * @property {string} [provisioningState]
+   * @property {string} [provisioningStateValues] Possible values include:
    * 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating', 'Created',
    * 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
    */

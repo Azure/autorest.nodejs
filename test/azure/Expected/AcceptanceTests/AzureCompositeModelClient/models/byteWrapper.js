@@ -16,7 +16,7 @@
 class ByteWrapper {
   /**
    * Create a ByteWrapper.
-   * @member {buffer} [field]
+   * @property {buffer} [field]
    */
   constructor() {
   }

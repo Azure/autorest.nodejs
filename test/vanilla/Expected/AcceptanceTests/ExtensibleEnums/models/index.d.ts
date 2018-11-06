@@ -15,11 +15,11 @@ import * as moment from "moment";
  * @class
  * Initializes a new instance of the Pet class.
  * @constructor
- * @member {string} [name]
- * @member {string} [daysOfWeek] Type of Pet. Possible values include:
+ * @property {string} [name]
+ * @property {string} [daysOfWeek] Type of Pet. Possible values include:
  * 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
  * 'Sunday'. Default value: 'Friday' .
- * @member {string} intEnum Possible values include: '1', '2', '3'
+ * @property {string} intEnum Possible values include: '1', '2', '3'
  */
 export interface Pet {
   name?: string;

@@ -16,8 +16,8 @@
 class DatetimeWrapper {
   /**
    * Create a DatetimeWrapper.
-   * @member {date} [field]
-   * @member {date} [now]
+   * @property {date} [field]
+   * @property {date} [now]
    */
   constructor() {
   }

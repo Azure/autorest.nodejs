@@ -16,8 +16,8 @@
 class OperationResultError {
   /**
    * Create a OperationResultError.
-   * @member {number} [code] The error code for an operation failure
-   * @member {string} [message] The detailed arror message
+   * @property {number} [code] The error code for an operation failure
+   * @property {string} [message] The detailed arror message
    */
   constructor() {
   }

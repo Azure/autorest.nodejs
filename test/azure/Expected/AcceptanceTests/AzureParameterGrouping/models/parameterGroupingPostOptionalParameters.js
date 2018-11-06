@@ -17,8 +17,9 @@
 class ParameterGroupingPostOptionalParameters {
   /**
    * Create a ParameterGroupingPostOptionalParameters.
-   * @member {string} [customHeader]
-   * @member {number} [query] Query parameter with default. Default value: 30 .
+   * @property {string} [customHeader]
+   * @property {number} [query] Query parameter with default. Default value: 30
+   * .
    */
   constructor() {
   }

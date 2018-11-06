@@ -19,8 +19,8 @@ const models = require('./index');
 class Shark extends models['Fish'] {
   /**
    * Create a Shark.
-   * @member {number} [age]
-   * @member {date} birthday
+   * @property {number} [age]
+   * @property {date} birthday
    */
   constructor() {
     super();

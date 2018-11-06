@@ -15,9 +15,9 @@ import * as moment from "moment";
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [status]
- * @member {string} [message]
- * @member {object} [parentError]
+ * @property {number} [status]
+ * @property {string} [message]
+ * @property {object} [parentError]
  */
 export interface ErrorModel {
   status?: number;
@@ -29,11 +29,11 @@ export interface ErrorModel {
  * @class
  * Initializes a new instance of the Resource class.
  * @constructor
- * @member {string} [id] Resource Id
- * @member {string} [type] Resource Type
- * @member {object} [tags]
- * @member {string} [location] Resource Location
- * @member {string} [name] Resource Name
+ * @property {string} [id] Resource Id
+ * @property {string} [type] Resource Type
+ * @property {object} [tags]
+ * @property {string} [location] Resource Location
+ * @property {string} [name] Resource Name
  */
 export interface Resource {
   readonly id?: string;
@@ -49,12 +49,12 @@ export interface Resource {
  * @constructor
  * Flattened product.
  *
- * @member {string} [pname]
- * @member {string} [flattenedProductType]
- * @member {string} [provisioningStateValues] Possible values include:
+ * @property {string} [pname]
+ * @property {string} [flattenedProductType]
+ * @property {string} [provisioningStateValues] Possible values include:
  * 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating', 'Created',
  * 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
- * @member {string} [provisioningState]
+ * @property {string} [provisioningState]
  */
 export interface FlattenedProduct extends Resource {
   pname?: string;
@@ -67,15 +67,15 @@ export interface FlattenedProduct extends Resource {
  * @class
  * Initializes a new instance of the ResourceCollection class.
  * @constructor
- * @member {object} [productresource]
- * @member {string} [productresource.pname]
- * @member {string} [productresource.flattenedProductType]
- * @member {string} [productresource.provisioningStateValues] Possible values
+ * @property {object} [productresource]
+ * @property {string} [productresource.pname]
+ * @property {string} [productresource.flattenedProductType]
+ * @property {string} [productresource.provisioningStateValues] Possible values
  * include: 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating',
  * 'Created', 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
- * @member {string} [productresource.provisioningState]
- * @member {array} [arrayofresources]
- * @member {object} [dictionaryofresources]
+ * @property {string} [productresource.provisioningState]
+ * @property {array} [arrayofresources]
+ * @property {object} [dictionaryofresources]
  */
 export interface ResourceCollection {
   productresource?: FlattenedProduct;
@@ -89,10 +89,10 @@ export interface ResourceCollection {
  * @constructor
  * The product documentation.
  *
- * @member {string} productId Unique identifier representing a specific product
- * for a given latitude & longitude. For example, uberX in San Francisco will
- * have a different product_id than uberX in Los Angeles.
- * @member {string} [description] Description of product.
+ * @property {string} productId Unique identifier representing a specific
+ * product for a given latitude & longitude. For example, uberX in San
+ * Francisco will have a different product_id than uberX in Los Angeles.
+ * @property {string} [description] Description of product.
  */
 export interface BaseProduct {
   productId: string;
@@ -105,9 +105,9 @@ export interface BaseProduct {
  * @constructor
  * The product documentation.
  *
- * @member {string} maxProductDisplayName Display name of product.
- * @member {string} [genericValue] Generic URL value.
- * @member {string} [odatavalue] URL value.
+ * @property {string} maxProductDisplayName Display name of product.
+ * @property {string} [genericValue] Generic URL value.
+ * @property {string} [odatavalue] URL value.
  */
 export interface SimpleProduct extends BaseProduct {
   maxProductDisplayName: string;
@@ -121,7 +121,7 @@ export interface SimpleProduct extends BaseProduct {
  * @constructor
  * The Generic URL.
  *
- * @member {string} [genericValue] Generic URL value.
+ * @property {string} [genericValue] Generic URL value.
  */
 export interface GenericUrl {
   genericValue?: string;
@@ -133,7 +133,7 @@ export interface GenericUrl {
  * @constructor
  * The wrapped produc.
  *
- * @member {string} [value] the product value
+ * @property {string} [value] the product value
  */
 export interface WrappedProduct {
   value?: string;
@@ -145,7 +145,7 @@ export interface WrappedProduct {
  * @constructor
  * The wrapped produc.
  *
- * @member {string} [value] the product value
+ * @property {string} [value] the product value
  */
 export interface ProductWrapper {
   value?: string;
@@ -157,14 +157,14 @@ export interface ProductWrapper {
  * @constructor
  * Additional parameters for putSimpleProductWithGrouping operation.
  *
- * @member {string} name Product name with value 'groupproduct'
- * @member {string} productId Unique identifier representing a specific product
- * for a given latitude & longitude. For example, uberX in San Francisco will
- * have a different product_id than uberX in Los Angeles.
- * @member {string} [description] Description of product.
- * @member {string} maxProductDisplayName Display name of product.
- * @member {string} [genericValue] Generic URL value.
- * @member {string} [odatavalue] URL value.
+ * @property {string} name Product name with value 'groupproduct'
+ * @property {string} productId Unique identifier representing a specific
+ * product for a given latitude & longitude. For example, uberX in San
+ * Francisco will have a different product_id than uberX in Los Angeles.
+ * @property {string} [description] Description of product.
+ * @property {string} maxProductDisplayName Display name of product.
+ * @property {string} [genericValue] Generic URL value.
+ * @property {string} [odatavalue] URL value.
  */
 export interface FlattenParameterGroup {
   name: string;

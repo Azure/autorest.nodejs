@@ -16,7 +16,8 @@
 class AvailabilitySetUpdateParameters {
   /**
    * Create a AvailabilitySetUpdateParameters.
-   * @member {object} tags A set of tags. A description about the set of tags.
+   * @property {object} tags A set of tags. A description about the set of
+   * tags.
    */
   constructor() {
   }

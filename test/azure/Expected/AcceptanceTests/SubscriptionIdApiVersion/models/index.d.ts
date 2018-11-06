@@ -20,8 +20,8 @@ export { CloudError } from 'ms-rest-azure';
  * @class
  * Initializes a new instance of the SampleResourceGroup class.
  * @constructor
- * @member {string} [name] resource group name 'testgroup101'
- * @member {string} [location] resource group location 'West US'
+ * @property {string} [name] resource group name 'testgroup101'
+ * @property {string} [location] resource group location 'West US'
  */
 export interface SampleResourceGroup {
   name?: string;
@@ -32,8 +32,8 @@ export interface SampleResourceGroup {
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [code]
- * @member {string} [message]
+ * @property {number} [code]
+ * @property {string} [message]
  */
 export interface ErrorModel {
   code?: number;

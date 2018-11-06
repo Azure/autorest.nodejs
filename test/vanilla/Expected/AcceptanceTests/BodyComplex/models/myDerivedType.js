@@ -19,7 +19,7 @@ const models = require('./index');
 class MyDerivedType extends models['MyBaseType'] {
   /**
    * Create a MyDerivedType.
-   * @member {string} [propD1]
+   * @property {string} [propD1]
    */
   constructor() {
     super();

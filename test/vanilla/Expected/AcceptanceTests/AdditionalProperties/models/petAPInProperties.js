@@ -16,10 +16,10 @@
 class PetAPInProperties {
   /**
    * Create a PetAPInProperties.
-   * @member {number} id
-   * @member {string} [name]
-   * @member {boolean} [status]
-   * @member {object} [additionalProperties]
+   * @property {number} id
+   * @property {string} [name]
+   * @property {boolean} [status]
+   * @property {object} [additionalProperties]
    */
   constructor() {
   }

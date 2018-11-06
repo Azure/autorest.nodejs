@@ -16,7 +16,7 @@
 class CatalogArray {
   /**
    * Create a CatalogArray.
-   * @member {array} [productArray] Array of products
+   * @property {array} [productArray] Array of products
    */
   constructor() {
   }
