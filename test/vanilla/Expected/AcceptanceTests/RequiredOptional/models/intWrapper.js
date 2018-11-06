@@ -16,7 +16,7 @@
 class IntWrapper {
   /**
    * Create a IntWrapper.
-   * @member {number} value
+   * @property {number} value
    */
   constructor() {
   }

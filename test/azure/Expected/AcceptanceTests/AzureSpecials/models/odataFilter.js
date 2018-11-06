@@ -16,8 +16,8 @@
 class OdataFilter {
   /**
    * Create a OdataFilter.
-   * @member {number} [id]
-   * @member {string} [name]
+   * @property {number} [id]
+   * @property {string} [name]
    */
   constructor() {
   }

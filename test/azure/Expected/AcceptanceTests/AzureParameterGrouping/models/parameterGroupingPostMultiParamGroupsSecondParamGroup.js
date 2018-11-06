@@ -17,8 +17,8 @@
 class ParameterGroupingPostMultiParamGroupsSecondParamGroup {
   /**
    * Create a ParameterGroupingPostMultiParamGroupsSecondParamGroup.
-   * @member {string} [headerTwo]
-   * @member {number} [queryTwo] Query parameter with default. Default value:
+   * @property {string} [headerTwo]
+   * @property {number} [queryTwo] Query parameter with default. Default value:
    * 30 .
    */
   constructor() {

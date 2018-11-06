@@ -17,10 +17,11 @@
 class ParameterGroupingPostRequiredParameters {
   /**
    * Create a ParameterGroupingPostRequiredParameters.
-   * @member {number} body
-   * @member {string} [customHeader]
-   * @member {number} [query] Query parameter with default. Default value: 30 .
-   * @member {string} path Path parameter
+   * @property {number} body
+   * @property {string} [customHeader]
+   * @property {number} [query] Query parameter with default. Default value: 30
+   * .
+   * @property {string} path Path parameter
    */
   constructor() {
   }

@@ -16,12 +16,12 @@
 class ResourceCollection {
   /**
    * Create a ResourceCollection.
-   * @member {object} [productresource]
-   * @member {string} [productresource.pname]
-   * @member {number} [productresource.lsize]
-   * @member {string} [productresource.provisioningState]
-   * @member {array} [arrayofresources]
-   * @member {object} [dictionaryofresources]
+   * @property {object} [productresource]
+   * @property {string} [productresource.pname]
+   * @property {number} [productresource.lsize]
+   * @property {string} [productresource.provisioningState]
+   * @property {array} [arrayofresources]
+   * @property {object} [dictionaryofresources]
    */
   constructor() {
   }

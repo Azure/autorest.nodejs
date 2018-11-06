@@ -20,11 +20,11 @@ export { CloudError } from 'ms-rest-azure';
  * @class
  * Initializes a new instance of the Resource class.
  * @constructor
- * @member {string} [id] Resource Id
- * @member {string} [type] Resource Type
- * @member {object} [tags]
- * @member {string} [location] Resource Location
- * @member {string} [name] Resource Name
+ * @property {string} [id] Resource Id
+ * @property {string} [type] Resource Type
+ * @property {object} [tags]
+ * @property {string} [location] Resource Location
+ * @property {string} [name] Resource Name
  */
 export interface Resource extends BaseResource {
   readonly id?: string;
@@ -38,8 +38,8 @@ export interface Resource extends BaseResource {
  * @class
  * Initializes a new instance of the Sku class.
  * @constructor
- * @member {string} [name]
- * @member {string} [id]
+ * @property {string} [name]
+ * @property {string} [id]
  */
 export interface Sku {
   name?: string;
@@ -50,8 +50,8 @@ export interface Sku {
  * @class
  * Initializes a new instance of the Product class.
  * @constructor
- * @member {string} [provisioningState]
- * @member {string} [provisioningStateValues] Possible values include:
+ * @property {string} [provisioningState]
+ * @property {string} [provisioningStateValues] Possible values include:
  * 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating', 'Created',
  * 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
  */
@@ -64,7 +64,7 @@ export interface Product extends Resource {
  * @class
  * Initializes a new instance of the SubResource class.
  * @constructor
- * @member {string} [id] Sub Resource Id
+ * @property {string} [id] Sub Resource Id
  */
 export interface SubResource extends BaseResource {
   readonly id?: string;
@@ -74,8 +74,8 @@ export interface SubResource extends BaseResource {
  * @class
  * Initializes a new instance of the SubProduct class.
  * @constructor
- * @member {string} [provisioningState]
- * @member {string} [provisioningStateValues] Possible values include:
+ * @property {string} [provisioningState]
+ * @property {string} [provisioningStateValues] Possible values include:
  * 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating', 'Created',
  * 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
  */
@@ -88,8 +88,8 @@ export interface SubProduct extends SubResource {
  * @class
  * Initializes a new instance of the OperationResultError class.
  * @constructor
- * @member {number} [code] The error code for an operation failure
- * @member {string} [message] The detailed arror message
+ * @property {number} [code] The error code for an operation failure
+ * @property {string} [message] The detailed arror message
  */
 export interface OperationResultError {
   code?: number;
@@ -100,12 +100,12 @@ export interface OperationResultError {
  * @class
  * Initializes a new instance of the OperationResult class.
  * @constructor
- * @member {string} [status] The status of the request. Possible values
+ * @property {string} [status] The status of the request. Possible values
  * include: 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating',
  * 'Created', 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
- * @member {object} [error]
- * @member {number} [error.code] The error code for an operation failure
- * @member {string} [error.message] The detailed arror message
+ * @property {object} [error]
+ * @property {number} [error.code] The error code for an operation failure
+ * @property {string} [error.message] The detailed arror message
  */
 export interface OperationResult {
   status?: string;

@@ -15,8 +15,8 @@ import * as moment from "moment";
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [status]
- * @member {string} [message]
+ * @property {number} [status]
+ * @property {string} [message]
  */
 export interface ErrorModel {
   status?: number;
@@ -27,7 +27,7 @@ export interface ErrorModel {
  * @class
  * Initializes a new instance of the RefColorConstant class.
  * @constructor
- * @member {string} [field1] Sample string.
+ * @property {string} [field1] Sample string.
  */
 export interface RefColorConstant {
   field1?: string;

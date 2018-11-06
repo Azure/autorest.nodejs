@@ -21,7 +21,7 @@
 @foreach (var property in Model.DocumentationPropertyList)
 {
     @CompositeTypeJs.ConstructPropertyDocumentation(
-              WrapComment(" * ", "@member {" + CompositeTypeJs.GetPropertyDocumentationType(property)
+              WrapComment(" * ", "@property {" + CompositeTypeJs.GetPropertyDocumentationType(property)
                                              + "} " + CompositeTypeJs.GetPropertyDocumentationName(property)
                                              + " " + CompositeTypeJs.GetPropertyDocumentationString(property)))
 }

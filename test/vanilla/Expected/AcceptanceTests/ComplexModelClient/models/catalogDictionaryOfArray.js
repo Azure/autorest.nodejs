@@ -16,7 +16,8 @@
 class CatalogDictionaryOfArray {
   /**
    * Create a CatalogDictionaryOfArray.
-   * @member {object} [productDictionaryOfArray] Dictionary of Array of product
+   * @property {object} [productDictionaryOfArray] Dictionary of Array of
+   * product
    */
   constructor() {
   }

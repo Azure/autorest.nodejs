@@ -16,8 +16,8 @@
 class Pet {
   /**
    * Create a Pet.
-   * @member {number} [id]
-   * @member {string} [name]
+   * @property {number} [id]
+   * @property {string} [name]
    */
   constructor() {
   }

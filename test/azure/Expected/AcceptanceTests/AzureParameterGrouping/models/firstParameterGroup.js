@@ -19,8 +19,8 @@
 class FirstParameterGroup {
   /**
    * Create a FirstParameterGroup.
-   * @member {string} [headerOne]
-   * @member {number} [queryOne] Query parameter with default. Default value:
+   * @property {string} [headerOne]
+   * @property {number} [queryOne] Query parameter with default. Default value:
    * 30 .
    */
   constructor() {

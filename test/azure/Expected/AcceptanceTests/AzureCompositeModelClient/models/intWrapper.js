@@ -16,8 +16,8 @@
 class IntWrapper {
   /**
    * Create a IntWrapper.
-   * @member {number} [field1]
-   * @member {number} [field2]
+   * @property {number} [field1]
+   * @property {number} [field2]
    */
   constructor() {
   }

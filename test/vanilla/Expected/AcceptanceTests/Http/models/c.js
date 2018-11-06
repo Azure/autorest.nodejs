@@ -16,7 +16,7 @@
 class C {
   /**
    * Create a C.
-   * @member {string} [httpCode]
+   * @property {string} [httpCode]
    */
   constructor() {
   }

@@ -20,8 +20,8 @@ export { CloudError } from 'ms-rest-azure';
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [status]
- * @member {string} [message]
+ * @property {number} [status]
+ * @property {string} [message]
  */
 export interface ErrorModel {
   status?: number;
@@ -34,10 +34,10 @@ export interface ErrorModel {
  * @constructor
  * Additional parameters for postRequired operation.
  *
- * @member {number} body
- * @member {string} [customHeader]
- * @member {number} [query] Query parameter with default. Default value: 30 .
- * @member {string} path Path parameter
+ * @property {number} body
+ * @property {string} [customHeader]
+ * @property {number} [query] Query parameter with default. Default value: 30 .
+ * @property {string} path Path parameter
  */
 export interface ParameterGroupingPostRequiredParameters {
   body: number;
@@ -52,8 +52,8 @@ export interface ParameterGroupingPostRequiredParameters {
  * @constructor
  * Additional parameters for postOptional operation.
  *
- * @member {string} [customHeader]
- * @member {number} [query] Query parameter with default. Default value: 30 .
+ * @property {string} [customHeader]
+ * @property {number} [query] Query parameter with default. Default value: 30 .
  */
 export interface ParameterGroupingPostOptionalParameters {
   customHeader?: string;
@@ -68,9 +68,9 @@ export interface ParameterGroupingPostOptionalParameters {
  * ParameterGrouping_postMultiParamGroups,
  * ParameterGrouping_postSharedParameterGroupObject.
  *
- * @member {string} [headerOne]
- * @member {number} [queryOne] Query parameter with default. Default value: 30
- * .
+ * @property {string} [headerOne]
+ * @property {number} [queryOne] Query parameter with default. Default value:
+ * 30 .
  */
 export interface FirstParameterGroup {
   headerOne?: string;
@@ -83,9 +83,9 @@ export interface FirstParameterGroup {
  * @constructor
  * Additional parameters for postMultiParamGroups operation.
  *
- * @member {string} [headerTwo]
- * @member {number} [queryTwo] Query parameter with default. Default value: 30
- * .
+ * @property {string} [headerTwo]
+ * @property {number} [queryTwo] Query parameter with default. Default value:
+ * 30 .
  */
 export interface ParameterGroupingPostMultiParamGroupsSecondParamGroup {
   headerTwo?: string;

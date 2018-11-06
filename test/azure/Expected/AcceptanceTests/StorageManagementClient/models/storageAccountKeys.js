@@ -17,8 +17,8 @@
 class StorageAccountKeys {
   /**
    * Create a StorageAccountKeys.
-   * @member {string} [key1] Gets the value of key 1.
-   * @member {string} [key2] Gets the value of key 2.
+   * @property {string} [key1] Gets the value of key 1.
+   * @property {string} [key2] Gets the value of key 2.
    */
   constructor() {
   }

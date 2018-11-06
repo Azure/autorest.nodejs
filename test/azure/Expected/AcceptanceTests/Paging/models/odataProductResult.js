@@ -16,8 +16,8 @@
 class OdataProductResult extends Array {
   /**
    * Create a OdataProductResult.
-   * @member {array} [values]
-   * @member {string} [odatanextLink]
+   * @property {array} [values]
+   * @property {string} [odatanextLink]
    */
   constructor() {
     super();

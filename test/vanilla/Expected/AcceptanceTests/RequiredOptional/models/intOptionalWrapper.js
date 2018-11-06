@@ -16,7 +16,7 @@
 class IntOptionalWrapper {
   /**
    * Create a IntOptionalWrapper.
-   * @member {number} [value]
+   * @property {number} [value]
    */
   constructor() {
   }

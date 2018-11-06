@@ -16,11 +16,11 @@
 class Resource {
   /**
    * Create a Resource.
-   * @member {string} [id] Resource Id
-   * @member {string} [type] Resource Type
-   * @member {object} [tags]
-   * @member {string} [location] Resource Location
-   * @member {string} [name] Resource Name
+   * @property {string} [id] Resource Id
+   * @property {string} [type] Resource Type
+   * @property {object} [tags]
+   * @property {string} [location] Resource Location
+   * @property {string} [name] Resource Name
    */
   constructor() {
   }

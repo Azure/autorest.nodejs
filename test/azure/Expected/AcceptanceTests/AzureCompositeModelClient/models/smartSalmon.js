@@ -19,7 +19,7 @@ const models = require('./index');
 class SmartSalmon extends models['Salmon'] {
   /**
    * Create a SmartSalmon.
-   * @member {string} [collegeDegree]
+   * @property {string} [collegeDegree]
    */
   constructor() {
     super();

@@ -19,7 +19,7 @@ const models = require('./index');
 class Dog extends models['Pet'] {
   /**
    * Create a Dog.
-   * @member {string} [food]
+   * @property {string} [food]
    */
   constructor() {
     super();

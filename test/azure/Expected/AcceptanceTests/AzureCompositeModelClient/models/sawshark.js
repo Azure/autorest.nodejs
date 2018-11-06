@@ -19,7 +19,7 @@ const models = require('./index');
 class Sawshark extends models['Shark'] {
   /**
    * Create a Sawshark.
-   * @member {buffer} [picture]
+   * @property {buffer} [picture]
    */
   constructor() {
     super();

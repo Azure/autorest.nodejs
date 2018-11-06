@@ -20,8 +20,8 @@ export { CloudError } from 'ms-rest-azure';
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [status]
- * @member {string} [message]
+ * @property {number} [status]
+ * @property {string} [message]
  */
 export interface ErrorModel {
   status?: number;
@@ -32,8 +32,8 @@ export interface ErrorModel {
  * @class
  * Initializes a new instance of the OdataFilter class.
  * @constructor
- * @member {number} [id]
- * @member {string} [name]
+ * @property {number} [id]
+ * @property {string} [name]
  */
 export interface OdataFilter {
   id?: number;
@@ -46,7 +46,7 @@ export interface OdataFilter {
  * @constructor
  * Additional parameters for customNamedRequestIdParamGrouping operation.
  *
- * @member {string} fooClientRequestId The fooRequestId
+ * @property {string} fooClientRequestId The fooRequestId
  */
 export interface HeaderCustomNamedRequestIdParamGroupingParameters {
   fooClientRequestId: string;

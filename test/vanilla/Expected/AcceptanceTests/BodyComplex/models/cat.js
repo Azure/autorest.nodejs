@@ -19,8 +19,8 @@ const models = require('./index');
 class Cat extends models['Pet'] {
   /**
    * Create a Cat.
-   * @member {string} [color]
-   * @member {array} [hates]
+   * @property {string} [color]
+   * @property {array} [hates]
    */
   constructor() {
     super();

@@ -16,7 +16,7 @@
 class A {
   /**
    * Create a A.
-   * @member {string} [statusCode]
+   * @property {string} [statusCode]
    */
   constructor() {
   }

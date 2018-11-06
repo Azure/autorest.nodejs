@@ -18,13 +18,13 @@
 class Endpoints {
   /**
    * Create a Endpoints.
-   * @member {string} [blob] Gets the blob endpoint.
-   * @member {string} [queue] Gets the queue endpoint.
-   * @member {string} [table] Gets the table endpoint.
-   * @member {object} [dummyEndPoint] Dummy EndPoint
-   * @member {object} [fooPoint] Foo point
-   * @member {object} [fooPoint.barPoint] Bar point
-   * @member {object} [fooPoint.barPoint.recursivePoint] Recursive Endpoints
+   * @property {string} [blob] Gets the blob endpoint.
+   * @property {string} [queue] Gets the queue endpoint.
+   * @property {string} [table] Gets the table endpoint.
+   * @property {object} [dummyEndPoint] Dummy EndPoint
+   * @property {object} [fooPoint] Foo point
+   * @property {object} [fooPoint.barPoint] Bar point
+   * @property {object} [fooPoint.barPoint.recursivePoint] Recursive Endpoints
    */
   constructor() {
   }

@@ -17,7 +17,7 @@
 class ProductWrapper {
   /**
    * Create a ProductWrapper.
-   * @member {string} [value] the product value
+   * @property {string} [value] the product value
    */
   constructor() {
   }

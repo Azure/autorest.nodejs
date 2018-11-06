@@ -19,7 +19,7 @@ const models = require('./index');
 class SubResource extends models['BaseResource'] {
   /**
    * Create a SubResource.
-   * @member {string} [id] Sub Resource Id
+   * @property {string} [id] Sub Resource Id
    */
   constructor() {
     super();

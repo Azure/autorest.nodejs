@@ -17,7 +17,7 @@
 class ChildProduct {
   /**
    * Create a ChildProduct.
-   * @member {number} [count] Count
+   * @property {number} [count] Count
    */
   constructor() {
   }

@@ -16,7 +16,7 @@
 class StringWrapper {
   /**
    * Create a StringWrapper.
-   * @member {string} value
+   * @property {string} value
    */
   constructor() {
   }

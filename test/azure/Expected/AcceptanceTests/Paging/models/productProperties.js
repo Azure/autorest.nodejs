@@ -16,8 +16,8 @@
 class ProductProperties {
   /**
    * Create a ProductProperties.
-   * @member {number} [id]
-   * @member {string} [name]
+   * @property {number} [id]
+   * @property {string} [name]
    */
   constructor() {
   }

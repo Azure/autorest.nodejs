@@ -18,13 +18,15 @@
 class Foo {
   /**
    * Create a Foo.
-   * @member {object} [barPoint] Bar point
-   * @member {object} [barPoint.recursivePoint] Recursive Endpoints
-   * @member {string} [barPoint.recursivePoint.blob] Gets the blob endpoint.
-   * @member {string} [barPoint.recursivePoint.queue] Gets the queue endpoint.
-   * @member {string} [barPoint.recursivePoint.table] Gets the table endpoint.
-   * @member {object} [barPoint.recursivePoint.dummyEndPoint] Dummy EndPoint
-   * @member {object} [barPoint.recursivePoint.fooPoint] Foo point
+   * @property {object} [barPoint] Bar point
+   * @property {object} [barPoint.recursivePoint] Recursive Endpoints
+   * @property {string} [barPoint.recursivePoint.blob] Gets the blob endpoint.
+   * @property {string} [barPoint.recursivePoint.queue] Gets the queue
+   * endpoint.
+   * @property {string} [barPoint.recursivePoint.table] Gets the table
+   * endpoint.
+   * @property {object} [barPoint.recursivePoint.dummyEndPoint] Dummy EndPoint
+   * @property {object} [barPoint.recursivePoint.fooPoint] Foo point
    */
   constructor() {
   }

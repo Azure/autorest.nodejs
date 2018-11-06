@@ -20,8 +20,8 @@ export { CloudError } from 'ms-rest-azure';
  * @class
  * Initializes a new instance of the ErrorModel class.
  * @constructor
- * @member {number} [status]
- * @member {string} [message]
+ * @property {number} [status]
+ * @property {string} [message]
  */
 export interface ErrorModel {
   status?: number;
@@ -34,11 +34,11 @@ export interface ErrorModel {
  * @constructor
  * Some resource
  *
- * @member {string} [id] Resource Id
- * @member {string} [type] Resource Type
- * @member {object} [tags]
- * @member {string} [location] Resource Location
- * @member {string} [name] Resource Name
+ * @property {string} [id] Resource Id
+ * @property {string} [type] Resource Type
+ * @property {object} [tags]
+ * @property {string} [location] Resource Location
+ * @property {string} [name] Resource Name
  */
 export interface Resource extends BaseResource {
   readonly id?: string;
@@ -52,9 +52,9 @@ export interface Resource extends BaseResource {
  * @class
  * Initializes a new instance of the FlattenedProduct class.
  * @constructor
- * @member {string} [pname]
- * @member {number} [lsize]
- * @member {string} [provisioningState]
+ * @property {string} [pname]
+ * @property {number} [lsize]
+ * @property {string} [provisioningState]
  */
 export interface FlattenedProduct extends Resource {
   pname?: string;
@@ -66,12 +66,12 @@ export interface FlattenedProduct extends Resource {
  * @class
  * Initializes a new instance of the ResourceCollection class.
  * @constructor
- * @member {object} [productresource]
- * @member {string} [productresource.pname]
- * @member {number} [productresource.lsize]
- * @member {string} [productresource.provisioningState]
- * @member {array} [arrayofresources]
- * @member {object} [dictionaryofresources]
+ * @property {object} [productresource]
+ * @property {string} [productresource.pname]
+ * @property {number} [productresource.lsize]
+ * @property {string} [productresource.provisioningState]
+ * @property {array} [arrayofresources]
+ * @property {object} [dictionaryofresources]
  */
 export interface ResourceCollection {
   productresource?: FlattenedProduct;

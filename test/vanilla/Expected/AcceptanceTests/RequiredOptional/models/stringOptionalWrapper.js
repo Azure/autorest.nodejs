@@ -16,7 +16,7 @@
 class StringOptionalWrapper {
   /**
    * Create a StringOptionalWrapper.
-   * @member {string} [value]
+   * @property {string} [value]
    */
   constructor() {
   }

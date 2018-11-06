@@ -16,7 +16,7 @@
 class RefColorConstant {
   /**
    * Create a RefColorConstant.
-   * @member {string} [field1] Sample string.
+   * @property {string} [field1] Sample string.
    */
   constructor() {
   }

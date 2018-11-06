@@ -16,7 +16,7 @@
 class ArrayOptionalWrapper {
   /**
    * Create a ArrayOptionalWrapper.
-   * @member {array} [value]
+   * @property {array} [value]
    */
   constructor() {
   }

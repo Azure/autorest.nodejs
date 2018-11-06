@@ -17,7 +17,7 @@
 class UsageListResult {
   /**
    * Create a UsageListResult.
-   * @member {array} [value] Gets or sets the list Storage Resource Usages.
+   * @property {array} [value] Gets or sets the list Storage Resource Usages.
    */
   constructor() {
   }

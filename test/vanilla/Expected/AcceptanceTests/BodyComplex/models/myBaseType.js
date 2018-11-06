@@ -16,10 +16,10 @@
 class MyBaseType {
   /**
    * Create a MyBaseType.
-   * @member {string} [propB1]
-   * @member {string} kind Polymorphic Discriminator
-   * @member {string} [propBH1]
-   * @member {string} kind Polymorphic Discriminator
+   * @property {string} [propB1]
+   * @property {string} kind Polymorphic Discriminator
+   * @property {string} [propBH1]
+   * @property {string} kind Polymorphic Discriminator
    */
   constructor() {
   }

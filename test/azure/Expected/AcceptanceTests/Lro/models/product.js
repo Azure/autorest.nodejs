@@ -19,8 +19,8 @@ const models = require('./index');
 class Product extends models['Resource'] {
   /**
    * Create a Product.
-   * @member {string} [provisioningState]
-   * @member {string} [provisioningStateValues] Possible values include:
+   * @property {string} [provisioningState]
+   * @property {string} [provisioningStateValues] Possible values include:
    * 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating', 'Created',
    * 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
    */

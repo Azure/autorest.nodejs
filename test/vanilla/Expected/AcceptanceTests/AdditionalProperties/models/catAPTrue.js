@@ -19,7 +19,7 @@ const models = require('./index');
 class CatAPTrue extends models['PetAPTrue'] {
   /**
    * Create a CatAPTrue.
-   * @member {boolean} [friendly]
+   * @property {boolean} [friendly]
    */
   constructor() {
     super();

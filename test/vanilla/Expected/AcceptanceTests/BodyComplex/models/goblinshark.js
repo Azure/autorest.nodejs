@@ -19,9 +19,9 @@ const models = require('./index');
 class Goblinshark extends models['Shark'] {
   /**
    * Create a Goblinshark.
-   * @member {number} [jawsize]
-   * @member {string} [color] Colors possible. Possible values include: 'pink',
-   * 'gray', 'brown'. Default value: 'gray' .
+   * @property {number} [jawsize]
+   * @property {string} [color] Colors possible. Possible values include:
+   * 'pink', 'gray', 'brown'. Default value: 'gray' .
    */
   constructor() {
     super();

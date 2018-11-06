@@ -16,8 +16,8 @@
 class BooleanWrapper {
   /**
    * Create a BooleanWrapper.
-   * @member {boolean} [fieldTrue]
-   * @member {boolean} [fieldFalse]
+   * @property {boolean} [fieldTrue]
+   * @property {boolean} [fieldFalse]
    */
   constructor() {
   }

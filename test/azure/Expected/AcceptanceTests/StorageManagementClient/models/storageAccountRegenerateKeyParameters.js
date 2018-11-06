@@ -16,7 +16,7 @@
 class StorageAccountRegenerateKeyParameters {
   /**
    * Create a StorageAccountRegenerateKeyParameters.
-   * @member {string} [keyName] Possible values include: 'key1', 'key2'
+   * @property {string} [keyName] Possible values include: 'key1', 'key2'
    */
   constructor() {
   }

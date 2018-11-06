@@ -20,8 +20,8 @@ export { CloudError } from 'ms-rest-azure';
  * @class
  * Initializes a new instance of the ProductProperties class.
  * @constructor
- * @member {number} [id]
- * @member {string} [name]
+ * @property {number} [id]
+ * @property {string} [name]
  */
 export interface ProductProperties {
   id?: number;
@@ -32,9 +32,9 @@ export interface ProductProperties {
  * @class
  * Initializes a new instance of the Product class.
  * @constructor
- * @member {object} [properties]
- * @member {number} [properties.id]
- * @member {string} [properties.name]
+ * @property {object} [properties]
+ * @property {number} [properties.id]
+ * @property {string} [properties.name]
  */
 export interface Product {
   properties?: ProductProperties;
@@ -44,7 +44,7 @@ export interface Product {
  * @class
  * Initializes a new instance of the OperationResult class.
  * @constructor
- * @member {string} [status] The status of the request. Possible values
+ * @property {string} [status] The status of the request. Possible values
  * include: 'Succeeded', 'Failed', 'canceled', 'Accepted', 'Creating',
  * 'Created', 'Updating', 'Updated', 'Deleting', 'Deleted', 'OK'
  */
@@ -58,9 +58,9 @@ export interface OperationResult {
  * @constructor
  * Additional parameters for getMultiplePages operation.
  *
- * @member {number} [maxresults] Sets the maximum number of items to return in
- * the response.
- * @member {number} [timeout] Sets the maximum time that the server can spend
+ * @property {number} [maxresults] Sets the maximum number of items to return
+ * in the response.
+ * @property {number} [timeout] Sets the maximum time that the server can spend
  * processing the request, in seconds. The default is 30 seconds. Default
  * value: 30 .
  */
@@ -75,9 +75,9 @@ export interface PagingGetMultiplePagesOptions {
  * @constructor
  * Additional parameters for getOdataMultiplePages operation.
  *
- * @member {number} [maxresults] Sets the maximum number of items to return in
- * the response.
- * @member {number} [timeout] Sets the maximum time that the server can spend
+ * @property {number} [maxresults] Sets the maximum number of items to return
+ * in the response.
+ * @property {number} [timeout] Sets the maximum time that the server can spend
  * processing the request, in seconds. The default is 30 seconds. Default
  * value: 30 .
  */
@@ -92,10 +92,10 @@ export interface PagingGetOdataMultiplePagesOptions {
  * @constructor
  * Additional parameters for getMultiplePagesWithOffset operation.
  *
- * @member {number} [maxresults] Sets the maximum number of items to return in
- * the response.
- * @member {number} offset Offset of return value
- * @member {number} [timeout] Sets the maximum time that the server can spend
+ * @property {number} [maxresults] Sets the maximum number of items to return
+ * in the response.
+ * @property {number} offset Offset of return value
+ * @property {number} [timeout] Sets the maximum time that the server can spend
  * processing the request, in seconds. The default is 30 seconds. Default
  * value: 30 .
  */
@@ -113,8 +113,8 @@ export interface PagingGetMultiplePagesWithOffsetOptions {
  * Paging_getMultiplePagesFragmentWithGroupingNextLink,
  * Paging_nextFragmentWithGrouping.
  *
- * @member {string} apiVersion Sets the api version to use.
- * @member {string} tenant Sets the tenant to use.
+ * @property {string} apiVersion Sets the api version to use.
+ * @property {string} tenant Sets the tenant to use.
  */
 export interface CustomParameterGroup {
   apiVersion: string;
@@ -127,9 +127,9 @@ export interface CustomParameterGroup {
  * @constructor
  * Additional parameters for getMultiplePagesLRO operation.
  *
- * @member {number} [maxresults] Sets the maximum number of items to return in
- * the response.
- * @member {number} [timeout] Sets the maximum time that the server can spend
+ * @property {number} [maxresults] Sets the maximum number of items to return
+ * in the response.
+ * @property {number} [timeout] Sets the maximum time that the server can spend
  * processing the request, in seconds. The default is 30 seconds. Default
  * value: 30 .
  */
@@ -144,9 +144,9 @@ export interface PagingGetMultiplePagesLROOptions {
  * @constructor
  * Additional parameters for getMultiplePagesWithOffsetNext operation.
  *
- * @member {number} [maxresults] Sets the maximum number of items to return in
- * the response.
- * @member {number} [timeout] Sets the maximum time that the server can spend
+ * @property {number} [maxresults] Sets the maximum number of items to return
+ * in the response.
+ * @property {number} [timeout] Sets the maximum time that the server can spend
  * processing the request, in seconds. The default is 30 seconds. Default
  * value: 30 .
  */
@@ -160,8 +160,8 @@ export interface PagingGetMultiplePagesWithOffsetNextOptions {
  * @class
  * Initializes a new instance of the ProductResult class.
  * @constructor
- * @member {array} [values]
- * @member {string} [nextLink]
+ * @property {array} [values]
+ * @property {string} [nextLink]
  */
 export interface ProductResult extends Array<Product> {
   nextLink?: string;
@@ -171,8 +171,8 @@ export interface ProductResult extends Array<Product> {
  * @class
  * Initializes a new instance of the OdataProductResult class.
  * @constructor
- * @member {array} [values]
- * @member {string} [odatanextLink]
+ * @property {array} [values]
+ * @property {string} [odatanextLink]
  */
 export interface OdataProductResult extends Array<Product> {
   odatanextLink?: string;

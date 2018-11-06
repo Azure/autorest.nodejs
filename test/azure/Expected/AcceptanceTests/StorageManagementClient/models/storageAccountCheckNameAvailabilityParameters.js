@@ -16,9 +16,9 @@
 class StorageAccountCheckNameAvailabilityParameters {
   /**
    * Create a StorageAccountCheckNameAvailabilityParameters.
-   * @member {string} name
-   * @member {string} [type] Default value: 'Microsoft.Storage/storageAccounts'
-   * .
+   * @property {string} name
+   * @property {string} [type] Default value:
+   * 'Microsoft.Storage/storageAccounts' .
    */
   constructor() {
   }

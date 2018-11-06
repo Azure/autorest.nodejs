@@ -16,8 +16,8 @@
 class Datetimerfc1123Wrapper {
   /**
    * Create a Datetimerfc1123Wrapper.
-   * @member {date} [field]
-   * @member {date} [now]
+   * @property {date} [field]
+   * @property {date} [now]
    */
   constructor() {
   }

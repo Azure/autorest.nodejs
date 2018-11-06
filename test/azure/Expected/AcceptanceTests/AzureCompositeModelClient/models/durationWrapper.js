@@ -16,7 +16,7 @@
 class DurationWrapper {
   /**
    * Create a DurationWrapper.
-   * @member {moment.duration} [field]
+   * @property {moment.duration} [field]
    */
   constructor() {
   }
