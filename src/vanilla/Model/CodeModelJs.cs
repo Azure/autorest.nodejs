@@ -431,5 +431,10 @@ namespace AutoRest.NodeJS.Model
 
             return builder.ToString();
         }
+
+        public string GenerateTypeScriptSDKMessage()
+        {
+            return $"**This SDK will be deprecated next year and will be replaced by a new TypeScript-based isomorphic SDK (found at https://github.com/Azure/azure-sdk-for-js) which works on Node.js and browsers.**";
+        }
     }
 }
