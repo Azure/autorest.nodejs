@@ -3,6 +3,7 @@ uid: azure-arm-parameterflattening
 summary: *content
 
 ---
+**This package will eventually be replaced by our new TypeScript-based isomorphic SDKs. Learn more at the [GitHub repository for our new packages](https://github.com/Azure/azure-sdk-for-js).**
 # Microsoft Azure SDK for Node.js - AutoRestParameterFlattening
 This project provides a Node.js package for accessing Azure. Right now it supports:
 - **Node.js version 6.x.x or higher**

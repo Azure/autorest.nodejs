@@ -431,5 +431,11 @@ namespace AutoRest.NodeJS.Model
 
             return builder.ToString();
         }
+
+        public string GenerateTypeScriptSDKMessage()
+        {
+            return $"**This package will eventually be replaced by our new TypeScript-based isomorphic SDKs. " +
+                "Learn more at the [GitHub repository for our new packages](https://github.com/Azure/azure-sdk-for-js).**";
+        }
     }
 }
