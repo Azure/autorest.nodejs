@@ -15,26 +15,11 @@ const WebResource = msRest.WebResource;
 
 /**
  * Get a null array of string using the multi-array format
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {array} [options.arrayQuery] a null array of string using the
- * multi-array format
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {array} [options.arrayQuery] a null array of string using the multi-array format
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _arrayStringMultiNull(options, callback) {
    /* jshint validthis: true */
@@ -135,26 +120,11 @@ function _arrayStringMultiNull(options, callback) {
 
 /**
  * Get an empty array [] of string using the multi-array format
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {array} [options.arrayQuery] an empty array [] of string using the
- * multi-array format
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {array} [options.arrayQuery] an empty array [] of string using the multi-array format
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _arrayStringMultiEmpty(options, callback) {
    /* jshint validthis: true */
@@ -254,28 +224,14 @@ function _arrayStringMultiEmpty(options, callback) {
 }
 
 /**
- * Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' , null,
- * ''] using the mult-array format
- *
+ * Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the
+ * mult-array format
  * @param {object} [options] Optional Parameters.
- *
- * @param {array} [options.arrayQuery] an array of string ['ArrayQuery1',
- * 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the mult-array format
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {array} [options.arrayQuery] an array of string ['ArrayQuery1', 'begin!*'();:@
+ * &=+$,/?#[]end' , null, ''] using the mult-array format
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _arrayStringMultiValid(options, callback) {
    /* jshint validthis: true */
@@ -389,20 +345,10 @@ class Queries {
 
   /**
    * Get a null array of string using the multi-array format
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.arrayQuery] a null array of string using the
-   * multi-array format
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {array} [options.arrayQuery] a null array of string using the multi-array format
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   arrayStringMultiNullWithHttpOperationResponse(options) {
     let client = this.client;
@@ -420,35 +366,12 @@ class Queries {
 
   /**
    * Get a null array of string using the multi-array format
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.arrayQuery] a null array of string using the
-   * multi-array format
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {array} [options.arrayQuery] a null array of string using the multi-array format
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   arrayStringMultiNull(options, optionalCallback) {
     let client = this.client;
@@ -472,20 +395,10 @@ class Queries {
 
   /**
    * Get an empty array [] of string using the multi-array format
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.arrayQuery] an empty array [] of string using the
-   * multi-array format
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {array} [options.arrayQuery] an empty array [] of string using the multi-array format
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   arrayStringMultiEmptyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -503,35 +416,12 @@ class Queries {
 
   /**
    * Get an empty array [] of string using the multi-array format
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.arrayQuery] an empty array [] of string using the
-   * multi-array format
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {array} [options.arrayQuery] an empty array [] of string using the multi-array format
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   arrayStringMultiEmpty(options, optionalCallback) {
     let client = this.client;
@@ -554,22 +444,13 @@ class Queries {
   }
 
   /**
-   * Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' , null,
-   * ''] using the mult-array format
-   *
+   * Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the
+   * mult-array format
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.arrayQuery] an array of string ['ArrayQuery1',
-   * 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the mult-array format
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {array} [options.arrayQuery] an array of string ['ArrayQuery1', 'begin!*'();:@
+   * &=+$,/?#[]end' , null, ''] using the mult-array format
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   arrayStringMultiValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -586,37 +467,15 @@ class Queries {
   }
 
   /**
-   * Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' , null,
-   * ''] using the mult-array format
-   *
+   * Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the
+   * mult-array format
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.arrayQuery] an array of string ['ArrayQuery1',
-   * 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the mult-array format
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {array} [options.arrayQuery] an array of string ['ArrayQuery1', 'begin!*'();:@
+   * &=+$,/?#[]end' , null, ''] using the mult-array format
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   arrayStringMultiValid(options, optionalCallback) {
     let client = this.client;

@@ -15,24 +15,10 @@ const WebResource = msRest.WebResource;
 
 /**
  * Return 501 status code - should be represented in the client as an error
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _head501(options, callback) {
    /* jshint validthis: true */
@@ -120,24 +106,10 @@ function _head501(options, callback) {
 
 /**
  * Return 501 status code - should be represented in the client as an error
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _get501(options, callback) {
    /* jshint validthis: true */
@@ -225,26 +197,11 @@ function _get501(options, callback) {
 
 /**
  * Return 505 status code - should be represented in the client as an error
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {boolean} [options.booleanValue] Simple boolean value true
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _post505(options, callback) {
    /* jshint validthis: true */
@@ -361,26 +318,11 @@ function _post505(options, callback) {
 
 /**
  * Return 505 status code - should be represented in the client as an error
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {boolean} [options.booleanValue] Simple boolean value true
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _delete505(options, callback) {
    /* jshint validthis: true */
@@ -511,17 +453,9 @@ class HttpServerFailure {
 
   /**
    * Return 501 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   head501WithHttpOperationResponse(options) {
     let client = this.client;
@@ -539,33 +473,11 @@ class HttpServerFailure {
 
   /**
    * Return 501 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   head501(options, optionalCallback) {
     let client = this.client;
@@ -589,17 +501,9 @@ class HttpServerFailure {
 
   /**
    * Return 501 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   get501WithHttpOperationResponse(options) {
     let client = this.client;
@@ -617,33 +521,11 @@ class HttpServerFailure {
 
   /**
    * Return 501 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   get501(options, optionalCallback) {
     let client = this.client;
@@ -667,19 +549,10 @@ class HttpServerFailure {
 
   /**
    * Return 505 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {boolean} [options.booleanValue] Simple boolean value true
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   post505WithHttpOperationResponse(options) {
     let client = this.client;
@@ -697,35 +570,12 @@ class HttpServerFailure {
 
   /**
    * Return 505 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {boolean} [options.booleanValue] Simple boolean value true
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   post505(options, optionalCallback) {
     let client = this.client;
@@ -749,19 +599,10 @@ class HttpServerFailure {
 
   /**
    * Return 505 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {boolean} [options.booleanValue] Simple boolean value true
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   delete505WithHttpOperationResponse(options) {
     let client = this.client;
@@ -779,35 +620,12 @@ class HttpServerFailure {
 
   /**
    * Return 505 status code - should be represented in the client as an error
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {boolean} [options.booleanValue] Simple boolean value true
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   delete505(options, optionalCallback) {
     let client = this.client;

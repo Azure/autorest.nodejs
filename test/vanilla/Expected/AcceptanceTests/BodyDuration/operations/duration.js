@@ -16,23 +16,10 @@ const moment = require('moment');
 
 /**
  * Get null duration value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {moment.duration} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getNull(options, callback) {
    /* jshint validthis: true */
@@ -129,25 +116,11 @@ function _getNull(options, callback) {
 
 /**
  * Put a positive duration value
- *
  * @param {moment.duration} durationBody
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putPositiveDuration(durationBody, options, callback) {
    /* jshint validthis: true */
@@ -249,23 +222,10 @@ function _putPositiveDuration(durationBody, options, callback) {
 
 /**
  * Get a positive duration value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {moment.duration} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getPositiveDuration(options, callback) {
    /* jshint validthis: true */
@@ -362,23 +322,10 @@ function _getPositiveDuration(options, callback) {
 
 /**
  * Get an invalid duration value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {moment.duration} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getInvalid(options, callback) {
    /* jshint validthis: true */
@@ -489,17 +436,9 @@ class Duration {
 
   /**
    * Get null duration value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<moment.duration>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getNullWithHttpOperationResponse(options) {
     let client = this.client;
@@ -517,32 +456,11 @@ class Duration {
 
   /**
    * Get null duration value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {moment.duration} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {moment.duration} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getNull(options, optionalCallback) {
     let client = this.client;
@@ -566,19 +484,10 @@ class Duration {
 
   /**
    * Put a positive duration value
-   *
    * @param {moment.duration} durationBody
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putPositiveDurationWithHttpOperationResponse(durationBody, options) {
     let client = this.client;
@@ -596,34 +505,12 @@ class Duration {
 
   /**
    * Put a positive duration value
-   *
    * @param {moment.duration} durationBody
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putPositiveDuration(durationBody, options, optionalCallback) {
     let client = this.client;
@@ -647,17 +534,9 @@ class Duration {
 
   /**
    * Get a positive duration value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<moment.duration>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getPositiveDurationWithHttpOperationResponse(options) {
     let client = this.client;
@@ -675,32 +554,11 @@ class Duration {
 
   /**
    * Get a positive duration value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {moment.duration} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {moment.duration} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getPositiveDuration(options, optionalCallback) {
     let client = this.client;
@@ -724,17 +582,9 @@ class Duration {
 
   /**
    * Get an invalid duration value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<moment.duration>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getInvalidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -752,32 +602,11 @@ class Duration {
 
   /**
    * Get an invalid duration value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {moment.duration} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {moment.duration} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getInvalid(options, optionalCallback) {
     let client = this.client;

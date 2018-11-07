@@ -38,61 +38,27 @@ export default class ComplexModelClient extends ServiceClient {
 
   /**
    * @summary Product Types
-   *
-   * The Products endpoint returns information about the Uber products offered at
-   * a given location. The response includes the display name and other details
-   * about each product, and lists the products in the proper display order.
-   *
+   * @description The Products endpoint returns information about the Uber products offered at a
+   * given location. The response includes the display name and other details about each product, and
+   * lists the products in the proper display order.
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CatalogArray>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   listWithHttpOperationResponse(resourceGroupName: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.CatalogArray>>;
 
   /**
    * @summary Product Types
-   *
-   * The Products endpoint returns information about the Uber products offered at
-   * a given location. The response includes the display name and other details
-   * about each product, and lists the products in the proper display order.
-   *
+   * @description The Products endpoint returns information about the Uber products offered at a
+   * given location. The response includes the display name and other details about each product, and
+   * lists the products in the proper display order.
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {CatalogArray} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {CatalogArray} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CatalogArray} for more information.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   list(resourceGroupName: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.CatalogArray>;
   list(resourceGroupName: string, callback: ServiceCallback<models.CatalogArray>): void;
@@ -101,67 +67,27 @@ export default class ComplexModelClient extends ServiceClient {
 
   /**
    * @summary Create products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of
-   * product
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CatalogDictionary>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of product
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createWithHttpOperationResponse(subscriptionId: string, resourceGroupName: string, options?: { productDictionaryOfArray? : { [propertyName: string]: models.Product[] }, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.CatalogDictionary>>;
 
   /**
    * @summary Create products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of
-   * product
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {CatalogDictionary} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {CatalogDictionary} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CatalogDictionary} for more information.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of product
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   create(subscriptionId: string, resourceGroupName: string, options?: { productDictionaryOfArray? : { [propertyName: string]: models.Product[] }, customHeaders? : { [headerName: string]: string; } }): Promise<models.CatalogDictionary>;
   create(subscriptionId: string, resourceGroupName: string, callback: ServiceCallback<models.CatalogDictionary>): void;
@@ -170,67 +96,27 @@ export default class ComplexModelClient extends ServiceClient {
 
   /**
    * @summary Update products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.productArrayOfDictionary] Array of dictionary of
-   * products
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CatalogArray>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {array} [options.productArrayOfDictionary] Array of dictionary of products
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   updateWithHttpOperationResponse(subscriptionId: string, resourceGroupName: string, options?: { productArrayOfDictionary? : { [propertyName: string]: models.Product }[], customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.CatalogArray>>;
 
   /**
    * @summary Update products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.productArrayOfDictionary] Array of dictionary of
-   * products
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {CatalogArray} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {CatalogArray} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CatalogArray} for more information.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {array} [options.productArrayOfDictionary] Array of dictionary of products
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   update(subscriptionId: string, resourceGroupName: string, options?: { productArrayOfDictionary? : { [propertyName: string]: models.Product }[], customHeaders? : { [headerName: string]: string; } }): Promise<models.CatalogArray>;
   update(subscriptionId: string, resourceGroupName: string, callback: ServiceCallback<models.CatalogArray>): void;

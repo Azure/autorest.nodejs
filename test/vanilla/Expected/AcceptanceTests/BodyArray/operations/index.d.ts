@@ -24,48 +24,19 @@ export interface ArrayModel {
 
     /**
      * Get null array value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get null array value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getNull(callback: ServiceCallback<number[]>): void;
@@ -74,48 +45,19 @@ export interface ArrayModel {
 
     /**
      * Get invalid array [1, 2, 3
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getInvalidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get invalid array [1, 2, 3
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getInvalid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getInvalid(callback: ServiceCallback<number[]>): void;
@@ -124,48 +66,19 @@ export interface ArrayModel {
 
     /**
      * Get empty array value []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get empty array value []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getEmpty(callback: ServiceCallback<number[]>): void;
@@ -174,52 +87,21 @@ export interface ArrayModel {
 
     /**
      * Set array value empty []
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putEmptyWithHttpOperationResponse(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value empty []
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putEmpty(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putEmpty(arrayBody: string[], callback: ServiceCallback<void>): void;
@@ -228,48 +110,19 @@ export interface ArrayModel {
 
     /**
      * Get boolean array value [true, false, false, true]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBooleanTfftWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<boolean[]>>;
 
     /**
      * Get boolean array value [true, false, false, true]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBooleanTfft(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<boolean[]>;
     getBooleanTfft(callback: ServiceCallback<boolean[]>): void;
@@ -278,52 +131,21 @@ export interface ArrayModel {
 
     /**
      * Set array value empty [true, false, false, true]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBooleanTfftWithHttpOperationResponse(arrayBody: boolean[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value empty [true, false, false, true]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBooleanTfft(arrayBody: boolean[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBooleanTfft(arrayBody: boolean[], callback: ServiceCallback<void>): void;
@@ -332,48 +154,19 @@ export interface ArrayModel {
 
     /**
      * Get boolean array value [true, null, false]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBooleanInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<boolean[]>>;
 
     /**
      * Get boolean array value [true, null, false]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBooleanInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<boolean[]>;
     getBooleanInvalidNull(callback: ServiceCallback<boolean[]>): void;
@@ -382,48 +175,19 @@ export interface ArrayModel {
 
     /**
      * Get boolean array value [true, 'boolean', false]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBooleanInvalidStringWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<boolean[]>>;
 
     /**
      * Get boolean array value [true, 'boolean', false]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBooleanInvalidString(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<boolean[]>;
     getBooleanInvalidString(callback: ServiceCallback<boolean[]>): void;
@@ -432,48 +196,19 @@ export interface ArrayModel {
 
     /**
      * Get integer array value [1, -1, 3, 300]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getIntegerValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get integer array value [1, -1, 3, 300]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getIntegerValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getIntegerValid(callback: ServiceCallback<number[]>): void;
@@ -482,52 +217,21 @@ export interface ArrayModel {
 
     /**
      * Set array value empty [1, -1, 3, 300]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putIntegerValidWithHttpOperationResponse(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value empty [1, -1, 3, 300]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putIntegerValid(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putIntegerValid(arrayBody: number[], callback: ServiceCallback<void>): void;
@@ -536,48 +240,19 @@ export interface ArrayModel {
 
     /**
      * Get integer array value [1, null, 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getIntInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get integer array value [1, null, 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getIntInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getIntInvalidNull(callback: ServiceCallback<number[]>): void;
@@ -586,48 +261,19 @@ export interface ArrayModel {
 
     /**
      * Get integer array value [1, 'integer', 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getIntInvalidStringWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get integer array value [1, 'integer', 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getIntInvalidString(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getIntInvalidString(callback: ServiceCallback<number[]>): void;
@@ -636,48 +282,19 @@ export interface ArrayModel {
 
     /**
      * Get integer array value [1, -1, 3, 300]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getLongValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get integer array value [1, -1, 3, 300]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getLongValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getLongValid(callback: ServiceCallback<number[]>): void;
@@ -686,52 +303,21 @@ export interface ArrayModel {
 
     /**
      * Set array value empty [1, -1, 3, 300]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putLongValidWithHttpOperationResponse(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value empty [1, -1, 3, 300]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putLongValid(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putLongValid(arrayBody: number[], callback: ServiceCallback<void>): void;
@@ -740,48 +326,19 @@ export interface ArrayModel {
 
     /**
      * Get long array value [1, null, 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getLongInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get long array value [1, null, 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getLongInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getLongInvalidNull(callback: ServiceCallback<number[]>): void;
@@ -790,48 +347,19 @@ export interface ArrayModel {
 
     /**
      * Get long array value [1, 'integer', 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getLongInvalidStringWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get long array value [1, 'integer', 0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getLongInvalidString(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getLongInvalidString(callback: ServiceCallback<number[]>): void;
@@ -840,48 +368,19 @@ export interface ArrayModel {
 
     /**
      * Get float array value [0, -0.01, 1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getFloatValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get float array value [0, -0.01, 1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getFloatValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getFloatValid(callback: ServiceCallback<number[]>): void;
@@ -890,52 +389,21 @@ export interface ArrayModel {
 
     /**
      * Set array value [0, -0.01, 1.2e20]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putFloatValidWithHttpOperationResponse(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value [0, -0.01, 1.2e20]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putFloatValid(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putFloatValid(arrayBody: number[], callback: ServiceCallback<void>): void;
@@ -944,48 +412,19 @@ export interface ArrayModel {
 
     /**
      * Get float array value [0.0, null, -1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getFloatInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get float array value [0.0, null, -1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getFloatInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getFloatInvalidNull(callback: ServiceCallback<number[]>): void;
@@ -994,48 +433,19 @@ export interface ArrayModel {
 
     /**
      * Get boolean array value [1.0, 'number', 0.0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getFloatInvalidStringWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get boolean array value [1.0, 'number', 0.0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getFloatInvalidString(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getFloatInvalidString(callback: ServiceCallback<number[]>): void;
@@ -1044,48 +454,19 @@ export interface ArrayModel {
 
     /**
      * Get float array value [0, -0.01, 1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDoubleValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get float array value [0, -0.01, 1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDoubleValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getDoubleValid(callback: ServiceCallback<number[]>): void;
@@ -1094,52 +475,21 @@ export interface ArrayModel {
 
     /**
      * Set array value [0, -0.01, 1.2e20]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putDoubleValidWithHttpOperationResponse(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value [0, -0.01, 1.2e20]
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putDoubleValid(arrayBody: number[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putDoubleValid(arrayBody: number[], callback: ServiceCallback<void>): void;
@@ -1148,48 +498,19 @@ export interface ArrayModel {
 
     /**
      * Get float array value [0.0, null, -1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDoubleInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get float array value [0.0, null, -1.2e20]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDoubleInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getDoubleInvalidNull(callback: ServiceCallback<number[]>): void;
@@ -1198,48 +519,19 @@ export interface ArrayModel {
 
     /**
      * Get boolean array value [1.0, 'number', 0.0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDoubleInvalidStringWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number[]>>;
 
     /**
      * Get boolean array value [1.0, 'number', 0.0]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDoubleInvalidString(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number[]>;
     getDoubleInvalidString(callback: ServiceCallback<number[]>): void;
@@ -1248,48 +540,19 @@ export interface ArrayModel {
 
     /**
      * Get string array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getStringValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[]>>;
 
     /**
      * Get string array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getStringValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[]>;
     getStringValid(callback: ServiceCallback<string[]>): void;
@@ -1298,52 +561,21 @@ export interface ArrayModel {
 
     /**
      * Set array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putStringValidWithHttpOperationResponse(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putStringValid(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putStringValid(arrayBody: string[], callback: ServiceCallback<void>): void;
@@ -1352,48 +584,19 @@ export interface ArrayModel {
 
     /**
      * Get enum array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getEnumValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[]>>;
 
     /**
      * Get enum array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getEnumValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[]>;
     getEnumValid(callback: ServiceCallback<string[]>): void;
@@ -1402,52 +605,21 @@ export interface ArrayModel {
 
     /**
      * Set array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putEnumValidWithHttpOperationResponse(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putEnumValid(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putEnumValid(arrayBody: string[], callback: ServiceCallback<void>): void;
@@ -1456,48 +628,19 @@ export interface ArrayModel {
 
     /**
      * Get enum array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getStringEnumValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[]>>;
 
     /**
      * Get enum array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getStringEnumValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[]>;
     getStringEnumValid(callback: ServiceCallback<string[]>): void;
@@ -1506,52 +649,21 @@ export interface ArrayModel {
 
     /**
      * Set array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putStringEnumValidWithHttpOperationResponse(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value ['foo1', 'foo2', 'foo3']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putStringEnumValid(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putStringEnumValid(arrayBody: string[], callback: ServiceCallback<void>): void;
@@ -1560,48 +672,19 @@ export interface ArrayModel {
 
     /**
      * Get string array value ['foo', null, 'foo2']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getStringWithNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[]>>;
 
     /**
      * Get string array value ['foo', null, 'foo2']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getStringWithNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[]>;
     getStringWithNull(callback: ServiceCallback<string[]>): void;
@@ -1610,48 +693,19 @@ export interface ArrayModel {
 
     /**
      * Get string array value ['foo', 123, 'foo2']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getStringWithInvalidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[]>>;
 
     /**
      * Get string array value ['foo', 123, 'foo2']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getStringWithInvalid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[]>;
     getStringWithInvalid(callback: ServiceCallback<string[]>): void;
@@ -1660,52 +714,21 @@ export interface ArrayModel {
 
     /**
      * Get uuid array value ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652',
-     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db',
-     * 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
-     *
+     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db', 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getUuidValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[]>>;
 
     /**
      * Get uuid array value ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652',
-     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db',
-     * 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
-     *
+     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db', 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getUuidValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[]>;
     getUuidValid(callback: ServiceCallback<string[]>): void;
@@ -1714,56 +737,23 @@ export interface ArrayModel {
 
     /**
      * Set array value  ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652',
-     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db',
-     * 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
-     *
+     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db', 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putUuidValidWithHttpOperationResponse(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value  ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652',
-     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db',
-     * 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
-     *
+     * 'd1399005-30f7-40d6-8da6-dd7c89ad34db', 'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putUuidValid(arrayBody: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putUuidValid(arrayBody: string[], callback: ServiceCallback<void>): void;
@@ -1772,48 +762,19 @@ export interface ArrayModel {
 
     /**
      * Get uuid array value ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652', 'foo']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getUuidInvalidCharsWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[]>>;
 
     /**
      * Get uuid array value ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652', 'foo']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getUuidInvalidChars(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[]>;
     getUuidInvalidChars(callback: ServiceCallback<string[]>): void;
@@ -1822,48 +783,19 @@ export interface ArrayModel {
 
     /**
      * Get integer array value ['2000-12-01', '1980-01-02', '1492-10-12']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDateValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Date[]>>;
 
     /**
      * Get integer array value ['2000-12-01', '1980-01-02', '1492-10-12']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDateValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Date[]>;
     getDateValid(callback: ServiceCallback<Date[]>): void;
@@ -1872,52 +804,21 @@ export interface ArrayModel {
 
     /**
      * Set array value  ['2000-12-01', '1980-01-02', '1492-10-12']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putDateValidWithHttpOperationResponse(arrayBody: Date[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value  ['2000-12-01', '1980-01-02', '1492-10-12']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putDateValid(arrayBody: Date[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putDateValid(arrayBody: Date[], callback: ServiceCallback<void>): void;
@@ -1926,48 +827,19 @@ export interface ArrayModel {
 
     /**
      * Get date array value ['2012-01-01', null, '1776-07-04']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDateInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Date[]>>;
 
     /**
      * Get date array value ['2012-01-01', null, '1776-07-04']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDateInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Date[]>;
     getDateInvalidNull(callback: ServiceCallback<Date[]>): void;
@@ -1976,48 +848,19 @@ export interface ArrayModel {
 
     /**
      * Get date array value ['2011-03-22', 'date']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDateInvalidCharsWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Date[]>>;
 
     /**
      * Get date array value ['2011-03-22', 'date']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDateInvalidChars(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Date[]>;
     getDateInvalidChars(callback: ServiceCallback<Date[]>): void;
@@ -2025,51 +868,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get date-time array value ['2000-12-01t00:00:01z',
-     * '1980-01-02T00:11:35+01:00', '1492-10-12T10:15:01-08:00']
-     *
+     * Get date-time array value ['2000-12-01t00:00:01z', '1980-01-02T00:11:35+01:00',
+     * '1492-10-12T10:15:01-08:00']
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDateTimeValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Date[]>>;
 
     /**
-     * Get date-time array value ['2000-12-01t00:00:01z',
-     * '1980-01-02T00:11:35+01:00', '1492-10-12T10:15:01-08:00']
-     *
+     * Get date-time array value ['2000-12-01t00:00:01z', '1980-01-02T00:11:35+01:00',
+     * '1492-10-12T10:15:01-08:00']
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDateTimeValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Date[]>;
     getDateTimeValid(callback: ServiceCallback<Date[]>): void;
@@ -2079,53 +893,22 @@ export interface ArrayModel {
     /**
      * Set array value  ['2000-12-01t00:00:01z', '1980-01-02T00:11:35+01:00',
      * '1492-10-12T10:15:01-08:00']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putDateTimeValidWithHttpOperationResponse(arrayBody: Date[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value  ['2000-12-01t00:00:01z', '1980-01-02T00:11:35+01:00',
      * '1492-10-12T10:15:01-08:00']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putDateTimeValid(arrayBody: Date[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putDateTimeValid(arrayBody: Date[], callback: ServiceCallback<void>): void;
@@ -2134,48 +917,19 @@ export interface ArrayModel {
 
     /**
      * Get date array value ['2000-12-01t00:00:01z', null]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDateTimeInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Date[]>>;
 
     /**
      * Get date array value ['2000-12-01t00:00:01z', null]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDateTimeInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Date[]>;
     getDateTimeInvalidNull(callback: ServiceCallback<Date[]>): void;
@@ -2184,48 +938,19 @@ export interface ArrayModel {
 
     /**
      * Get date array value ['2000-12-01t00:00:01z', 'date-time']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDateTimeInvalidCharsWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Date[]>>;
 
     /**
      * Get date array value ['2000-12-01t00:00:01z', 'date-time']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDateTimeInvalidChars(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Date[]>;
     getDateTimeInvalidChars(callback: ServiceCallback<Date[]>): void;
@@ -2233,51 +958,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get date-time array value ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan
-     * 1980 00:11:35 GMT', 'Wed, 12 Oct 1492 10:15:01 GMT']
-     *
+     * Get date-time array value ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan 1980 00:11:35 GMT',
+     * 'Wed, 12 Oct 1492 10:15:01 GMT']
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDateTimeRfc1123ValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Date[]>>;
 
     /**
-     * Get date-time array value ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan
-     * 1980 00:11:35 GMT', 'Wed, 12 Oct 1492 10:15:01 GMT']
-     *
+     * Get date-time array value ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan 1980 00:11:35 GMT',
+     * 'Wed, 12 Oct 1492 10:15:01 GMT']
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDateTimeRfc1123Valid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Date[]>;
     getDateTimeRfc1123Valid(callback: ServiceCallback<Date[]>): void;
@@ -2285,55 +981,24 @@ export interface ArrayModel {
 
 
     /**
-     * Set array value  ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan 1980
-     * 00:11:35 GMT', 'Wed, 12 Oct 1492 10:15:01 GMT']
-     *
+     * Set array value  ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan 1980 00:11:35 GMT', 'Wed, 12 Oct
+     * 1492 10:15:01 GMT']
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putDateTimeRfc1123ValidWithHttpOperationResponse(arrayBody: Date[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Set array value  ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan 1980
-     * 00:11:35 GMT', 'Wed, 12 Oct 1492 10:15:01 GMT']
-     *
+     * Set array value  ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan 1980 00:11:35 GMT', 'Wed, 12 Oct
+     * 1492 10:15:01 GMT']
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putDateTimeRfc1123Valid(arrayBody: Date[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putDateTimeRfc1123Valid(arrayBody: Date[], callback: ServiceCallback<void>): void;
@@ -2342,48 +1007,19 @@ export interface ArrayModel {
 
     /**
      * Get duration array value ['P123DT22H14M12.011S', 'P5DT1H0M0S']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDurationValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<moment.Duration[]>>;
 
     /**
      * Get duration array value ['P123DT22H14M12.011S', 'P5DT1H0M0S']
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDurationValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<moment.Duration[]>;
     getDurationValid(callback: ServiceCallback<moment.Duration[]>): void;
@@ -2392,52 +1028,21 @@ export interface ArrayModel {
 
     /**
      * Set array value  ['P123DT22H14M12.011S', 'P5DT1H0M0S']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putDurationValidWithHttpOperationResponse(arrayBody: moment.Duration[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Set array value  ['P123DT22H14M12.011S', 'P5DT1H0M0S']
-     *
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putDurationValid(arrayBody: moment.Duration[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putDurationValid(arrayBody: moment.Duration[], callback: ServiceCallback<void>): void;
@@ -2445,51 +1050,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get byte array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)]
-     * with each item encoded in base64
-     *
+     * Get byte array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)] with each item encoded
+     * in base64
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getByteValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Buffer[]>>;
 
     /**
-     * Get byte array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)]
-     * with each item encoded in base64
-     *
+     * Get byte array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)] with each item encoded
+     * in base64
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getByteValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Buffer[]>;
     getByteValid(callback: ServiceCallback<Buffer[]>): void;
@@ -2497,55 +1073,24 @@ export interface ArrayModel {
 
 
     /**
-     * Put the array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)] with
-     * each elementencoded in base 64
-     *
+     * Put the array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)] with each elementencoded
+     * in base 64
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putByteValidWithHttpOperationResponse(arrayBody: Buffer[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Put the array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)] with
-     * each elementencoded in base 64
-     *
+     * Put the array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29, 43)] with each elementencoded
+     * in base 64
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putByteValid(arrayBody: Buffer[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putByteValid(arrayBody: Buffer[], callback: ServiceCallback<void>): void;
@@ -2553,51 +1098,20 @@ export interface ArrayModel {
 
 
     /**
-     * Get byte array value [hex(AB, AC, AD), null] with the first item base64
-     * encoded
-     *
+     * Get byte array value [hex(AB, AC, AD), null] with the first item base64 encoded
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getByteInvalidNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Buffer[]>>;
 
     /**
-     * Get byte array value [hex(AB, AC, AD), null] with the first item base64
-     * encoded
-     *
+     * Get byte array value [hex(AB, AC, AD), null] with the first item base64 encoded
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getByteInvalidNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Buffer[]>;
     getByteInvalidNull(callback: ServiceCallback<Buffer[]>): void;
@@ -2605,51 +1119,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get array value ['a string that gets encoded with base64url', 'test string'
-     * 'Lorem ipsum'] with the items base64url encoded
-     *
+     * Get array value ['a string that gets encoded with base64url', 'test string' 'Lorem ipsum'] with
+     * the items base64url encoded
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBase64UrlWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Buffer[]>>;
 
     /**
-     * Get array value ['a string that gets encoded with base64url', 'test string'
-     * 'Lorem ipsum'] with the items base64url encoded
-     *
+     * Get array value ['a string that gets encoded with base64url', 'test string' 'Lorem ipsum'] with
+     * the items base64url encoded
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBase64Url(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Buffer[]>;
     getBase64Url(callback: ServiceCallback<Buffer[]>): void;
@@ -2658,48 +1143,19 @@ export interface ArrayModel {
 
     /**
      * Get array of complex type null value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getComplexNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product[]>>;
 
     /**
      * Get array of complex type null value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getComplexNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product[]>;
     getComplexNull(callback: ServiceCallback<models.Product[]>): void;
@@ -2708,48 +1164,19 @@ export interface ArrayModel {
 
     /**
      * Get empty array of complex type []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getComplexEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product[]>>;
 
     /**
      * Get empty array of complex type []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getComplexEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product[]>;
     getComplexEmpty(callback: ServiceCallback<models.Product[]>): void;
@@ -2757,51 +1184,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get array of complex type with null item [{'integer': 1 'string': '2'},
-     * null, {'integer': 5, 'string': '6'}]
-     *
+     * Get array of complex type with null item [{'integer': 1 'string': '2'}, null, {'integer': 5,
+     * 'string': '6'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getComplexItemNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product[]>>;
 
     /**
-     * Get array of complex type with null item [{'integer': 1 'string': '2'},
-     * null, {'integer': 5, 'string': '6'}]
-     *
+     * Get array of complex type with null item [{'integer': 1 'string': '2'}, null, {'integer': 5,
+     * 'string': '6'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getComplexItemNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product[]>;
     getComplexItemNull(callback: ServiceCallback<models.Product[]>): void;
@@ -2809,51 +1207,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get array of complex type with empty item [{'integer': 1 'string': '2'}, {},
-     * {'integer': 5, 'string': '6'}]
-     *
+     * Get array of complex type with empty item [{'integer': 1 'string': '2'}, {}, {'integer': 5,
+     * 'string': '6'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getComplexItemEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product[]>>;
 
     /**
-     * Get array of complex type with empty item [{'integer': 1 'string': '2'}, {},
-     * {'integer': 5, 'string': '6'}]
-     *
+     * Get array of complex type with empty item [{'integer': 1 'string': '2'}, {}, {'integer': 5,
+     * 'string': '6'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getComplexItemEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product[]>;
     getComplexItemEmpty(callback: ServiceCallback<models.Product[]>): void;
@@ -2861,51 +1230,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get array of complex type with [{'integer': 1 'string': '2'}, {'integer': 3,
-     * 'string': '4'}, {'integer': 5, 'string': '6'}]
-     *
+     * Get array of complex type with [{'integer': 1 'string': '2'}, {'integer': 3, 'string': '4'},
+     * {'integer': 5, 'string': '6'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getComplexValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product[]>>;
 
     /**
-     * Get array of complex type with [{'integer': 1 'string': '2'}, {'integer': 3,
-     * 'string': '4'}, {'integer': 5, 'string': '6'}]
-     *
+     * Get array of complex type with [{'integer': 1 'string': '2'}, {'integer': 3, 'string': '4'},
+     * {'integer': 5, 'string': '6'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getComplexValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product[]>;
     getComplexValid(callback: ServiceCallback<models.Product[]>): void;
@@ -2913,55 +1253,24 @@ export interface ArrayModel {
 
 
     /**
-     * Put an array of complex type with values [{'integer': 1 'string': '2'},
-     * {'integer': 3, 'string': '4'}, {'integer': 5, 'string': '6'}]
-     *
+     * Put an array of complex type with values [{'integer': 1 'string': '2'}, {'integer': 3, 'string':
+     * '4'}, {'integer': 5, 'string': '6'}]
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putComplexValidWithHttpOperationResponse(arrayBody: models.Product[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Put an array of complex type with values [{'integer': 1 'string': '2'},
-     * {'integer': 3, 'string': '4'}, {'integer': 5, 'string': '6'}]
-     *
+     * Put an array of complex type with values [{'integer': 1 'string': '2'}, {'integer': 3, 'string':
+     * '4'}, {'integer': 5, 'string': '6'}]
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putComplexValid(arrayBody: models.Product[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putComplexValid(arrayBody: models.Product[], callback: ServiceCallback<void>): void;
@@ -2970,48 +1279,19 @@ export interface ArrayModel {
 
     /**
      * Get a null array
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getArrayNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[][]>>;
 
     /**
      * Get a null array
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getArrayNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[][]>;
     getArrayNull(callback: ServiceCallback<string[][]>): void;
@@ -3020,48 +1300,19 @@ export interface ArrayModel {
 
     /**
      * Get an empty array []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getArrayEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[][]>>;
 
     /**
      * Get an empty array []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getArrayEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[][]>;
     getArrayEmpty(callback: ServiceCallback<string[][]>): void;
@@ -3070,48 +1321,19 @@ export interface ArrayModel {
 
     /**
      * Get an array of array of strings [['1', '2', '3'], null, ['7', '8', '9']]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getArrayItemNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[][]>>;
 
     /**
      * Get an array of array of strings [['1', '2', '3'], null, ['7', '8', '9']]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getArrayItemNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[][]>;
     getArrayItemNull(callback: ServiceCallback<string[][]>): void;
@@ -3120,48 +1342,19 @@ export interface ArrayModel {
 
     /**
      * Get an array of array of strings [['1', '2', '3'], [], ['7', '8', '9']]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getArrayItemEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[][]>>;
 
     /**
      * Get an array of array of strings [['1', '2', '3'], [], ['7', '8', '9']]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getArrayItemEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[][]>;
     getArrayItemEmpty(callback: ServiceCallback<string[][]>): void;
@@ -3169,51 +1362,20 @@ export interface ArrayModel {
 
 
     /**
-     * Get an array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7',
-     * '8', '9']]
-     *
+     * Get an array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getArrayValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<string[][]>>;
 
     /**
-     * Get an array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7',
-     * '8', '9']]
-     *
+     * Get an array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getArrayValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<string[][]>;
     getArrayValid(callback: ServiceCallback<string[][]>): void;
@@ -3221,55 +1383,22 @@ export interface ArrayModel {
 
 
     /**
-     * Put An array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7',
-     * '8', '9']]
-     *
+     * Put An array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putArrayValidWithHttpOperationResponse(arrayBody: string[][], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Put An array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7',
-     * '8', '9']]
-     *
+     * Put An array of array of strings [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putArrayValid(arrayBody: string[][], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putArrayValid(arrayBody: string[][], callback: ServiceCallback<void>): void;
@@ -3278,48 +1407,19 @@ export interface ArrayModel {
 
     /**
      * Get an array of Dictionaries with value null
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDictionaryNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: string }[]>>;
 
     /**
      * Get an array of Dictionaries with value null
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDictionaryNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: string }[]>;
     getDictionaryNull(callback: ServiceCallback<{ [propertyName: string]: string }[]>): void;
@@ -3328,48 +1428,19 @@ export interface ArrayModel {
 
     /**
      * Get an array of Dictionaries of type <string, string> with value []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDictionaryEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: string }[]>>;
 
     /**
      * Get an array of Dictionaries of type <string, string> with value []
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDictionaryEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: string }[]>;
     getDictionaryEmpty(callback: ServiceCallback<{ [propertyName: string]: string }[]>): void;
@@ -3377,53 +1448,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, null, {'7': 'seven', '8': 'eight', '9':
-     * 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, null, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDictionaryItemNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: string }[]>>;
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, null, {'7': 'seven', '8': 'eight', '9':
-     * 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, null, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDictionaryItemNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: string }[]>;
     getDictionaryItemNull(callback: ServiceCallback<{ [propertyName: string]: string }[]>): void;
@@ -3431,53 +1471,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, {}, {'7': 'seven', '8': 'eight', '9':
-     * 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, {}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDictionaryItemEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: string }[]>>;
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, {}, {'7': 'seven', '8': 'eight', '9':
-     * 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, {}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDictionaryItemEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: string }[]>;
     getDictionaryItemEmpty(callback: ServiceCallback<{ [propertyName: string]: string }[]>): void;
@@ -3485,53 +1494,22 @@ export interface ArrayModel {
 
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, {'4': 'four', '5': 'five', '6': 'six'},
-     * {'7': 'seven', '8': 'eight', '9': 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, {'4': 'four', '5': 'five', '6': 'six'}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getDictionaryValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: string }[]>>;
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, {'4': 'four', '5': 'five', '6': 'six'},
-     * {'7': 'seven', '8': 'eight', '9': 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, {'4': 'four', '5': 'five', '6': 'six'}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Array} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Array} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getDictionaryValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: string }[]>;
     getDictionaryValid(callback: ServiceCallback<{ [propertyName: string]: string }[]>): void;
@@ -3539,57 +1517,24 @@ export interface ArrayModel {
 
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, {'4': 'four', '5': 'five', '6': 'six'},
-     * {'7': 'seven', '8': 'eight', '9': 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, {'4': 'four', '5': 'five', '6': 'six'}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putDictionaryValidWithHttpOperationResponse(arrayBody: { [propertyName: string]: string }[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get an array of Dictionaries of type <string, string> with value [{'1':
-     * 'one', '2': 'two', '3': 'three'}, {'4': 'four', '5': 'five', '6': 'six'},
-     * {'7': 'seven', '8': 'eight', '9': 'nine'}]
-     *
+     * Get an array of Dictionaries of type <string, string> with value [{'1': 'one', '2': 'two', '3':
+     * 'three'}, {'4': 'four', '5': 'five', '6': 'six'}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
      * @param {array} arrayBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putDictionaryValid(arrayBody: { [propertyName: string]: string }[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putDictionaryValid(arrayBody: { [propertyName: string]: string }[], callback: ServiceCallback<void>): void;

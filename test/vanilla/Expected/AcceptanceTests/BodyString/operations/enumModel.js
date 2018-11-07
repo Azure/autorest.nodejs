@@ -14,27 +14,11 @@ const msRest = require('ms-rest');
 const WebResource = msRest.WebResource;
 
 /**
- * Get enum value 'red color' from enumeration of 'red color', 'green-color',
- * 'blue_color'.
- *
+ * Get enum value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'.
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {string} [result]   - The deserialized result object if an error did not occur.
- *                      Possible values for result are - red color,
- *                      green-color, blue_color.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getNotExpandable(options, callback) {
    /* jshint validthis: true */
@@ -131,28 +115,12 @@ function _getNotExpandable(options, callback) {
 }
 
 /**
- * Sends value 'red color' from enumeration of 'red color', 'green-color',
- * 'blue_color'
- *
- * @param {string} stringBody Possible values include: 'red color',
- * 'green-color', 'blue_color'
- *
+ * Sends value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'
+ * @param {string} stringBody Possible values include: 'red color', 'green-color', 'blue_color'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putNotExpandable(stringBody, options, callback) {
    /* jshint validthis: true */
@@ -259,27 +227,11 @@ function _putNotExpandable(stringBody, options, callback) {
 }
 
 /**
- * Get enum value 'red color' from enumeration of 'red color', 'green-color',
- * 'blue_color'.
- *
+ * Get enum value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'.
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {string} [result]   - The deserialized result object if an error did not occur.
- *                      Possible values for result are - red color,
- *                      green-color, blue_color.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getReferenced(options, callback) {
    /* jshint validthis: true */
@@ -376,28 +328,12 @@ function _getReferenced(options, callback) {
 }
 
 /**
- * Sends value 'red color' from enumeration of 'red color', 'green-color',
- * 'blue_color'
- *
- * @param {string} enumStringBody Possible values include: 'red color',
- * 'green-color', 'blue_color'
- *
+ * Sends value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'
+ * @param {string} enumStringBody Possible values include: 'red color', 'green-color', 'blue_color'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putReferenced(enumStringBody, options, callback) {
    /* jshint validthis: true */
@@ -505,24 +441,10 @@ function _putReferenced(enumStringBody, options, callback) {
 
 /**
  * Get value 'green-color' from the constant.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link RefColorConstant} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getReferencedConstant(options, callback) {
    /* jshint validthis: true */
@@ -613,25 +535,11 @@ function _getReferencedConstant(options, callback) {
 
 /**
  * Sends value 'green-color' from a constant
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.field1] Sample string.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putReferencedConstant(options, callback) {
    /* jshint validthis: true */
@@ -752,19 +660,10 @@ class EnumModel {
   }
 
   /**
-   * Get enum value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'.
-   *
+   * Get enum value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Colors>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getNotExpandableWithHttpOperationResponse(options) {
     let client = this.client;
@@ -781,36 +680,12 @@ class EnumModel {
   }
 
   /**
-   * Get enum value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'.
-   *
+   * Get enum value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Colors} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {string} [result]   - The deserialized result object if an error did not occur.
-   *                      Possible values for result are - red color,
-   *                      green-color, blue_color.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getNotExpandable(options, optionalCallback) {
     let client = this.client;
@@ -833,22 +708,11 @@ class EnumModel {
   }
 
   /**
-   * Sends value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'
-   *
-   * @param {string} stringBody Possible values include: 'red color',
-   * 'green-color', 'blue_color'
-   *
+   * Sends value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'
+   * @param {string} stringBody Possible values include: 'red color', 'green-color', 'blue_color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putNotExpandableWithHttpOperationResponse(stringBody, options) {
     let client = this.client;
@@ -865,37 +729,13 @@ class EnumModel {
   }
 
   /**
-   * Sends value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'
-   *
-   * @param {string} stringBody Possible values include: 'red color',
-   * 'green-color', 'blue_color'
-   *
+   * Sends value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'
+   * @param {string} stringBody Possible values include: 'red color', 'green-color', 'blue_color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putNotExpandable(stringBody, options, optionalCallback) {
     let client = this.client;
@@ -918,19 +758,10 @@ class EnumModel {
   }
 
   /**
-   * Get enum value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'.
-   *
+   * Get enum value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Colors>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getReferencedWithHttpOperationResponse(options) {
     let client = this.client;
@@ -947,36 +778,12 @@ class EnumModel {
   }
 
   /**
-   * Get enum value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'.
-   *
+   * Get enum value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Colors} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {string} [result]   - The deserialized result object if an error did not occur.
-   *                      Possible values for result are - red color,
-   *                      green-color, blue_color.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getReferenced(options, optionalCallback) {
     let client = this.client;
@@ -999,22 +806,11 @@ class EnumModel {
   }
 
   /**
-   * Sends value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'
-   *
-   * @param {string} enumStringBody Possible values include: 'red color',
-   * 'green-color', 'blue_color'
-   *
+   * Sends value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'
+   * @param {string} enumStringBody Possible values include: 'red color', 'green-color', 'blue_color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putReferencedWithHttpOperationResponse(enumStringBody, options) {
     let client = this.client;
@@ -1031,37 +827,13 @@ class EnumModel {
   }
 
   /**
-   * Sends value 'red color' from enumeration of 'red color', 'green-color',
-   * 'blue_color'
-   *
-   * @param {string} enumStringBody Possible values include: 'red color',
-   * 'green-color', 'blue_color'
-   *
+   * Sends value 'red color' from enumeration of 'red color', 'green-color', 'blue_color'
+   * @param {string} enumStringBody Possible values include: 'red color', 'green-color', 'blue_color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putReferenced(enumStringBody, options, optionalCallback) {
     let client = this.client;
@@ -1085,17 +857,9 @@ class EnumModel {
 
   /**
    * Get value 'green-color' from the constant.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<RefColorConstant>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getReferencedConstantWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1113,33 +877,11 @@ class EnumModel {
 
   /**
    * Get value 'green-color' from the constant.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {RefColorConstant} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link RefColorConstant} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getReferencedConstant(options, optionalCallback) {
     let client = this.client;
@@ -1163,19 +905,10 @@ class EnumModel {
 
   /**
    * Sends value 'green-color' from a constant
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.field1] Sample string.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putReferencedConstantWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1193,34 +926,12 @@ class EnumModel {
 
   /**
    * Sends value 'green-color' from a constant
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.field1] Sample string.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putReferencedConstant(options, optionalCallback) {
     let client = this.client;

@@ -23,48 +23,19 @@ export interface ByteModel {
 
     /**
      * Get null byte value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Buffer>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Buffer>>;
 
     /**
      * Get null byte value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Buffer} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Buffer} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Buffer>;
     getNull(callback: ServiceCallback<Buffer>): void;
@@ -73,48 +44,19 @@ export interface ByteModel {
 
     /**
      * Get empty byte value ''
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Buffer>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getEmptyWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Buffer>>;
 
     /**
      * Get empty byte value ''
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Buffer} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Buffer} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getEmpty(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Buffer>;
     getEmpty(callback: ServiceCallback<Buffer>): void;
@@ -123,48 +65,19 @@ export interface ByteModel {
 
     /**
      * Get non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Buffer>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getNonAsciiWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Buffer>>;
 
     /**
      * Get non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Buffer} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Buffer} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getNonAscii(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Buffer>;
     getNonAscii(callback: ServiceCallback<Buffer>): void;
@@ -173,54 +86,21 @@ export interface ByteModel {
 
     /**
      * Put non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
-     *
-     * @param {buffer} byteBody Base64-encoded non-ascii byte string hex(FF FE FD
-     * FC FB FA F9 F8 F7 F6)
-     *
+     * @param {buffer} byteBody Base64-encoded non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putNonAsciiWithHttpOperationResponse(byteBody: Buffer, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
-     *
-     * @param {buffer} byteBody Base64-encoded non-ascii byte string hex(FF FE FD
-     * FC FB FA F9 F8 F7 F6)
-     *
+     * @param {buffer} byteBody Base64-encoded non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putNonAscii(byteBody: Buffer, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putNonAscii(byteBody: Buffer, callback: ServiceCallback<void>): void;
@@ -229,48 +109,19 @@ export interface ByteModel {
 
     /**
      * Get invalid byte value ':::SWAGGER::::'
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Buffer>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getInvalidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<Buffer>>;
 
     /**
      * Get invalid byte value ':::SWAGGER::::'
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Buffer} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Buffer} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getInvalid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<Buffer>;
     getInvalid(callback: ServiceCallback<Buffer>): void;

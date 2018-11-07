@@ -15,23 +15,10 @@ const WebResource = msRest.WebResource;
 
 /**
  * Get true Boolean value on path
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getBooleanTrue(options, callback) {
    /* jshint validthis: true */
@@ -107,23 +94,10 @@ function _getBooleanTrue(options, callback) {
 
 /**
  * Get false Boolean value on path
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getBooleanFalse(options, callback) {
    /* jshint validthis: true */
@@ -199,23 +173,10 @@ function _getBooleanFalse(options, callback) {
 
 /**
  * Get '1000000' integer value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getIntOneMillion(options, callback) {
    /* jshint validthis: true */
@@ -291,23 +252,10 @@ function _getIntOneMillion(options, callback) {
 
 /**
  * Get '-1000000' integer value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getIntNegativeOneMillion(options, callback) {
    /* jshint validthis: true */
@@ -383,23 +331,10 @@ function _getIntNegativeOneMillion(options, callback) {
 
 /**
  * Get '10000000000' 64 bit integer value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getTenBillion(options, callback) {
    /* jshint validthis: true */
@@ -475,23 +410,10 @@ function _getTenBillion(options, callback) {
 
 /**
  * Get '-10000000000' 64 bit integer value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getNegativeTenBillion(options, callback) {
    /* jshint validthis: true */
@@ -567,23 +489,10 @@ function _getNegativeTenBillion(options, callback) {
 
 /**
  * Get '1.034E+20' numeric value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _floatScientificPositive(options, callback) {
    /* jshint validthis: true */
@@ -659,23 +568,10 @@ function _floatScientificPositive(options, callback) {
 
 /**
  * Get '-1.034E-20' numeric value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _floatScientificNegative(options, callback) {
    /* jshint validthis: true */
@@ -751,23 +647,10 @@ function _floatScientificNegative(options, callback) {
 
 /**
  * Get '9999999.999' numeric value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _doubleDecimalPositive(options, callback) {
    /* jshint validthis: true */
@@ -843,23 +726,10 @@ function _doubleDecimalPositive(options, callback) {
 
 /**
  * Get '-9999999.999' numeric value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _doubleDecimalNegative(options, callback) {
    /* jshint validthis: true */
@@ -935,23 +805,10 @@ function _doubleDecimalNegative(options, callback) {
 
 /**
  * Get '啊齄丂狛狜隣郎隣兀﨩' multi-byte string value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _stringUnicode(options, callback) {
    /* jshint validthis: true */
@@ -1027,23 +884,10 @@ function _stringUnicode(options, callback) {
 
 /**
  * Get 'begin!*'();:@ &=+$,/?#[]end
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _stringUrlEncoded(options, callback) {
    /* jshint validthis: true */
@@ -1119,23 +963,10 @@ function _stringUrlEncoded(options, callback) {
 
 /**
  * Get ''
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _stringEmpty(options, callback) {
    /* jshint validthis: true */
@@ -1211,25 +1042,11 @@ function _stringEmpty(options, callback) {
 
 /**
  * Get null (should throw)
- *
  * @param {string} stringPath null string value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _stringNull(stringPath, options, callback) {
    /* jshint validthis: true */
@@ -1312,26 +1129,12 @@ function _stringNull(stringPath, options, callback) {
 
 /**
  * Get using uri with 'green color' in path parameter
- *
- * @param {string} enumPath send the value green. Possible values include: 'red
- * color', 'green color', 'blue color'
- *
+ * @param {string} enumPath send the value green. Possible values include: 'red color', 'green
+ * color', 'blue color'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _enumValid(enumPath, options, callback) {
    /* jshint validthis: true */
@@ -1419,26 +1222,12 @@ function _enumValid(enumPath, options, callback) {
 
 /**
  * Get null (should throw on the client before the request is sent on wire)
- *
- * @param {string} enumPath send null should throw. Possible values include:
- * 'red color', 'green color', 'blue color'
- *
+ * @param {string} enumPath send null should throw. Possible values include: 'red color', 'green
+ * color', 'blue color'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _enumNull(enumPath, options, callback) {
    /* jshint validthis: true */
@@ -1526,26 +1315,11 @@ function _enumNull(enumPath, options, callback) {
 
 /**
  * Get '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
- *
- * @param {buffer} bytePath '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte
- * array
- *
+ * @param {buffer} bytePath '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _byteMultiByte(bytePath, options, callback) {
    /* jshint validthis: true */
@@ -1628,23 +1402,10 @@ function _byteMultiByte(bytePath, options, callback) {
 
 /**
  * Get '' as byte array
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _byteEmpty(options, callback) {
    /* jshint validthis: true */
@@ -1720,25 +1481,11 @@ function _byteEmpty(options, callback) {
 
 /**
  * Get null as byte array (should throw)
- *
  * @param {buffer} bytePath null as byte array (should throw)
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _byteNull(bytePath, options, callback) {
    /* jshint validthis: true */
@@ -1821,23 +1568,10 @@ function _byteNull(bytePath, options, callback) {
 
 /**
  * Get '2012-01-01' as date
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _dateValid(options, callback) {
    /* jshint validthis: true */
@@ -1912,27 +1646,13 @@ function _dateValid(options, callback) {
 }
 
 /**
- * Get null as date - this should throw or be unusable on the client side,
- * depending on date representation
- *
+ * Get null as date - this should throw or be unusable on the client side, depending on date
+ * representation
  * @param {date} datePath null as date (should throw)
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _dateNull(datePath, options, callback) {
    /* jshint validthis: true */
@@ -2016,23 +1736,10 @@ function _dateNull(datePath, options, callback) {
 
 /**
  * Get '2012-01-01T01:01:01Z' as date-time
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _dateTimeValid(options, callback) {
    /* jshint validthis: true */
@@ -2107,27 +1814,12 @@ function _dateTimeValid(options, callback) {
 }
 
 /**
- * Get null as date-time, should be disallowed or throw depending on
- * representation of date-time
- *
+ * Get null as date-time, should be disallowed or throw depending on representation of date-time
  * @param {date} dateTimePath null as date-time
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _dateTimeNull(dateTimePath, options, callback) {
    /* jshint validthis: true */
@@ -2211,25 +1903,11 @@ function _dateTimeNull(dateTimePath, options, callback) {
 
 /**
  * Get 'lorem' encoded value as 'bG9yZW0' (base64url)
- *
  * @param {buffer} base64UrlPath base64url encoded value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _base64Url(base64UrlPath, options, callback) {
    /* jshint validthis: true */
@@ -2311,28 +1989,14 @@ function _base64Url(base64UrlPath, options, callback) {
 }
 
 /**
- * Get an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null,
+ * Get an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the
+ * csv-array format
+ * @param {array} arrayPath an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null,
  * ''] using the csv-array format
- *
- * @param {array} arrayPath an array of string ['ArrayPath1', 'begin!*'();:@
- * &=+$,/?#[]end' , null, ''] using the csv-array format
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _arrayCsvInPath(arrayPath, options, callback) {
    /* jshint validthis: true */
@@ -2420,25 +2084,11 @@ function _arrayCsvInPath(arrayPath, options, callback) {
 
 /**
  * Get the date 2016-04-13 encoded value as '1460505600' (Unix time)
- *
  * @param {date} unixTimeUrlPath Unix time encoded value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _unixTimeUrl(unixTimeUrlPath, options, callback) {
    /* jshint validthis: true */
@@ -2558,17 +2208,9 @@ class Paths {
 
   /**
    * Get true Boolean value on path
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getBooleanTrueWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2586,32 +2228,11 @@ class Paths {
 
   /**
    * Get true Boolean value on path
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getBooleanTrue(options, optionalCallback) {
     let client = this.client;
@@ -2635,17 +2256,9 @@ class Paths {
 
   /**
    * Get false Boolean value on path
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getBooleanFalseWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2663,32 +2276,11 @@ class Paths {
 
   /**
    * Get false Boolean value on path
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getBooleanFalse(options, optionalCallback) {
     let client = this.client;
@@ -2712,17 +2304,9 @@ class Paths {
 
   /**
    * Get '1000000' integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getIntOneMillionWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2740,32 +2324,11 @@ class Paths {
 
   /**
    * Get '1000000' integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getIntOneMillion(options, optionalCallback) {
     let client = this.client;
@@ -2789,17 +2352,9 @@ class Paths {
 
   /**
    * Get '-1000000' integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getIntNegativeOneMillionWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2817,32 +2372,11 @@ class Paths {
 
   /**
    * Get '-1000000' integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getIntNegativeOneMillion(options, optionalCallback) {
     let client = this.client;
@@ -2866,17 +2400,9 @@ class Paths {
 
   /**
    * Get '10000000000' 64 bit integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getTenBillionWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2894,32 +2420,11 @@ class Paths {
 
   /**
    * Get '10000000000' 64 bit integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getTenBillion(options, optionalCallback) {
     let client = this.client;
@@ -2943,17 +2448,9 @@ class Paths {
 
   /**
    * Get '-10000000000' 64 bit integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getNegativeTenBillionWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2971,32 +2468,11 @@ class Paths {
 
   /**
    * Get '-10000000000' 64 bit integer value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getNegativeTenBillion(options, optionalCallback) {
     let client = this.client;
@@ -3020,17 +2496,9 @@ class Paths {
 
   /**
    * Get '1.034E+20' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   floatScientificPositiveWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3048,32 +2516,11 @@ class Paths {
 
   /**
    * Get '1.034E+20' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   floatScientificPositive(options, optionalCallback) {
     let client = this.client;
@@ -3097,17 +2544,9 @@ class Paths {
 
   /**
    * Get '-1.034E-20' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   floatScientificNegativeWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3125,32 +2564,11 @@ class Paths {
 
   /**
    * Get '-1.034E-20' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   floatScientificNegative(options, optionalCallback) {
     let client = this.client;
@@ -3174,17 +2592,9 @@ class Paths {
 
   /**
    * Get '9999999.999' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   doubleDecimalPositiveWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3202,32 +2612,11 @@ class Paths {
 
   /**
    * Get '9999999.999' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   doubleDecimalPositive(options, optionalCallback) {
     let client = this.client;
@@ -3251,17 +2640,9 @@ class Paths {
 
   /**
    * Get '-9999999.999' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   doubleDecimalNegativeWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3279,32 +2660,11 @@ class Paths {
 
   /**
    * Get '-9999999.999' numeric value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   doubleDecimalNegative(options, optionalCallback) {
     let client = this.client;
@@ -3328,17 +2688,9 @@ class Paths {
 
   /**
    * Get '啊齄丂狛狜隣郎隣兀﨩' multi-byte string value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   stringUnicodeWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3356,32 +2708,11 @@ class Paths {
 
   /**
    * Get '啊齄丂狛狜隣郎隣兀﨩' multi-byte string value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   stringUnicode(options, optionalCallback) {
     let client = this.client;
@@ -3405,17 +2736,9 @@ class Paths {
 
   /**
    * Get 'begin!*'();:@ &=+$,/?#[]end
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   stringUrlEncodedWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3433,32 +2756,11 @@ class Paths {
 
   /**
    * Get 'begin!*'();:@ &=+$,/?#[]end
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   stringUrlEncoded(options, optionalCallback) {
     let client = this.client;
@@ -3482,17 +2784,9 @@ class Paths {
 
   /**
    * Get ''
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   stringEmptyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3510,32 +2804,11 @@ class Paths {
 
   /**
    * Get ''
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   stringEmpty(options, optionalCallback) {
     let client = this.client;
@@ -3559,19 +2832,10 @@ class Paths {
 
   /**
    * Get null (should throw)
-   *
    * @param {string} stringPath null string value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   stringNullWithHttpOperationResponse(stringPath, options) {
     let client = this.client;
@@ -3589,34 +2853,12 @@ class Paths {
 
   /**
    * Get null (should throw)
-   *
    * @param {string} stringPath null string value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   stringNull(stringPath, options, optionalCallback) {
     let client = this.client;
@@ -3640,20 +2882,11 @@ class Paths {
 
   /**
    * Get using uri with 'green color' in path parameter
-   *
-   * @param {string} enumPath send the value green. Possible values include: 'red
-   * color', 'green color', 'blue color'
-   *
+   * @param {string} enumPath send the value green. Possible values include: 'red color', 'green
+   * color', 'blue color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   enumValidWithHttpOperationResponse(enumPath, options) {
     let client = this.client;
@@ -3671,35 +2904,13 @@ class Paths {
 
   /**
    * Get using uri with 'green color' in path parameter
-   *
-   * @param {string} enumPath send the value green. Possible values include: 'red
-   * color', 'green color', 'blue color'
-   *
+   * @param {string} enumPath send the value green. Possible values include: 'red color', 'green
+   * color', 'blue color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   enumValid(enumPath, options, optionalCallback) {
     let client = this.client;
@@ -3723,20 +2934,11 @@ class Paths {
 
   /**
    * Get null (should throw on the client before the request is sent on wire)
-   *
-   * @param {string} enumPath send null should throw. Possible values include:
-   * 'red color', 'green color', 'blue color'
-   *
+   * @param {string} enumPath send null should throw. Possible values include: 'red color', 'green
+   * color', 'blue color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   enumNullWithHttpOperationResponse(enumPath, options) {
     let client = this.client;
@@ -3754,35 +2956,13 @@ class Paths {
 
   /**
    * Get null (should throw on the client before the request is sent on wire)
-   *
-   * @param {string} enumPath send null should throw. Possible values include:
-   * 'red color', 'green color', 'blue color'
-   *
+   * @param {string} enumPath send null should throw. Possible values include: 'red color', 'green
+   * color', 'blue color'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   enumNull(enumPath, options, optionalCallback) {
     let client = this.client;
@@ -3806,20 +2986,10 @@ class Paths {
 
   /**
    * Get '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
-   *
-   * @param {buffer} bytePath '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte
-   * array
-   *
+   * @param {buffer} bytePath '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   byteMultiByteWithHttpOperationResponse(bytePath, options) {
     let client = this.client;
@@ -3837,35 +3007,12 @@ class Paths {
 
   /**
    * Get '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
-   *
-   * @param {buffer} bytePath '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte
-   * array
-   *
+   * @param {buffer} bytePath '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   byteMultiByte(bytePath, options, optionalCallback) {
     let client = this.client;
@@ -3889,17 +3036,9 @@ class Paths {
 
   /**
    * Get '' as byte array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   byteEmptyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3917,32 +3056,11 @@ class Paths {
 
   /**
    * Get '' as byte array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   byteEmpty(options, optionalCallback) {
     let client = this.client;
@@ -3966,19 +3084,10 @@ class Paths {
 
   /**
    * Get null as byte array (should throw)
-   *
    * @param {buffer} bytePath null as byte array (should throw)
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   byteNullWithHttpOperationResponse(bytePath, options) {
     let client = this.client;
@@ -3996,34 +3105,12 @@ class Paths {
 
   /**
    * Get null as byte array (should throw)
-   *
    * @param {buffer} bytePath null as byte array (should throw)
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   byteNull(bytePath, options, optionalCallback) {
     let client = this.client;
@@ -4047,17 +3134,9 @@ class Paths {
 
   /**
    * Get '2012-01-01' as date
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   dateValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -4075,32 +3154,11 @@ class Paths {
 
   /**
    * Get '2012-01-01' as date
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   dateValid(options, optionalCallback) {
     let client = this.client;
@@ -4123,21 +3181,12 @@ class Paths {
   }
 
   /**
-   * Get null as date - this should throw or be unusable on the client side,
-   * depending on date representation
-   *
+   * Get null as date - this should throw or be unusable on the client side, depending on date
+   * representation
    * @param {date} datePath null as date (should throw)
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   dateNullWithHttpOperationResponse(datePath, options) {
     let client = this.client;
@@ -4154,36 +3203,14 @@ class Paths {
   }
 
   /**
-   * Get null as date - this should throw or be unusable on the client side,
-   * depending on date representation
-   *
+   * Get null as date - this should throw or be unusable on the client side, depending on date
+   * representation
    * @param {date} datePath null as date (should throw)
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   dateNull(datePath, options, optionalCallback) {
     let client = this.client;
@@ -4207,17 +3234,9 @@ class Paths {
 
   /**
    * Get '2012-01-01T01:01:01Z' as date-time
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   dateTimeValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -4235,32 +3254,11 @@ class Paths {
 
   /**
    * Get '2012-01-01T01:01:01Z' as date-time
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   dateTimeValid(options, optionalCallback) {
     let client = this.client;
@@ -4283,21 +3281,11 @@ class Paths {
   }
 
   /**
-   * Get null as date-time, should be disallowed or throw depending on
-   * representation of date-time
-   *
+   * Get null as date-time, should be disallowed or throw depending on representation of date-time
    * @param {date} dateTimePath null as date-time
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   dateTimeNullWithHttpOperationResponse(dateTimePath, options) {
     let client = this.client;
@@ -4314,36 +3302,13 @@ class Paths {
   }
 
   /**
-   * Get null as date-time, should be disallowed or throw depending on
-   * representation of date-time
-   *
+   * Get null as date-time, should be disallowed or throw depending on representation of date-time
    * @param {date} dateTimePath null as date-time
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   dateTimeNull(dateTimePath, options, optionalCallback) {
     let client = this.client;
@@ -4367,19 +3332,10 @@ class Paths {
 
   /**
    * Get 'lorem' encoded value as 'bG9yZW0' (base64url)
-   *
    * @param {buffer} base64UrlPath base64url encoded value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   base64UrlWithHttpOperationResponse(base64UrlPath, options) {
     let client = this.client;
@@ -4397,34 +3353,12 @@ class Paths {
 
   /**
    * Get 'lorem' encoded value as 'bG9yZW0' (base64url)
-   *
    * @param {buffer} base64UrlPath base64url encoded value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   base64Url(base64UrlPath, options, optionalCallback) {
     let client = this.client;
@@ -4447,22 +3381,13 @@ class Paths {
   }
 
   /**
-   * Get an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null,
+   * Get an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the
+   * csv-array format
+   * @param {array} arrayPath an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null,
    * ''] using the csv-array format
-   *
-   * @param {array} arrayPath an array of string ['ArrayPath1', 'begin!*'();:@
-   * &=+$,/?#[]end' , null, ''] using the csv-array format
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   arrayCsvInPathWithHttpOperationResponse(arrayPath, options) {
     let client = this.client;
@@ -4479,37 +3404,15 @@ class Paths {
   }
 
   /**
-   * Get an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null,
+   * Get an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null, ''] using the
+   * csv-array format
+   * @param {array} arrayPath an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' , null,
    * ''] using the csv-array format
-   *
-   * @param {array} arrayPath an array of string ['ArrayPath1', 'begin!*'();:@
-   * &=+$,/?#[]end' , null, ''] using the csv-array format
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   arrayCsvInPath(arrayPath, options, optionalCallback) {
     let client = this.client;
@@ -4533,19 +3436,10 @@ class Paths {
 
   /**
    * Get the date 2016-04-13 encoded value as '1460505600' (Unix time)
-   *
    * @param {date} unixTimeUrlPath Unix time encoded value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   unixTimeUrlWithHttpOperationResponse(unixTimeUrlPath, options) {
     let client = this.client;
@@ -4563,34 +3457,12 @@ class Paths {
 
   /**
    * Get the date 2016-04-13 encoded value as '1460505600' (Unix time)
-   *
    * @param {date} unixTimeUrlPath Unix time encoded value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   unixTimeUrl(unixTimeUrlPath, options, optionalCallback) {
     let client = this.client;

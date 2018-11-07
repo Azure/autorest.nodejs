@@ -16,26 +16,11 @@ const WebResource = msRest.WebResource;
 
 /**
  * Provides a resouce group with name 'testgroup101' and location 'West US'.
- *
  * @param {string} resourceGroupName Resource Group name 'testgroup101'.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link SampleResourceGroup} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getSampleResourceGroup(resourceGroupName, options, callback) {
    /* jshint validthis: true */
@@ -167,19 +152,10 @@ class Group {
 
   /**
    * Provides a resouce group with name 'testgroup101' and location 'West US'.
-   *
    * @param {string} resourceGroupName Resource Group name 'testgroup101'.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<SampleResourceGroup>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getSampleResourceGroupWithHttpOperationResponse(resourceGroupName, options) {
     let client = this.client;
@@ -197,35 +173,12 @@ class Group {
 
   /**
    * Provides a resouce group with name 'testgroup101' and location 'West US'.
-   *
    * @param {string} resourceGroupName Resource Group name 'testgroup101'.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {SampleResourceGroup} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link SampleResourceGroup} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getSampleResourceGroup(resourceGroupName, options, optionalCallback) {
     let client = this.client;

@@ -23,48 +23,19 @@ export interface Number {
 
     /**
      * Get null Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get null Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getNull(callback: ServiceCallback<number>): void;
@@ -73,48 +44,19 @@ export interface Number {
 
     /**
      * Get invalid float Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getInvalidFloatWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get invalid float Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getInvalidFloat(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getInvalidFloat(callback: ServiceCallback<number>): void;
@@ -123,48 +65,19 @@ export interface Number {
 
     /**
      * Get invalid double Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getInvalidDoubleWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get invalid double Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getInvalidDouble(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getInvalidDouble(callback: ServiceCallback<number>): void;
@@ -173,48 +86,19 @@ export interface Number {
 
     /**
      * Get invalid decimal Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getInvalidDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get invalid decimal Number value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getInvalidDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getInvalidDecimal(callback: ServiceCallback<number>): void;
@@ -223,52 +107,21 @@ export interface Number {
 
     /**
      * Put big float value 3.402823e+20
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBigFloatWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big float value 3.402823e+20
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBigFloat(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBigFloat(numberBody: number, callback: ServiceCallback<void>): void;
@@ -277,48 +130,19 @@ export interface Number {
 
     /**
      * Get big float value 3.402823e+20
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBigFloatWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big float value 3.402823e+20
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBigFloat(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getBigFloat(callback: ServiceCallback<number>): void;
@@ -327,52 +151,21 @@ export interface Number {
 
     /**
      * Put big double value 2.5976931e+101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBigDoubleWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big double value 2.5976931e+101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBigDouble(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBigDouble(numberBody: number, callback: ServiceCallback<void>): void;
@@ -381,48 +174,19 @@ export interface Number {
 
     /**
      * Get big double value 2.5976931e+101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBigDoubleWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big double value 2.5976931e+101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBigDouble(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getBigDouble(callback: ServiceCallback<number>): void;
@@ -431,48 +195,19 @@ export interface Number {
 
     /**
      * Put big double value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBigDoublePositiveDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big double value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBigDoublePositiveDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBigDoublePositiveDecimal(callback: ServiceCallback<void>): void;
@@ -481,48 +216,19 @@ export interface Number {
 
     /**
      * Get big double value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBigDoublePositiveDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big double value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBigDoublePositiveDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getBigDoublePositiveDecimal(callback: ServiceCallback<number>): void;
@@ -531,48 +237,19 @@ export interface Number {
 
     /**
      * Put big double value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBigDoubleNegativeDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big double value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBigDoubleNegativeDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBigDoubleNegativeDecimal(callback: ServiceCallback<void>): void;
@@ -581,48 +258,19 @@ export interface Number {
 
     /**
      * Get big double value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBigDoubleNegativeDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big double value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBigDoubleNegativeDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getBigDoubleNegativeDecimal(callback: ServiceCallback<number>): void;
@@ -631,52 +279,21 @@ export interface Number {
 
     /**
      * Put big decimal value 2.5976931e+101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBigDecimalWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big decimal value 2.5976931e+101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBigDecimal(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBigDecimal(numberBody: number, callback: ServiceCallback<void>): void;
@@ -685,48 +302,19 @@ export interface Number {
 
     /**
      * Get big decimal value 2.5976931e+101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBigDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big decimal value 2.5976931e+101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBigDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getBigDecimal(callback: ServiceCallback<number>): void;
@@ -735,48 +323,19 @@ export interface Number {
 
     /**
      * Put big decimal value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBigDecimalPositiveDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big decimal value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBigDecimalPositiveDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBigDecimalPositiveDecimal(callback: ServiceCallback<void>): void;
@@ -785,48 +344,19 @@ export interface Number {
 
     /**
      * Get big decimal value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBigDecimalPositiveDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big decimal value 99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBigDecimalPositiveDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getBigDecimalPositiveDecimal(callback: ServiceCallback<number>): void;
@@ -835,48 +365,19 @@ export interface Number {
 
     /**
      * Put big decimal value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putBigDecimalNegativeDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put big decimal value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putBigDecimalNegativeDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putBigDecimalNegativeDecimal(callback: ServiceCallback<void>): void;
@@ -885,48 +386,19 @@ export interface Number {
 
     /**
      * Get big decimal value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getBigDecimalNegativeDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big decimal value -99999999.99
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getBigDecimalNegativeDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getBigDecimalNegativeDecimal(callback: ServiceCallback<number>): void;
@@ -935,52 +407,21 @@ export interface Number {
 
     /**
      * Put small float value 3.402823e-20
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putSmallFloatWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put small float value 3.402823e-20
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putSmallFloat(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putSmallFloat(numberBody: number, callback: ServiceCallback<void>): void;
@@ -989,48 +430,19 @@ export interface Number {
 
     /**
      * Get big double value 3.402823e-20
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getSmallFloatWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big double value 3.402823e-20
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getSmallFloat(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getSmallFloat(callback: ServiceCallback<number>): void;
@@ -1039,52 +451,21 @@ export interface Number {
 
     /**
      * Put small double value 2.5976931e-101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putSmallDoubleWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put small double value 2.5976931e-101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putSmallDouble(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putSmallDouble(numberBody: number, callback: ServiceCallback<void>): void;
@@ -1093,48 +474,19 @@ export interface Number {
 
     /**
      * Get big double value 2.5976931e-101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getSmallDoubleWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get big double value 2.5976931e-101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getSmallDouble(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getSmallDouble(callback: ServiceCallback<number>): void;
@@ -1143,52 +495,21 @@ export interface Number {
 
     /**
      * Put small decimal value 2.5976931e-101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putSmallDecimalWithHttpOperationResponse(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Put small decimal value 2.5976931e-101
-     *
      * @param {number} numberBody
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putSmallDecimal(numberBody: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putSmallDecimal(numberBody: number, callback: ServiceCallback<void>): void;
@@ -1197,48 +518,19 @@ export interface Number {
 
     /**
      * Get small decimal value 2.5976931e-101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Number>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getSmallDecimalWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<number>>;
 
     /**
      * Get small decimal value 2.5976931e-101
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Number} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Number} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getSmallDecimal(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<number>;
     getSmallDecimal(callback: ServiceCallback<number>): void;

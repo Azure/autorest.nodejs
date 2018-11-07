@@ -15,24 +15,10 @@ const WebResource = msRest.WebResource;
 
 /**
  * Get complex types that are polymorphic
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link Fish} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getValid(options, callback) {
    /* jshint validthis: true */
@@ -123,7 +109,6 @@ function _getValid(options, callback) {
 
 /**
  * Put complex types that are polymorphic
- *
  * @param {object} complexBody Please put a salmon that looks like this:
  * {
  * 'fishtype':'Salmon',
@@ -157,31 +142,14 @@ function _getValid(options, callback) {
  * }
  * ]
  * };
- *
  * @param {string} [complexBody.species]
- *
  * @param {number} complexBody.length
- *
  * @param {array} [complexBody.siblings]
- *
  * @param {string} complexBody.fishtype Polymorphic Discriminator
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putValid(complexBody, options, callback) {
    /* jshint validthis: true */
@@ -276,26 +244,12 @@ function _putValid(complexBody, options, callback) {
 }
 
 /**
- * Get complex types that are polymorphic, but not at the root of the
- * hierarchy; also have additional properties
- *
+ * Get complex types that are polymorphic, but not at the root of the hierarchy; also have
+ * additional properties
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link Salmon} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getComplicated(options, callback) {
    /* jshint validthis: true */
@@ -385,39 +339,19 @@ function _getComplicated(options, callback) {
 }
 
 /**
- * Put complex types that are polymorphic, but not at the root of the
- * hierarchy; also have additional properties
- *
+ * Put complex types that are polymorphic, but not at the root of the hierarchy; also have
+ * additional properties
  * @param {object} complexBody
- *
  * @param {string} [complexBody.location]
- *
  * @param {boolean} [complexBody.iswild]
- *
  * @param {string} [complexBody.species]
- *
  * @param {number} complexBody.length
- *
  * @param {array} [complexBody.siblings]
- *
  * @param {string} complexBody.fishtype Polymorphic Discriminator
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putComplicated(complexBody, options, callback) {
    /* jshint validthis: true */
@@ -513,38 +447,17 @@ function _putComplicated(complexBody, options, callback) {
 
 /**
  * Put complex types that are polymorphic, omitting the discriminator
- *
  * @param {object} complexBody
- *
  * @param {string} [complexBody.location]
- *
  * @param {boolean} [complexBody.iswild]
- *
  * @param {string} [complexBody.species]
- *
  * @param {number} complexBody.length
- *
  * @param {array} [complexBody.siblings]
- *
  * @param {string} complexBody.fishtype Polymorphic Discriminator
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link Salmon} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putMissingDiscriminator(complexBody, options, callback) {
    /* jshint validthis: true */
@@ -656,11 +569,10 @@ function _putMissingDiscriminator(complexBody, options, callback) {
 }
 
 /**
- * Put complex types that are polymorphic, attempting to omit required
- * 'birthday' field - the request should not be allowed from the client
- *
- * @param {object} complexBody Please attempt put a sawshark that looks like
- * this, the client should not allow this data to be sent:
+ * Put complex types that are polymorphic, attempting to omit required 'birthday' field - the
+ * request should not be allowed from the client
+ * @param {object} complexBody Please attempt put a sawshark that looks like this, the client
+ * should not allow this data to be sent:
  * {
  * "fishtype": "sawshark",
  * "species": "snaggle toothed",
@@ -686,31 +598,14 @@ function _putMissingDiscriminator(complexBody, options, callback) {
  * }
  * ]
  * }
- *
  * @param {string} [complexBody.species]
- *
  * @param {number} complexBody.length
- *
  * @param {array} [complexBody.siblings]
- *
  * @param {string} complexBody.fishtype Polymorphic Discriminator
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putValidMissingRequired(complexBody, options, callback) {
    /* jshint validthis: true */
@@ -822,17 +717,9 @@ class Polymorphism {
 
   /**
    * Get complex types that are polymorphic
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Fish>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -850,33 +737,11 @@ class Polymorphism {
 
   /**
    * Get complex types that are polymorphic
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Fish} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Fish} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getValid(options, optionalCallback) {
     let client = this.client;
@@ -900,7 +765,6 @@ class Polymorphism {
 
   /**
    * Put complex types that are polymorphic
-   *
    * @param {object} complexBody Please put a salmon that looks like this:
    * {
    * 'fishtype':'Salmon',
@@ -934,25 +798,13 @@ class Polymorphism {
    * }
    * ]
    * };
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putValidWithHttpOperationResponse(complexBody, options) {
     let client = this.client;
@@ -970,7 +822,6 @@ class Polymorphism {
 
   /**
    * Put complex types that are polymorphic
-   *
    * @param {object} complexBody Please put a salmon that looks like this:
    * {
    * 'fishtype':'Salmon',
@@ -1004,40 +855,15 @@ class Polymorphism {
    * }
    * ]
    * };
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putValid(complexBody, options, optionalCallback) {
     let client = this.client;
@@ -1060,19 +886,11 @@ class Polymorphism {
   }
 
   /**
-   * Get complex types that are polymorphic, but not at the root of the
-   * hierarchy; also have additional properties
-   *
+   * Get complex types that are polymorphic, but not at the root of the hierarchy; also have
+   * additional properties
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Salmon>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getComplicatedWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1089,35 +907,13 @@ class Polymorphism {
   }
 
   /**
-   * Get complex types that are polymorphic, but not at the root of the
-   * hierarchy; also have additional properties
-   *
+   * Get complex types that are polymorphic, but not at the root of the hierarchy; also have
+   * additional properties
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Salmon} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Salmon} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getComplicated(options, optionalCallback) {
     let client = this.client;
@@ -1140,33 +936,18 @@ class Polymorphism {
   }
 
   /**
-   * Put complex types that are polymorphic, but not at the root of the
-   * hierarchy; also have additional properties
-   *
+   * Put complex types that are polymorphic, but not at the root of the hierarchy; also have
+   * additional properties
    * @param {object} complexBody
-   *
    * @param {string} [complexBody.location]
-   *
    * @param {boolean} [complexBody.iswild]
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putComplicatedWithHttpOperationResponse(complexBody, options) {
     let client = this.client;
@@ -1183,48 +964,20 @@ class Polymorphism {
   }
 
   /**
-   * Put complex types that are polymorphic, but not at the root of the
-   * hierarchy; also have additional properties
-   *
+   * Put complex types that are polymorphic, but not at the root of the hierarchy; also have
+   * additional properties
    * @param {object} complexBody
-   *
    * @param {string} [complexBody.location]
-   *
    * @param {boolean} [complexBody.iswild]
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putComplicated(complexBody, options, optionalCallback) {
     let client = this.client;
@@ -1248,31 +1001,16 @@ class Polymorphism {
 
   /**
    * Put complex types that are polymorphic, omitting the discriminator
-   *
    * @param {object} complexBody
-   *
    * @param {string} [complexBody.location]
-   *
    * @param {boolean} [complexBody.iswild]
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Salmon>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putMissingDiscriminatorWithHttpOperationResponse(complexBody, options) {
     let client = this.client;
@@ -1290,47 +1028,18 @@ class Polymorphism {
 
   /**
    * Put complex types that are polymorphic, omitting the discriminator
-   *
    * @param {object} complexBody
-   *
    * @param {string} [complexBody.location]
-   *
    * @param {boolean} [complexBody.iswild]
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Salmon} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Salmon} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putMissingDiscriminator(complexBody, options, optionalCallback) {
     let client = this.client;
@@ -1353,11 +1062,10 @@ class Polymorphism {
   }
 
   /**
-   * Put complex types that are polymorphic, attempting to omit required
-   * 'birthday' field - the request should not be allowed from the client
-   *
-   * @param {object} complexBody Please attempt put a sawshark that looks like
-   * this, the client should not allow this data to be sent:
+   * Put complex types that are polymorphic, attempting to omit required 'birthday' field - the
+   * request should not be allowed from the client
+   * @param {object} complexBody Please attempt put a sawshark that looks like this, the client
+   * should not allow this data to be sent:
    * {
    * "fishtype": "sawshark",
    * "species": "snaggle toothed",
@@ -1383,25 +1091,13 @@ class Polymorphism {
    * }
    * ]
    * }
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putValidMissingRequiredWithHttpOperationResponse(complexBody, options) {
     let client = this.client;
@@ -1418,11 +1114,10 @@ class Polymorphism {
   }
 
   /**
-   * Put complex types that are polymorphic, attempting to omit required
-   * 'birthday' field - the request should not be allowed from the client
-   *
-   * @param {object} complexBody Please attempt put a sawshark that looks like
-   * this, the client should not allow this data to be sent:
+   * Put complex types that are polymorphic, attempting to omit required 'birthday' field - the
+   * request should not be allowed from the client
+   * @param {object} complexBody Please attempt put a sawshark that looks like this, the client
+   * should not allow this data to be sent:
    * {
    * "fishtype": "sawshark",
    * "species": "snaggle toothed",
@@ -1448,40 +1143,15 @@ class Polymorphism {
    * }
    * ]
    * }
-   *
    * @param {string} [complexBody.species]
-   *
    * @param {number} complexBody.length
-   *
    * @param {array} [complexBody.siblings]
-   *
    * @param {string} complexBody.fishtype Polymorphic Discriminator
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putValidMissingRequired(complexBody, options, optionalCallback) {
     let client = this.client;

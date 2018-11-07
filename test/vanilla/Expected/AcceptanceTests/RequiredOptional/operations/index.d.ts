@@ -23,53 +23,21 @@ export interface Implicit {
 
     /**
      * Test implicitly required path parameter
-     *
      * @param {string} pathParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getRequiredPathWithHttpOperationResponse(pathParameter: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
      * Test implicitly required path parameter
-     *
      * @param {string} pathParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getRequiredPath(pathParameter: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     getRequiredPath(pathParameter: string, callback: ServiceCallback<models.ErrorModel>): void;
@@ -78,52 +46,21 @@ export interface Implicit {
 
     /**
      * Test implicitly optional query parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.queryParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putOptionalQueryWithHttpOperationResponse(options?: { queryParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Test implicitly optional query parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.queryParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putOptionalQuery(options?: { queryParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putOptionalQuery(callback: ServiceCallback<void>): void;
@@ -132,52 +69,21 @@ export interface Implicit {
 
     /**
      * Test implicitly optional header parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.queryParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putOptionalHeaderWithHttpOperationResponse(options?: { queryParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Test implicitly optional header parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.queryParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putOptionalHeader(options?: { queryParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putOptionalHeader(callback: ServiceCallback<void>): void;
@@ -186,52 +92,21 @@ export interface Implicit {
 
     /**
      * Test implicitly optional body parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putOptionalBodyWithHttpOperationResponse(options?: { bodyParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Test implicitly optional body parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putOptionalBody(options?: { bodyParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     putOptionalBody(callback: ServiceCallback<void>): void;
@@ -240,49 +115,19 @@ export interface Implicit {
 
     /**
      * Test implicitly required path parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getRequiredGlobalPathWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
      * Test implicitly required path parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getRequiredGlobalPath(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     getRequiredGlobalPath(callback: ServiceCallback<models.ErrorModel>): void;
@@ -291,49 +136,19 @@ export interface Implicit {
 
     /**
      * Test implicitly required query parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getRequiredGlobalQueryWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
      * Test implicitly required query parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getRequiredGlobalQuery(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     getRequiredGlobalQuery(callback: ServiceCallback<models.ErrorModel>): void;
@@ -342,49 +157,19 @@ export interface Implicit {
 
     /**
      * Test implicitly optional query parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getOptionalGlobalQueryWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
      * Test implicitly optional query parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getOptionalGlobalQuery(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     getOptionalGlobalQuery(callback: ServiceCallback<models.ErrorModel>): void;
@@ -401,56 +186,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required integer. Please put null and the client library
-     * should throw before the request is sent.
-     *
+     * Test explicitly required integer. Please put null and the client library should throw before the
+     * request is sent.
      * @param {number} bodyParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredIntegerParameterWithHttpOperationResponse(bodyParameter: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required integer. Please put null and the client library
-     * should throw before the request is sent.
-     *
+     * Test explicitly required integer. Please put null and the client library should throw before the
+     * request is sent.
      * @param {number} bodyParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredIntegerParameter(bodyParameter: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredIntegerParameter(bodyParameter: number, callback: ServiceCallback<models.ErrorModel>): void;
@@ -459,52 +212,21 @@ export interface Explicit {
 
     /**
      * Test explicitly optional integer. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {number} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalIntegerParameterWithHttpOperationResponse(options?: { bodyParameter? : number, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Test explicitly optional integer. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {number} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalIntegerParameter(options?: { bodyParameter? : number, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalIntegerParameter(callback: ServiceCallback<void>): void;
@@ -512,58 +234,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required integer. Please put a valid int-wrapper with
-     * 'value' = null and the client library should throw before the request is
-     * sent.
-     *
+     * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the
+     * client library should throw before the request is sent.
      * @param {number} value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredIntegerPropertyWithHttpOperationResponse(value: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required integer. Please put a valid int-wrapper with
-     * 'value' = null and the client library should throw before the request is
-     * sent.
-     *
+     * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the
+     * client library should throw before the request is sent.
      * @param {number} value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredIntegerProperty(value: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredIntegerProperty(value: number, callback: ServiceCallback<models.ErrorModel>): void;
@@ -571,55 +259,22 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly optional integer. Please put a valid int-wrapper with
-     * 'value' = null.
-     *
+     * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {number} [options.value]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalIntegerPropertyWithHttpOperationResponse(options?: { value? : number, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Test explicitly optional integer. Please put a valid int-wrapper with
-     * 'value' = null.
-     *
+     * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {number} [options.value]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalIntegerProperty(options?: { value? : number, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalIntegerProperty(callback: ServiceCallback<void>): void;
@@ -627,56 +282,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required integer. Please put a header 'headerParameter' =>
-     * null and the client library should throw before the request is sent.
-     *
+     * Test explicitly required integer. Please put a header 'headerParameter' => null and the client
+     * library should throw before the request is sent.
      * @param {number} headerParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredIntegerHeaderWithHttpOperationResponse(headerParameter: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required integer. Please put a header 'headerParameter' =>
-     * null and the client library should throw before the request is sent.
-     *
+     * Test explicitly required integer. Please put a header 'headerParameter' => null and the client
+     * library should throw before the request is sent.
      * @param {number} headerParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredIntegerHeader(headerParameter: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredIntegerHeader(headerParameter: number, callback: ServiceCallback<models.ErrorModel>): void;
@@ -684,55 +307,22 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly optional integer. Please put a header 'headerParameter' =>
-     * null.
-     *
+     * Test explicitly optional integer. Please put a header 'headerParameter' => null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {number} [options.headerParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalIntegerHeaderWithHttpOperationResponse(options?: { headerParameter? : number, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Test explicitly optional integer. Please put a header 'headerParameter' =>
-     * null.
-     *
+     * Test explicitly optional integer. Please put a header 'headerParameter' => null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {number} [options.headerParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalIntegerHeader(options?: { headerParameter? : number, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalIntegerHeader(callback: ServiceCallback<void>): void;
@@ -740,56 +330,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required string. Please put null and the client library
-     * should throw before the request is sent.
-     *
+     * Test explicitly required string. Please put null and the client library should throw before the
+     * request is sent.
      * @param {string} bodyParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredStringParameterWithHttpOperationResponse(bodyParameter: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required string. Please put null and the client library
-     * should throw before the request is sent.
-     *
+     * Test explicitly required string. Please put null and the client library should throw before the
+     * request is sent.
      * @param {string} bodyParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredStringParameter(bodyParameter: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredStringParameter(bodyParameter: string, callback: ServiceCallback<models.ErrorModel>): void;
@@ -798,52 +356,21 @@ export interface Explicit {
 
     /**
      * Test explicitly optional string. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalStringParameterWithHttpOperationResponse(options?: { bodyParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Test explicitly optional string. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalStringParameter(options?: { bodyParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalStringParameter(callback: ServiceCallback<void>): void;
@@ -851,58 +378,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required string. Please put a valid string-wrapper with
-     * 'value' = null and the client library should throw before the request is
-     * sent.
-     *
+     * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the
+     * client library should throw before the request is sent.
      * @param {string} value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredStringPropertyWithHttpOperationResponse(value: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required string. Please put a valid string-wrapper with
-     * 'value' = null and the client library should throw before the request is
-     * sent.
-     *
+     * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the
+     * client library should throw before the request is sent.
      * @param {string} value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredStringProperty(value: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredStringProperty(value: string, callback: ServiceCallback<models.ErrorModel>): void;
@@ -910,55 +403,22 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly optional integer. Please put a valid string-wrapper with
-     * 'value' = null.
-     *
+     * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.value]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalStringPropertyWithHttpOperationResponse(options?: { value? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Test explicitly optional integer. Please put a valid string-wrapper with
-     * 'value' = null.
-     *
+     * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.value]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalStringProperty(options?: { value? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalStringProperty(callback: ServiceCallback<void>): void;
@@ -966,56 +426,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required string. Please put a header 'headerParameter' =>
-     * null and the client library should throw before the request is sent.
-     *
+     * Test explicitly required string. Please put a header 'headerParameter' => null and the client
+     * library should throw before the request is sent.
      * @param {string} headerParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredStringHeaderWithHttpOperationResponse(headerParameter: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required string. Please put a header 'headerParameter' =>
-     * null and the client library should throw before the request is sent.
-     *
+     * Test explicitly required string. Please put a header 'headerParameter' => null and the client
+     * library should throw before the request is sent.
      * @param {string} headerParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredStringHeader(headerParameter: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredStringHeader(headerParameter: string, callback: ServiceCallback<models.ErrorModel>): void;
@@ -1023,55 +451,22 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly optional string. Please put a header 'headerParameter' =>
-     * null.
-     *
+     * Test explicitly optional string. Please put a header 'headerParameter' => null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalStringHeaderWithHttpOperationResponse(options?: { bodyParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Test explicitly optional string. Please put a header 'headerParameter' =>
-     * null.
-     *
+     * Test explicitly optional string. Please put a header 'headerParameter' => null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalStringHeader(options?: { bodyParameter? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalStringHeader(callback: ServiceCallback<void>): void;
@@ -1079,64 +474,28 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required complex object. Please put null and the client
-     * library should throw before the request is sent.
-     *
+     * Test explicitly required complex object. Please put null and the client library should throw
+     * before the request is sent.
      * @param {object} bodyParameter
-     *
      * @param {number} bodyParameter.id
-     *
      * @param {string} [bodyParameter.name]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredClassParameterWithHttpOperationResponse(bodyParameter: models.Product, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required complex object. Please put null and the client
-     * library should throw before the request is sent.
-     *
+     * Test explicitly required complex object. Please put null and the client library should throw
+     * before the request is sent.
      * @param {object} bodyParameter
-     *
      * @param {number} bodyParameter.id
-     *
      * @param {string} [bodyParameter.name]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredClassParameter(bodyParameter: models.Product, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredClassParameter(bodyParameter: models.Product, callback: ServiceCallback<models.ErrorModel>): void;
@@ -1145,60 +504,25 @@ export interface Explicit {
 
     /**
      * Test explicitly optional complex object. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.bodyParameter]
-     *
      * @param {number} options.bodyParameter.id
-     *
      * @param {string} [options.bodyParameter.name]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalClassParameterWithHttpOperationResponse(options?: { bodyParameter? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Test explicitly optional complex object. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.bodyParameter]
-     *
      * @param {number} options.bodyParameter.id
-     *
      * @param {string} [options.bodyParameter.name]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalClassParameter(options?: { bodyParameter? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalClassParameter(callback: ServiceCallback<void>): void;
@@ -1206,66 +530,28 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required complex object. Please put a valid class-wrapper
-     * with 'value' = null and the client library should throw before the request
-     * is sent.
-     *
+     * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null
+     * and the client library should throw before the request is sent.
      * @param {object} value
-     *
      * @param {number} value.id
-     *
      * @param {string} [value.name]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredClassPropertyWithHttpOperationResponse(value: models.Product, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required complex object. Please put a valid class-wrapper
-     * with 'value' = null and the client library should throw before the request
-     * is sent.
-     *
+     * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null
+     * and the client library should throw before the request is sent.
      * @param {object} value
-     *
      * @param {number} value.id
-     *
      * @param {string} [value.name]
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredClassProperty(value: models.Product, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredClassProperty(value: models.Product, callback: ServiceCallback<models.ErrorModel>): void;
@@ -1273,63 +559,26 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly optional complex object. Please put a valid class-wrapper
-     * with 'value' = null.
-     *
+     * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.value]
-     *
      * @param {number} options.value.id
-     *
      * @param {string} [options.value.name]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalClassPropertyWithHttpOperationResponse(options?: { value? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Test explicitly optional complex object. Please put a valid class-wrapper
-     * with 'value' = null.
-     *
+     * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.value]
-     *
      * @param {number} options.value.id
-     *
      * @param {string} [options.value.name]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalClassProperty(options?: { value? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalClassProperty(callback: ServiceCallback<void>): void;
@@ -1337,56 +586,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required array. Please put null and the client library
-     * should throw before the request is sent.
-     *
+     * Test explicitly required array. Please put null and the client library should throw before the
+     * request is sent.
      * @param {array} bodyParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredArrayParameterWithHttpOperationResponse(bodyParameter: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required array. Please put null and the client library
-     * should throw before the request is sent.
-     *
+     * Test explicitly required array. Please put null and the client library should throw before the
+     * request is sent.
      * @param {array} bodyParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredArrayParameter(bodyParameter: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredArrayParameter(bodyParameter: string[], callback: ServiceCallback<models.ErrorModel>): void;
@@ -1395,52 +612,21 @@ export interface Explicit {
 
     /**
      * Test explicitly optional array. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {array} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalArrayParameterWithHttpOperationResponse(options?: { bodyParameter? : string[], customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Test explicitly optional array. Please put null.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {array} [options.bodyParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalArrayParameter(options?: { bodyParameter? : string[], customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalArrayParameter(callback: ServiceCallback<void>): void;
@@ -1448,58 +634,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required array. Please put a valid array-wrapper with
-     * 'value' = null and the client library should throw before the request is
-     * sent.
-     *
+     * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the
+     * client library should throw before the request is sent.
      * @param {array} value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredArrayPropertyWithHttpOperationResponse(value: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required array. Please put a valid array-wrapper with
-     * 'value' = null and the client library should throw before the request is
-     * sent.
-     *
+     * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the
+     * client library should throw before the request is sent.
      * @param {array} value
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredArrayProperty(value: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredArrayProperty(value: string[], callback: ServiceCallback<models.ErrorModel>): void;
@@ -1507,55 +659,22 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly optional array. Please put a valid array-wrapper with
-     * 'value' = null.
-     *
+     * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {array} [options.value]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalArrayPropertyWithHttpOperationResponse(options?: { value? : string[], customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Test explicitly optional array. Please put a valid array-wrapper with
-     * 'value' = null.
-     *
+     * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {array} [options.value]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalArrayProperty(options?: { value? : string[], customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalArrayProperty(callback: ServiceCallback<void>): void;
@@ -1563,56 +682,24 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly required array. Please put a header 'headerParameter' =>
-     * null and the client library should throw before the request is sent.
-     *
+     * Test explicitly required array. Please put a header 'headerParameter' => null and the client
+     * library should throw before the request is sent.
      * @param {array} headerParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredArrayHeaderWithHttpOperationResponse(headerParameter: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ErrorModel>>;
 
     /**
-     * Test explicitly required array. Please put a header 'headerParameter' =>
-     * null and the client library should throw before the request is sent.
-     *
+     * Test explicitly required array. Please put a header 'headerParameter' => null and the client
+     * library should throw before the request is sent.
      * @param {array} headerParameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {ErrorModel} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {ErrorModel} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link ErrorModel} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequiredArrayHeader(headerParameter: string[], options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ErrorModel>;
     postRequiredArrayHeader(headerParameter: string[], callback: ServiceCallback<models.ErrorModel>): void;
@@ -1620,55 +707,22 @@ export interface Explicit {
 
 
     /**
-     * Test explicitly optional integer. Please put a header 'headerParameter' =>
-     * null.
-     *
+     * Test explicitly optional integer. Please put a header 'headerParameter' => null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {array} [options.headerParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalArrayHeaderWithHttpOperationResponse(options?: { headerParameter? : string[], customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Test explicitly optional integer. Please put a header 'headerParameter' =>
-     * null.
-     *
+     * Test explicitly optional integer. Please put a header 'headerParameter' => null.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {array} [options.headerParameter]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptionalArrayHeader(options?: { headerParameter? : string[], customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptionalArrayHeader(callback: ServiceCallback<void>): void;

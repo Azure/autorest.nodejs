@@ -25,30 +25,14 @@ const operations = require('./operations');
 
 /**
  * @summary Product Types
- *
- * The Products endpoint returns information about the Uber products offered at
- * a given location. The response includes the display name and other details
- * about each product, and lists the products in the proper display order.
- *
+ * @description The Products endpoint returns information about the Uber products offered at a
+ * given location. The response includes the display name and other details about each product, and
+ * lists the products in the proper display order.
  * @param {string} resourceGroupName Resource Group ID.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link CatalogArray} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _list(resourceGroupName, options, callback) {
    /* jshint validthis: true */
@@ -164,33 +148,14 @@ function _list(resourceGroupName, options, callback) {
 
 /**
  * @summary Create products
- *
- * Resets products.
- *
+ * @description Resets products.
  * @param {string} subscriptionId Subscription ID.
- *
  * @param {string} resourceGroupName Resource Group ID.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.productDictionaryOfArray] Dictionary of Array of
- * product
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.productDictionaryOfArray] Dictionary of Array of product
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link CatalogDictionary} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _create(subscriptionId, resourceGroupName, options, callback) {
    /* jshint validthis: true */
@@ -329,33 +294,14 @@ function _create(subscriptionId, resourceGroupName, options, callback) {
 
 /**
  * @summary Update products
- *
- * Resets products.
- *
+ * @description Resets products.
  * @param {string} subscriptionId Subscription ID.
- *
  * @param {string} resourceGroupName Resource Group ID.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {array} [options.productArrayOfDictionary] Array of dictionary of
- * products
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {array} [options.productArrayOfDictionary] Array of dictionary of products
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link CatalogArray} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _update(subscriptionId, resourceGroupName, options, callback) {
    /* jshint validthis: true */
@@ -555,23 +501,13 @@ class AzureCompositeModel extends ServiceClient {
 
   /**
    * @summary Product Types
-   *
-   * The Products endpoint returns information about the Uber products offered at
-   * a given location. The response includes the display name and other details
-   * about each product, and lists the products in the proper display order.
-   *
+   * @description The Products endpoint returns information about the Uber products offered at a
+   * given location. The response includes the display name and other details about each product, and
+   * lists the products in the proper display order.
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CatalogArray>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   listWithHttpOperationResponse(resourceGroupName, options) {
     let client = this;
@@ -589,39 +525,15 @@ class AzureCompositeModel extends ServiceClient {
 
   /**
    * @summary Product Types
-   *
-   * The Products endpoint returns information about the Uber products offered at
-   * a given location. The response includes the display name and other details
-   * about each product, and lists the products in the proper display order.
-   *
+   * @description The Products endpoint returns information about the Uber products offered at a
+   * given location. The response includes the display name and other details about each product, and
+   * lists the products in the proper display order.
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {CatalogArray} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CatalogArray} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   list(resourceGroupName, options, optionalCallback) {
     let client = this;
@@ -645,26 +557,13 @@ class AzureCompositeModel extends ServiceClient {
 
   /**
    * @summary Create products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of
-   * product
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CatalogDictionary>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of product
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createWithHttpOperationResponse(subscriptionId, resourceGroupName, options) {
     let client = this;
@@ -682,42 +581,15 @@ class AzureCompositeModel extends ServiceClient {
 
   /**
    * @summary Create products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of
-   * product
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {CatalogDictionary} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CatalogDictionary} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.productDictionaryOfArray] Dictionary of Array of product
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   create(subscriptionId, resourceGroupName, options, optionalCallback) {
     let client = this;
@@ -741,26 +613,13 @@ class AzureCompositeModel extends ServiceClient {
 
   /**
    * @summary Update products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.productArrayOfDictionary] Array of dictionary of
-   * products
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CatalogArray>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {array} [options.productArrayOfDictionary] Array of dictionary of products
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   updateWithHttpOperationResponse(subscriptionId, resourceGroupName, options) {
     let client = this;
@@ -778,42 +637,15 @@ class AzureCompositeModel extends ServiceClient {
 
   /**
    * @summary Update products
-   *
-   * Resets products.
-   *
+   * @description Resets products.
    * @param {string} subscriptionId Subscription ID.
-   *
    * @param {string} resourceGroupName Resource Group ID.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {array} [options.productArrayOfDictionary] Array of dictionary of
-   * products
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {CatalogArray} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CatalogArray} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {array} [options.productArrayOfDictionary] Array of dictionary of products
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   update(subscriptionId, resourceGroupName, options, optionalCallback) {
     let client = this;

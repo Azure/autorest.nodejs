@@ -23,49 +23,19 @@ export interface PetOperations {
 
     /**
      * @param {string} petId Pet id
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Pet>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getByPetIdWithHttpOperationResponse(petId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Pet>>;
 
     /**
      * @param {string} petId Pet id
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Pet} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Pet} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Pet} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getByPetId(petId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Pet>;
     getByPetId(petId: string, callback: ServiceCallback<models.Pet>): void;
@@ -74,67 +44,27 @@ export interface PetOperations {
 
     /**
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.petParam]
-     *
      * @param {string} [options.petParam.name]
-     *
-     * @param {string} [options.petParam.daysOfWeek] Type of Pet. Possible values
-     * include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
-     * 'Sunday'
-     *
-     * @param {string} options.petParam.intEnum Possible values include: '1', '2',
-     * '3'
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Pet>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {string} [options.petParam.daysOfWeek] Type of Pet. Possible values include: 'Monday',
+     * 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+     * @param {string} options.petParam.intEnum Possible values include: '1', '2', '3'
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     addPetWithHttpOperationResponse(options?: { petParam? : models.Pet, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Pet>>;
 
     /**
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.petParam]
-     *
      * @param {string} [options.petParam.name]
-     *
-     * @param {string} [options.petParam.daysOfWeek] Type of Pet. Possible values
-     * include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
-     * 'Sunday'
-     *
-     * @param {string} options.petParam.intEnum Possible values include: '1', '2',
-     * '3'
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Pet} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Pet} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Pet} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {string} [options.petParam.daysOfWeek] Type of Pet. Possible values include: 'Monday',
+     * 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+     * @param {string} options.petParam.intEnum Possible values include: '1', '2', '3'
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     addPet(options?: { petParam? : models.Pet, customHeaders? : { [headerName: string]: string; } }): Promise<models.Pet>;
     addPet(callback: ServiceCallback<models.Pet>): void;

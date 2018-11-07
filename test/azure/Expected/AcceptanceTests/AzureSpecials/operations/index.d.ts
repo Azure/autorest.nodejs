@@ -24,49 +24,20 @@ export interface XMsClientRequestId {
     /**
      * Get method that overwrites x-ms-client-request header with value
      * 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Get method that overwrites x-ms-client-request header with value
      * 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     get(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     get(callback: ServiceCallback<void>): void;
@@ -76,55 +47,24 @@ export interface XMsClientRequestId {
     /**
      * Get method that overwrites x-ms-client-request header with value
      * 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
-     *
-     * @param {string} xMsClientRequestId This should appear as a method parameter,
-     * use value '9C4D50EE-2D56-4CD3-8152-34347DC9F2B0'
-     *
+     * @param {string} xMsClientRequestId This should appear as a method parameter, use value
+     * '9C4D50EE-2D56-4CD3-8152-34347DC9F2B0'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     paramGetWithHttpOperationResponse(xMsClientRequestId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Get method that overwrites x-ms-client-request header with value
      * 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
-     *
-     * @param {string} xMsClientRequestId This should appear as a method parameter,
-     * use value '9C4D50EE-2D56-4CD3-8152-34347DC9F2B0'
-     *
+     * @param {string} xMsClientRequestId This should appear as a method parameter, use value
+     * '9C4D50EE-2D56-4CD3-8152-34347DC9F2B0'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     paramGet(xMsClientRequestId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     paramGet(xMsClientRequestId: string, callback: ServiceCallback<void>): void;
@@ -141,51 +81,22 @@ export interface SubscriptionInCredentials {
 
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postMethodGlobalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postMethodGlobalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postMethodGlobalValid(callback: ServiceCallback<void>): void;
@@ -193,53 +104,22 @@ export interface SubscriptionInCredentials {
 
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to null, and client-side validation should prevent you from
-     * making this call
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * null, and client-side validation should prevent you from making this call
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postMethodGlobalNullWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to null, and client-side validation should prevent you from
-     * making this call
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * null, and client-side validation should prevent you from making this call
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postMethodGlobalNull(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postMethodGlobalNull(callback: ServiceCallback<void>): void;
@@ -247,51 +127,22 @@ export interface SubscriptionInCredentials {
 
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postMethodGlobalNotProvidedValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postMethodGlobalNotProvidedValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postMethodGlobalNotProvidedValid(callback: ServiceCallback<void>): void;
@@ -299,51 +150,22 @@ export interface SubscriptionInCredentials {
 
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postPathGlobalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postPathGlobalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postPathGlobalValid(callback: ServiceCallback<void>): void;
@@ -351,51 +173,22 @@ export interface SubscriptionInCredentials {
 
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postSwaggerGlobalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in credentials.  Set the credential
-     * subscriptionId to '1234-5678-9012-3456' to succeed
-     *
+     * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+     * '1234-5678-9012-3456' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postSwaggerGlobalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postSwaggerGlobalValid(callback: ServiceCallback<void>): void;
@@ -412,57 +205,26 @@ export interface SubscriptionInMethod {
 
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = '1234-5678-9012-3456' to succeed
-     *
-     * @param {string} subscriptionId This should appear as a method parameter, use
-     * value '1234-5678-9012-3456'
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id =
+     * '1234-5678-9012-3456' to succeed
+     * @param {string} subscriptionId This should appear as a method parameter, use value
+     * '1234-5678-9012-3456'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postMethodLocalValidWithHttpOperationResponse(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = '1234-5678-9012-3456' to succeed
-     *
-     * @param {string} subscriptionId This should appear as a method parameter, use
-     * value '1234-5678-9012-3456'
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id =
+     * '1234-5678-9012-3456' to succeed
+     * @param {string} subscriptionId This should appear as a method parameter, use value
+     * '1234-5678-9012-3456'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postMethodLocalValid(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postMethodLocalValid(subscriptionId: string, callback: ServiceCallback<void>): void;
@@ -470,57 +232,26 @@ export interface SubscriptionInMethod {
 
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = null, client-side validation should prevent you from making this call
-     *
-     * @param {string} subscriptionId This should appear as a method parameter, use
-     * value null, client-side validation should prvenet the call
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id = null,
+     * client-side validation should prevent you from making this call
+     * @param {string} subscriptionId This should appear as a method parameter, use value null,
+     * client-side validation should prvenet the call
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postMethodLocalNullWithHttpOperationResponse(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = null, client-side validation should prevent you from making this call
-     *
-     * @param {string} subscriptionId This should appear as a method parameter, use
-     * value null, client-side validation should prvenet the call
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id = null,
+     * client-side validation should prevent you from making this call
+     * @param {string} subscriptionId This should appear as a method parameter, use value null,
+     * client-side validation should prvenet the call
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postMethodLocalNull(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postMethodLocalNull(subscriptionId: string, callback: ServiceCallback<void>): void;
@@ -528,57 +259,26 @@ export interface SubscriptionInMethod {
 
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = '1234-5678-9012-3456' to succeed
-     *
-     * @param {string} subscriptionId Should appear as a method parameter -use
-     * value '1234-5678-9012-3456'
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id =
+     * '1234-5678-9012-3456' to succeed
+     * @param {string} subscriptionId Should appear as a method parameter -use value
+     * '1234-5678-9012-3456'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postPathLocalValidWithHttpOperationResponse(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = '1234-5678-9012-3456' to succeed
-     *
-     * @param {string} subscriptionId Should appear as a method parameter -use
-     * value '1234-5678-9012-3456'
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id =
+     * '1234-5678-9012-3456' to succeed
+     * @param {string} subscriptionId Should appear as a method parameter -use value
+     * '1234-5678-9012-3456'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postPathLocalValid(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postPathLocalValid(subscriptionId: string, callback: ServiceCallback<void>): void;
@@ -586,57 +286,26 @@ export interface SubscriptionInMethod {
 
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = '1234-5678-9012-3456' to succeed
-     *
-     * @param {string} subscriptionId The subscriptionId, which appears in the
-     * path, the value is always '1234-5678-9012-3456'
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id =
+     * '1234-5678-9012-3456' to succeed
+     * @param {string} subscriptionId The subscriptionId, which appears in the path, the value is
+     * always '1234-5678-9012-3456'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postSwaggerLocalValidWithHttpOperationResponse(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * POST method with subscriptionId modeled in the method.  pass in subscription
-     * id = '1234-5678-9012-3456' to succeed
-     *
-     * @param {string} subscriptionId The subscriptionId, which appears in the
-     * path, the value is always '1234-5678-9012-3456'
-     *
+     * POST method with subscriptionId modeled in the method.  pass in subscription id =
+     * '1234-5678-9012-3456' to succeed
+     * @param {string} subscriptionId The subscriptionId, which appears in the path, the value is
+     * always '1234-5678-9012-3456'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postSwaggerLocalValid(subscriptionId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postSwaggerLocalValid(subscriptionId: string, callback: ServiceCallback<void>): void;
@@ -654,48 +323,19 @@ export interface ApiVersionDefault {
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getMethodGlobalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getMethodGlobalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getMethodGlobalValid(callback: ServiceCallback<void>): void;
@@ -704,48 +344,19 @@ export interface ApiVersionDefault {
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getMethodGlobalNotProvidedValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getMethodGlobalNotProvidedValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getMethodGlobalNotProvidedValid(callback: ServiceCallback<void>): void;
@@ -754,48 +365,19 @@ export interface ApiVersionDefault {
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getPathGlobalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getPathGlobalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getPathGlobalValid(callback: ServiceCallback<void>): void;
@@ -804,48 +386,19 @@ export interface ApiVersionDefault {
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getSwaggerGlobalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * GET method with api-version modeled in global settings.
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getSwaggerGlobalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getSwaggerGlobalValid(callback: ServiceCallback<void>): void;
@@ -862,51 +415,20 @@ export interface ApiVersionLocal {
 
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * '2.0' to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = '2.0' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getMethodLocalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * '2.0' to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = '2.0' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getMethodLocalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getMethodLocalValid(callback: ServiceCallback<void>): void;
@@ -914,57 +436,24 @@ export interface ApiVersionLocal {
 
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * null to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = null to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {string} [options.apiVersion] This should appear as a method
-     * parameter, use value null, this should result in no serialized parameter
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {string} [options.apiVersion] This should appear as a method parameter, use value null,
+     * this should result in no serialized parameter
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getMethodLocalNullWithHttpOperationResponse(options?: { apiVersion? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * null to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = null to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {string} [options.apiVersion] This should appear as a method
-     * parameter, use value null, this should result in no serialized parameter
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {string} [options.apiVersion] This should appear as a method parameter, use value null,
+     * this should result in no serialized parameter
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getMethodLocalNull(options?: { apiVersion? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getMethodLocalNull(callback: ServiceCallback<void>): void;
@@ -972,51 +461,20 @@ export interface ApiVersionLocal {
 
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * '2.0' to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = '2.0' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getPathLocalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * '2.0' to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = '2.0' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getPathLocalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getPathLocalValid(callback: ServiceCallback<void>): void;
@@ -1024,51 +482,20 @@ export interface ApiVersionLocal {
 
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * '2.0' to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = '2.0' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getSwaggerLocalValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get method with api-version modeled in the method.  pass in api-version =
-     * '2.0' to succeed
-     *
+     * Get method with api-version modeled in the method.  pass in api-version = '2.0' to succeed
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getSwaggerLocalValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getSwaggerLocalValid(callback: ServiceCallback<void>): void;
@@ -1086,54 +513,21 @@ export interface SkipUrlEncoding {
 
     /**
      * Get method with unencoded path parameter with value 'path1/path2/path3'
-     *
-     * @param {string} unencodedPathParam Unencoded path parameter with value
-     * 'path1/path2/path3'
-     *
+     * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getMethodPathValidWithHttpOperationResponse(unencodedPathParam: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Get method with unencoded path parameter with value 'path1/path2/path3'
-     *
-     * @param {string} unencodedPathParam Unencoded path parameter with value
-     * 'path1/path2/path3'
-     *
+     * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getMethodPathValid(unencodedPathParam: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getMethodPathValid(unencodedPathParam: string, callback: ServiceCallback<void>): void;
@@ -1142,54 +536,21 @@ export interface SkipUrlEncoding {
 
     /**
      * Get method with unencoded path parameter with value 'path1/path2/path3'
-     *
-     * @param {string} unencodedPathParam Unencoded path parameter with value
-     * 'path1/path2/path3'
-     *
+     * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getPathPathValidWithHttpOperationResponse(unencodedPathParam: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Get method with unencoded path parameter with value 'path1/path2/path3'
-     *
-     * @param {string} unencodedPathParam Unencoded path parameter with value
-     * 'path1/path2/path3'
-     *
+     * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getPathPathValid(unencodedPathParam: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getPathPathValid(unencodedPathParam: string, callback: ServiceCallback<void>): void;
@@ -1198,48 +559,19 @@ export interface SkipUrlEncoding {
 
     /**
      * Get method with unencoded path parameter with value 'path1/path2/path3'
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getSwaggerPathValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Get method with unencoded path parameter with value 'path1/path2/path3'
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getSwaggerPathValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getSwaggerPathValid(callback: ServiceCallback<void>): void;
@@ -1247,57 +579,22 @@ export interface SkipUrlEncoding {
 
 
     /**
-     * Get method with unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
-     * @param {string} q1 Unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
+     * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+     * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getMethodQueryValidWithHttpOperationResponse(q1: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get method with unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
-     * @param {string} q1 Unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
+     * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+     * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getMethodQueryValid(q1: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getMethodQueryValid(q1: string, callback: ServiceCallback<void>): void;
@@ -1306,52 +603,21 @@ export interface SkipUrlEncoding {
 
     /**
      * Get method with unencoded query parameter with value null
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.q1] Unencoded query parameter with value null
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getMethodQueryNullWithHttpOperationResponse(options?: { q1? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Get method with unencoded query parameter with value null
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.q1] Unencoded query parameter with value null
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getMethodQueryNull(options?: { q1? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getMethodQueryNull(callback: ServiceCallback<void>): void;
@@ -1359,57 +625,22 @@ export interface SkipUrlEncoding {
 
 
     /**
-     * Get method with unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
-     * @param {string} q1 Unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
+     * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+     * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getPathQueryValidWithHttpOperationResponse(q1: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get method with unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
-     * @param {string} q1 Unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
+     * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+     * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getPathQueryValid(q1: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getPathQueryValid(q1: string, callback: ServiceCallback<void>): void;
@@ -1417,51 +648,20 @@ export interface SkipUrlEncoding {
 
 
     /**
-     * Get method with unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
+     * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getSwaggerQueryValidWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Get method with unencoded query parameter with value
-     * 'value1&q2=value2&q3=value3'
-     *
+     * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getSwaggerQueryValid(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getSwaggerQueryValid(callback: ServiceCallback<void>): void;
@@ -1478,65 +678,28 @@ export interface Odata {
 
 
     /**
-     * Specify filter parameter with value '$filter=id gt 5 and name eq
-     * 'foo'&$orderby=id&$top=10'
-     *
+     * Specify filter parameter with value '$filter=id gt 5 and name eq 'foo'&$orderby=id&$top=10'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {string} [options.filter] The filter parameter with value '$filter=id
-     * gt 5 and name eq 'foo''.
-     *
+     * @param {string} [options.filter] The filter parameter with value '$filter=id gt 5 and name eq
+     * 'foo''.
      * @param {number} [options.top] The top parameter with value 10.
-     *
      * @param {string} [options.orderby] The orderby parameter with value id.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     getWithFilterWithHttpOperationResponse(options?: { filter? : string, top? : number, orderby? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Specify filter parameter with value '$filter=id gt 5 and name eq
-     * 'foo'&$orderby=id&$top=10'
-     *
+     * Specify filter parameter with value '$filter=id gt 5 and name eq 'foo'&$orderby=id&$top=10'
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {string} [options.filter] The filter parameter with value '$filter=id
-     * gt 5 and name eq 'foo''.
-     *
+     * @param {string} [options.filter] The filter parameter with value '$filter=id gt 5 and name eq
+     * 'foo''.
      * @param {number} [options.top] The top parameter with value 10.
-     *
      * @param {string} [options.orderby] The orderby parameter with value id.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     getWithFilter(options?: { filter? : string, top? : number, orderby? : string, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     getWithFilter(callback: ServiceCallback<void>): void;
@@ -1553,55 +716,22 @@ export interface Header {
 
 
     /**
-     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-     * header of the request
-     *
+     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request
      * @param {string} fooClientRequestId The fooRequestId
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     customNamedRequestIdWithHttpOperationResponse(fooClientRequestId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-     * header of the request
-     *
+     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request
      * @param {string} fooClientRequestId The fooRequestId
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     customNamedRequestId(fooClientRequestId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     customNamedRequestId(fooClientRequestId: string, callback: ServiceCallback<void>): void;
@@ -1609,65 +739,30 @@ export interface Header {
 
 
     /**
-     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-     * header of the request, via a parameter group
-     *
-     * @param {object} headerCustomNamedRequestIdParamGroupingParameters Additional
-     * parameters for the operation
-     *
-     * @param {string}
-     * headerCustomNamedRequestIdParamGroupingParameters.fooClientRequestId The
+     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request,
+     * via a parameter group
+     * @param {object} headerCustomNamedRequestIdParamGroupingParameters Additional parameters for the
+     * operation
+     * @param {string} headerCustomNamedRequestIdParamGroupingParameters.fooClientRequestId The
      * fooRequestId
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     customNamedRequestIdParamGroupingWithHttpOperationResponse(headerCustomNamedRequestIdParamGroupingParameters: models.HeaderCustomNamedRequestIdParamGroupingParameters, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-     * header of the request, via a parameter group
-     *
-     * @param {object} headerCustomNamedRequestIdParamGroupingParameters Additional
-     * parameters for the operation
-     *
-     * @param {string}
-     * headerCustomNamedRequestIdParamGroupingParameters.fooClientRequestId The
+     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request,
+     * via a parameter group
+     * @param {object} headerCustomNamedRequestIdParamGroupingParameters Additional parameters for the
+     * operation
+     * @param {string} headerCustomNamedRequestIdParamGroupingParameters.fooClientRequestId The
      * fooRequestId
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     customNamedRequestIdParamGrouping(headerCustomNamedRequestIdParamGroupingParameters: models.HeaderCustomNamedRequestIdParamGroupingParameters, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     customNamedRequestIdParamGrouping(headerCustomNamedRequestIdParamGroupingParameters: models.HeaderCustomNamedRequestIdParamGroupingParameters, callback: ServiceCallback<void>): void;
@@ -1675,55 +770,22 @@ export interface Header {
 
 
     /**
-     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-     * header of the request
-     *
+     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request
      * @param {string} fooClientRequestId The fooRequestId
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Boolean>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     customNamedRequestIdHeadWithHttpOperationResponse(fooClientRequestId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<boolean>>;
 
     /**
-     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-     * header of the request
-     *
+     * Send foo-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request
      * @param {string} fooClientRequestId The fooRequestId
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Boolean} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Boolean} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     customNamedRequestIdHead(fooClientRequestId: string, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<boolean>;
     customNamedRequestIdHead(fooClientRequestId: string, callback: ServiceCallback<boolean>): void;

@@ -52,52 +52,21 @@ export default class AutoRestResourceFlatteningTestService extends AzureServiceC
 
   /**
    * Put External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putArrayWithHttpOperationResponse(options?: { resourceArray? : models.Resource[], customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
   /**
    * Put External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putArray(options?: { resourceArray? : models.Resource[], customHeaders? : { [headerName: string]: string; } }): Promise<void>;
   putArray(callback: ServiceCallback<void>): void;
@@ -106,48 +75,19 @@ export default class AutoRestResourceFlatteningTestService extends AzureServiceC
 
   /**
    * Get External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getArrayWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.FlattenedProduct[]>>;
 
   /**
    * Get External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {Array} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {Array} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getArray(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.FlattenedProduct[]>;
   getArray(callback: ServiceCallback<models.FlattenedProduct[]>): void;
@@ -156,54 +96,21 @@ export default class AutoRestResourceFlatteningTestService extends AzureServiceC
 
   /**
    * Put External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceDictionary] External Resource as a
-   * Dictionary to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putDictionaryWithHttpOperationResponse(options?: { resourceDictionary? : { [propertyName: string]: models.FlattenedProduct }, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
   /**
    * Put External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceDictionary] External Resource as a
-   * Dictionary to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putDictionary(options?: { resourceDictionary? : { [propertyName: string]: models.FlattenedProduct }, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
   putDictionary(callback: ServiceCallback<void>): void;
@@ -212,48 +119,19 @@ export default class AutoRestResourceFlatteningTestService extends AzureServiceC
 
   /**
    * Get External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Object>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getDictionaryWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<{ [propertyName: string]: models.FlattenedProduct }>>;
 
   /**
    * Get External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {Object} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {Object} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getDictionary(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<{ [propertyName: string]: models.FlattenedProduct }>;
   getDictionary(callback: ServiceCallback<{ [propertyName: string]: models.FlattenedProduct }>): void;
@@ -262,90 +140,37 @@ export default class AutoRestResourceFlatteningTestService extends AzureServiceC
 
   /**
    * Put External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceComplexObject] External Resource as a
-   * ResourceCollection to put
-   *
+   * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
    * @param {object} [options.resourceComplexObject.productresource]
-   *
    * @param {string} [options.resourceComplexObject.productresource.pname]
-   *
    * @param {number} [options.resourceComplexObject.productresource.lsize]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.provisioningState]
-   *
+   * @param {string} [options.resourceComplexObject.productresource.provisioningState]
    * @param {object} [options.resourceComplexObject.productresource.tags]
-   *
-   * @param {string} [options.resourceComplexObject.productresource.location]
-   * Resource Location
-   *
+   * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
    * @param {array} [options.resourceComplexObject.arrayofresources]
-   *
    * @param {object} [options.resourceComplexObject.dictionaryofresources]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putResourceCollectionWithHttpOperationResponse(options?: { resourceComplexObject? : models.ResourceCollection, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
   /**
    * Put External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceComplexObject] External Resource as a
-   * ResourceCollection to put
-   *
+   * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
    * @param {object} [options.resourceComplexObject.productresource]
-   *
    * @param {string} [options.resourceComplexObject.productresource.pname]
-   *
    * @param {number} [options.resourceComplexObject.productresource.lsize]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.provisioningState]
-   *
+   * @param {string} [options.resourceComplexObject.productresource.provisioningState]
    * @param {object} [options.resourceComplexObject.productresource.tags]
-   *
-   * @param {string} [options.resourceComplexObject.productresource.location]
-   * Resource Location
-   *
+   * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
    * @param {array} [options.resourceComplexObject.arrayofresources]
-   *
    * @param {object} [options.resourceComplexObject.dictionaryofresources]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putResourceCollection(options?: { resourceComplexObject? : models.ResourceCollection, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
   putResourceCollection(callback: ServiceCallback<void>): void;
@@ -354,49 +179,19 @@ export default class AutoRestResourceFlatteningTestService extends AzureServiceC
 
   /**
    * Get External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ResourceCollection>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getResourceCollectionWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.ResourceCollection>>;
 
   /**
    * Get External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {ResourceCollection} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {ResourceCollection} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ResourceCollection} for more information.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getResourceCollection(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.ResourceCollection>;
   getResourceCollection(callback: ServiceCallback<models.ResourceCollection>): void;

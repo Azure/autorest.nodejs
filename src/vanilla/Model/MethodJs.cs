@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
+using AutoRest.NodeJS.DSL;
 using AutoRest.NodeJS.vanilla.Templates;
 using Newtonsoft.Json;
 using static AutoRest.Core.Utilities.DependencyInjection;
@@ -1007,79 +1008,33 @@ namespace AutoRest.NodeJS.Model
         /// <returns></returns>
         public string GenerateMethodDocumentation(MethodFlavor flavor, Language language = Language.JavaScript)
         {
-            var template = new Core.Template<Object>();
-            var builder = new IndentedStringBuilder("  ");
-            builder.AppendLine("/**");
-            if (!String.IsNullOrEmpty(Summary))
+            JSBuilder builder = new JSBuilder();
+            builder.DocumentationComment(comment =>
             {
-                builder.AppendLine(template.WrapComment(" * ", "@summary " + Summary)).AppendLine(" *");
-            }
-            if (!String.IsNullOrEmpty(Description))
-            {
-                builder.AppendLine(template.WrapComment(" * ", Description)).AppendLine(" *");
-            }
-            foreach (var parameter in DocumentationParameters)
-            {
-                var paramDoc = $"@param {{{GetParameterDocumentationType(parameter)}}} {GetParameterDocumentationName(parameter)} {parameter.Documentation}";
-                builder.AppendLine(ConstructParameterDocumentation(template.WrapComment(" * ", paramDoc)));
-            }
-            if (flavor == MethodFlavor.HttpOperationResponse)
-            {
-                var errorType = (language == Language.JavaScript) ?  "Error" : "Error|ServiceError";
-                builder.AppendLine(" * @returns {Promise} A promise is returned").AppendLine(" *")
-                    .AppendLine(" * @resolve {{HttpOperationResponse<{0}>}} - The deserialized result object.", ReturnTypeString).AppendLine(" *")
-                    .AppendLine(" * @reject {{{0}}} - The error object.", errorType);
-            }
-            else
-            {
-                if (language == Language.JavaScript)
+                comment.Summary(Summary);
+                comment.Description(Description);
+                foreach (ParameterJs parameter in DocumentationParameters)
                 {
-                    if (flavor == MethodFlavor.Callback)
-                    {
-                        builder.AppendLine(template.WrapComment(" * ", " @param {function} callback - The callback.")).AppendLine(" *")
-                            .AppendLine(template.WrapComment(" * ", " @returns {function} callback(err, result, request, response)")).AppendLine(" *");
-                    }
-                    else if (flavor == MethodFlavor.Promise)
-                    {
-                        builder.AppendLine(template.WrapComment(" * ", " @param {function} [optionalCallback] - The optional callback.")).AppendLine(" *")
-                            .AppendLine(template.WrapComment(" * ", " @returns {function|Promise} If a callback was passed as the last parameter " +
-                            "then it returns the callback else returns a Promise.")).AppendLine(" *")
-                            .AppendLine(" * {Promise} A promise is returned").AppendLine(" *")
-                            .AppendLine(" *                      @resolve {{{0}}} - The deserialized result object.", ReturnTypeString).AppendLine(" *")
-                            .AppendLine(" *                      @reject {Error} - The error object.").AppendLine(" *")
-                            .AppendLine(template.WrapComment(" * ", "{function} optionalCallback(err, result, request, response)")).AppendLine(" *");
-                    }
-                    builder.AppendLine(" *                      {Error}  err        - The Error object if an error occurred, null otherwise.").AppendLine(" *")
-                        .AppendLine(" *                      {{{0}}} [result]   - The deserialized result object if an error did not occur.", DocumentReturnTypeString)
-                        .AppendLine(template.WrapComment(" *                      ", ReturnTypeInfo)).AppendLine(" *")
-                        .AppendLine(" *                      {object} [request]  - The HTTP Request object if an error did not occur.").AppendLine(" *")
-                        .AppendLine(" *                      {stream} [response] - The HTTP Response stream if an error did not occur.");
+                    string parameterName = GetParameterDocumentationName(parameter);
+                    string parameterType = GetParameterDocumentationType(parameter);
+                    comment.Parameter(parameterName, parameterType, parameter.Documentation);
                 }
-                else
+
+                if (flavor == MethodFlavor.HttpOperationResponse)
                 {
-                    if (flavor == MethodFlavor.Callback)
-                    {
-                        builder.AppendLine(template.WrapComment(" * ", " @param {ServiceCallback} callback - The callback.")).AppendLine(" *")
-                            .AppendLine(template.WrapComment(" * ", " @returns {ServiceCallback} callback(err, result, request, response)")).AppendLine(" *");
-                    }
-                    else if (flavor == MethodFlavor.Promise)
-                    {
-                        builder.AppendLine(template.WrapComment(" * ", " @param {ServiceCallback} [optionalCallback] - The optional callback.")).AppendLine(" *")
-                            .AppendLine(template.WrapComment(" * ", " @returns {ServiceCallback|Promise} If a callback was passed as the last parameter " +
-                            "then it returns the callback else returns a Promise.")).AppendLine(" *")
-                            .AppendLine(" * {Promise} A promise is returned.").AppendLine(" *")
-                            .AppendLine(" *                      @resolve {{{0}}} - The deserialized result object.", ReturnTypeString).AppendLine(" *")
-                            .AppendLine(" *                      @reject {Error|ServiceError} - The error object.").AppendLine(" *")
-                            .AppendLine(template.WrapComment(" * ", "{ServiceCallback} optionalCallback(err, result, request, response)")).AppendLine(" *");
-                    }
-                    builder.AppendLine(" *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.").AppendLine(" *")
-                        .AppendLine(" *                      {{{0}}} [result]   - The deserialized result object if an error did not occur.", ReturnTypeString)
-                        .AppendLine(template.WrapComment(" *                      ", ReturnTypeInfo)).AppendLine(" *")
-                        .AppendLine(" *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.").AppendLine(" *")
-                        .AppendLine(" *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.");
+                    comment.Returns("Promise", "A promise is returned.");
                 }
-            }
-            builder.AppendLine(" */");
+                else if (flavor == MethodFlavor.Callback)
+                {
+                    comment.Parameter("callback", "function", "The callback.");
+                    comment.Returns("function", "callback(err, result, request, response)");
+                }
+                else if (flavor == MethodFlavor.Promise)
+                {
+                    comment.Parameter("optionalCallback", "function", "The optional callback.", isOptional: true);
+                    comment.Returns("function|Promise", "If a callback was passed as the last parameter, then it returns the callback. Otherwise it returns a Promise.");
+                }
+            });
             return builder.ToString();
         }
     }

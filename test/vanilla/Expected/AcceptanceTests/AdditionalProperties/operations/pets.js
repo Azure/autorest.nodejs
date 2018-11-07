@@ -15,30 +15,13 @@ const WebResource = msRest.WebResource;
 
 /**
  * Create a Pet which contains more properties than what is defined.
- *
  * @param {object} createParameters
- *
  * @param {number} createParameters.id
- *
  * @param {string} [createParameters.name]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link PetAPTrue} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _createAPTrue(createParameters, options, callback) {
    /* jshint validthis: true */
@@ -151,32 +134,14 @@ function _createAPTrue(createParameters, options, callback) {
 
 /**
  * Create a CatAPTrue which contains more properties than what is defined.
- *
  * @param {object} createParameters
- *
  * @param {boolean} [createParameters.friendly]
- *
  * @param {number} createParameters.id
- *
  * @param {string} [createParameters.name]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link CatAPTrue} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _createCatAPTrue(createParameters, options, callback) {
    /* jshint validthis: true */
@@ -289,30 +254,13 @@ function _createCatAPTrue(createParameters, options, callback) {
 
 /**
  * Create a Pet which contains more properties than what is defined.
- *
  * @param {object} createParameters
- *
  * @param {number} createParameters.id
- *
  * @param {string} [createParameters.name]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link PetAPObject} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _createAPObject(createParameters, options, callback) {
    /* jshint validthis: true */
@@ -425,30 +373,13 @@ function _createAPObject(createParameters, options, callback) {
 
 /**
  * Create a Pet which contains more properties than what is defined.
- *
  * @param {object} createParameters
- *
  * @param {number} createParameters.id
- *
  * @param {string} [createParameters.name]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link PetAPString} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _createAPString(createParameters, options, callback) {
    /* jshint validthis: true */
@@ -561,32 +492,14 @@ function _createAPString(createParameters, options, callback) {
 
 /**
  * Create a Pet which contains more properties than what is defined.
- *
  * @param {object} createParameters
- *
  * @param {number} createParameters.id
- *
  * @param {string} [createParameters.name]
- *
  * @param {object} [createParameters.additionalProperties]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link PetAPInProperties} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _createAPInProperties(createParameters, options, callback) {
    /* jshint validthis: true */
@@ -699,35 +612,15 @@ function _createAPInProperties(createParameters, options, callback) {
 
 /**
  * Create a Pet which contains more properties than what is defined.
- *
  * @param {object} createParameters
- *
  * @param {number} createParameters.id
- *
  * @param {string} [createParameters.name]
- *
  * @param {string} createParameters.odatalocation
- *
  * @param {object} [createParameters.additionalProperties1]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link PetAPInPropertiesWithAPString} for more
- *                      information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _createAPInPropertiesWithAPString(createParameters, options, callback) {
    /* jshint validthis: true */
@@ -856,23 +749,12 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<PetAPTrue>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createAPTrueWithHttpOperationResponse(createParameters, options) {
     let client = this.client;
@@ -890,39 +772,14 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {PetAPTrue} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link PetAPTrue} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   createAPTrue(createParameters, options, optionalCallback) {
     let client = this.client;
@@ -946,25 +803,13 @@ class Pets {
 
   /**
    * Create a CatAPTrue which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {boolean} [createParameters.friendly]
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CatAPTrue>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createCatAPTrueWithHttpOperationResponse(createParameters, options) {
     let client = this.client;
@@ -982,41 +827,15 @@ class Pets {
 
   /**
    * Create a CatAPTrue which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {boolean} [createParameters.friendly]
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {CatAPTrue} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CatAPTrue} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   createCatAPTrue(createParameters, options, optionalCallback) {
     let client = this.client;
@@ -1040,23 +859,12 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<PetAPObject>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createAPObjectWithHttpOperationResponse(createParameters, options) {
     let client = this.client;
@@ -1074,39 +882,14 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {PetAPObject} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link PetAPObject} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   createAPObject(createParameters, options, optionalCallback) {
     let client = this.client;
@@ -1130,23 +913,12 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<PetAPString>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createAPStringWithHttpOperationResponse(createParameters, options) {
     let client = this.client;
@@ -1164,39 +936,14 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {PetAPString} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link PetAPString} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   createAPString(createParameters, options, optionalCallback) {
     let client = this.client;
@@ -1220,25 +967,13 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [createParameters.additionalProperties]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<PetAPInProperties>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createAPInPropertiesWithHttpOperationResponse(createParameters, options) {
     let client = this.client;
@@ -1256,41 +991,15 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {object} [createParameters.additionalProperties]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {PetAPInProperties} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link PetAPInProperties} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   createAPInProperties(createParameters, options, optionalCallback) {
     let client = this.client;
@@ -1314,27 +1023,14 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {string} createParameters.odatalocation
-   *
    * @param {object} [createParameters.additionalProperties1]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<PetAPInPropertiesWithAPString>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createAPInPropertiesWithAPStringWithHttpOperationResponse(createParameters, options) {
     let client = this.client;
@@ -1352,44 +1048,16 @@ class Pets {
 
   /**
    * Create a Pet which contains more properties than what is defined.
-   *
    * @param {object} createParameters
-   *
    * @param {number} createParameters.id
-   *
    * @param {string} [createParameters.name]
-   *
    * @param {string} createParameters.odatalocation
-   *
    * @param {object} [createParameters.additionalProperties1]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {PetAPInPropertiesWithAPString} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link PetAPInPropertiesWithAPString} for more
-   *                      information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   createAPInPropertiesWithAPString(createParameters, options, optionalCallback) {
     let client = this.client;

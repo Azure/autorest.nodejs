@@ -24,25 +24,11 @@ const models = require('./models');
 
 /**
  * Put External Resource as an Array
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {array} [options.resourceArray] External Resource as an Array to put
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putArray(options, callback) {
    /* jshint validthis: true */
@@ -163,23 +149,10 @@ function _putArray(options, callback) {
 
 /**
  * Get External Resource as an Array
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {array} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getArray(options, callback) {
    /* jshint validthis: true */
@@ -302,26 +275,11 @@ function _getArray(options, callback) {
 
 /**
  * Put External Resource as a Dictionary
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.resourceDictionary] External Resource as a
- * Dictionary to put
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putDictionary(options, callback) {
    /* jshint validthis: true */
@@ -442,23 +400,10 @@ function _putDictionary(options, callback) {
 
 /**
  * Get External Resource as a Dictionary
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getDictionary(options, callback) {
    /* jshint validthis: true */
@@ -581,44 +526,19 @@ function _getDictionary(options, callback) {
 
 /**
  * Put External Resource as a ResourceCollection
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.resourceComplexObject] External Resource as a
- * ResourceCollection to put
- *
+ * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
  * @param {object} [options.resourceComplexObject.productresource]
- *
  * @param {string} [options.resourceComplexObject.productresource.pname]
- *
  * @param {number} [options.resourceComplexObject.productresource.lsize]
- *
- * @param {string}
- * [options.resourceComplexObject.productresource.provisioningState]
- *
+ * @param {string} [options.resourceComplexObject.productresource.provisioningState]
  * @param {object} [options.resourceComplexObject.productresource.tags]
- *
- * @param {string} [options.resourceComplexObject.productresource.location]
- * Resource Location
- *
+ * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
  * @param {array} [options.resourceComplexObject.arrayofresources]
- *
  * @param {object} [options.resourceComplexObject.dictionaryofresources]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putResourceCollection(options, callback) {
    /* jshint validthis: true */
@@ -725,24 +645,10 @@ function _putResourceCollection(options, callback) {
 
 /**
  * Get External Resource as a ResourceCollection
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ResourceCollection} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getResourceCollection(options, callback) {
    /* jshint validthis: true */
@@ -905,19 +811,10 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putArrayWithHttpOperationResponse(options) {
     let client = this;
@@ -935,34 +832,12 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putArray(options, optionalCallback) {
     let client = this;
@@ -986,17 +861,9 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getArrayWithHttpOperationResponse(options) {
     let client = this;
@@ -1014,32 +881,11 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Array} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {array} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getArray(options, optionalCallback) {
     let client = this;
@@ -1063,20 +909,10 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceDictionary] External Resource as a
-   * Dictionary to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putDictionaryWithHttpOperationResponse(options) {
     let client = this;
@@ -1094,35 +930,12 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceDictionary] External Resource as a
-   * Dictionary to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putDictionary(options, optionalCallback) {
     let client = this;
@@ -1146,17 +959,9 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Object>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getDictionaryWithHttpOperationResponse(options) {
     let client = this;
@@ -1174,32 +979,11 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Object} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getDictionary(options, optionalCallback) {
     let client = this;
@@ -1223,38 +1007,18 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceComplexObject] External Resource as a
-   * ResourceCollection to put
-   *
+   * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
    * @param {object} [options.resourceComplexObject.productresource]
-   *
    * @param {string} [options.resourceComplexObject.productresource.pname]
-   *
    * @param {number} [options.resourceComplexObject.productresource.lsize]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.provisioningState]
-   *
+   * @param {string} [options.resourceComplexObject.productresource.provisioningState]
    * @param {object} [options.resourceComplexObject.productresource.tags]
-   *
-   * @param {string} [options.resourceComplexObject.productresource.location]
-   * Resource Location
-   *
+   * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
    * @param {array} [options.resourceComplexObject.arrayofresources]
-   *
    * @param {object} [options.resourceComplexObject.dictionaryofresources]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putResourceCollectionWithHttpOperationResponse(options) {
     let client = this;
@@ -1272,53 +1036,20 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceComplexObject] External Resource as a
-   * ResourceCollection to put
-   *
+   * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
    * @param {object} [options.resourceComplexObject.productresource]
-   *
    * @param {string} [options.resourceComplexObject.productresource.pname]
-   *
    * @param {number} [options.resourceComplexObject.productresource.lsize]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.provisioningState]
-   *
+   * @param {string} [options.resourceComplexObject.productresource.provisioningState]
    * @param {object} [options.resourceComplexObject.productresource.tags]
-   *
-   * @param {string} [options.resourceComplexObject.productresource.location]
-   * Resource Location
-   *
+   * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
    * @param {array} [options.resourceComplexObject.arrayofresources]
-   *
    * @param {object} [options.resourceComplexObject.dictionaryofresources]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putResourceCollection(options, optionalCallback) {
     let client = this;
@@ -1342,17 +1073,9 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ResourceCollection>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getResourceCollectionWithHttpOperationResponse(options) {
     let client = this;
@@ -1370,33 +1093,11 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ResourceCollection} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ResourceCollection} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getResourceCollection(options, optionalCallback) {
     let client = this;

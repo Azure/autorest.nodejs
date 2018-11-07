@@ -16,29 +16,13 @@ const WebResource = msRest.WebResource;
 
 /**
  * Updates the tags for an availability set.
- *
  * @param {string} resourceGroupName The name of the resource group.
- *
  * @param {string} avset The name of the storage availability set.
- *
  * @param {object} tags A set of tags. A description about the set of tags.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _update(resourceGroupName, avset, tags, options, callback) {
    /* jshint validthis: true */
@@ -181,23 +165,12 @@ class AvailabilitySets {
 
   /**
    * Updates the tags for an availability set.
-   *
    * @param {string} resourceGroupName The name of the resource group.
-   *
    * @param {string} avset The name of the storage availability set.
-   *
    * @param {object} tags A set of tags. A description about the set of tags.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   updateWithHttpOperationResponse(resourceGroupName, avset, tags, options) {
     let client = this.client;
@@ -215,38 +188,14 @@ class AvailabilitySets {
 
   /**
    * Updates the tags for an availability set.
-   *
    * @param {string} resourceGroupName The name of the resource group.
-   *
    * @param {string} avset The name of the storage availability set.
-   *
    * @param {object} tags A set of tags. A description about the set of tags.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   update(resourceGroupName, avset, tags, options, optionalCallback) {
     let client = this.client;

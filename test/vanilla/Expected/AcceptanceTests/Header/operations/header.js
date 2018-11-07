@@ -16,26 +16,11 @@ const moment = require('moment');
 
 /**
  * Send a post request with header value "User-Agent": "overwrite"
- *
- * @param {string} userAgent Send a post request with header value
- * "User-Agent": "overwrite"
- *
+ * @param {string} userAgent Send a post request with header value "User-Agent": "overwrite"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramExistingKey(userAgent, options, callback) {
    /* jshint validthis: true */
@@ -120,23 +105,10 @@ function _paramExistingKey(userAgent, options, callback) {
 
 /**
  * Get a response with header value "User-Agent": "overwrite"
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseExistingKey(options, callback) {
    /* jshint validthis: true */
@@ -210,26 +182,11 @@ function _responseExistingKey(options, callback) {
 
 /**
  * Send a post request with header value "Content-Type": "text/html"
- *
- * @param {string} contentType Send a post request with header value
- * "Content-Type": "text/html"
- *
+ * @param {string} contentType Send a post request with header value "Content-Type": "text/html"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramProtectedKey(contentType, options, callback) {
    /* jshint validthis: true */
@@ -314,23 +271,10 @@ function _paramProtectedKey(contentType, options, callback) {
 
 /**
  * Get a response with header value "Content-Type": "text/html"
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseProtectedKey(options, callback) {
    /* jshint validthis: true */
@@ -403,30 +347,15 @@ function _responseProtectedKey(options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "positive", "value": 1 or
- * "scenario": "negative", "value": -2
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * Send a post request with header values "scenario": "positive", "value": 1 or "scenario":
+ * "negative", "value": -2
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {number} value Send a post request with header values 1 or -2
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramInteger(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -517,26 +446,12 @@ function _paramInteger(scenario, value, options, callback) {
 
 /**
  * Get a response with header value "value": 1 or -2
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseInteger(scenario, options, callback) {
    /* jshint validthis: true */
@@ -620,30 +535,15 @@ function _responseInteger(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "positive", "value": 105
- * or "scenario": "negative", "value": -2
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * Send a post request with header values "scenario": "positive", "value": 105 or "scenario":
+ * "negative", "value": -2
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {number} value Send a post request with header values 105 or -2
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramLong(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -734,26 +634,12 @@ function _paramLong(scenario, value, options, callback) {
 
 /**
  * Get a response with header value "value": 105 or -2
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseLong(scenario, options, callback) {
    /* jshint validthis: true */
@@ -837,30 +723,15 @@ function _responseLong(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "positive", "value": 0.07
- * or "scenario": "negative", "value": -3.0
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * Send a post request with header values "scenario": "positive", "value": 0.07 or "scenario":
+ * "negative", "value": -3.0
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {number} value Send a post request with header values 0.07 or -3.0
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramFloat(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -951,26 +822,12 @@ function _paramFloat(scenario, value, options, callback) {
 
 /**
  * Get a response with header value "value": 0.07 or -3.0
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseFloat(scenario, options, callback) {
    /* jshint validthis: true */
@@ -1054,30 +911,15 @@ function _responseFloat(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "positive", "value":
- * 7e120 or "scenario": "negative", "value": -3.0
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * Send a post request with header values "scenario": "positive", "value": 7e120 or "scenario":
+ * "negative", "value": -3.0
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {number} value Send a post request with header values 7e120 or -3.0
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramDouble(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -1168,26 +1010,12 @@ function _paramDouble(scenario, value, options, callback) {
 
 /**
  * Get a response with header value "value": 7e120 or -3.0
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "positive" or "negative"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "positive" or
+ * "negative"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseDouble(scenario, options, callback) {
    /* jshint validthis: true */
@@ -1271,30 +1099,14 @@ function _responseDouble(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "true", "value": true or
- * "scenario": "false", "value": false
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "true" or "false"
- *
+ * Send a post request with header values "scenario": "true", "value": true or "scenario": "false",
+ * "value": false
+ * @param {string} scenario Send a post request with header values "scenario": "true" or "false"
  * @param {boolean} value Send a post request with header values true or false
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramBool(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -1385,26 +1197,11 @@ function _paramBool(scenario, value, options, callback) {
 
 /**
  * Get a response with header value "value": true or false
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "true" or "false"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "true" or "false"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseBool(scenario, options, callback) {
    /* jshint validthis: true */
@@ -1488,32 +1285,16 @@ function _responseBool(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "valid", "value": "The
- * quick brown fox jumps over the lazy dog" or "scenario": "null", "value":
- * null or "scenario": "empty", "value": ""
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "null" or "empty"
- *
+ * Send a post request with header values "scenario": "valid", "value": "The quick brown fox jumps
+ * over the lazy dog" or "scenario": "null", "value": null or "scenario": "empty", "value": ""
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+ * "empty"
  * @param {object} [options] Optional Parameters.
- *
- * @param {string} [options.value] Send a post request with header values "The
- * quick brown fox jumps over the lazy dog" or null or ""
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} [options.value] Send a post request with header values "The quick brown fox
+ * jumps over the lazy dog" or null or ""
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramString(scenario, options, callback) {
    /* jshint validthis: true */
@@ -1604,28 +1385,13 @@ function _paramString(scenario, options, callback) {
 }
 
 /**
- * Get a response with header values "The quick brown fox jumps over the lazy
- * dog" or null or ""
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "null" or "empty"
- *
+ * Get a response with header values "The quick brown fox jumps over the lazy dog" or null or ""
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+ * "empty"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseString(scenario, options, callback) {
    /* jshint validthis: true */
@@ -1709,31 +1475,14 @@ function _responseString(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "valid", "value":
- * "2010-01-01" or "scenario": "min", "value": "0001-01-01"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "min"
- *
- * @param {date} value Send a post request with header values "2010-01-01" or
- * "0001-01-01"
- *
+ * Send a post request with header values "scenario": "valid", "value": "2010-01-01" or "scenario":
+ * "min", "value": "0001-01-01"
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
+ * @param {date} value Send a post request with header values "2010-01-01" or "0001-01-01"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramDate(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -1825,26 +1574,11 @@ function _paramDate(scenario, value, options, callback) {
 
 /**
  * Get a response with header values "2010-01-01" or "0001-01-01"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "min"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseDate(scenario, options, callback) {
    /* jshint validthis: true */
@@ -1928,31 +1662,15 @@ function _responseDate(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "valid", "value":
- * "2010-01-01T12:34:56Z" or "scenario": "min", "value": "0001-01-01T00:00:00Z"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "min"
- *
- * @param {date} value Send a post request with header values
- * "2010-01-01T12:34:56Z" or "0001-01-01T00:00:00Z"
- *
+ * Send a post request with header values "scenario": "valid", "value": "2010-01-01T12:34:56Z" or
+ * "scenario": "min", "value": "0001-01-01T00:00:00Z"
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
+ * @param {date} value Send a post request with header values "2010-01-01T12:34:56Z" or
+ * "0001-01-01T00:00:00Z"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramDatetime(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -2043,28 +1761,12 @@ function _paramDatetime(scenario, value, options, callback) {
 }
 
 /**
- * Get a response with header values "2010-01-01T12:34:56Z" or
- * "0001-01-01T00:00:00Z"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "min"
- *
+ * Get a response with header values "2010-01-01T12:34:56Z" or "0001-01-01T00:00:00Z"
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseDatetime(scenario, options, callback) {
    /* jshint validthis: true */
@@ -2148,32 +1850,15 @@ function _responseDatetime(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "valid", "value": "Wed,
- * 01 Jan 2010 12:34:56 GMT" or "scenario": "min", "value": "Mon, 01 Jan 0001
- * 00:00:00 GMT"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "min"
- *
+ * Send a post request with header values "scenario": "valid", "value": "Wed, 01 Jan 2010 12:34:56
+ * GMT" or "scenario": "min", "value": "Mon, 01 Jan 0001 00:00:00 GMT"
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
  * @param {object} [options] Optional Parameters.
- *
- * @param {date} [options.value] Send a post request with header values "Wed,
- * 01 Jan 2010 12:34:56 GMT" or "Mon, 01 Jan 0001 00:00:00 GMT"
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {date} [options.value] Send a post request with header values "Wed, 01 Jan 2010 12:34:56
+ * GMT" or "Mon, 01 Jan 0001 00:00:00 GMT"
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramDatetimeRfc1123(scenario, options, callback) {
    /* jshint validthis: true */
@@ -2265,28 +1950,13 @@ function _paramDatetimeRfc1123(scenario, options, callback) {
 }
 
 /**
- * Get a response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or "Mon,
- * 01 Jan 0001 00:00:00 GMT"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "min"
- *
+ * Get a response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or "Mon, 01 Jan 0001 00:00:00
+ * GMT"
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseDatetimeRfc1123(scenario, options, callback) {
    /* jshint validthis: true */
@@ -2370,31 +2040,13 @@ function _responseDatetimeRfc1123(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "valid", "value":
- * "P123DT22H14M12.011S"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid"
- *
- * @param {moment.duration} value Send a post request with header values
- * "P123DT22H14M12.011S"
- *
+ * Send a post request with header values "scenario": "valid", "value": "P123DT22H14M12.011S"
+ * @param {string} scenario Send a post request with header values "scenario": "valid"
+ * @param {moment.duration} value Send a post request with header values "P123DT22H14M12.011S"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramDuration(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -2485,26 +2137,11 @@ function _paramDuration(scenario, value, options, callback) {
 
 /**
  * Get a response with header values "P123DT22H14M12.011S"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "valid"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseDuration(scenario, options, callback) {
    /* jshint validthis: true */
@@ -2588,30 +2225,13 @@ function _responseDuration(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "valid", "value":
- * "啊齄丂狛狜隣郎隣兀﨩"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid"
- *
+ * Send a post request with header values "scenario": "valid", "value": "啊齄丂狛狜隣郎隣兀﨩"
+ * @param {string} scenario Send a post request with header values "scenario": "valid"
  * @param {buffer} value Send a post request with header values "啊齄丂狛狜隣郎隣兀﨩"
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramByte(scenario, value, options, callback) {
    /* jshint validthis: true */
@@ -2702,26 +2322,11 @@ function _paramByte(scenario, value, options, callback) {
 
 /**
  * Get a response with header values "啊齄丂狛狜隣郎隣兀﨩"
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "valid"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseByte(scenario, options, callback) {
    /* jshint validthis: true */
@@ -2805,31 +2410,16 @@ function _responseByte(scenario, options, callback) {
 }
 
 /**
- * Send a post request with header values "scenario": "valid", "value": "GREY"
- * or "scenario": "null", "value": null
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "null" or "empty"
- *
+ * Send a post request with header values "scenario": "valid", "value": "GREY" or "scenario":
+ * "null", "value": null
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+ * "empty"
  * @param {object} [options] Optional Parameters.
- *
- * @param {string} [options.value] Send a post request with header values
- * 'GREY'. Possible values include: 'White', 'black', 'GREY'
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} [options.value] Send a post request with header values 'GREY'. Possible values
+ * include: 'White', 'black', 'GREY'
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _paramEnum(scenario, options, callback) {
    /* jshint validthis: true */
@@ -2924,26 +2514,12 @@ function _paramEnum(scenario, options, callback) {
 
 /**
  * Get a response with header values "GREY" or null
- *
- * @param {string} scenario Send a post request with header values "scenario":
- * "valid" or "null" or "empty"
- *
+ * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+ * "empty"
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _responseEnum(scenario, options, callback) {
    /* jshint validthis: true */
@@ -3027,25 +2603,11 @@ function _responseEnum(scenario, options, callback) {
 }
 
 /**
- * Send x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
- * header of the request
- *
+ * Send x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _customRequestId(options, callback) {
    /* jshint validthis: true */
@@ -3158,20 +2720,10 @@ class Header {
 
   /**
    * Send a post request with header value "User-Agent": "overwrite"
-   *
-   * @param {string} userAgent Send a post request with header value
-   * "User-Agent": "overwrite"
-   *
+   * @param {string} userAgent Send a post request with header value "User-Agent": "overwrite"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramExistingKeyWithHttpOperationResponse(userAgent, options) {
     let client = this.client;
@@ -3189,35 +2741,12 @@ class Header {
 
   /**
    * Send a post request with header value "User-Agent": "overwrite"
-   *
-   * @param {string} userAgent Send a post request with header value
-   * "User-Agent": "overwrite"
-   *
+   * @param {string} userAgent Send a post request with header value "User-Agent": "overwrite"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramExistingKey(userAgent, options, optionalCallback) {
     let client = this.client;
@@ -3241,17 +2770,9 @@ class Header {
 
   /**
    * Get a response with header value "User-Agent": "overwrite"
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseExistingKeyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3269,32 +2790,11 @@ class Header {
 
   /**
    * Get a response with header value "User-Agent": "overwrite"
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseExistingKey(options, optionalCallback) {
     let client = this.client;
@@ -3318,20 +2818,10 @@ class Header {
 
   /**
    * Send a post request with header value "Content-Type": "text/html"
-   *
-   * @param {string} contentType Send a post request with header value
-   * "Content-Type": "text/html"
-   *
+   * @param {string} contentType Send a post request with header value "Content-Type": "text/html"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramProtectedKeyWithHttpOperationResponse(contentType, options) {
     let client = this.client;
@@ -3349,35 +2839,12 @@ class Header {
 
   /**
    * Send a post request with header value "Content-Type": "text/html"
-   *
-   * @param {string} contentType Send a post request with header value
-   * "Content-Type": "text/html"
-   *
+   * @param {string} contentType Send a post request with header value "Content-Type": "text/html"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramProtectedKey(contentType, options, optionalCallback) {
     let client = this.client;
@@ -3401,17 +2868,9 @@ class Header {
 
   /**
    * Get a response with header value "Content-Type": "text/html"
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseProtectedKeyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3429,32 +2888,11 @@ class Header {
 
   /**
    * Get a response with header value "Content-Type": "text/html"
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseProtectedKey(options, optionalCallback) {
     let client = this.client;
@@ -3477,24 +2915,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value": 1 or
-   * "scenario": "negative", "value": -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 1 or "scenario":
+   * "negative", "value": -2
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 1 or -2
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramIntegerWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -3511,39 +2939,16 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value": 1 or
-   * "scenario": "negative", "value": -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 1 or "scenario":
+   * "negative", "value": -2
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 1 or -2
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramInteger(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -3567,20 +2972,11 @@ class Header {
 
   /**
    * Get a response with header value "value": 1 or -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseIntegerWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -3598,35 +2994,13 @@ class Header {
 
   /**
    * Get a response with header value "value": 1 or -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseInteger(scenario, options, optionalCallback) {
     let client = this.client;
@@ -3649,24 +3023,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value": 105
-   * or "scenario": "negative", "value": -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 105 or "scenario":
+   * "negative", "value": -2
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 105 or -2
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramLongWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -3683,39 +3047,16 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value": 105
-   * or "scenario": "negative", "value": -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 105 or "scenario":
+   * "negative", "value": -2
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 105 or -2
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramLong(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -3739,20 +3080,11 @@ class Header {
 
   /**
    * Get a response with header value "value": 105 or -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseLongWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -3770,35 +3102,13 @@ class Header {
 
   /**
    * Get a response with header value "value": 105 or -2
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseLong(scenario, options, optionalCallback) {
     let client = this.client;
@@ -3821,24 +3131,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value": 0.07
-   * or "scenario": "negative", "value": -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 0.07 or "scenario":
+   * "negative", "value": -3.0
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 0.07 or -3.0
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramFloatWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -3855,39 +3155,16 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value": 0.07
-   * or "scenario": "negative", "value": -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 0.07 or "scenario":
+   * "negative", "value": -3.0
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 0.07 or -3.0
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramFloat(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -3911,20 +3188,11 @@ class Header {
 
   /**
    * Get a response with header value "value": 0.07 or -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseFloatWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -3942,35 +3210,13 @@ class Header {
 
   /**
    * Get a response with header value "value": 0.07 or -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseFloat(scenario, options, optionalCallback) {
     let client = this.client;
@@ -3993,24 +3239,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value":
-   * 7e120 or "scenario": "negative", "value": -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 7e120 or "scenario":
+   * "negative", "value": -3.0
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 7e120 or -3.0
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramDoubleWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -4027,39 +3263,16 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "positive", "value":
-   * 7e120 or "scenario": "negative", "value": -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * Send a post request with header values "scenario": "positive", "value": 7e120 or "scenario":
+   * "negative", "value": -3.0
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {number} value Send a post request with header values 7e120 or -3.0
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramDouble(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -4083,20 +3296,11 @@ class Header {
 
   /**
    * Get a response with header value "value": 7e120 or -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseDoubleWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4114,35 +3318,13 @@ class Header {
 
   /**
    * Get a response with header value "value": 7e120 or -3.0
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "positive" or "negative"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "positive" or
+   * "negative"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseDouble(scenario, options, optionalCallback) {
     let client = this.client;
@@ -4165,24 +3347,13 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "true", "value": true or
-   * "scenario": "false", "value": false
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "true" or "false"
-   *
+   * Send a post request with header values "scenario": "true", "value": true or "scenario": "false",
+   * "value": false
+   * @param {string} scenario Send a post request with header values "scenario": "true" or "false"
    * @param {boolean} value Send a post request with header values true or false
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramBoolWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -4199,39 +3370,15 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "true", "value": true or
-   * "scenario": "false", "value": false
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "true" or "false"
-   *
+   * Send a post request with header values "scenario": "true", "value": true or "scenario": "false",
+   * "value": false
+   * @param {string} scenario Send a post request with header values "scenario": "true" or "false"
    * @param {boolean} value Send a post request with header values true or false
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramBool(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -4255,20 +3402,10 @@ class Header {
 
   /**
    * Get a response with header value "value": true or false
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "true" or "false"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "true" or "false"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseBoolWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4286,35 +3423,12 @@ class Header {
 
   /**
    * Get a response with header value "value": true or false
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "true" or "false"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "true" or "false"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseBool(scenario, options, optionalCallback) {
     let client = this.client;
@@ -4337,26 +3451,15 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value": "The
-   * quick brown fox jumps over the lazy dog" or "scenario": "null", "value":
-   * null or "scenario": "empty", "value": ""
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "The quick brown fox jumps
+   * over the lazy dog" or "scenario": "null", "value": null or "scenario": "empty", "value": ""
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.value] Send a post request with header values "The
-   * quick brown fox jumps over the lazy dog" or null or ""
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} [options.value] Send a post request with header values "The quick brown fox
+   * jumps over the lazy dog" or null or ""
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramStringWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4373,41 +3476,17 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value": "The
-   * quick brown fox jumps over the lazy dog" or "scenario": "null", "value":
-   * null or "scenario": "empty", "value": ""
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "The quick brown fox jumps
+   * over the lazy dog" or "scenario": "null", "value": null or "scenario": "empty", "value": ""
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.value] Send a post request with header values "The
-   * quick brown fox jumps over the lazy dog" or null or ""
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.value] Send a post request with header values "The quick brown fox
+   * jumps over the lazy dog" or null or ""
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramString(scenario, options, optionalCallback) {
     let client = this.client;
@@ -4430,22 +3509,12 @@ class Header {
   }
 
   /**
-   * Get a response with header values "The quick brown fox jumps over the lazy
-   * dog" or null or ""
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * Get a response with header values "The quick brown fox jumps over the lazy dog" or null or ""
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseStringWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4462,37 +3531,14 @@ class Header {
   }
 
   /**
-   * Get a response with header values "The quick brown fox jumps over the lazy
-   * dog" or null or ""
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * Get a response with header values "The quick brown fox jumps over the lazy dog" or null or ""
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseString(scenario, options, optionalCallback) {
     let client = this.client;
@@ -4515,25 +3561,13 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "2010-01-01" or "scenario": "min", "value": "0001-01-01"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
-   * @param {date} value Send a post request with header values "2010-01-01" or
-   * "0001-01-01"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "2010-01-01" or "scenario":
+   * "min", "value": "0001-01-01"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
+   * @param {date} value Send a post request with header values "2010-01-01" or "0001-01-01"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramDateWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -4550,40 +3584,15 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "2010-01-01" or "scenario": "min", "value": "0001-01-01"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
-   * @param {date} value Send a post request with header values "2010-01-01" or
-   * "0001-01-01"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "2010-01-01" or "scenario":
+   * "min", "value": "0001-01-01"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
+   * @param {date} value Send a post request with header values "2010-01-01" or "0001-01-01"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramDate(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -4607,20 +3616,10 @@ class Header {
 
   /**
    * Get a response with header values "2010-01-01" or "0001-01-01"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseDateWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4638,35 +3637,12 @@ class Header {
 
   /**
    * Get a response with header values "2010-01-01" or "0001-01-01"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseDate(scenario, options, optionalCallback) {
     let client = this.client;
@@ -4689,25 +3665,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "2010-01-01T12:34:56Z" or "scenario": "min", "value": "0001-01-01T00:00:00Z"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
-   * @param {date} value Send a post request with header values
-   * "2010-01-01T12:34:56Z" or "0001-01-01T00:00:00Z"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "2010-01-01T12:34:56Z" or
+   * "scenario": "min", "value": "0001-01-01T00:00:00Z"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
+   * @param {date} value Send a post request with header values "2010-01-01T12:34:56Z" or
+   * "0001-01-01T00:00:00Z"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramDatetimeWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -4724,40 +3689,16 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "2010-01-01T12:34:56Z" or "scenario": "min", "value": "0001-01-01T00:00:00Z"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
-   * @param {date} value Send a post request with header values
-   * "2010-01-01T12:34:56Z" or "0001-01-01T00:00:00Z"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "2010-01-01T12:34:56Z" or
+   * "scenario": "min", "value": "0001-01-01T00:00:00Z"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
+   * @param {date} value Send a post request with header values "2010-01-01T12:34:56Z" or
+   * "0001-01-01T00:00:00Z"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramDatetime(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -4780,22 +3721,11 @@ class Header {
   }
 
   /**
-   * Get a response with header values "2010-01-01T12:34:56Z" or
-   * "0001-01-01T00:00:00Z"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * Get a response with header values "2010-01-01T12:34:56Z" or "0001-01-01T00:00:00Z"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseDatetimeWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4812,37 +3742,13 @@ class Header {
   }
 
   /**
-   * Get a response with header values "2010-01-01T12:34:56Z" or
-   * "0001-01-01T00:00:00Z"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * Get a response with header values "2010-01-01T12:34:56Z" or "0001-01-01T00:00:00Z"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseDatetime(scenario, options, optionalCallback) {
     let client = this.client;
@@ -4865,26 +3771,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value": "Wed,
-   * 01 Jan 2010 12:34:56 GMT" or "scenario": "min", "value": "Mon, 01 Jan 0001
-   * 00:00:00 GMT"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "Wed, 01 Jan 2010 12:34:56
+   * GMT" or "scenario": "min", "value": "Mon, 01 Jan 0001 00:00:00 GMT"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {date} [options.value] Send a post request with header values "Wed,
-   * 01 Jan 2010 12:34:56 GMT" or "Mon, 01 Jan 0001 00:00:00 GMT"
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {date} [options.value] Send a post request with header values "Wed, 01 Jan 2010 12:34:56
+   * GMT" or "Mon, 01 Jan 0001 00:00:00 GMT"
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramDatetimeRfc1123WithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4901,41 +3795,16 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value": "Wed,
-   * 01 Jan 2010 12:34:56 GMT" or "scenario": "min", "value": "Mon, 01 Jan 0001
-   * 00:00:00 GMT"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "Wed, 01 Jan 2010 12:34:56
+   * GMT" or "scenario": "min", "value": "Mon, 01 Jan 0001 00:00:00 GMT"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {date} [options.value] Send a post request with header values "Wed,
-   * 01 Jan 2010 12:34:56 GMT" or "Mon, 01 Jan 0001 00:00:00 GMT"
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {date} [options.value] Send a post request with header values "Wed, 01 Jan 2010 12:34:56
+   * GMT" or "Mon, 01 Jan 0001 00:00:00 GMT"
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramDatetimeRfc1123(scenario, options, optionalCallback) {
     let client = this.client;
@@ -4958,22 +3827,12 @@ class Header {
   }
 
   /**
-   * Get a response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or "Mon,
-   * 01 Jan 0001 00:00:00 GMT"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * Get a response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or "Mon, 01 Jan 0001 00:00:00
+   * GMT"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseDatetimeRfc1123WithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -4990,37 +3849,14 @@ class Header {
   }
 
   /**
-   * Get a response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or "Mon,
-   * 01 Jan 0001 00:00:00 GMT"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "min"
-   *
+   * Get a response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or "Mon, 01 Jan 0001 00:00:00
+   * GMT"
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "min"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseDatetimeRfc1123(scenario, options, optionalCallback) {
     let client = this.client;
@@ -5043,25 +3879,12 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "P123DT22H14M12.011S"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
-   * @param {moment.duration} value Send a post request with header values
-   * "P123DT22H14M12.011S"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "P123DT22H14M12.011S"
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
+   * @param {moment.duration} value Send a post request with header values "P123DT22H14M12.011S"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramDurationWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -5078,40 +3901,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "P123DT22H14M12.011S"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
-   * @param {moment.duration} value Send a post request with header values
-   * "P123DT22H14M12.011S"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "P123DT22H14M12.011S"
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
+   * @param {moment.duration} value Send a post request with header values "P123DT22H14M12.011S"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramDuration(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -5135,20 +3932,10 @@ class Header {
 
   /**
    * Get a response with header values "P123DT22H14M12.011S"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseDurationWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -5166,35 +3953,12 @@ class Header {
 
   /**
    * Get a response with header values "P123DT22H14M12.011S"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseDuration(scenario, options, optionalCallback) {
     let client = this.client;
@@ -5217,24 +3981,12 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "啊齄丂狛狜隣郎隣兀﨩"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "啊齄丂狛狜隣郎隣兀﨩"
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
    * @param {buffer} value Send a post request with header values "啊齄丂狛狜隣郎隣兀﨩"
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramByteWithHttpOperationResponse(scenario, value, options) {
     let client = this.client;
@@ -5251,39 +4003,14 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value":
-   * "啊齄丂狛狜隣郎隣兀﨩"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "啊齄丂狛狜隣郎隣兀﨩"
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
    * @param {buffer} value Send a post request with header values "啊齄丂狛狜隣郎隣兀﨩"
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramByte(scenario, value, options, optionalCallback) {
     let client = this.client;
@@ -5307,20 +4034,10 @@ class Header {
 
   /**
    * Get a response with header values "啊齄丂狛狜隣郎隣兀﨩"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseByteWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -5338,35 +4055,12 @@ class Header {
 
   /**
    * Get a response with header values "啊齄丂狛狜隣郎隣兀﨩"
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseByte(scenario, options, optionalCallback) {
     let client = this.client;
@@ -5389,25 +4083,15 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value": "GREY"
-   * or "scenario": "null", "value": null
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "GREY" or "scenario":
+   * "null", "value": null
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.value] Send a post request with header values
-   * 'GREY'. Possible values include: 'White', 'black', 'GREY'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} [options.value] Send a post request with header values 'GREY'. Possible values
+   * include: 'White', 'black', 'GREY'
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   paramEnumWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -5424,40 +4108,17 @@ class Header {
   }
 
   /**
-   * Send a post request with header values "scenario": "valid", "value": "GREY"
-   * or "scenario": "null", "value": null
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * Send a post request with header values "scenario": "valid", "value": "GREY" or "scenario":
+   * "null", "value": null
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.value] Send a post request with header values
-   * 'GREY'. Possible values include: 'White', 'black', 'GREY'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.value] Send a post request with header values 'GREY'. Possible values
+   * include: 'White', 'black', 'GREY'
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   paramEnum(scenario, options, optionalCallback) {
     let client = this.client;
@@ -5481,20 +4142,11 @@ class Header {
 
   /**
    * Get a response with header values "GREY" or null
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   responseEnumWithHttpOperationResponse(scenario, options) {
     let client = this.client;
@@ -5512,35 +4164,13 @@ class Header {
 
   /**
    * Get a response with header values "GREY" or null
-   *
-   * @param {string} scenario Send a post request with header values "scenario":
-   * "valid" or "null" or "empty"
-   *
+   * @param {string} scenario Send a post request with header values "scenario": "valid" or "null" or
+   * "empty"
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   responseEnum(scenario, options, optionalCallback) {
     let client = this.client;
@@ -5563,19 +4193,10 @@ class Header {
   }
 
   /**
-   * Send x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-   * header of the request
-   *
+   * Send x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   customRequestIdWithHttpOperationResponse(options) {
     let client = this.client;
@@ -5592,34 +4213,12 @@ class Header {
   }
 
   /**
-   * Send x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the
-   * header of the request
-   *
+   * Send x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in the header of the request
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   customRequestId(options, optionalCallback) {
     let client = this.client;

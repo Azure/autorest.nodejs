@@ -16,35 +16,15 @@ const WebResource = msRest.WebResource;
 
 /**
  * Post a bunch of required parameters grouped
- *
- * @param {object} parameterGroupingPostRequiredParameters Additional
- * parameters for the operation
- *
+ * @param {object} parameterGroupingPostRequiredParameters Additional parameters for the operation
  * @param {number} parameterGroupingPostRequiredParameters.body
- *
  * @param {string} [parameterGroupingPostRequiredParameters.customHeader]
- *
- * @param {number} [parameterGroupingPostRequiredParameters.query] Query
- * parameter with default
- *
+ * @param {number} [parameterGroupingPostRequiredParameters.query] Query parameter with default
  * @param {string} parameterGroupingPostRequiredParameters.path Path parameter
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequired(parameterGroupingPostRequiredParameters, options, callback) {
    /* jshint validthis: true */
@@ -202,32 +182,15 @@ function _postRequired(parameterGroupingPostRequiredParameters, options, callbac
 
 /**
  * Post a bunch of optional parameters grouped
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.parameterGroupingPostOptionalParameters] Additional
- * parameters for the operation
- *
- * @param {string}
- * [options.parameterGroupingPostOptionalParameters.customHeader]
- *
- * @param {number} [options.parameterGroupingPostOptionalParameters.query]
- * Query parameter with default
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.parameterGroupingPostOptionalParameters] Additional parameters for the
+ * operation
+ * @param {string} [options.parameterGroupingPostOptionalParameters.customHeader]
+ * @param {number} [options.parameterGroupingPostOptionalParameters.query] Query parameter with
+ * default
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptional(options, callback) {
    /* jshint validthis: true */
@@ -346,42 +309,18 @@ function _postOptional(options, callback) {
 
 /**
  * Post parameters from multiple different parameter groups
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.firstParameterGroup] Additional parameters for the
- * operation
- *
+ * @param {object} [options.firstParameterGroup] Additional parameters for the operation
  * @param {string} [options.firstParameterGroup.headerOne]
- *
- * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
- * default
- *
- * @param {object}
- * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
+ * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+ * @param {object} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
  * parameters for the operation
- *
- * @param {string}
- * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
- *
- * @param {number}
- * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo]
- * Query parameter with default
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
+ * @param {number} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo] Query
+ * parameter with default
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postMultiParamGroups(options, callback) {
    /* jshint validthis: true */
@@ -523,31 +462,13 @@ function _postMultiParamGroups(options, callback) {
 
 /**
  * Post parameters with a shared parameter group object
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.firstParameterGroup] Additional parameters for the
- * operation
- *
+ * @param {object} [options.firstParameterGroup] Additional parameters for the operation
  * @param {string} [options.firstParameterGroup.headerOne]
- *
- * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
- * default
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postSharedParameterGroupObject(options, callback) {
    /* jshint validthis: true */
@@ -680,29 +601,14 @@ class ParameterGrouping {
 
   /**
    * Post a bunch of required parameters grouped
-   *
-   * @param {object} parameterGroupingPostRequiredParameters Additional
-   * parameters for the operation
-   *
+   * @param {object} parameterGroupingPostRequiredParameters Additional parameters for the operation
    * @param {number} parameterGroupingPostRequiredParameters.body
-   *
    * @param {string} [parameterGroupingPostRequiredParameters.customHeader]
-   *
-   * @param {number} [parameterGroupingPostRequiredParameters.query] Query
-   * parameter with default
-   *
+   * @param {number} [parameterGroupingPostRequiredParameters.query] Query parameter with default
    * @param {string} parameterGroupingPostRequiredParameters.path Path parameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredWithHttpOperationResponse(parameterGroupingPostRequiredParameters, options) {
     let client = this.client;
@@ -720,44 +626,16 @@ class ParameterGrouping {
 
   /**
    * Post a bunch of required parameters grouped
-   *
-   * @param {object} parameterGroupingPostRequiredParameters Additional
-   * parameters for the operation
-   *
+   * @param {object} parameterGroupingPostRequiredParameters Additional parameters for the operation
    * @param {number} parameterGroupingPostRequiredParameters.body
-   *
    * @param {string} [parameterGroupingPostRequiredParameters.customHeader]
-   *
-   * @param {number} [parameterGroupingPostRequiredParameters.query] Query
-   * parameter with default
-   *
+   * @param {number} [parameterGroupingPostRequiredParameters.query] Query parameter with default
    * @param {string} parameterGroupingPostRequiredParameters.path Path parameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequired(parameterGroupingPostRequiredParameters, options, optionalCallback) {
     let client = this.client;
@@ -781,26 +659,14 @@ class ParameterGrouping {
 
   /**
    * Post a bunch of optional parameters grouped
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.parameterGroupingPostOptionalParameters] Additional
-   * parameters for the operation
-   *
-   * @param {string}
-   * [options.parameterGroupingPostOptionalParameters.customHeader]
-   *
-   * @param {number} [options.parameterGroupingPostOptionalParameters.query]
-   * Query parameter with default
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.parameterGroupingPostOptionalParameters] Additional parameters for the
+   * operation
+   * @param {string} [options.parameterGroupingPostOptionalParameters.customHeader]
+   * @param {number} [options.parameterGroupingPostOptionalParameters.query] Query parameter with
+   * default
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalWithHttpOperationResponse(options) {
     let client = this.client;
@@ -818,41 +684,16 @@ class ParameterGrouping {
 
   /**
    * Post a bunch of optional parameters grouped
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.parameterGroupingPostOptionalParameters] Additional
-   * parameters for the operation
-   *
-   * @param {string}
-   * [options.parameterGroupingPostOptionalParameters.customHeader]
-   *
-   * @param {number} [options.parameterGroupingPostOptionalParameters.query]
-   * Query parameter with default
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.parameterGroupingPostOptionalParameters] Additional parameters for the
+   * operation
+   * @param {string} [options.parameterGroupingPostOptionalParameters.customHeader]
+   * @param {number} [options.parameterGroupingPostOptionalParameters.query] Query parameter with
+   * default
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptional(options, optionalCallback) {
     let client = this.client;
@@ -876,36 +717,17 @@ class ParameterGrouping {
 
   /**
    * Post parameters from multiple different parameter groups
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.firstParameterGroup] Additional parameters for the
-   * operation
-   *
+   * @param {object} [options.firstParameterGroup] Additional parameters for the operation
    * @param {string} [options.firstParameterGroup.headerOne]
-   *
-   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-   * default
-   *
-   * @param {object}
-   * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
+   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+   * @param {object} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
    * parameters for the operation
-   *
-   * @param {string}
-   * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
-   *
-   * @param {number}
-   * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo]
-   * Query parameter with default
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
+   * @param {number} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo] Query
+   * parameter with default
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postMultiParamGroupsWithHttpOperationResponse(options) {
     let client = this.client;
@@ -923,51 +745,19 @@ class ParameterGrouping {
 
   /**
    * Post parameters from multiple different parameter groups
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.firstParameterGroup] Additional parameters for the
-   * operation
-   *
+   * @param {object} [options.firstParameterGroup] Additional parameters for the operation
    * @param {string} [options.firstParameterGroup.headerOne]
-   *
-   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-   * default
-   *
-   * @param {object}
-   * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
+   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+   * @param {object} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
    * parameters for the operation
-   *
-   * @param {string}
-   * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
-   *
-   * @param {number}
-   * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo]
-   * Query parameter with default
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
+   * @param {number} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo] Query
+   * parameter with default
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postMultiParamGroups(options, optionalCallback) {
     let client = this.client;
@@ -991,25 +781,12 @@ class ParameterGrouping {
 
   /**
    * Post parameters with a shared parameter group object
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.firstParameterGroup] Additional parameters for the
-   * operation
-   *
+   * @param {object} [options.firstParameterGroup] Additional parameters for the operation
    * @param {string} [options.firstParameterGroup.headerOne]
-   *
-   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-   * default
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postSharedParameterGroupObjectWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1027,40 +804,14 @@ class ParameterGrouping {
 
   /**
    * Post parameters with a shared parameter group object
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.firstParameterGroup] Additional parameters for the
-   * operation
-   *
+   * @param {object} [options.firstParameterGroup] Additional parameters for the operation
    * @param {string} [options.firstParameterGroup.headerOne]
-   *
-   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-   * default
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postSharedParameterGroupObject(options, optionalCallback) {
     let client = this.client;

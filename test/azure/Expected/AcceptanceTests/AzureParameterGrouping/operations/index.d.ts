@@ -23,72 +23,29 @@ export interface ParameterGrouping {
 
     /**
      * Post a bunch of required parameters grouped
-     *
-     * @param {object} parameterGroupingPostRequiredParameters Additional
-     * parameters for the operation
-     *
+     * @param {object} parameterGroupingPostRequiredParameters Additional parameters for the operation
      * @param {number} parameterGroupingPostRequiredParameters.body
-     *
      * @param {string} [parameterGroupingPostRequiredParameters.customHeader]
-     *
-     * @param {number} [parameterGroupingPostRequiredParameters.query] Query
-     * parameter with default
-     *
+     * @param {number} [parameterGroupingPostRequiredParameters.query] Query parameter with default
      * @param {string} parameterGroupingPostRequiredParameters.path Path parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postRequiredWithHttpOperationResponse(parameterGroupingPostRequiredParameters: models.ParameterGroupingPostRequiredParameters, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Post a bunch of required parameters grouped
-     *
-     * @param {object} parameterGroupingPostRequiredParameters Additional
-     * parameters for the operation
-     *
+     * @param {object} parameterGroupingPostRequiredParameters Additional parameters for the operation
      * @param {number} parameterGroupingPostRequiredParameters.body
-     *
      * @param {string} [parameterGroupingPostRequiredParameters.customHeader]
-     *
-     * @param {number} [parameterGroupingPostRequiredParameters.query] Query
-     * parameter with default
-     *
+     * @param {number} [parameterGroupingPostRequiredParameters.query] Query parameter with default
      * @param {string} parameterGroupingPostRequiredParameters.path Path parameter
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postRequired(parameterGroupingPostRequiredParameters: models.ParameterGroupingPostRequiredParameters, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postRequired(parameterGroupingPostRequiredParameters: models.ParameterGroupingPostRequiredParameters, callback: ServiceCallback<void>): void;
@@ -97,66 +54,29 @@ export interface ParameterGrouping {
 
     /**
      * Post a bunch of optional parameters grouped
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.parameterGroupingPostOptionalParameters] Additional
-     * parameters for the operation
-     *
-     * @param {string}
-     * [options.parameterGroupingPostOptionalParameters.customHeader]
-     *
-     * @param {number} [options.parameterGroupingPostOptionalParameters.query]
-     * Query parameter with default
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.parameterGroupingPostOptionalParameters] Additional parameters for the
+     * operation
+     * @param {string} [options.parameterGroupingPostOptionalParameters.customHeader]
+     * @param {number} [options.parameterGroupingPostOptionalParameters.query] Query parameter with
+     * default
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postOptionalWithHttpOperationResponse(options?: { parameterGroupingPostOptionalParameters? : models.ParameterGroupingPostOptionalParameters, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Post a bunch of optional parameters grouped
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.parameterGroupingPostOptionalParameters] Additional
-     * parameters for the operation
-     *
-     * @param {string}
-     * [options.parameterGroupingPostOptionalParameters.customHeader]
-     *
-     * @param {number} [options.parameterGroupingPostOptionalParameters.query]
-     * Query parameter with default
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.parameterGroupingPostOptionalParameters] Additional parameters for the
+     * operation
+     * @param {string} [options.parameterGroupingPostOptionalParameters.customHeader]
+     * @param {number} [options.parameterGroupingPostOptionalParameters.query] Query parameter with
+     * default
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postOptional(options?: { parameterGroupingPostOptionalParameters? : models.ParameterGroupingPostOptionalParameters, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postOptional(callback: ServiceCallback<void>): void;
@@ -165,86 +85,35 @@ export interface ParameterGrouping {
 
     /**
      * Post parameters from multiple different parameter groups
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.firstParameterGroup] Additional parameters for the
-     * operation
-     *
+     * @param {object} [options.firstParameterGroup] Additional parameters for the operation
      * @param {string} [options.firstParameterGroup.headerOne]
-     *
-     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-     * default
-     *
-     * @param {object}
-     * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
+     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+     * @param {object} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
      * parameters for the operation
-     *
-     * @param {string}
-     * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
-     *
-     * @param {number}
-     * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo]
-     * Query parameter with default
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {string} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
+     * @param {number} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo] Query
+     * parameter with default
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postMultiParamGroupsWithHttpOperationResponse(options?: { firstParameterGroup? : models.FirstParameterGroup, parameterGroupingPostMultiParamGroupsSecondParamGroup? : models.ParameterGroupingPostMultiParamGroupsSecondParamGroup, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Post parameters from multiple different parameter groups
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.firstParameterGroup] Additional parameters for the
-     * operation
-     *
+     * @param {object} [options.firstParameterGroup] Additional parameters for the operation
      * @param {string} [options.firstParameterGroup.headerOne]
-     *
-     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-     * default
-     *
-     * @param {object}
-     * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
+     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+     * @param {object} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup] Additional
      * parameters for the operation
-     *
-     * @param {string}
-     * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
-     *
-     * @param {number}
-     * [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo]
-     * Query parameter with default
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {string} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo]
+     * @param {number} [options.parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo] Query
+     * parameter with default
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postMultiParamGroups(options?: { firstParameterGroup? : models.FirstParameterGroup, parameterGroupingPostMultiParamGroupsSecondParamGroup? : models.ParameterGroupingPostMultiParamGroupsSecondParamGroup, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postMultiParamGroups(callback: ServiceCallback<void>): void;
@@ -253,64 +122,25 @@ export interface ParameterGrouping {
 
     /**
      * Post parameters with a shared parameter group object
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.firstParameterGroup] Additional parameters for the
-     * operation
-     *
+     * @param {object} [options.firstParameterGroup] Additional parameters for the operation
      * @param {string} [options.firstParameterGroup.headerOne]
-     *
-     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-     * default
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postSharedParameterGroupObjectWithHttpOperationResponse(options?: { firstParameterGroup? : models.FirstParameterGroup, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Post parameters with a shared parameter group object
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.firstParameterGroup] Additional parameters for the
-     * operation
-     *
+     * @param {object} [options.firstParameterGroup] Additional parameters for the operation
      * @param {string} [options.firstParameterGroup.headerOne]
-     *
-     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with
-     * default
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {number} [options.firstParameterGroup.queryOne] Query parameter with default
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postSharedParameterGroupObject(options?: { firstParameterGroup? : models.FirstParameterGroup, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postSharedParameterGroupObject(callback: ServiceCallback<void>): void;

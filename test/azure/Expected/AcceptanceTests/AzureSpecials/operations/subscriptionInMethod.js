@@ -15,28 +15,14 @@ const msRestAzure = require('ms-rest-azure');
 const WebResource = msRest.WebResource;
 
 /**
- * POST method with subscriptionId modeled in the method.  pass in subscription
- * id = '1234-5678-9012-3456' to succeed
- *
- * @param {string} subscriptionId This should appear as a method parameter, use
- * value '1234-5678-9012-3456'
- *
+ * POST method with subscriptionId modeled in the method.  pass in subscription id =
+ * '1234-5678-9012-3456' to succeed
+ * @param {string} subscriptionId This should appear as a method parameter, use value
+ * '1234-5678-9012-3456'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postMethodLocalValid(subscriptionId, options, callback) {
    /* jshint validthis: true */
@@ -131,28 +117,14 @@ function _postMethodLocalValid(subscriptionId, options, callback) {
 }
 
 /**
- * POST method with subscriptionId modeled in the method.  pass in subscription
- * id = null, client-side validation should prevent you from making this call
- *
- * @param {string} subscriptionId This should appear as a method parameter, use
- * value null, client-side validation should prvenet the call
- *
+ * POST method with subscriptionId modeled in the method.  pass in subscription id = null,
+ * client-side validation should prevent you from making this call
+ * @param {string} subscriptionId This should appear as a method parameter, use value null,
+ * client-side validation should prvenet the call
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postMethodLocalNull(subscriptionId, options, callback) {
    /* jshint validthis: true */
@@ -247,28 +219,14 @@ function _postMethodLocalNull(subscriptionId, options, callback) {
 }
 
 /**
- * POST method with subscriptionId modeled in the method.  pass in subscription
- * id = '1234-5678-9012-3456' to succeed
- *
- * @param {string} subscriptionId Should appear as a method parameter -use
- * value '1234-5678-9012-3456'
- *
+ * POST method with subscriptionId modeled in the method.  pass in subscription id =
+ * '1234-5678-9012-3456' to succeed
+ * @param {string} subscriptionId Should appear as a method parameter -use value
+ * '1234-5678-9012-3456'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postPathLocalValid(subscriptionId, options, callback) {
    /* jshint validthis: true */
@@ -363,28 +321,14 @@ function _postPathLocalValid(subscriptionId, options, callback) {
 }
 
 /**
- * POST method with subscriptionId modeled in the method.  pass in subscription
- * id = '1234-5678-9012-3456' to succeed
- *
- * @param {string} subscriptionId The subscriptionId, which appears in the
- * path, the value is always '1234-5678-9012-3456'
- *
+ * POST method with subscriptionId modeled in the method.  pass in subscription id =
+ * '1234-5678-9012-3456' to succeed
+ * @param {string} subscriptionId The subscriptionId, which appears in the path, the value is
+ * always '1234-5678-9012-3456'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postSwaggerLocalValid(subscriptionId, options, callback) {
    /* jshint validthis: true */
@@ -493,22 +437,13 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = '1234-5678-9012-3456' to succeed
-   *
-   * @param {string} subscriptionId This should appear as a method parameter, use
-   * value '1234-5678-9012-3456'
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id =
+   * '1234-5678-9012-3456' to succeed
+   * @param {string} subscriptionId This should appear as a method parameter, use value
+   * '1234-5678-9012-3456'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postMethodLocalValidWithHttpOperationResponse(subscriptionId, options) {
     let client = this.client;
@@ -525,37 +460,15 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = '1234-5678-9012-3456' to succeed
-   *
-   * @param {string} subscriptionId This should appear as a method parameter, use
-   * value '1234-5678-9012-3456'
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id =
+   * '1234-5678-9012-3456' to succeed
+   * @param {string} subscriptionId This should appear as a method parameter, use value
+   * '1234-5678-9012-3456'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postMethodLocalValid(subscriptionId, options, optionalCallback) {
     let client = this.client;
@@ -578,22 +491,13 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = null, client-side validation should prevent you from making this call
-   *
-   * @param {string} subscriptionId This should appear as a method parameter, use
-   * value null, client-side validation should prvenet the call
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id = null,
+   * client-side validation should prevent you from making this call
+   * @param {string} subscriptionId This should appear as a method parameter, use value null,
+   * client-side validation should prvenet the call
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postMethodLocalNullWithHttpOperationResponse(subscriptionId, options) {
     let client = this.client;
@@ -610,37 +514,15 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = null, client-side validation should prevent you from making this call
-   *
-   * @param {string} subscriptionId This should appear as a method parameter, use
-   * value null, client-side validation should prvenet the call
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id = null,
+   * client-side validation should prevent you from making this call
+   * @param {string} subscriptionId This should appear as a method parameter, use value null,
+   * client-side validation should prvenet the call
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postMethodLocalNull(subscriptionId, options, optionalCallback) {
     let client = this.client;
@@ -663,22 +545,13 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = '1234-5678-9012-3456' to succeed
-   *
-   * @param {string} subscriptionId Should appear as a method parameter -use
-   * value '1234-5678-9012-3456'
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id =
+   * '1234-5678-9012-3456' to succeed
+   * @param {string} subscriptionId Should appear as a method parameter -use value
+   * '1234-5678-9012-3456'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postPathLocalValidWithHttpOperationResponse(subscriptionId, options) {
     let client = this.client;
@@ -695,37 +568,15 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = '1234-5678-9012-3456' to succeed
-   *
-   * @param {string} subscriptionId Should appear as a method parameter -use
-   * value '1234-5678-9012-3456'
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id =
+   * '1234-5678-9012-3456' to succeed
+   * @param {string} subscriptionId Should appear as a method parameter -use value
+   * '1234-5678-9012-3456'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postPathLocalValid(subscriptionId, options, optionalCallback) {
     let client = this.client;
@@ -748,22 +599,13 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = '1234-5678-9012-3456' to succeed
-   *
-   * @param {string} subscriptionId The subscriptionId, which appears in the
-   * path, the value is always '1234-5678-9012-3456'
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id =
+   * '1234-5678-9012-3456' to succeed
+   * @param {string} subscriptionId The subscriptionId, which appears in the path, the value is
+   * always '1234-5678-9012-3456'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postSwaggerLocalValidWithHttpOperationResponse(subscriptionId, options) {
     let client = this.client;
@@ -780,37 +622,15 @@ class SubscriptionInMethod {
   }
 
   /**
-   * POST method with subscriptionId modeled in the method.  pass in subscription
-   * id = '1234-5678-9012-3456' to succeed
-   *
-   * @param {string} subscriptionId The subscriptionId, which appears in the
-   * path, the value is always '1234-5678-9012-3456'
-   *
+   * POST method with subscriptionId modeled in the method.  pass in subscription id =
+   * '1234-5678-9012-3456' to succeed
+   * @param {string} subscriptionId The subscriptionId, which appears in the path, the value is
+   * always '1234-5678-9012-3456'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postSwaggerLocalValid(subscriptionId, options, optionalCallback) {
     let client = this.client;

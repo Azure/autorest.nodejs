@@ -16,33 +16,15 @@ const WebResource = msRest.WebResource;
 
 /**
  * Checks that account name is valid and is not in use.
- *
- * @param {object} accountName The name of the storage account within the
- * specified resource group. Storage account names must be between 3 and 24
- * characters in length and use numbers and lower-case letters only.
- *
+ * @param {object} accountName The name of the storage account within the specified resource group.
+ * Storage account names must be between 3 and 24 characters in length and use numbers and
+ * lower-case letters only.
  * @param {string} accountName.name
- *
  * @param {string} [accountName.type]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link CheckNameAvailabilityResult} for more
- *                      information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _checkNameAvailability(accountName, options, callback) {
    /* jshint validthis: true */
@@ -175,47 +157,23 @@ function _checkNameAvailability(accountName, options, callback) {
 
 
 /**
- * Asynchronously creates a new storage account with the specified parameters.
- * Existing accounts cannot be updated with this API and should instead use the
- * Update Storage Account API. If an account is already created and subsequent
- * PUT request is issued with exact same set of properties, then HTTP 200 would
- * be returned.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
- * @param {string} accountName The name of the storage account within the
- * specified resource group. Storage account names must be between 3 and 24
- * characters in length and use numbers and lower-case letters only.
- *
- * @param {object} parameters The parameters to provide for the created
- * account.
- *
- * @param {string} [parameters.accountType] Gets or sets the account type.
- * Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS',
- * 'Standard_RAGRS', 'Premium_LRS'
- *
+ * Asynchronously creates a new storage account with the specified parameters. Existing accounts
+ * cannot be updated with this API and should instead use the Update Storage Account API. If an
+ * account is already created and subsequent PUT request is issued with exact same set of
+ * properties, then HTTP 200 would be returned.
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+ * @param {string} accountName The name of the storage account within the specified resource group.
+ * Storage account names must be between 3 and 24 characters in length and use numbers and
+ * lower-case letters only.
+ * @param {object} parameters The parameters to provide for the created account.
+ * @param {string} [parameters.accountType] Gets or sets the account type. Possible values include:
+ * 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
  * @param {string} parameters.location Resource location
- *
  * @param {object} [parameters.tags] Resource tags
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccount} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _create(resourceGroupName, accountName, parameters, options, callback) {
    /* jshint validthis: true */
@@ -271,30 +229,14 @@ function _create(resourceGroupName, accountName, parameters, options, callback) 
 
 /**
  * Deletes a storage account in Microsoft Azure.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
- * @param {string} accountName The name of the storage account within the
- * specified resource group. Storage account names must be between 3 and 24
- * characters in length and use numbers and lower-case letters only.
- *
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+ * @param {string} accountName The name of the storage account within the specified resource group.
+ * Storage account names must be between 3 and 24 characters in length and use numbers and
+ * lower-case letters only.
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _deleteMethod(resourceGroupName, accountName, options, callback) {
    /* jshint validthis: true */
@@ -400,34 +342,17 @@ function _deleteMethod(resourceGroupName, accountName, options, callback) {
 }
 
 /**
- * Returns the properties for the specified storage account including but not
- * limited to name, account type, location, and account status. The ListKeys
- * operation should be used to retrieve storage keys.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
- * @param {string} accountName The name of the storage account within the
- * specified resource group. Storage account names must be between 3 and 24
- * characters in length and use numbers and lower-case letters only.
- *
+ * Returns the properties for the specified storage account including but not limited to name,
+ * account type, location, and account status. The ListKeys operation should be used to retrieve
+ * storage keys.
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+ * @param {string} accountName The name of the storage account within the specified resource group.
+ * Storage account names must be between 3 and 24 characters in length and use numbers and
+ * lower-case letters only.
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccount} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getProperties(resourceGroupName, accountName, options, callback) {
    /* jshint validthis: true */
@@ -550,65 +475,36 @@ function _getProperties(resourceGroupName, accountName, options, callback) {
 }
 
 /**
- * Updates the account type or tags for a storage account. It can also be used
- * to add a custom domain (note that custom domains cannot be added via the
- * Create operation). Only one custom domain is supported per storage account.
- * This API can only be used to update one of tags, accountType, or
- * customDomain per call. To update multiple of these properties, call the API
- * multiple times with one change per call. This call does not change the
- * storage keys for the account. If you want to change storage account keys,
- * use the RegenerateKey operation. The location and name of the storage
- * account cannot be changed after creation.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
- * @param {string} accountName The name of the storage account within the
- * specified resource group. Storage account names must be between 3 and 24
- * characters in length and use numbers and lower-case letters only.
- *
- * @param {object} parameters The parameters to update on the account. Note
- * that only one property can be changed at a time using this API.
- *
- * @param {string} [parameters.accountType] Gets or sets the account type. Note
- * that StandardZRS and PremiumLRS accounts cannot be changed to other account
- * types, and other account types cannot be changed to StandardZRS or
- * PremiumLRS. Possible values include: 'Standard_LRS', 'Standard_ZRS',
- * 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
- *
- * @param {object} [parameters.customDomain] User domain assigned to the
- * storage account. Name is the CNAME source. Only one custom domain is
- * supported per storage account at this time. To clear the existing custom
- * domain, use an empty string for the custom domain name property.
- *
- * @param {string} [parameters.customDomain.name] Gets or sets the custom
- * domain name. Name is the CNAME source.
- *
- * @param {boolean} [parameters.customDomain.useSubDomain] Indicates whether
- * indirect CName validation is enabled. Default value is false. This should
- * only be set on updates
- *
+ * Updates the account type or tags for a storage account. It can also be used to add a custom
+ * domain (note that custom domains cannot be added via the Create operation). Only one custom
+ * domain is supported per storage account. This API can only be used to update one of tags,
+ * accountType, or customDomain per call. To update multiple of these properties, call the API
+ * multiple times with one change per call. This call does not change the storage keys for the
+ * account. If you want to change storage account keys, use the RegenerateKey operation. The
+ * location and name of the storage account cannot be changed after creation.
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+ * @param {string} accountName The name of the storage account within the specified resource group.
+ * Storage account names must be between 3 and 24 characters in length and use numbers and
+ * lower-case letters only.
+ * @param {object} parameters The parameters to update on the account. Note that only one property
+ * can be changed at a time using this API.
+ * @param {string} [parameters.accountType] Gets or sets the account type. Note that StandardZRS
+ * and PremiumLRS accounts cannot be changed to other account types, and other account types cannot
+ * be changed to StandardZRS or PremiumLRS. Possible values include: 'Standard_LRS',
+ * 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
+ * @param {object} [parameters.customDomain] User domain assigned to the storage account. Name is
+ * the CNAME source. Only one custom domain is supported per storage account at this time. To clear
+ * the existing custom domain, use an empty string for the custom domain name property.
+ * @param {string} [parameters.customDomain.name] Gets or sets the custom domain name. Name is the
+ * CNAME source.
+ * @param {boolean} [parameters.customDomain.useSubDomain] Indicates whether indirect CName
+ * validation is enabled. Default value is false. This should only be set on updates
  * @param {string} parameters.location Resource location
- *
  * @param {object} [parameters.tags] Resource tags
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccount} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _update(resourceGroupName, accountName, parameters, options, callback) {
    /* jshint validthis: true */
@@ -749,29 +645,12 @@ function _update(resourceGroupName, accountName, parameters, options, callback) 
 
 /**
  * Lists the access keys for the specified storage account.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
  * @param {string} accountName The name of the storage account.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccountKeys} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _listKeys(resourceGroupName, accountName, options, callback) {
    /* jshint validthis: true */
@@ -894,27 +773,12 @@ function _listKeys(resourceGroupName, accountName, options, callback) {
 }
 
 /**
- * Lists all the storage accounts available under the subscription. Note that
- * storage keys are not returned; use the ListKeys operation for this.
- *
+ * Lists all the storage accounts available under the subscription. Note that storage keys are not
+ * returned; use the ListKeys operation for this.
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccountListResult} for more
- *                      information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _list(options, callback) {
    /* jshint validthis: true */
@@ -1029,31 +893,13 @@ function _list(options, callback) {
 }
 
 /**
- * Lists all the storage accounts available under the given resource group.
- * Note that storage keys are not returned; use the ListKeys operation for
- * this.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
+ * Lists all the storage accounts available under the given resource group. Note that storage keys
+ * are not returned; use the ListKeys operation for this.
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccountListResult} for more
- *                      information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _listByResourceGroup(resourceGroupName, options, callback) {
    /* jshint validthis: true */
@@ -1173,33 +1019,15 @@ function _listByResourceGroup(resourceGroupName, options, callback) {
 
 /**
  * Regenerates the access keys for the specified storage account.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
- * @param {string} accountName The name of the storage account within the
- * specified resource group. Storage account names must be between 3 and 24
- * characters in length and use numbers and lower-case letters only.
- *
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+ * @param {string} accountName The name of the storage account within the specified resource group.
+ * Storage account names must be between 3 and 24 characters in length and use numbers and
+ * lower-case letters only.
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.keyName] Possible values include: 'key1', 'key2'
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccountKeys} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _regenerateKey(resourceGroupName, accountName, options, callback) {
    /* jshint validthis: true */
@@ -1348,47 +1176,23 @@ function _regenerateKey(resourceGroupName, accountName, options, callback) {
 }
 
 /**
- * Asynchronously creates a new storage account with the specified parameters.
- * Existing accounts cannot be updated with this API and should instead use the
- * Update Storage Account API. If an account is already created and subsequent
- * PUT request is issued with exact same set of properties, then HTTP 200 would
- * be returned.
- *
- * @param {string} resourceGroupName The name of the resource group within the
- * user’s subscription.
- *
- * @param {string} accountName The name of the storage account within the
- * specified resource group. Storage account names must be between 3 and 24
- * characters in length and use numbers and lower-case letters only.
- *
- * @param {object} parameters The parameters to provide for the created
- * account.
- *
- * @param {string} [parameters.accountType] Gets or sets the account type.
- * Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS',
- * 'Standard_RAGRS', 'Premium_LRS'
- *
+ * Asynchronously creates a new storage account with the specified parameters. Existing accounts
+ * cannot be updated with this API and should instead use the Update Storage Account API. If an
+ * account is already created and subsequent PUT request is issued with exact same set of
+ * properties, then HTTP 200 would be returned.
+ * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+ * @param {string} accountName The name of the storage account within the specified resource group.
+ * Storage account names must be between 3 and 24 characters in length and use numbers and
+ * lower-case letters only.
+ * @param {object} parameters The parameters to provide for the created account.
+ * @param {string} [parameters.accountType] Gets or sets the account type. Possible values include:
+ * 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
  * @param {string} parameters.location Resource location
- *
  * @param {object} [parameters.tags] Resource tags
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link StorageAccount} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _beginCreate(resourceGroupName, accountName, parameters, options, callback) {
    /* jshint validthis: true */
@@ -1549,25 +1353,14 @@ class StorageAccounts {
 
   /**
    * Checks that account name is valid and is not in use.
-   *
-   * @param {object} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * @param {object} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {string} accountName.name
-   *
    * @param {string} [accountName.type]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<CheckNameAvailabilityResult>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   checkNameAvailabilityWithHttpOperationResponse(accountName, options) {
     let client = this.client;
@@ -1585,42 +1378,16 @@ class StorageAccounts {
 
   /**
    * Checks that account name is valid and is not in use.
-   *
-   * @param {object} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * @param {object} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {string} accountName.name
-   *
    * @param {string} [accountName.type]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {CheckNameAvailabilityResult} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link CheckNameAvailabilityResult} for more
-   *                      information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   checkNameAvailability(accountName, options, optionalCallback) {
     let client = this.client;
@@ -1643,40 +1410,22 @@ class StorageAccounts {
   }
 
   /**
-   * Asynchronously creates a new storage account with the specified parameters.
-   * Existing accounts cannot be updated with this API and should instead use the
-   * Update Storage Account API. If an account is already created and subsequent
-   * PUT request is issued with exact same set of properties, then HTTP 200 would
-   * be returned.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
-   * @param {object} parameters The parameters to provide for the created
-   * account.
-   *
-   * @param {string} [parameters.accountType] Gets or sets the account type.
-   * Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS',
-   * 'Standard_RAGRS', 'Premium_LRS'
-   *
+   * Asynchronously creates a new storage account with the specified parameters. Existing accounts
+   * cannot be updated with this API and should instead use the Update Storage Account API. If an
+   * account is already created and subsequent PUT request is issued with exact same set of
+   * properties, then HTTP 200 would be returned.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
+   * @param {object} parameters The parameters to provide for the created account.
+   * @param {string} [parameters.accountType] Gets or sets the account type. Possible values include:
+   * 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
    * @param {string} parameters.location Resource location
-   *
    * @param {object} [parameters.tags] Resource tags
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccount>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   createWithHttpOperationResponse(resourceGroupName, accountName, parameters, options) {
     let client = this.client;
@@ -1693,56 +1442,24 @@ class StorageAccounts {
   }
 
   /**
-   * Asynchronously creates a new storage account with the specified parameters.
-   * Existing accounts cannot be updated with this API and should instead use the
-   * Update Storage Account API. If an account is already created and subsequent
-   * PUT request is issued with exact same set of properties, then HTTP 200 would
-   * be returned.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
-   * @param {object} parameters The parameters to provide for the created
-   * account.
-   *
-   * @param {string} [parameters.accountType] Gets or sets the account type.
-   * Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS',
-   * 'Standard_RAGRS', 'Premium_LRS'
-   *
+   * Asynchronously creates a new storage account with the specified parameters. Existing accounts
+   * cannot be updated with this API and should instead use the Update Storage Account API. If an
+   * account is already created and subsequent PUT request is issued with exact same set of
+   * properties, then HTTP 200 would be returned.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
+   * @param {object} parameters The parameters to provide for the created account.
+   * @param {string} [parameters.accountType] Gets or sets the account type. Possible values include:
+   * 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
    * @param {string} parameters.location Resource location
-   *
    * @param {object} [parameters.tags] Resource tags
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccount} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccount} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   create(resourceGroupName, accountName, parameters, options, optionalCallback) {
     let client = this.client;
@@ -1766,24 +1483,13 @@ class StorageAccounts {
 
   /**
    * Deletes a storage account in Microsoft Azure.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   deleteMethodWithHttpOperationResponse(resourceGroupName, accountName, options) {
     let client = this.client;
@@ -1801,39 +1507,15 @@ class StorageAccounts {
 
   /**
    * Deletes a storage account in Microsoft Azure.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   deleteMethod(resourceGroupName, accountName, options, optionalCallback) {
     let client = this.client;
@@ -1856,27 +1538,16 @@ class StorageAccounts {
   }
 
   /**
-   * Returns the properties for the specified storage account including but not
-   * limited to name, account type, location, and account status. The ListKeys
-   * operation should be used to retrieve storage keys.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * Returns the properties for the specified storage account including but not limited to name,
+   * account type, location, and account status. The ListKeys operation should be used to retrieve
+   * storage keys.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccount>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getPropertiesWithHttpOperationResponse(resourceGroupName, accountName, options) {
     let client = this.client;
@@ -1893,43 +1564,18 @@ class StorageAccounts {
   }
 
   /**
-   * Returns the properties for the specified storage account including but not
-   * limited to name, account type, location, and account status. The ListKeys
-   * operation should be used to retrieve storage keys.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * Returns the properties for the specified storage account including but not limited to name,
+   * account type, location, and account status. The ListKeys operation should be used to retrieve
+   * storage keys.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccount} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccount} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getProperties(resourceGroupName, accountName, options, optionalCallback) {
     let client = this.client;
@@ -1952,58 +1598,35 @@ class StorageAccounts {
   }
 
   /**
-   * Updates the account type or tags for a storage account. It can also be used
-   * to add a custom domain (note that custom domains cannot be added via the
-   * Create operation). Only one custom domain is supported per storage account.
-   * This API can only be used to update one of tags, accountType, or
-   * customDomain per call. To update multiple of these properties, call the API
-   * multiple times with one change per call. This call does not change the
-   * storage keys for the account. If you want to change storage account keys,
-   * use the RegenerateKey operation. The location and name of the storage
-   * account cannot be changed after creation.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
-   * @param {object} parameters The parameters to update on the account. Note
-   * that only one property can be changed at a time using this API.
-   *
-   * @param {string} [parameters.accountType] Gets or sets the account type. Note
-   * that StandardZRS and PremiumLRS accounts cannot be changed to other account
-   * types, and other account types cannot be changed to StandardZRS or
-   * PremiumLRS. Possible values include: 'Standard_LRS', 'Standard_ZRS',
-   * 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
-   *
-   * @param {object} [parameters.customDomain] User domain assigned to the
-   * storage account. Name is the CNAME source. Only one custom domain is
-   * supported per storage account at this time. To clear the existing custom
-   * domain, use an empty string for the custom domain name property.
-   *
-   * @param {string} [parameters.customDomain.name] Gets or sets the custom
-   * domain name. Name is the CNAME source.
-   *
-   * @param {boolean} [parameters.customDomain.useSubDomain] Indicates whether
-   * indirect CName validation is enabled. Default value is false. This should
-   * only be set on updates
-   *
+   * Updates the account type or tags for a storage account. It can also be used to add a custom
+   * domain (note that custom domains cannot be added via the Create operation). Only one custom
+   * domain is supported per storage account. This API can only be used to update one of tags,
+   * accountType, or customDomain per call. To update multiple of these properties, call the API
+   * multiple times with one change per call. This call does not change the storage keys for the
+   * account. If you want to change storage account keys, use the RegenerateKey operation. The
+   * location and name of the storage account cannot be changed after creation.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
+   * @param {object} parameters The parameters to update on the account. Note that only one property
+   * can be changed at a time using this API.
+   * @param {string} [parameters.accountType] Gets or sets the account type. Note that StandardZRS
+   * and PremiumLRS accounts cannot be changed to other account types, and other account types cannot
+   * be changed to StandardZRS or PremiumLRS. Possible values include: 'Standard_LRS',
+   * 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
+   * @param {object} [parameters.customDomain] User domain assigned to the storage account. Name is
+   * the CNAME source. Only one custom domain is supported per storage account at this time. To clear
+   * the existing custom domain, use an empty string for the custom domain name property.
+   * @param {string} [parameters.customDomain.name] Gets or sets the custom domain name. Name is the
+   * CNAME source.
+   * @param {boolean} [parameters.customDomain.useSubDomain] Indicates whether indirect CName
+   * validation is enabled. Default value is false. This should only be set on updates
    * @param {string} parameters.location Resource location
-   *
    * @param {object} [parameters.tags] Resource tags
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccount>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   updateWithHttpOperationResponse(resourceGroupName, accountName, parameters, options) {
     let client = this.client;
@@ -2020,74 +1643,37 @@ class StorageAccounts {
   }
 
   /**
-   * Updates the account type or tags for a storage account. It can also be used
-   * to add a custom domain (note that custom domains cannot be added via the
-   * Create operation). Only one custom domain is supported per storage account.
-   * This API can only be used to update one of tags, accountType, or
-   * customDomain per call. To update multiple of these properties, call the API
-   * multiple times with one change per call. This call does not change the
-   * storage keys for the account. If you want to change storage account keys,
-   * use the RegenerateKey operation. The location and name of the storage
-   * account cannot be changed after creation.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
-   * @param {object} parameters The parameters to update on the account. Note
-   * that only one property can be changed at a time using this API.
-   *
-   * @param {string} [parameters.accountType] Gets or sets the account type. Note
-   * that StandardZRS and PremiumLRS accounts cannot be changed to other account
-   * types, and other account types cannot be changed to StandardZRS or
-   * PremiumLRS. Possible values include: 'Standard_LRS', 'Standard_ZRS',
-   * 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
-   *
-   * @param {object} [parameters.customDomain] User domain assigned to the
-   * storage account. Name is the CNAME source. Only one custom domain is
-   * supported per storage account at this time. To clear the existing custom
-   * domain, use an empty string for the custom domain name property.
-   *
-   * @param {string} [parameters.customDomain.name] Gets or sets the custom
-   * domain name. Name is the CNAME source.
-   *
-   * @param {boolean} [parameters.customDomain.useSubDomain] Indicates whether
-   * indirect CName validation is enabled. Default value is false. This should
-   * only be set on updates
-   *
+   * Updates the account type or tags for a storage account. It can also be used to add a custom
+   * domain (note that custom domains cannot be added via the Create operation). Only one custom
+   * domain is supported per storage account. This API can only be used to update one of tags,
+   * accountType, or customDomain per call. To update multiple of these properties, call the API
+   * multiple times with one change per call. This call does not change the storage keys for the
+   * account. If you want to change storage account keys, use the RegenerateKey operation. The
+   * location and name of the storage account cannot be changed after creation.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
+   * @param {object} parameters The parameters to update on the account. Note that only one property
+   * can be changed at a time using this API.
+   * @param {string} [parameters.accountType] Gets or sets the account type. Note that StandardZRS
+   * and PremiumLRS accounts cannot be changed to other account types, and other account types cannot
+   * be changed to StandardZRS or PremiumLRS. Possible values include: 'Standard_LRS',
+   * 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
+   * @param {object} [parameters.customDomain] User domain assigned to the storage account. Name is
+   * the CNAME source. Only one custom domain is supported per storage account at this time. To clear
+   * the existing custom domain, use an empty string for the custom domain name property.
+   * @param {string} [parameters.customDomain.name] Gets or sets the custom domain name. Name is the
+   * CNAME source.
+   * @param {boolean} [parameters.customDomain.useSubDomain] Indicates whether indirect CName
+   * validation is enabled. Default value is false. This should only be set on updates
    * @param {string} parameters.location Resource location
-   *
    * @param {object} [parameters.tags] Resource tags
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccount} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccount} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   update(resourceGroupName, accountName, parameters, options, optionalCallback) {
     let client = this.client;
@@ -2111,22 +1697,11 @@ class StorageAccounts {
 
   /**
    * Lists the access keys for the specified storage account.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
    * @param {string} accountName The name of the storage account.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccountKeys>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   listKeysWithHttpOperationResponse(resourceGroupName, accountName, options) {
     let client = this.client;
@@ -2144,38 +1719,13 @@ class StorageAccounts {
 
   /**
    * Lists the access keys for the specified storage account.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
    * @param {string} accountName The name of the storage account.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccountKeys} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccountKeys} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   listKeys(resourceGroupName, accountName, options, optionalCallback) {
     let client = this.client;
@@ -2198,19 +1748,11 @@ class StorageAccounts {
   }
 
   /**
-   * Lists all the storage accounts available under the subscription. Note that
-   * storage keys are not returned; use the ListKeys operation for this.
-   *
+   * Lists all the storage accounts available under the subscription. Note that storage keys are not
+   * returned; use the ListKeys operation for this.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccountListResult>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   listWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2227,36 +1769,13 @@ class StorageAccounts {
   }
 
   /**
-   * Lists all the storage accounts available under the subscription. Note that
-   * storage keys are not returned; use the ListKeys operation for this.
-   *
+   * Lists all the storage accounts available under the subscription. Note that storage keys are not
+   * returned; use the ListKeys operation for this.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccountListResult} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccountListResult} for more
-   *                      information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   list(options, optionalCallback) {
     let client = this.client;
@@ -2279,23 +1798,12 @@ class StorageAccounts {
   }
 
   /**
-   * Lists all the storage accounts available under the given resource group.
-   * Note that storage keys are not returned; use the ListKeys operation for
-   * this.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
+   * Lists all the storage accounts available under the given resource group. Note that storage keys
+   * are not returned; use the ListKeys operation for this.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccountListResult>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   listByResourceGroupWithHttpOperationResponse(resourceGroupName, options) {
     let client = this.client;
@@ -2312,40 +1820,14 @@ class StorageAccounts {
   }
 
   /**
-   * Lists all the storage accounts available under the given resource group.
-   * Note that storage keys are not returned; use the ListKeys operation for
-   * this.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
+   * Lists all the storage accounts available under the given resource group. Note that storage keys
+   * are not returned; use the ListKeys operation for this.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccountListResult} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccountListResult} for more
-   *                      information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   listByResourceGroup(resourceGroupName, options, optionalCallback) {
     let client = this.client;
@@ -2369,26 +1851,14 @@ class StorageAccounts {
 
   /**
    * Regenerates the access keys for the specified storage account.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.keyName] Possible values include: 'key1', 'key2'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccountKeys>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   regenerateKeyWithHttpOperationResponse(resourceGroupName, accountName, options) {
     let client = this.client;
@@ -2406,42 +1876,16 @@ class StorageAccounts {
 
   /**
    * Regenerates the access keys for the specified storage account.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.keyName] Possible values include: 'key1', 'key2'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccountKeys} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccountKeys} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   regenerateKey(resourceGroupName, accountName, options, optionalCallback) {
     let client = this.client;
@@ -2464,40 +1908,22 @@ class StorageAccounts {
   }
 
   /**
-   * Asynchronously creates a new storage account with the specified parameters.
-   * Existing accounts cannot be updated with this API and should instead use the
-   * Update Storage Account API. If an account is already created and subsequent
-   * PUT request is issued with exact same set of properties, then HTTP 200 would
-   * be returned.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
-   * @param {object} parameters The parameters to provide for the created
-   * account.
-   *
-   * @param {string} [parameters.accountType] Gets or sets the account type.
-   * Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS',
-   * 'Standard_RAGRS', 'Premium_LRS'
-   *
+   * Asynchronously creates a new storage account with the specified parameters. Existing accounts
+   * cannot be updated with this API and should instead use the Update Storage Account API. If an
+   * account is already created and subsequent PUT request is issued with exact same set of
+   * properties, then HTTP 200 would be returned.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
+   * @param {object} parameters The parameters to provide for the created account.
+   * @param {string} [parameters.accountType] Gets or sets the account type. Possible values include:
+   * 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
    * @param {string} parameters.location Resource location
-   *
    * @param {object} [parameters.tags] Resource tags
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<StorageAccount>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   beginCreateWithHttpOperationResponse(resourceGroupName, accountName, parameters, options) {
     let client = this.client;
@@ -2514,56 +1940,24 @@ class StorageAccounts {
   }
 
   /**
-   * Asynchronously creates a new storage account with the specified parameters.
-   * Existing accounts cannot be updated with this API and should instead use the
-   * Update Storage Account API. If an account is already created and subsequent
-   * PUT request is issued with exact same set of properties, then HTTP 200 would
-   * be returned.
-   *
-   * @param {string} resourceGroupName The name of the resource group within the
-   * user’s subscription.
-   *
-   * @param {string} accountName The name of the storage account within the
-   * specified resource group. Storage account names must be between 3 and 24
-   * characters in length and use numbers and lower-case letters only.
-   *
-   * @param {object} parameters The parameters to provide for the created
-   * account.
-   *
-   * @param {string} [parameters.accountType] Gets or sets the account type.
-   * Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS',
-   * 'Standard_RAGRS', 'Premium_LRS'
-   *
+   * Asynchronously creates a new storage account with the specified parameters. Existing accounts
+   * cannot be updated with this API and should instead use the Update Storage Account API. If an
+   * account is already created and subsequent PUT request is issued with exact same set of
+   * properties, then HTTP 200 would be returned.
+   * @param {string} resourceGroupName The name of the resource group within the user’s subscription.
+   * @param {string} accountName The name of the storage account within the specified resource group.
+   * Storage account names must be between 3 and 24 characters in length and use numbers and
+   * lower-case letters only.
+   * @param {object} parameters The parameters to provide for the created account.
+   * @param {string} [parameters.accountType] Gets or sets the account type. Possible values include:
+   * 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
    * @param {string} parameters.location Resource location
-   *
    * @param {object} [parameters.tags] Resource tags
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {StorageAccount} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link StorageAccount} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   beginCreate(resourceGroupName, accountName, parameters, options, optionalCallback) {
     let client = this.client;

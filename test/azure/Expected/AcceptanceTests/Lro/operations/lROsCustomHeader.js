@@ -16,37 +16,18 @@ const WebResource = msRest.WebResource;
 
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running put request, service returns a
- * 200 to the initial request, with an entity that contains
- * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running put request, service returns a 200 to the initial request, with an entity
+ * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
  * Azure-AsyncOperation header for operation status
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link Product} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putAsyncRetrySucceeded(options, callback) {
    /* jshint validthis: true */
@@ -102,37 +83,18 @@ function _putAsyncRetrySucceeded(options, callback) {
 
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running put request, service returns a
- * 201 to the initial request, with an entity that contains
- * ProvisioningState=’Creating’.  Polls return this value until the last poll
- * returns a ‘200’ with ProvisioningState=’Succeeded’
- *
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running put request, service returns a 201 to the initial request, with an entity
+ * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+ * a ‘200’ with ProvisioningState=’Succeeded’
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link Product} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _put201CreatingSucceeded200(options, callback) {
    /* jshint validthis: true */
@@ -188,35 +150,17 @@ function _put201CreatingSucceeded200(options, callback) {
 
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running post request, service returns
- * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
- * Polls return a 200 with a response body after success
- *
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running post request, service returns a 202 to the initial request, with
+ * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _post202Retry200(options, callback) {
    /* jshint validthis: true */
@@ -258,36 +202,18 @@ function _post202Retry200(options, callback) {
 
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running post request, service returns
- * a 202 to the initial request, with an entity that contains
- * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running post request, service returns a 202 to the initial request, with an
+ * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
  * Azure-AsyncOperation header for operation status
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postAsyncRetrySucceeded(options, callback) {
    /* jshint validthis: true */
@@ -328,37 +254,18 @@ function _postAsyncRetrySucceeded(options, callback) {
 }
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running put request, service returns a
- * 200 to the initial request, with an entity that contains
- * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running put request, service returns a 200 to the initial request, with an entity
+ * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
  * Azure-AsyncOperation header for operation status
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link Product} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _beginPutAsyncRetrySucceeded(options, callback) {
    /* jshint validthis: true */
@@ -480,37 +387,18 @@ function _beginPutAsyncRetrySucceeded(options, callback) {
 }
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running put request, service returns a
- * 201 to the initial request, with an entity that contains
- * ProvisioningState=’Creating’.  Polls return this value until the last poll
- * returns a ‘200’ with ProvisioningState=’Succeeded’
- *
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running put request, service returns a 201 to the initial request, with an entity
+ * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+ * a ‘200’ with ProvisioningState=’Succeeded’
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link Product} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _beginPut201CreatingSucceeded200(options, callback) {
    /* jshint validthis: true */
@@ -649,35 +537,17 @@ function _beginPut201CreatingSucceeded200(options, callback) {
 }
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running post request, service returns
- * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
- * Polls return a 200 with a response body after success
- *
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running post request, service returns a 202 to the initial request, with
+ * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _beginPost202Retry200(options, callback) {
    /* jshint validthis: true */
@@ -782,36 +652,18 @@ function _beginPost202Retry200(options, callback) {
 }
 
 /**
- * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
- * message header for all requests. Long running post request, service returns
- * a 202 to the initial request, with an entity that contains
- * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+ * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+ * requests. Long running post request, service returns a 202 to the initial request, with an
+ * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
  * Azure-AsyncOperation header for operation status
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.product] Product to put
- *
  * @param {string} [options.product.provisioningState]
- *
  * @param {object} [options.product.tags]
- *
  * @param {string} [options.product.location] Resource Location
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _beginPostAsyncRetrySucceeded(options, callback) {
    /* jshint validthis: true */
@@ -934,30 +786,17 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 200 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 200 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putAsyncRetrySucceededWithHttpOperationResponse(options) {
     let client = this.client;
@@ -974,46 +813,19 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 200 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 200 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Product} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Product} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putAsyncRetrySucceeded(options, optionalCallback) {
     let client = this.client;
@@ -1036,30 +848,17 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 201 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’.  Polls return this value until the last poll
-   * returns a ‘200’ with ProvisioningState=’Succeeded’
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 201 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+   * a ‘200’ with ProvisioningState=’Succeeded’
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   put201CreatingSucceeded200WithHttpOperationResponse(options) {
     let client = this.client;
@@ -1076,46 +875,19 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 201 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’.  Polls return this value until the last poll
-   * returns a ‘200’ with ProvisioningState=’Succeeded’
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 201 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+   * a ‘200’ with ProvisioningState=’Succeeded’
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Product} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Product} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   put201CreatingSucceeded200(options, optionalCallback) {
     let client = this.client;
@@ -1138,29 +910,16 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-   * Polls return a 200 with a response body after success
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with
+   * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   post202Retry200WithHttpOperationResponse(options) {
     let client = this.client;
@@ -1177,44 +936,18 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-   * Polls return a 200 with a response body after success
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with
+   * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   post202Retry200(options, optionalCallback) {
     let client = this.client;
@@ -1237,30 +970,17 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with an
+   * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postAsyncRetrySucceededWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1277,45 +997,19 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with an
+   * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postAsyncRetrySucceeded(options, optionalCallback) {
     let client = this.client;
@@ -1338,30 +1032,17 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 200 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 200 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   beginPutAsyncRetrySucceededWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1378,46 +1059,19 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 200 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 200 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Product} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Product} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   beginPutAsyncRetrySucceeded(options, optionalCallback) {
     let client = this.client;
@@ -1440,30 +1094,17 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 201 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’.  Polls return this value until the last poll
-   * returns a ‘200’ with ProvisioningState=’Succeeded’
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 201 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+   * a ‘200’ with ProvisioningState=’Succeeded’
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   beginPut201CreatingSucceeded200WithHttpOperationResponse(options) {
     let client = this.client;
@@ -1480,46 +1121,19 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running put request, service returns a
-   * 201 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’.  Polls return this value until the last poll
-   * returns a ‘200’ with ProvisioningState=’Succeeded’
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running put request, service returns a 201 to the initial request, with an entity
+   * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+   * a ‘200’ with ProvisioningState=’Succeeded’
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Product} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Product} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   beginPut201CreatingSucceeded200(options, optionalCallback) {
     let client = this.client;
@@ -1542,29 +1156,16 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-   * Polls return a 200 with a response body after success
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with
+   * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   beginPost202Retry200WithHttpOperationResponse(options) {
     let client = this.client;
@@ -1581,44 +1182,18 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-   * Polls return a 200 with a response body after success
-   *
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with
+   * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   beginPost202Retry200(options, optionalCallback) {
     let client = this.client;
@@ -1641,30 +1216,17 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with an
+   * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   beginPostAsyncRetrySucceededWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1681,45 +1243,19 @@ class LROsCustomHeader {
   }
 
   /**
-   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-   * message header for all requests. Long running post request, service returns
-   * a 202 to the initial request, with an entity that contains
-   * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+   * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+   * requests. Long running post request, service returns a 202 to the initial request, with an
+   * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
    * Azure-AsyncOperation header for operation status
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.product] Product to put
-   *
    * @param {string} [options.product.provisioningState]
-   *
    * @param {object} [options.product.tags]
-   *
    * @param {string} [options.product.location] Resource Location
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   beginPostAsyncRetrySucceeded(options, optionalCallback) {
     let client = this.client;

@@ -24,28 +24,13 @@ const models = require('./models');
 
 /**
  * Get test coverage report
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {string} [options.qualifier] If specified, qualifies the generated
- * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
- * generators that run all tests several times, can distinguish the generated
- * reports.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} [options.qualifier] If specified, qualifies the generated report further (e.g.
+ * '2.7' vs '3.5' in for Python). The only effect is, that generators that run all tests several
+ * times, can distinguish the generated reports.
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getReport(options, callback) {
    /* jshint validthis: true */
@@ -223,22 +208,12 @@ class AutoRestReportServiceForAzure extends ServiceClient {
 
   /**
    * Get test coverage report
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.qualifier] If specified, qualifies the generated
-   * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
-   * generators that run all tests several times, can distinguish the generated
-   * reports.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Object>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} [options.qualifier] If specified, qualifies the generated report further (e.g.
+   * '2.7' vs '3.5' in for Python). The only effect is, that generators that run all tests several
+   * times, can distinguish the generated reports.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getReportWithHttpOperationResponse(options) {
     let client = this;
@@ -256,37 +231,14 @@ class AutoRestReportServiceForAzure extends ServiceClient {
 
   /**
    * Get test coverage report
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.qualifier] If specified, qualifies the generated
-   * report further (e.g. '2.7' vs '3.5' in for Python). The only effect is, that
-   * generators that run all tests several times, can distinguish the generated
-   * reports.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Object} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.qualifier] If specified, qualifies the generated report further (e.g.
+   * '2.7' vs '3.5' in for Python). The only effect is, that generators that run all tests several
+   * times, can distinguish the generated reports.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getReport(options, optionalCallback) {
     let client = this;

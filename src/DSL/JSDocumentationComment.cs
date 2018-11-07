@@ -68,10 +68,10 @@ namespace AutoRest.NodeJS.DSL
             }
         }
 
-        public void Parameter(string parameterName, string parameterDocumentation, bool isOptional = false)
+        public void Parameter(string parameterName, string parameterType, string parameterDocumentation, bool isOptional = false)
         {
             SetCurrentState(State.Parameters);
-            builder.Line($"@param {(isOptional ? '[' + parameterName + ']' : parameterName)} {parameterDocumentation}");
+            builder.Line($"@param {{{parameterType}}} {(isOptional ? '[' + parameterName + ']' : parameterName)} {parameterDocumentation}");
         }
 
         public void Parameters(IEnumerable<JSParameter> parameters)
@@ -80,7 +80,7 @@ namespace AutoRest.NodeJS.DSL
             {
                 foreach (JSParameter parameter in parameters)
                 {
-                    Parameter(parameter.Name, parameter.Description, !parameter.Required);
+                    Parameter(parameter.Name, parameter.Type, parameter.Description, !parameter.Required);
                 }
             }
         }
@@ -106,13 +106,10 @@ namespace AutoRest.NodeJS.DSL
             }
         }
 
-        public void Returns(string returnDocumentation)
+        public void Returns(string returnType, string returnDocumentation)
         {
-            if (!string.IsNullOrEmpty(returnDocumentation))
-            {
-                SetCurrentState(State.Returns);
-                builder.Line($"@returns {returnDocumentation}");
-            }
+            SetCurrentState(State.Returns);
+            builder.Line($"@returns {{{returnType}}} {returnDocumentation}");
         }
 
         public void ReadOnly()

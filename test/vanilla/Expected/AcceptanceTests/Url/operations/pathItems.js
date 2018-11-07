@@ -14,39 +14,18 @@ const msRest = require('ms-rest');
 const WebResource = msRest.WebResource;
 
 /**
- * send globalStringPath='globalStringPath',
- * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
- * globalStringQuery='globalStringQuery',
- * pathItemStringQuery='pathItemStringQuery',
- * localStringQuery='localStringQuery'
- *
+ * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+ * localStringPath='localStringPath', globalStringQuery='globalStringQuery',
+ * pathItemStringQuery='pathItemStringQuery', localStringQuery='localStringQuery'
  * @param {string} localStringPath should contain value 'localStringPath'
- *
- * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
- * appears in the path
- *
+ * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
  * @param {object} [options] Optional Parameters.
- *
- * @param {string} [options.localStringQuery] should contain value
- * 'localStringQuery'
- *
- * @param {string} [options.pathItemStringQuery] A string value
- * 'pathItemStringQuery' that appears as a query parameter
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} [options.localStringQuery] should contain value 'localStringQuery'
+ * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+ * as a query parameter
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getAllWithValues(localStringPath, pathItemStringPath, options, callback) {
    /* jshint validthis: true */
@@ -160,38 +139,18 @@ function _getAllWithValues(localStringPath, pathItemStringPath, options, callbac
 }
 
 /**
- * send globalStringPath='globalStringPath',
- * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
- * globalStringQuery=null, pathItemStringQuery='pathItemStringQuery',
- * localStringQuery='localStringQuery'
- *
+ * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+ * localStringPath='localStringPath', globalStringQuery=null,
+ * pathItemStringQuery='pathItemStringQuery', localStringQuery='localStringQuery'
  * @param {string} localStringPath should contain value 'localStringPath'
- *
- * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
- * appears in the path
- *
+ * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
  * @param {object} [options] Optional Parameters.
- *
- * @param {string} [options.localStringQuery] should contain value
- * 'localStringQuery'
- *
- * @param {string} [options.pathItemStringQuery] A string value
- * 'pathItemStringQuery' that appears as a query parameter
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} [options.localStringQuery] should contain value 'localStringQuery'
+ * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+ * as a query parameter
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getGlobalQueryNull(localStringPath, pathItemStringPath, options, callback) {
    /* jshint validthis: true */
@@ -305,37 +264,18 @@ function _getGlobalQueryNull(localStringPath, pathItemStringPath, options, callb
 }
 
 /**
- * send globalStringPath=globalStringPath,
- * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
- * globalStringQuery=null, pathItemStringQuery='pathItemStringQuery',
- * localStringQuery=null
- *
+ * send globalStringPath=globalStringPath, pathItemStringPath='pathItemStringPath',
+ * localStringPath='localStringPath', globalStringQuery=null,
+ * pathItemStringQuery='pathItemStringQuery', localStringQuery=null
  * @param {string} localStringPath should contain value 'localStringPath'
- *
- * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
- * appears in the path
- *
+ * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.localStringQuery] should contain null value
- *
- * @param {string} [options.pathItemStringQuery] A string value
- * 'pathItemStringQuery' that appears as a query parameter
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+ * as a query parameter
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getGlobalAndLocalQueryNull(localStringPath, pathItemStringPath, options, callback) {
    /* jshint validthis: true */
@@ -449,36 +389,17 @@ function _getGlobalAndLocalQueryNull(localStringPath, pathItemStringPath, option
 }
 
 /**
- * send globalStringPath='globalStringPath',
- * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
- * globalStringQuery='globalStringQuery', pathItemStringQuery=null,
- * localStringQuery=null
- *
+ * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+ * localStringPath='localStringPath', globalStringQuery='globalStringQuery',
+ * pathItemStringQuery=null, localStringQuery=null
  * @param {string} localStringPath should contain value 'localStringPath'
- *
- * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
- * appears in the path
- *
+ * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.localStringQuery] should contain value null
- *
  * @param {string} [options.pathItemStringQuery] should contain value null
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getLocalPathItemQueryNull(localStringPath, pathItemStringPath, options, callback) {
    /* jshint validthis: true */
@@ -606,33 +527,17 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath='globalStringPath',
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery='globalStringQuery',
-   * pathItemStringQuery='pathItemStringQuery',
-   * localStringQuery='localStringQuery'
-   *
+   * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery='globalStringQuery',
+   * pathItemStringQuery='pathItemStringQuery', localStringQuery='localStringQuery'
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.localStringQuery] should contain value
-   * 'localStringQuery'
-   *
-   * @param {string} [options.pathItemStringQuery] A string value
-   * 'pathItemStringQuery' that appears as a query parameter
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} [options.localStringQuery] should contain value 'localStringQuery'
+   * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+   * as a query parameter
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getAllWithValuesWithHttpOperationResponse(localStringPath, pathItemStringPath, options) {
     let client = this.client;
@@ -649,48 +554,19 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath='globalStringPath',
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery='globalStringQuery',
-   * pathItemStringQuery='pathItemStringQuery',
-   * localStringQuery='localStringQuery'
-   *
+   * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery='globalStringQuery',
+   * pathItemStringQuery='pathItemStringQuery', localStringQuery='localStringQuery'
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.localStringQuery] should contain value
-   * 'localStringQuery'
-   *
-   * @param {string} [options.pathItemStringQuery] A string value
-   * 'pathItemStringQuery' that appears as a query parameter
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.localStringQuery] should contain value 'localStringQuery'
+   * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+   * as a query parameter
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getAllWithValues(localStringPath, pathItemStringPath, options, optionalCallback) {
     let client = this.client;
@@ -713,32 +589,17 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath='globalStringPath',
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery=null, pathItemStringQuery='pathItemStringQuery',
-   * localStringQuery='localStringQuery'
-   *
+   * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery=null,
+   * pathItemStringQuery='pathItemStringQuery', localStringQuery='localStringQuery'
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.localStringQuery] should contain value
-   * 'localStringQuery'
-   *
-   * @param {string} [options.pathItemStringQuery] A string value
-   * 'pathItemStringQuery' that appears as a query parameter
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} [options.localStringQuery] should contain value 'localStringQuery'
+   * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+   * as a query parameter
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getGlobalQueryNullWithHttpOperationResponse(localStringPath, pathItemStringPath, options) {
     let client = this.client;
@@ -755,47 +616,19 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath='globalStringPath',
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery=null, pathItemStringQuery='pathItemStringQuery',
-   * localStringQuery='localStringQuery'
-   *
+   * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery=null,
+   * pathItemStringQuery='pathItemStringQuery', localStringQuery='localStringQuery'
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {string} [options.localStringQuery] should contain value
-   * 'localStringQuery'
-   *
-   * @param {string} [options.pathItemStringQuery] A string value
-   * 'pathItemStringQuery' that appears as a query parameter
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.localStringQuery] should contain value 'localStringQuery'
+   * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+   * as a query parameter
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getGlobalQueryNull(localStringPath, pathItemStringPath, options, optionalCallback) {
     let client = this.client;
@@ -818,31 +651,17 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath=globalStringPath,
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery=null, pathItemStringQuery='pathItemStringQuery',
-   * localStringQuery=null
-   *
+   * send globalStringPath=globalStringPath, pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery=null,
+   * pathItemStringQuery='pathItemStringQuery', localStringQuery=null
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.localStringQuery] should contain null value
-   *
-   * @param {string} [options.pathItemStringQuery] A string value
-   * 'pathItemStringQuery' that appears as a query parameter
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+   * as a query parameter
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getGlobalAndLocalQueryNullWithHttpOperationResponse(localStringPath, pathItemStringPath, options) {
     let client = this.client;
@@ -859,46 +678,19 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath=globalStringPath,
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery=null, pathItemStringQuery='pathItemStringQuery',
-   * localStringQuery=null
-   *
+   * send globalStringPath=globalStringPath, pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery=null,
+   * pathItemStringQuery='pathItemStringQuery', localStringQuery=null
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.localStringQuery] should contain null value
-   *
-   * @param {string} [options.pathItemStringQuery] A string value
-   * 'pathItemStringQuery' that appears as a query parameter
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.pathItemStringQuery] A string value 'pathItemStringQuery' that appears
+   * as a query parameter
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getGlobalAndLocalQueryNull(localStringPath, pathItemStringPath, options, optionalCallback) {
     let client = this.client;
@@ -921,30 +713,16 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath='globalStringPath',
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery='globalStringQuery', pathItemStringQuery=null,
-   * localStringQuery=null
-   *
+   * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery='globalStringQuery',
+   * pathItemStringQuery=null, localStringQuery=null
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.localStringQuery] should contain value null
-   *
    * @param {string} [options.pathItemStringQuery] should contain value null
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getLocalPathItemQueryNullWithHttpOperationResponse(localStringPath, pathItemStringPath, options) {
     let client = this.client;
@@ -961,45 +739,18 @@ class PathItems {
   }
 
   /**
-   * send globalStringPath='globalStringPath',
-   * pathItemStringPath='pathItemStringPath', localStringPath='localStringPath',
-   * globalStringQuery='globalStringQuery', pathItemStringQuery=null,
-   * localStringQuery=null
-   *
+   * send globalStringPath='globalStringPath', pathItemStringPath='pathItemStringPath',
+   * localStringPath='localStringPath', globalStringQuery='globalStringQuery',
+   * pathItemStringQuery=null, localStringQuery=null
    * @param {string} localStringPath should contain value 'localStringPath'
-   *
-   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that
-   * appears in the path
-   *
+   * @param {string} pathItemStringPath A string value 'pathItemStringPath' that appears in the path
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.localStringQuery] should contain value null
-   *
    * @param {string} [options.pathItemStringQuery] should contain value null
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getLocalPathItemQueryNull(localStringPath, pathItemStringPath, options, optionalCallback) {
     let client = this.client;

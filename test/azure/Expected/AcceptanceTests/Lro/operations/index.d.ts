@@ -22,68 +22,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put200SucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put200Succeeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put200Succeeded(callback: ServiceCallback<models.Product>): void;
@@ -91,68 +53,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that does not contain ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that does
+     * not contain ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put200SucceededNoStateWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that does not contain ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that does
+     * not contain ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put200SucceededNoState(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put200SucceededNoState(callback: ServiceCallback<models.Product>): void;
@@ -160,70 +84,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 202 to the initial request, with
-     * a location header that points to a polling URL that returns a 200 and an
-     * entity that doesn't contains ProvisioningState
-     *
+     * Long running put request, service returns a 202 to the initial request, with a location header
+     * that points to a polling URL that returns a 200 and an entity that doesn't contains
+     * ProvisioningState
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 202 to the initial request, with
-     * a location header that points to a polling URL that returns a 200 and an
-     * entity that doesn't contains ProvisioningState
-     *
+     * Long running put request, service returns a 202 to the initial request, with a location header
+     * that points to a polling URL that returns a 200 and an entity that doesn't contains
+     * ProvisioningState
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put202Retry200(callback: ServiceCallback<models.Product>): void;
@@ -231,70 +117,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put201CreatingSucceeded200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put201CreatingSucceeded200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put201CreatingSucceeded200(callback: ServiceCallback<models.Product>): void;
@@ -302,70 +150,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Updating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Updating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put200UpdatingSucceeded204WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Updating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Updating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put200UpdatingSucceeded204(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put200UpdatingSucceeded204(callback: ServiceCallback<models.Product>): void;
@@ -373,70 +183,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Created’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Failed’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Created’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put201CreatingFailed200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Created’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Failed’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Created’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put201CreatingFailed200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put201CreatingFailed200(callback: ServiceCallback<models.Product>): void;
@@ -444,70 +216,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Canceled’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put200Acceptedcanceled200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Canceled’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put200Acceptedcanceled200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put200Acceptedcanceled200(callback: ServiceCallback<models.Product>): void;
@@ -515,70 +249,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * location header. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running put request, service returns a 202 to the initial request with location header.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putNoHeaderInRetryWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * location header. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running put request, service returns a 202 to the initial request with location header.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putNoHeaderInRetry(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putNoHeaderInRetry(callback: ServiceCallback<models.Product>): void;
@@ -586,70 +280,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -657,70 +313,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncNoRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncNoRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncNoRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -728,70 +346,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRetryFailedWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRetryFailed(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRetryFailed(callback: ServiceCallback<models.Product>): void;
@@ -799,70 +379,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncNoRetrycanceledWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncNoRetrycanceled(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncNoRetrycanceled(callback: ServiceCallback<models.Product>): void;
@@ -870,70 +412,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * Azure-AsyncOperation header. Subsequent calls to operation status do not
-     * contain Azure-AsyncOperation header.
-     *
+     * Long running put request, service returns a 202 to the initial request with Azure-AsyncOperation
+     * header. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncNoHeaderInRetryWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * Azure-AsyncOperation header. Subsequent calls to operation status do not
-     * contain Azure-AsyncOperation header.
-     *
+     * Long running put request, service returns a 202 to the initial request with Azure-AsyncOperation
+     * header. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncNoHeaderInRetry(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncNoHeaderInRetry(callback: ServiceCallback<models.Product>): void;
@@ -942,61 +444,25 @@ export interface LROs {
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Sku>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putNonResourceWithHttpOperationResponse(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Sku>>;
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Sku} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Sku} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Sku} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putNonResource(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<models.Sku>;
     putNonResource(callback: ServiceCallback<models.Sku>): void;
@@ -1005,61 +471,25 @@ export interface LROs {
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] Sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Sku>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncNonResourceWithHttpOperationResponse(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Sku>>;
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] Sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Sku} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Sku} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Sku} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncNonResource(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<models.Sku>;
     putAsyncNonResource(callback: ServiceCallback<models.Sku>): void;
@@ -1068,53 +498,21 @@ export interface LROs {
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<SubProduct>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putSubResourceWithHttpOperationResponse(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.SubProduct>>;
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {SubProduct} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {SubProduct} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link SubProduct} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putSubResource(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<models.SubProduct>;
     putSubResource(callback: ServiceCallback<models.SubProduct>): void;
@@ -1123,53 +521,21 @@ export interface LROs {
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<SubProduct>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncSubResourceWithHttpOperationResponse(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.SubProduct>>;
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {SubProduct} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {SubProduct} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link SubProduct} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncSubResource(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<models.SubProduct>;
     putAsyncSubResource(callback: ServiceCallback<models.SubProduct>): void;
@@ -1177,56 +543,24 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Accepted’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Accepted’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteProvisioning202Accepted200SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Accepted’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Accepted’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteProvisioning202Accepted200Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     deleteProvisioning202Accepted200Succeeded(callback: ServiceCallback<models.Product>): void;
@@ -1234,56 +568,24 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Failed’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteProvisioning202DeletingFailed200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Failed’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteProvisioning202DeletingFailed200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     deleteProvisioning202DeletingFailed200(callback: ServiceCallback<models.Product>): void;
@@ -1291,56 +593,24 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Canceled’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteProvisioning202Deletingcanceled200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Canceled’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteProvisioning202Deletingcanceled200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     deleteProvisioning202Deletingcanceled200(callback: ServiceCallback<models.Product>): void;
@@ -1349,48 +619,19 @@ export interface LROs {
 
     /**
      * Long running delete succeeds and returns right away
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     delete204SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running delete succeeds and returns right away
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     delete204Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     delete204Succeeded(callback: ServiceCallback<void>): void;
@@ -1398,54 +639,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     delete202Retry200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     delete202Retry200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     delete202Retry200(callback: ServiceCallback<models.Product>): void;
@@ -1453,54 +662,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     delete202NoRetry204WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     delete202NoRetry204(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     delete202NoRetry204(callback: ServiceCallback<models.Product>): void;
@@ -1508,53 +685,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a location header in the
-     * initial request. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running delete request, service returns a location header in the initial request.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteNoHeaderInRetryWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a location header in the
-     * initial request. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running delete request, service returns a location header in the initial request.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteNoHeaderInRetry(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteNoHeaderInRetry(callback: ServiceCallback<void>): void;
@@ -1562,53 +708,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns an Azure-AsyncOperation header
-     * in the initial request. Subsequent calls to operation status do not contain
-     * Azure-AsyncOperation header.
-     *
+     * Long running delete request, service returns an Azure-AsyncOperation header in the initial
+     * request. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncNoHeaderInRetryWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns an Azure-AsyncOperation header
-     * in the initial request. Subsequent calls to operation status do not contain
-     * Azure-AsyncOperation header.
-     *
+     * Long running delete request, service returns an Azure-AsyncOperation header in the initial
+     * request. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncNoHeaderInRetry(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncNoHeaderInRetry(callback: ServiceCallback<void>): void;
@@ -1616,53 +731,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRetrySucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRetrySucceeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -1670,53 +754,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncNoRetrySucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncNoRetrySucceeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncNoRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -1724,53 +777,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRetryFailedWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRetryFailed(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRetryFailed(callback: ServiceCallback<void>): void;
@@ -1778,53 +800,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRetrycanceledWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRetrycanceled(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRetrycanceled(callback: ServiceCallback<void>): void;
@@ -1832,54 +823,22 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header. Poll returns a 200 with a response body after
-     * success.
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header.
+     * Poll returns a 200 with a response body after success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Sku>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post200WithPayloadWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Sku>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header. Poll returns a 200 with a response body after
-     * success.
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header.
+     * Poll returns a 200 with a response body after success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Sku} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Sku} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Sku} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post200WithPayload(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Sku>;
     post200WithPayload(callback: ServiceCallback<models.Sku>): void;
@@ -1887,69 +846,30 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' and 'Retry-After' headers, Polls return a 200 with a
-     * response body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' and
+     * 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' and 'Retry-After' headers, Polls return a 200 with a
-     * response body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' and
+     * 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     post202Retry200(callback: ServiceCallback<void>): void;
@@ -1957,68 +877,30 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header, 204 with noresponse body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header,
+     * 204 with noresponse body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post202NoRetry204WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header, 204 with noresponse body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header,
+     * 204 with noresponse body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post202NoRetry204(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     post202NoRetry204(callback: ServiceCallback<models.Product>): void;
@@ -2026,54 +908,24 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postDoubleHeadersFinalLocationGetWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postDoubleHeadersFinalLocationGet(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     postDoubleHeadersFinalLocationGet(callback: ServiceCallback<models.Product>): void;
@@ -2081,54 +933,24 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postDoubleHeadersFinalAzureHeaderGetWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postDoubleHeadersFinalAzureHeaderGet(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     postDoubleHeadersFinalAzureHeaderGet(callback: ServiceCallback<models.Product>): void;
@@ -2136,56 +958,24 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object if you support initial
-     * Autorest behavior.
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object if you support initial Autorest behavior.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postDoubleHeadersFinalAzureHeaderGetDefaultWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object if you support initial
-     * Autorest behavior.
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object if you support initial Autorest behavior.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postDoubleHeadersFinalAzureHeaderGetDefault(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     postDoubleHeadersFinalAzureHeaderGetDefault(callback: ServiceCallback<models.Product>): void;
@@ -2193,70 +983,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     postAsyncRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -2264,70 +1016,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncNoRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncNoRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     postAsyncNoRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -2335,69 +1049,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRetryFailedWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRetryFailed(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRetryFailed(callback: ServiceCallback<void>): void;
@@ -2405,69 +1082,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRetrycanceledWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRetrycanceled(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRetrycanceled(callback: ServiceCallback<void>): void;
@@ -2475,68 +1115,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut200SucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut200Succeeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut200Succeeded(callback: ServiceCallback<models.Product>): void;
@@ -2544,68 +1146,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that does not contain ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that does
+     * not contain ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut200SucceededNoStateWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that does not contain ProvisioningState=’Succeeded’.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that does
+     * not contain ProvisioningState=’Succeeded’.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut200SucceededNoState(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut200SucceededNoState(callback: ServiceCallback<models.Product>): void;
@@ -2613,70 +1177,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 202 to the initial request, with
-     * a location header that points to a polling URL that returns a 200 and an
-     * entity that doesn't contains ProvisioningState
-     *
+     * Long running put request, service returns a 202 to the initial request, with a location header
+     * that points to a polling URL that returns a 200 and an entity that doesn't contains
+     * ProvisioningState
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 202 to the initial request, with
-     * a location header that points to a polling URL that returns a 200 and an
-     * entity that doesn't contains ProvisioningState
-     *
+     * Long running put request, service returns a 202 to the initial request, with a location header
+     * that points to a polling URL that returns a 200 and an entity that doesn't contains
+     * ProvisioningState
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut202Retry200(callback: ServiceCallback<models.Product>): void;
@@ -2684,70 +1210,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut201CreatingSucceeded200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut201CreatingSucceeded200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut201CreatingSucceeded200(callback: ServiceCallback<models.Product>): void;
@@ -2755,70 +1243,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Updating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Updating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut200UpdatingSucceeded204WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Updating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Updating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut200UpdatingSucceeded204(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut200UpdatingSucceeded204(callback: ServiceCallback<models.Product>): void;
@@ -2826,70 +1276,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Created’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Failed’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Created’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut201CreatingFailed200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Created’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Failed’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Created’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut201CreatingFailed200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut201CreatingFailed200(callback: ServiceCallback<models.Product>): void;
@@ -2897,70 +1309,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Canceled’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut200Acceptedcanceled200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’.  Polls return this
-     * value until the last poll returns a ‘200’ with ProvisioningState=’Canceled’
-     *
+     * Long running put request, service returns a 201 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut200Acceptedcanceled200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut200Acceptedcanceled200(callback: ServiceCallback<models.Product>): void;
@@ -2968,70 +1342,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * location header. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running put request, service returns a 202 to the initial request with location header.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutNoHeaderInRetryWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * location header. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running put request, service returns a 202 to the initial request with location header.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutNoHeaderInRetry(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutNoHeaderInRetry(callback: ServiceCallback<models.Product>): void;
@@ -3039,70 +1373,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -3110,70 +1406,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncNoRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncNoRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncNoRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -3181,70 +1439,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRetryFailedWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRetryFailed(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRetryFailed(callback: ServiceCallback<models.Product>): void;
@@ -3252,70 +1472,32 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncNoRetrycanceledWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncNoRetrycanceled(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncNoRetrycanceled(callback: ServiceCallback<models.Product>): void;
@@ -3323,70 +1505,30 @@ export interface LROs {
 
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * Azure-AsyncOperation header. Subsequent calls to operation status do not
-     * contain Azure-AsyncOperation header.
-     *
+     * Long running put request, service returns a 202 to the initial request with Azure-AsyncOperation
+     * header. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncNoHeaderInRetryWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 202 to the initial request with
-     * Azure-AsyncOperation header. Subsequent calls to operation status do not
-     * contain Azure-AsyncOperation header.
-     *
+     * Long running put request, service returns a 202 to the initial request with Azure-AsyncOperation
+     * header. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncNoHeaderInRetry(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncNoHeaderInRetry(callback: ServiceCallback<models.Product>): void;
@@ -3395,61 +1537,25 @@ export interface LROs {
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Sku>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutNonResourceWithHttpOperationResponse(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Sku>>;
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Sku} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Sku} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Sku} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutNonResource(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<models.Sku>;
     beginPutNonResource(callback: ServiceCallback<models.Sku>): void;
@@ -3458,61 +1564,25 @@ export interface LROs {
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] Sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Sku>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncNonResourceWithHttpOperationResponse(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Sku>>;
 
     /**
      * Long running put request with non resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.sku] Sku to put
-     *
      * @param {string} [options.sku.name]
-     *
      * @param {string} [options.sku.id]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Sku} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Sku} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Sku} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncNonResource(options?: { sku? : models.Sku, customHeaders? : { [headerName: string]: string; } }): Promise<models.Sku>;
     beginPutAsyncNonResource(callback: ServiceCallback<models.Sku>): void;
@@ -3521,53 +1591,21 @@ export interface LROs {
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<SubProduct>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutSubResourceWithHttpOperationResponse(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.SubProduct>>;
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {SubProduct} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {SubProduct} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link SubProduct} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutSubResource(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<models.SubProduct>;
     beginPutSubResource(callback: ServiceCallback<models.SubProduct>): void;
@@ -3576,53 +1614,21 @@ export interface LROs {
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<SubProduct>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncSubResourceWithHttpOperationResponse(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.SubProduct>>;
 
     /**
      * Long running put request with sub resource.
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {string} [options.provisioningState]
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {SubProduct} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {SubProduct} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link SubProduct} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncSubResource(options?: { provisioningState? : string, customHeaders? : { [headerName: string]: string; } }): Promise<models.SubProduct>;
     beginPutAsyncSubResource(callback: ServiceCallback<models.SubProduct>): void;
@@ -3630,56 +1636,24 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Accepted’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Accepted’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteProvisioning202Accepted200SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Accepted’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Accepted’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteProvisioning202Accepted200Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginDeleteProvisioning202Accepted200Succeeded(callback: ServiceCallback<models.Product>): void;
@@ -3687,56 +1661,24 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Failed’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteProvisioning202DeletingFailed200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Failed’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Failed’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteProvisioning202DeletingFailed200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginDeleteProvisioning202DeletingFailed200(callback: ServiceCallback<models.Product>): void;
@@ -3744,56 +1686,24 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Canceled’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteProvisioning202Deletingcanceled200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’.  Polls return
-     * this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Canceled’
-     *
+     * Long running delete request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns a
+     * ‘200’ with ProvisioningState=’Canceled’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteProvisioning202Deletingcanceled200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginDeleteProvisioning202Deletingcanceled200(callback: ServiceCallback<models.Product>): void;
@@ -3802,48 +1712,19 @@ export interface LROs {
 
     /**
      * Long running delete succeeds and returns right away
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDelete204SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running delete succeeds and returns right away
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDelete204Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDelete204Succeeded(callback: ServiceCallback<void>): void;
@@ -3851,54 +1732,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDelete202Retry200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDelete202Retry200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginDelete202Retry200(callback: ServiceCallback<models.Product>): void;
@@ -3906,54 +1755,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDelete202NoRetry204WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 202 to the initial request. Polls return this
+     * value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDelete202NoRetry204(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginDelete202NoRetry204(callback: ServiceCallback<models.Product>): void;
@@ -3961,53 +1778,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a location header in the
-     * initial request. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running delete request, service returns a location header in the initial request.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteNoHeaderInRetryWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a location header in the
-     * initial request. Subsequent calls to operation status do not contain
-     * location header.
-     *
+     * Long running delete request, service returns a location header in the initial request.
+     * Subsequent calls to operation status do not contain location header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteNoHeaderInRetry(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteNoHeaderInRetry(callback: ServiceCallback<void>): void;
@@ -4015,53 +1801,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns an Azure-AsyncOperation header
-     * in the initial request. Subsequent calls to operation status do not contain
-     * Azure-AsyncOperation header.
-     *
+     * Long running delete request, service returns an Azure-AsyncOperation header in the initial
+     * request. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncNoHeaderInRetryWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns an Azure-AsyncOperation header
-     * in the initial request. Subsequent calls to operation status do not contain
-     * Azure-AsyncOperation header.
-     *
+     * Long running delete request, service returns an Azure-AsyncOperation header in the initial
+     * request. Subsequent calls to operation status do not contain Azure-AsyncOperation header.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncNoHeaderInRetry(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncNoHeaderInRetry(callback: ServiceCallback<void>): void;
@@ -4069,53 +1824,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRetrySucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRetrySucceeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -4123,53 +1847,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncNoRetrySucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncNoRetrySucceeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncNoRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -4177,53 +1870,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRetryFailedWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRetryFailed(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRetryFailed(callback: ServiceCallback<void>): void;
@@ -4231,53 +1893,22 @@ export interface LROs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRetrycanceledWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRetrycanceled(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRetrycanceled(callback: ServiceCallback<void>): void;
@@ -4285,54 +1916,22 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header. Poll returns a 200 with a response body after
-     * success.
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header.
+     * Poll returns a 200 with a response body after success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Sku>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost200WithPayloadWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Sku>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header. Poll returns a 200 with a response body after
-     * success.
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header.
+     * Poll returns a 200 with a response body after success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Sku} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Sku} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Sku} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost200WithPayload(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Sku>;
     beginPost200WithPayload(callback: ServiceCallback<models.Sku>): void;
@@ -4340,69 +1939,30 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' and 'Retry-After' headers, Polls return a 200 with a
-     * response body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' and
+     * 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' and 'Retry-After' headers, Polls return a 200 with a
-     * response body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' and
+     * 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPost202Retry200(callback: ServiceCallback<void>): void;
@@ -4410,68 +1970,30 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header, 204 with noresponse body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header,
+     * 204 with noresponse body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost202NoRetry204WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with 'Location' header, 204 with noresponse body after success
-     *
+     * Long running post request, service returns a 202 to the initial request, with 'Location' header,
+     * 204 with noresponse body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost202NoRetry204(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPost202NoRetry204(callback: ServiceCallback<models.Product>): void;
@@ -4479,54 +2001,24 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostDoubleHeadersFinalLocationGetWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostDoubleHeadersFinalLocationGet(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPostDoubleHeadersFinalLocationGet(callback: ServiceCallback<models.Product>): void;
@@ -4534,54 +2026,24 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostDoubleHeadersFinalAzureHeaderGetWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostDoubleHeadersFinalAzureHeaderGet(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPostDoubleHeadersFinalAzureHeaderGet(callback: ServiceCallback<models.Product>): void;
@@ -4589,56 +2051,24 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object if you support initial
-     * Autorest behavior.
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object if you support initial Autorest behavior.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostDoubleHeadersFinalAzureHeaderGetDefaultWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request with
-     * both Location and Azure-Async header. Poll Azure-Async and it's success.
-     * Should NOT poll Location to get the final object if you support initial
-     * Autorest behavior.
-     *
+     * Long running post request, service returns a 202 to the initial request with both Location and
+     * Azure-Async header. Poll Azure-Async and it's success. Should NOT poll Location to get the final
+     * object if you support initial Autorest behavior.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostDoubleHeadersFinalAzureHeaderGetDefault(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPostDoubleHeadersFinalAzureHeaderGetDefault(callback: ServiceCallback<models.Product>): void;
@@ -4646,70 +2076,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPostAsyncRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -4717,70 +2109,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncNoRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncNoRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPostAsyncNoRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -4788,69 +2142,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRetryFailedWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRetryFailed(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRetryFailed(callback: ServiceCallback<void>): void;
@@ -4858,69 +2175,32 @@ export interface LROs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRetrycanceledWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRetrycanceled(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRetrycanceled(callback: ServiceCallback<void>): void;
@@ -4937,72 +2217,32 @@ export interface LRORetrys {
 
 
     /**
-     * Long running put request, service returns a 500, then a 201 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’.  Polls
-     * return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 500, then a 201 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put201CreatingSucceeded200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 500, then a 201 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’.  Polls
-     * return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 500, then a 201 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put201CreatingSucceeded200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put201CreatingSucceeded200(callback: ServiceCallback<models.Product>): void;
@@ -5010,70 +2250,32 @@ export interface LRORetrys {
 
 
     /**
-     * Long running put request, service returns a 500, then a 200 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 500, then a 200 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRelativeRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 500, then a 200 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 500, then a 200 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRelativeRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRelativeRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -5081,56 +2283,24 @@ export interface LRORetrys {
 
 
     /**
-     * Long running delete request, service returns a 500, then a  202 to the
-     * initial request, with an entity that contains ProvisioningState=’Accepted’.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a  202 to the initial request, with an
+     * entity that contains ProvisioningState=’Accepted’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteProvisioning202Accepted200SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 500, then a  202 to the
-     * initial request, with an entity that contains ProvisioningState=’Accepted’.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a  202 to the initial request, with an
+     * entity that contains ProvisioningState=’Accepted’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteProvisioning202Accepted200Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     deleteProvisioning202Accepted200Succeeded(callback: ServiceCallback<models.Product>): void;
@@ -5138,53 +2308,22 @@ export interface LRORetrys {
 
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Polls return this value until the last poll returns a ‘200’
-     * with ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Polls
+     * return this value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     delete202Retry200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Polls return this value until the last poll returns a ‘200’
-     * with ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Polls
+     * return this value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     delete202Retry200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     delete202Retry200(callback: ServiceCallback<void>): void;
@@ -5192,53 +2331,22 @@ export interface LRORetrys {
 
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Poll the endpoint indicated in the Azure-AsyncOperation
-     * header for operation status
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRelativeRetrySucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Poll the endpoint indicated in the Azure-AsyncOperation
-     * header for operation status
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRelativeRetrySucceeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRelativeRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -5246,69 +2354,30 @@ export interface LRORetrys {
 
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with 'Location' and 'Retry-After' headers, Polls return a 200 with
-     * a response body after success
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with 'Location' and 'Retry-After' headers, Polls return a 200 with
-     * a response body after success
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     post202Retry200(callback: ServiceCallback<void>): void;
@@ -5316,69 +2385,32 @@ export interface LRORetrys {
 
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRelativeRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRelativeRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRelativeRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -5386,72 +2418,32 @@ export interface LRORetrys {
 
 
     /**
-     * Long running put request, service returns a 500, then a 201 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’.  Polls
-     * return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 500, then a 201 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut201CreatingSucceeded200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 500, then a 201 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’.  Polls
-     * return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running put request, service returns a 500, then a 201 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut201CreatingSucceeded200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut201CreatingSucceeded200(callback: ServiceCallback<models.Product>): void;
@@ -5459,70 +2451,32 @@ export interface LRORetrys {
 
 
     /**
-     * Long running put request, service returns a 500, then a 200 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 500, then a 200 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRelativeRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 500, then a 200 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 500, then a 200 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRelativeRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRelativeRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -5530,56 +2484,24 @@ export interface LRORetrys {
 
 
     /**
-     * Long running delete request, service returns a 500, then a  202 to the
-     * initial request, with an entity that contains ProvisioningState=’Accepted’.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a  202 to the initial request, with an
+     * entity that contains ProvisioningState=’Accepted’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteProvisioning202Accepted200SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running delete request, service returns a 500, then a  202 to the
-     * initial request, with an entity that contains ProvisioningState=’Accepted’.
-     * Polls return this value until the last poll returns a ‘200’ with
-     * ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a  202 to the initial request, with an
+     * entity that contains ProvisioningState=’Accepted’.  Polls return this value until the last poll
+     * returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteProvisioning202Accepted200Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginDeleteProvisioning202Accepted200Succeeded(callback: ServiceCallback<models.Product>): void;
@@ -5587,53 +2509,22 @@ export interface LRORetrys {
 
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Polls return this value until the last poll returns a ‘200’
-     * with ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Polls
+     * return this value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDelete202Retry200WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Polls return this value until the last poll returns a ‘200’
-     * with ProvisioningState=’Succeeded’
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Polls
+     * return this value until the last poll returns a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDelete202Retry200(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDelete202Retry200(callback: ServiceCallback<void>): void;
@@ -5641,53 +2532,22 @@ export interface LRORetrys {
 
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Poll the endpoint indicated in the Azure-AsyncOperation
-     * header for operation status
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRelativeRetrySucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 500, then a 202 to the
-     * initial request. Poll the endpoint indicated in the Azure-AsyncOperation
-     * header for operation status
-     *
+     * Long running delete request, service returns a 500, then a 202 to the initial request. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRelativeRetrySucceeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRelativeRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -5695,69 +2555,30 @@ export interface LRORetrys {
 
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with 'Location' and 'Retry-After' headers, Polls return a 200 with
-     * a response body after success
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with 'Location' and 'Retry-After' headers, Polls return a 200 with
-     * a response body after success
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPost202Retry200(callback: ServiceCallback<void>): void;
@@ -5765,69 +2586,32 @@ export interface LRORetrys {
 
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRelativeRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 500, then a 202 to the initial
-     * request, with an entity that contains ProvisioningState=’Creating’. Poll the
-     * endpoint indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 500, then a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRelativeRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRelativeRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -5845,65 +2629,27 @@ export interface LROSADs {
 
     /**
      * Long running put request, service returns a 400 to the initial request
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putNonRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
      * Long running put request, service returns a 400 to the initial request
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putNonRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putNonRetry400(callback: ServiceCallback<models.Product>): void;
@@ -5911,68 +2657,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putNonRetry201Creating400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putNonRetry201Creating400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putNonRetry201Creating400(callback: ServiceCallback<models.Product>): void;
@@ -5980,68 +2688,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putNonRetry201Creating400InvalidJsonWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putNonRetry201Creating400InvalidJson(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putNonRetry201Creating400InvalidJson(callback: ServiceCallback<models.Product>): void;
@@ -6049,70 +2719,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 with
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
-     * Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 with ProvisioningState=’Creating’. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRelativeRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 with
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
-     * Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 with ProvisioningState=’Creating’. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRelativeRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRelativeRetry400(callback: ServiceCallback<models.Product>): void;
@@ -6121,48 +2751,19 @@ export interface LROSADs {
 
     /**
      * Long running delete request, service returns a 400 with an error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteNonRetry400WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running delete request, service returns a 400 with an error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteNonRetry400(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteNonRetry400(callback: ServiceCallback<void>): void;
@@ -6171,48 +2772,19 @@ export interface LROSADs {
 
     /**
      * Long running delete request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     delete202NonRetry400WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running delete request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     delete202NonRetry400(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     delete202NonRetry400(callback: ServiceCallback<void>): void;
@@ -6220,53 +2792,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRelativeRetry400WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRelativeRetry400(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRelativeRetry400(callback: ServiceCallback<void>): void;
@@ -6275,64 +2816,27 @@ export interface LROSADs {
 
     /**
      * Long running post request, service returns a 400 with no error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postNonRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running post request, service returns a 400 with no error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postNonRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postNonRetry400(callback: ServiceCallback<void>): void;
@@ -6341,64 +2845,27 @@ export interface LROSADs {
 
     /**
      * Long running post request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post202NonRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running post request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post202NonRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     post202NonRetry400(callback: ServiceCallback<void>): void;
@@ -6406,69 +2873,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request Poll
-     * the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running post request, service returns a 202 to the initial request Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRelativeRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request Poll
-     * the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running post request, service returns a 202 to the initial request Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRelativeRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRelativeRetry400(callback: ServiceCallback<void>): void;
@@ -6476,68 +2904,28 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request with
-     * no payload
-     *
+     * Long running put request, service returns a 201 to the initial request with no payload
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putError201NoProvisioningStatePayloadWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request with
-     * no payload
-     *
+     * Long running put request, service returns a 201 to the initial request with no payload
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putError201NoProvisioningStatePayload(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putError201NoProvisioningStatePayload(callback: ServiceCallback<models.Product>): void;
@@ -6545,70 +2933,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRelativeRetryNoStatusWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRelativeRetryNoStatus(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRelativeRetryNoStatus(callback: ServiceCallback<models.Product>): void;
@@ -6616,70 +2966,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRelativeRetryNoStatusPayloadWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRelativeRetryNoStatusPayload(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRelativeRetryNoStatusPayload(callback: ServiceCallback<models.Product>): void;
@@ -6687,51 +2999,20 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 204 to the initial request,
-     * indicating success.
-     *
+     * Long running delete request, service returns a 204 to the initial request, indicating success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     delete204SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 204 to the initial request,
-     * indicating success.
-     *
+     * Long running delete request, service returns a 204 to the initial request, indicating success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     delete204Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     delete204Succeeded(callback: ServiceCallback<void>): void;
@@ -6739,53 +3020,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRelativeRetryNoStatusWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRelativeRetryNoStatus(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRelativeRetryNoStatus(callback: ServiceCallback<void>): void;
@@ -6793,67 +3043,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * without a location header.
-     *
+     * Long running post request, service returns a 202 to the initial request, without a location
+     * header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post202NoLocationWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * without a location header.
-     *
+     * Long running post request, service returns a 202 to the initial request, without a location
+     * header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post202NoLocation(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     post202NoLocation(callback: ServiceCallback<void>): void;
@@ -6861,69 +3074,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRelativeRetryNoPayloadWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRelativeRetryNoPayload(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRelativeRetryNoPayload(callback: ServiceCallback<void>): void;
@@ -6931,68 +3107,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that is not a valid json
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that is
+     * not a valid json
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put200InvalidJsonWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that is not a valid json
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that is
+     * not a valid json
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put200InvalidJson(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put200InvalidJson(callback: ServiceCallback<models.Product>): void;
@@ -7000,70 +3138,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. The endpoint indicated
-     * in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRelativeRetryInvalidHeaderWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. The endpoint indicated
-     * in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRelativeRetryInvalidHeader(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRelativeRetryInvalidHeader(callback: ServiceCallback<models.Product>): void;
@@ -7071,70 +3171,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRelativeRetryInvalidJsonPollingWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRelativeRetryInvalidJsonPolling(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRelativeRetryInvalidJsonPolling(callback: ServiceCallback<models.Product>): void;
@@ -7142,51 +3204,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request
-     * receing a reponse with an invalid 'Location' and 'Retry-After' headers
-     *
+     * Long running delete request, service returns a 202 to the initial request receing a reponse with
+     * an invalid 'Location' and 'Retry-After' headers
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     delete202RetryInvalidHeaderWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request
-     * receing a reponse with an invalid 'Location' and 'Retry-After' headers
-     *
+     * Long running delete request, service returns a 202 to the initial request receing a reponse with
+     * an invalid 'Location' and 'Retry-After' headers
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     delete202RetryInvalidHeader(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     delete202RetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -7194,51 +3227,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * The endpoint indicated in the Azure-AsyncOperation header is invalid
-     *
+     * Long running delete request, service returns a 202 to the initial request. The endpoint
+     * indicated in the Azure-AsyncOperation header is invalid
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRelativeRetryInvalidHeaderWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * The endpoint indicated in the Azure-AsyncOperation header is invalid
-     *
+     * Long running delete request, service returns a 202 to the initial request. The endpoint
+     * indicated in the Azure-AsyncOperation header is invalid
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRelativeRetryInvalidHeader(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRelativeRetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -7246,53 +3250,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     deleteAsyncRelativeRetryInvalidJsonPollingWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     deleteAsyncRelativeRetryInvalidJsonPolling(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     deleteAsyncRelativeRetryInvalidJsonPolling(callback: ServiceCallback<void>): void;
@@ -7300,67 +3273,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with invalid 'Location' and 'Retry-After' headers.
-     *
+     * Long running post request, service returns a 202 to the initial request, with invalid 'Location'
+     * and 'Retry-After' headers.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post202RetryInvalidHeaderWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with invalid 'Location' and 'Retry-After' headers.
-     *
+     * Long running post request, service returns a 202 to the initial request, with invalid 'Location'
+     * and 'Retry-After' headers.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post202RetryInvalidHeader(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     post202RetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -7368,69 +3304,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. The endpoint
-     * indicated in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRelativeRetryInvalidHeaderWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. The endpoint
-     * indicated in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRelativeRetryInvalidHeader(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRelativeRetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -7438,69 +3337,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRelativeRetryInvalidJsonPollingWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRelativeRetryInvalidJsonPolling(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRelativeRetryInvalidJsonPolling(callback: ServiceCallback<void>): void;
@@ -7509,65 +3371,27 @@ export interface LROSADs {
 
     /**
      * Long running put request, service returns a 400 to the initial request
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutNonRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
      * Long running put request, service returns a 400 to the initial request
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutNonRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutNonRetry400(callback: ServiceCallback<models.Product>): void;
@@ -7575,68 +3399,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutNonRetry201Creating400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutNonRetry201Creating400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutNonRetry201Creating400(callback: ServiceCallback<models.Product>): void;
@@ -7644,68 +3430,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutNonRetry201Creating400InvalidJsonWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a Product with 'ProvisioningState'
-     * = 'Creating' and 201 response code
-     *
+     * Long running put request, service returns a Product with 'ProvisioningState' = 'Creating' and
+     * 201 response code
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutNonRetry201Creating400InvalidJson(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutNonRetry201Creating400InvalidJson(callback: ServiceCallback<models.Product>): void;
@@ -7713,70 +3461,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 with
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
-     * Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 with ProvisioningState=’Creating’. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRelativeRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 with
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
-     * Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 with ProvisioningState=’Creating’. Poll the
+     * endpoint indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRelativeRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRelativeRetry400(callback: ServiceCallback<models.Product>): void;
@@ -7785,48 +3493,19 @@ export interface LROSADs {
 
     /**
      * Long running delete request, service returns a 400 with an error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteNonRetry400WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running delete request, service returns a 400 with an error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteNonRetry400(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteNonRetry400(callback: ServiceCallback<void>): void;
@@ -7835,48 +3514,19 @@ export interface LROSADs {
 
     /**
      * Long running delete request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDelete202NonRetry400WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running delete request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDelete202NonRetry400(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDelete202NonRetry400(callback: ServiceCallback<void>): void;
@@ -7884,53 +3534,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRelativeRetry400WithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRelativeRetry400(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRelativeRetry400(callback: ServiceCallback<void>): void;
@@ -7939,64 +3558,27 @@ export interface LROSADs {
 
     /**
      * Long running post request, service returns a 400 with no error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostNonRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running post request, service returns a 400 with no error body
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostNonRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostNonRetry400(callback: ServiceCallback<void>): void;
@@ -8005,64 +3587,27 @@ export interface LROSADs {
 
     /**
      * Long running post request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost202NonRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
      * Long running post request, service returns a 202 with a location header
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost202NonRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPost202NonRetry400(callback: ServiceCallback<void>): void;
@@ -8070,69 +3615,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request Poll
-     * the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running post request, service returns a 202 to the initial request Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRelativeRetry400WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request Poll
-     * the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running post request, service returns a 202 to the initial request Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRelativeRetry400(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRelativeRetry400(callback: ServiceCallback<void>): void;
@@ -8140,68 +3646,28 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 201 to the initial request with
-     * no payload
-     *
+     * Long running put request, service returns a 201 to the initial request with no payload
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutError201NoProvisioningStatePayloadWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 201 to the initial request with
-     * no payload
-     *
+     * Long running put request, service returns a 201 to the initial request with no payload
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutError201NoProvisioningStatePayload(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutError201NoProvisioningStatePayload(callback: ServiceCallback<models.Product>): void;
@@ -8209,70 +3675,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRelativeRetryNoStatusWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRelativeRetryNoStatus(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRelativeRetryNoStatus(callback: ServiceCallback<models.Product>): void;
@@ -8280,70 +3708,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRelativeRetryNoStatusPayloadWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRelativeRetryNoStatusPayload(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRelativeRetryNoStatusPayload(callback: ServiceCallback<models.Product>): void;
@@ -8351,51 +3741,20 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 204 to the initial request,
-     * indicating success.
-     *
+     * Long running delete request, service returns a 204 to the initial request, indicating success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDelete204SucceededWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 204 to the initial request,
-     * indicating success.
-     *
+     * Long running delete request, service returns a 204 to the initial request, indicating success.
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDelete204Succeeded(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDelete204Succeeded(callback: ServiceCallback<void>): void;
@@ -8403,53 +3762,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRelativeRetryNoStatusWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRelativeRetryNoStatus(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRelativeRetryNoStatus(callback: ServiceCallback<void>): void;
@@ -8457,67 +3785,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * without a location header.
-     *
+     * Long running post request, service returns a 202 to the initial request, without a location
+     * header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost202NoLocationWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * without a location header.
-     *
+     * Long running post request, service returns a 202 to the initial request, without a location
+     * header.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost202NoLocation(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPost202NoLocation(callback: ServiceCallback<void>): void;
@@ -8525,69 +3816,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRelativeRetryNoPayloadWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRelativeRetryNoPayload(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRelativeRetryNoPayload(callback: ServiceCallback<void>): void;
@@ -8595,68 +3849,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that is not a valid json
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that is
+     * not a valid json
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut200InvalidJsonWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that is not a valid json
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that is
+     * not a valid json
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut200InvalidJson(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut200InvalidJson(callback: ServiceCallback<models.Product>): void;
@@ -8664,70 +3880,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. The endpoint indicated
-     * in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRelativeRetryInvalidHeaderWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. The endpoint indicated
-     * in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRelativeRetryInvalidHeader(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRelativeRetryInvalidHeader(callback: ServiceCallback<models.Product>): void;
@@ -8735,70 +3913,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRelativeRetryInvalidJsonPollingWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * Long running put request, service returns a 200 to the initial request, with
-     * an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running put request, service returns a 200 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRelativeRetryInvalidJsonPolling(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRelativeRetryInvalidJsonPolling(callback: ServiceCallback<models.Product>): void;
@@ -8806,51 +3946,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request
-     * receing a reponse with an invalid 'Location' and 'Retry-After' headers
-     *
+     * Long running delete request, service returns a 202 to the initial request receing a reponse with
+     * an invalid 'Location' and 'Retry-After' headers
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDelete202RetryInvalidHeaderWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request
-     * receing a reponse with an invalid 'Location' and 'Retry-After' headers
-     *
+     * Long running delete request, service returns a 202 to the initial request receing a reponse with
+     * an invalid 'Location' and 'Retry-After' headers
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDelete202RetryInvalidHeader(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDelete202RetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -8858,51 +3969,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * The endpoint indicated in the Azure-AsyncOperation header is invalid
-     *
+     * Long running delete request, service returns a 202 to the initial request. The endpoint
+     * indicated in the Azure-AsyncOperation header is invalid
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRelativeRetryInvalidHeaderWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * The endpoint indicated in the Azure-AsyncOperation header is invalid
-     *
+     * Long running delete request, service returns a 202 to the initial request. The endpoint
+     * indicated in the Azure-AsyncOperation header is invalid
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRelativeRetryInvalidHeader(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRelativeRetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -8910,53 +3992,22 @@ export interface LROSADs {
 
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginDeleteAsyncRelativeRetryInvalidJsonPollingWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running delete request, service returns a 202 to the initial request.
-     * Poll the endpoint indicated in the Azure-AsyncOperation header for operation
-     * status
-     *
+     * Long running delete request, service returns a 202 to the initial request. Poll the endpoint
+     * indicated in the Azure-AsyncOperation header for operation status
      * @param {object} [options] Optional Parameters.
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginDeleteAsyncRelativeRetryInvalidJsonPolling(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginDeleteAsyncRelativeRetryInvalidJsonPolling(callback: ServiceCallback<void>): void;
@@ -8964,67 +4015,30 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with invalid 'Location' and 'Retry-After' headers.
-     *
+     * Long running post request, service returns a 202 to the initial request, with invalid 'Location'
+     * and 'Retry-After' headers.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost202RetryInvalidHeaderWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with invalid 'Location' and 'Retry-After' headers.
-     *
+     * Long running post request, service returns a 202 to the initial request, with invalid 'Location'
+     * and 'Retry-After' headers.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost202RetryInvalidHeader(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPost202RetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -9032,69 +4046,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. The endpoint
-     * indicated in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRelativeRetryInvalidHeaderWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. The endpoint
-     * indicated in the Azure-AsyncOperation header is invalid.
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. The endpoint indicated in the Azure-AsyncOperation header
+     * is invalid.
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRelativeRetryInvalidHeader(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRelativeRetryInvalidHeader(callback: ServiceCallback<void>): void;
@@ -9102,69 +4079,32 @@ export interface LROSADs {
 
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRelativeRetryInvalidJsonPollingWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * Long running post request, service returns a 202 to the initial request,
-     * with an entity that contains ProvisioningState=’Creating’. Poll the endpoint
-     * indicated in the Azure-AsyncOperation header for operation status
-     *
+     * Long running post request, service returns a 202 to the initial request, with an entity that
+     * contains ProvisioningState=’Creating’. Poll the endpoint indicated in the Azure-AsyncOperation
+     * header for operation status
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRelativeRetryInvalidJsonPolling(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRelativeRetryInvalidJsonPolling(callback: ServiceCallback<void>): void;
@@ -9181,74 +4121,34 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 200 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 200 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     putAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 200 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 200 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     putAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     putAsyncRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -9256,74 +4156,34 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 201 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’.  Polls return this value until the last poll
-     * returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 201 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+     * a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     put201CreatingSucceeded200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 201 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’.  Polls return this value until the last poll
-     * returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 201 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+     * a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     put201CreatingSucceeded200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     put201CreatingSucceeded200(callback: ServiceCallback<models.Product>): void;
@@ -9331,71 +4191,32 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-     * Polls return a 200 with a response body after success
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     post202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-     * Polls return a 200 with a response body after success
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     post202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     post202Retry200(callback: ServiceCallback<void>): void;
@@ -9403,73 +4224,34 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     postAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     postAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     postAsyncRetrySucceeded(callback: ServiceCallback<void>): void;
@@ -9477,74 +4259,34 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 200 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 200 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPutAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 200 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 200 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPutAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPutAsyncRetrySucceeded(callback: ServiceCallback<models.Product>): void;
@@ -9552,74 +4294,34 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 201 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’.  Polls return this value until the last poll
-     * returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 201 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+     * a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPut201CreatingSucceeded200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running put request, service returns a
-     * 201 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’.  Polls return this value until the last poll
-     * returns a ‘200’ with ProvisioningState=’Succeeded’
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running put request, service returns a 201 to the initial request, with an entity
+     * that contains ProvisioningState=’Creating’.  Polls return this value until the last poll returns
+     * a ‘200’ with ProvisioningState=’Succeeded’
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {Product} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {Product} [result]   - The deserialized result object if an error did not occur.
-     *                      See {@link Product} for more information.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPut201CreatingSucceeded200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
     beginPut201CreatingSucceeded200(callback: ServiceCallback<models.Product>): void;
@@ -9627,71 +4329,32 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-     * Polls return a 200 with a response body after success
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPost202Retry200WithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with 'Location' and 'Retry-After' headers,
-     * Polls return a 200 with a response body after success
-     *
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with
+     * 'Location' and 'Retry-After' headers, Polls return a 200 with a response body after success
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPost202Retry200(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPost202Retry200(callback: ServiceCallback<void>): void;
@@ -9699,73 +4362,34 @@ export interface LROsCustomHeader {
 
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @returns {Promise} A promise is returned
-     *
-     * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-     *
-     * @reject {Error|ServiceError} - The error object.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @returns {Promise} A promise is returned.
      */
     beginPostAsyncRetrySucceededWithHttpOperationResponse(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
     /**
-     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required
-     * message header for all requests. Long running post request, service returns
-     * a 202 to the initial request, with an entity that contains
-     * ProvisioningState=’Creating’. Poll the endpoint indicated in the
+     * x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 is required message header for all
+     * requests. Long running post request, service returns a 202 to the initial request, with an
+     * entity that contains ProvisioningState=’Creating’. Poll the endpoint indicated in the
      * Azure-AsyncOperation header for operation status
-     *
      * @param {object} [options] Optional Parameters.
-     *
      * @param {object} [options.product] Product to put
-     *
      * @param {string} [options.product.provisioningState]
-     *
      * @param {object} [options.product.tags]
-     *
      * @param {string} [options.product.location] Resource Location
-     *
-     * @param {object} [options.customHeaders] Headers that will be added to the
-     * request
-     *
-     * @param {ServiceCallback} [optionalCallback] - The optional callback.
-     *
-     * @returns {ServiceCallback|Promise} If a callback was passed as the last
-     * parameter then it returns the callback else returns a Promise.
-     *
-     * {Promise} A promise is returned.
-     *
-     *                      @resolve {null} - The deserialized result object.
-     *
-     *                      @reject {Error|ServiceError} - The error object.
-     *
-     * {ServiceCallback} optionalCallback(err, result, request, response)
-     *
-     *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-     *
-     *                      {null} [result]   - The deserialized result object if an error did not occur.
-     *
-     *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-     *
-     *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+     * @param {object} [options.customHeaders] Headers that will be added to the request
+     * @param {function} [optionalCallback] The optional callback.
+     * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+     * callback. Otherwise it returns a Promise.
      */
     beginPostAsyncRetrySucceeded(options?: { product? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<void>;
     beginPostAsyncRetrySucceeded(callback: ServiceCallback<void>): void;

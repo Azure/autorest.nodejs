@@ -15,25 +15,12 @@ const msRestAzure = require('ms-rest-azure');
 const WebResource = msRest.WebResource;
 
 /**
- * POST method with subscriptionId modeled in credentials.  Set the credential
- * subscriptionId to '1234-5678-9012-3456' to succeed
- *
+ * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+ * '1234-5678-9012-3456' to succeed
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postMethodGlobalValid(options, callback) {
    /* jshint validthis: true */
@@ -128,26 +115,12 @@ function _postMethodGlobalValid(options, callback) {
 }
 
 /**
- * POST method with subscriptionId modeled in credentials.  Set the credential
- * subscriptionId to null, and client-side validation should prevent you from
- * making this call
- *
+ * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+ * null, and client-side validation should prevent you from making this call
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postMethodGlobalNull(options, callback) {
    /* jshint validthis: true */
@@ -242,25 +215,12 @@ function _postMethodGlobalNull(options, callback) {
 }
 
 /**
- * POST method with subscriptionId modeled in credentials.  Set the credential
- * subscriptionId to '1234-5678-9012-3456' to succeed
- *
+ * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+ * '1234-5678-9012-3456' to succeed
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postMethodGlobalNotProvidedValid(options, callback) {
    /* jshint validthis: true */
@@ -359,25 +319,12 @@ function _postMethodGlobalNotProvidedValid(options, callback) {
 }
 
 /**
- * POST method with subscriptionId modeled in credentials.  Set the credential
- * subscriptionId to '1234-5678-9012-3456' to succeed
- *
+ * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+ * '1234-5678-9012-3456' to succeed
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postPathGlobalValid(options, callback) {
    /* jshint validthis: true */
@@ -472,25 +419,12 @@ function _postPathGlobalValid(options, callback) {
 }
 
 /**
- * POST method with subscriptionId modeled in credentials.  Set the credential
- * subscriptionId to '1234-5678-9012-3456' to succeed
- *
+ * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+ * '1234-5678-9012-3456' to succeed
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postSwaggerGlobalValid(options, callback) {
    /* jshint validthis: true */
@@ -600,19 +534,11 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postMethodGlobalValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -629,34 +555,13 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postMethodGlobalValid(options, optionalCallback) {
     let client = this.client;
@@ -679,20 +584,11 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to null, and client-side validation should prevent you from
-   * making this call
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * null, and client-side validation should prevent you from making this call
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postMethodGlobalNullWithHttpOperationResponse(options) {
     let client = this.client;
@@ -709,35 +605,13 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to null, and client-side validation should prevent you from
-   * making this call
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * null, and client-side validation should prevent you from making this call
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postMethodGlobalNull(options, optionalCallback) {
     let client = this.client;
@@ -760,19 +634,11 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postMethodGlobalNotProvidedValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -789,34 +655,13 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postMethodGlobalNotProvidedValid(options, optionalCallback) {
     let client = this.client;
@@ -839,19 +684,11 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postPathGlobalValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -868,34 +705,13 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postPathGlobalValid(options, optionalCallback) {
     let client = this.client;
@@ -918,19 +734,11 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postSwaggerGlobalValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -947,34 +755,13 @@ class SubscriptionInCredentials {
   }
 
   /**
-   * POST method with subscriptionId modeled in credentials.  Set the credential
-   * subscriptionId to '1234-5678-9012-3456' to succeed
-   *
+   * POST method with subscriptionId modeled in credentials.  Set the credential subscriptionId to
+   * '1234-5678-9012-3456' to succeed
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postSwaggerGlobalValid(options, optionalCallback) {
     let client = this.client;

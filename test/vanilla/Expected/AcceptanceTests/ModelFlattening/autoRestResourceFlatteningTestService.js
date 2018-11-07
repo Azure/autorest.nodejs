@@ -23,25 +23,11 @@ const models = require('./models');
 
 /**
  * Put External Resource as an Array
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {array} [options.resourceArray] External Resource as an Array to put
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putArray(options, callback) {
    /* jshint validthis: true */
@@ -144,23 +130,10 @@ function _putArray(options, callback) {
 
 /**
  * Get External Resource as an Array
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {array} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getArray(options, callback) {
    /* jshint validthis: true */
@@ -264,27 +237,13 @@ function _getArray(options, callback) {
 }
 
 /**
- * No need to have a route in Express server for this operation. Used to verify
- * the type flattened is not removed if it's referenced in an array
- *
+ * No need to have a route in Express server for this operation. Used to verify the type flattened
+ * is not removed if it's referenced in an array
  * @param {object} [options] Optional Parameters.
- *
  * @param {array} [options.resourceArray] External Resource as an Array to put
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putWrappedArray(options, callback) {
    /* jshint validthis: true */
@@ -386,25 +345,12 @@ function _putWrappedArray(options, callback) {
 }
 
 /**
- * No need to have a route in Express server for this operation. Used to verify
- * the type flattened is not removed if it's referenced in an array
- *
+ * No need to have a route in Express server for this operation. Used to verify the type flattened
+ * is not removed if it's referenced in an array
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {array} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getWrappedArray(options, callback) {
    /* jshint validthis: true */
@@ -509,26 +455,11 @@ function _getWrappedArray(options, callback) {
 
 /**
  * Put External Resource as a Dictionary
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.resourceDictionary] External Resource as a
- * Dictionary to put
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putDictionary(options, callback) {
    /* jshint validthis: true */
@@ -631,23 +562,10 @@ function _putDictionary(options, callback) {
 
 /**
  * Get External Resource as a Dictionary
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getDictionary(options, callback) {
    /* jshint validthis: true */
@@ -752,45 +670,19 @@ function _getDictionary(options, callback) {
 
 /**
  * Put External Resource as a ResourceCollection
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.resourceComplexObject] External Resource as a
- * ResourceCollection to put
- *
+ * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
  * @param {object} [options.resourceComplexObject.productresource]
- *
  * @param {string} [options.resourceComplexObject.productresource.pname]
- *
- * @param {string}
- * [options.resourceComplexObject.productresource.flattenedProductType]
- *
- * @param {string}
- * [options.resourceComplexObject.productresource.provisioningState]
- *
+ * @param {string} [options.resourceComplexObject.productresource.flattenedProductType]
+ * @param {string} [options.resourceComplexObject.productresource.provisioningState]
  * @param {object} [options.resourceComplexObject.productresource.tags]
- *
- * @param {string} [options.resourceComplexObject.productresource.location]
- * Resource Location
- *
+ * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
  * @param {array} [options.resourceComplexObject.arrayofresources]
- *
  * @param {object} [options.resourceComplexObject.dictionaryofresources]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putResourceCollection(options, callback) {
    /* jshint validthis: true */
@@ -879,24 +771,10 @@ function _putResourceCollection(options, callback) {
 
 /**
  * Get External Resource as a ResourceCollection
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ResourceCollection} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getResourceCollection(options, callback) {
    /* jshint validthis: true */
@@ -987,41 +865,18 @@ function _getResourceCollection(options, callback) {
 
 /**
  * Put Simple Product with client flattening true on the model
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.simpleBodyProduct] Simple body product to put
- *
- * @param {string} options.simpleBodyProduct.maxProductDisplayName Display name
- * of product.
- *
+ * @param {string} options.simpleBodyProduct.maxProductDisplayName Display name of product.
  * @param {string} [options.simpleBodyProduct.genericValue] Generic URL value.
- *
  * @param {string} [options.simpleBodyProduct.odatavalue] URL value.
- *
- * @param {string} options.simpleBodyProduct.productId Unique identifier
- * representing a specific product for a given latitude & longitude. For
- * example, uberX in San Francisco will have a different product_id than uberX
- * in Los Angeles.
- *
- * @param {string} [options.simpleBodyProduct.description] Description of
- * product.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {string} options.simpleBodyProduct.productId Unique identifier representing a specific
+ * product for a given latitude & longitude. For example, uberX in San Francisco will have a
+ * different product_id than uberX in Los Angeles.
+ * @param {string} [options.simpleBodyProduct.description] Description of product.
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link SimpleProduct} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putSimpleProduct(options, callback) {
    /* jshint validthis: true */
@@ -1127,36 +982,17 @@ function _putSimpleProduct(options, callback) {
 
 /**
  * Put Flattened Simple Product with client flattening true on the parameter
- *
- * @param {string} productId Unique identifier representing a specific product
- * for a given latitude & longitude. For example, uberX in San Francisco will
- * have a different product_id than uberX in Los Angeles.
- *
+ * @param {string} productId Unique identifier representing a specific product for a given latitude
+ * & longitude. For example, uberX in San Francisco will have a different product_id than uberX in
+ * Los Angeles.
  * @param {string} maxProductDisplayName Display name of product.
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.description] Description of product.
- *
  * @param {string} [options.genericValue] Generic URL value.
- *
  * @param {string} [options.odatavalue] URL value.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link SimpleProduct} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postFlattenedSimpleProduct(productId, maxProductDisplayName, options, callback) {
    /* jshint validthis: true */
@@ -1298,44 +1134,19 @@ function _postFlattenedSimpleProduct(productId, maxProductDisplayName, options, 
 
 /**
  * Put Simple Product with client flattening true on the model
- *
- * @param {object} flattenParameterGroup Additional parameters for the
- * operation
- *
- * @param {string} flattenParameterGroup.name Product name with value
- * 'groupproduct'
- *
- * @param {string} flattenParameterGroup.productId Unique identifier
- * representing a specific product for a given latitude & longitude. For
- * example, uberX in San Francisco will have a different product_id than uberX
- * in Los Angeles.
- *
+ * @param {object} flattenParameterGroup Additional parameters for the operation
+ * @param {string} flattenParameterGroup.name Product name with value 'groupproduct'
+ * @param {string} flattenParameterGroup.productId Unique identifier representing a specific
+ * product for a given latitude & longitude. For example, uberX in San Francisco will have a
+ * different product_id than uberX in Los Angeles.
  * @param {string} [flattenParameterGroup.description] Description of product.
- *
- * @param {string} flattenParameterGroup.maxProductDisplayName Display name of
- * product.
- *
+ * @param {string} flattenParameterGroup.maxProductDisplayName Display name of product.
  * @param {string} [flattenParameterGroup.genericValue] Generic URL value.
- *
  * @param {string} [flattenParameterGroup.odatavalue] URL value.
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link SimpleProduct} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _putSimpleProductWithGrouping(flattenParameterGroup, options, callback) {
    /* jshint validthis: true */
@@ -1550,19 +1361,10 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putArrayWithHttpOperationResponse(options) {
     let client = this;
@@ -1580,34 +1382,12 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putArray(options, optionalCallback) {
     let client = this;
@@ -1631,17 +1411,9 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getArrayWithHttpOperationResponse(options) {
     let client = this;
@@ -1659,32 +1431,11 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as an Array
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Array} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {array} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getArray(options, optionalCallback) {
     let client = this;
@@ -1707,21 +1458,12 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
   }
 
   /**
-   * No need to have a route in Express server for this operation. Used to verify
-   * the type flattened is not removed if it's referenced in an array
-   *
+   * No need to have a route in Express server for this operation. Used to verify the type flattened
+   * is not removed if it's referenced in an array
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putWrappedArrayWithHttpOperationResponse(options) {
     let client = this;
@@ -1738,36 +1480,14 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
   }
 
   /**
-   * No need to have a route in Express server for this operation. Used to verify
-   * the type flattened is not removed if it's referenced in an array
-   *
+   * No need to have a route in Express server for this operation. Used to verify the type flattened
+   * is not removed if it's referenced in an array
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.resourceArray] External Resource as an Array to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putWrappedArray(options, optionalCallback) {
     let client = this;
@@ -1790,19 +1510,11 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
   }
 
   /**
-   * No need to have a route in Express server for this operation. Used to verify
-   * the type flattened is not removed if it's referenced in an array
-   *
+   * No need to have a route in Express server for this operation. Used to verify the type flattened
+   * is not removed if it's referenced in an array
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Array>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getWrappedArrayWithHttpOperationResponse(options) {
     let client = this;
@@ -1819,34 +1531,13 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
   }
 
   /**
-   * No need to have a route in Express server for this operation. Used to verify
-   * the type flattened is not removed if it's referenced in an array
-   *
+   * No need to have a route in Express server for this operation. Used to verify the type flattened
+   * is not removed if it's referenced in an array
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Array} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {array} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getWrappedArray(options, optionalCallback) {
     let client = this;
@@ -1870,20 +1561,10 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceDictionary] External Resource as a
-   * Dictionary to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putDictionaryWithHttpOperationResponse(options) {
     let client = this;
@@ -1901,35 +1582,12 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceDictionary] External Resource as a
-   * Dictionary to put
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.resourceDictionary] External Resource as a Dictionary to put
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putDictionary(options, optionalCallback) {
     let client = this;
@@ -1953,17 +1611,9 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Object>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getDictionaryWithHttpOperationResponse(options) {
     let client = this;
@@ -1981,32 +1631,11 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a Dictionary
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {Object} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getDictionary(options, optionalCallback) {
     let client = this;
@@ -2030,39 +1659,18 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceComplexObject] External Resource as a
-   * ResourceCollection to put
-   *
+   * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
    * @param {object} [options.resourceComplexObject.productresource]
-   *
    * @param {string} [options.resourceComplexObject.productresource.pname]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.flattenedProductType]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.provisioningState]
-   *
+   * @param {string} [options.resourceComplexObject.productresource.flattenedProductType]
+   * @param {string} [options.resourceComplexObject.productresource.provisioningState]
    * @param {object} [options.resourceComplexObject.productresource.tags]
-   *
-   * @param {string} [options.resourceComplexObject.productresource.location]
-   * Resource Location
-   *
+   * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
    * @param {array} [options.resourceComplexObject.arrayofresources]
-   *
    * @param {object} [options.resourceComplexObject.dictionaryofresources]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putResourceCollectionWithHttpOperationResponse(options) {
     let client = this;
@@ -2080,54 +1688,20 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.resourceComplexObject] External Resource as a
-   * ResourceCollection to put
-   *
+   * @param {object} [options.resourceComplexObject] External Resource as a ResourceCollection to put
    * @param {object} [options.resourceComplexObject.productresource]
-   *
    * @param {string} [options.resourceComplexObject.productresource.pname]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.flattenedProductType]
-   *
-   * @param {string}
-   * [options.resourceComplexObject.productresource.provisioningState]
-   *
+   * @param {string} [options.resourceComplexObject.productresource.flattenedProductType]
+   * @param {string} [options.resourceComplexObject.productresource.provisioningState]
    * @param {object} [options.resourceComplexObject.productresource.tags]
-   *
-   * @param {string} [options.resourceComplexObject.productresource.location]
-   * Resource Location
-   *
+   * @param {string} [options.resourceComplexObject.productresource.location] Resource Location
    * @param {array} [options.resourceComplexObject.arrayofresources]
-   *
    * @param {object} [options.resourceComplexObject.dictionaryofresources]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putResourceCollection(options, optionalCallback) {
     let client = this;
@@ -2151,17 +1725,9 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ResourceCollection>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getResourceCollectionWithHttpOperationResponse(options) {
     let client = this;
@@ -2179,33 +1745,11 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Get External Resource as a ResourceCollection
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ResourceCollection} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ResourceCollection} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getResourceCollection(options, optionalCallback) {
     let client = this;
@@ -2229,34 +1773,17 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put Simple Product with client flattening true on the model
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.simpleBodyProduct] Simple body product to put
-   *
-   * @param {string} options.simpleBodyProduct.maxProductDisplayName Display name
-   * of product.
-   *
+   * @param {string} options.simpleBodyProduct.maxProductDisplayName Display name of product.
    * @param {string} [options.simpleBodyProduct.genericValue] Generic URL value.
-   *
    * @param {string} [options.simpleBodyProduct.odatavalue] URL value.
-   *
-   * @param {string} options.simpleBodyProduct.productId Unique identifier
-   * representing a specific product for a given latitude & longitude. For
-   * example, uberX in San Francisco will have a different product_id than uberX
-   * in Los Angeles.
-   *
-   * @param {string} [options.simpleBodyProduct.description] Description of
-   * product.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<SimpleProduct>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {string} options.simpleBodyProduct.productId Unique identifier representing a specific
+   * product for a given latitude & longitude. For example, uberX in San Francisco will have a
+   * different product_id than uberX in Los Angeles.
+   * @param {string} [options.simpleBodyProduct.description] Description of product.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putSimpleProductWithHttpOperationResponse(options) {
     let client = this;
@@ -2274,50 +1801,19 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put Simple Product with client flattening true on the model
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.simpleBodyProduct] Simple body product to put
-   *
-   * @param {string} options.simpleBodyProduct.maxProductDisplayName Display name
-   * of product.
-   *
+   * @param {string} options.simpleBodyProduct.maxProductDisplayName Display name of product.
    * @param {string} [options.simpleBodyProduct.genericValue] Generic URL value.
-   *
    * @param {string} [options.simpleBodyProduct.odatavalue] URL value.
-   *
-   * @param {string} options.simpleBodyProduct.productId Unique identifier
-   * representing a specific product for a given latitude & longitude. For
-   * example, uberX in San Francisco will have a different product_id than uberX
-   * in Los Angeles.
-   *
-   * @param {string} [options.simpleBodyProduct.description] Description of
-   * product.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {SimpleProduct} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link SimpleProduct} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} options.simpleBodyProduct.productId Unique identifier representing a specific
+   * product for a given latitude & longitude. For example, uberX in San Francisco will have a
+   * different product_id than uberX in Los Angeles.
+   * @param {string} [options.simpleBodyProduct.description] Description of product.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putSimpleProduct(options, optionalCallback) {
     let client = this;
@@ -2341,29 +1837,16 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put Flattened Simple Product with client flattening true on the parameter
-   *
-   * @param {string} productId Unique identifier representing a specific product
-   * for a given latitude & longitude. For example, uberX in San Francisco will
-   * have a different product_id than uberX in Los Angeles.
-   *
+   * @param {string} productId Unique identifier representing a specific product for a given latitude
+   * & longitude. For example, uberX in San Francisco will have a different product_id than uberX in
+   * Los Angeles.
    * @param {string} maxProductDisplayName Display name of product.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.description] Description of product.
-   *
    * @param {string} [options.genericValue] Generic URL value.
-   *
    * @param {string} [options.odatavalue] URL value.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<SimpleProduct>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postFlattenedSimpleProductWithHttpOperationResponse(productId, maxProductDisplayName, options) {
     let client = this;
@@ -2381,45 +1864,18 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put Flattened Simple Product with client flattening true on the parameter
-   *
-   * @param {string} productId Unique identifier representing a specific product
-   * for a given latitude & longitude. For example, uberX in San Francisco will
-   * have a different product_id than uberX in Los Angeles.
-   *
+   * @param {string} productId Unique identifier representing a specific product for a given latitude
+   * & longitude. For example, uberX in San Francisco will have a different product_id than uberX in
+   * Los Angeles.
    * @param {string} maxProductDisplayName Display name of product.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.description] Description of product.
-   *
    * @param {string} [options.genericValue] Generic URL value.
-   *
    * @param {string} [options.odatavalue] URL value.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {SimpleProduct} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link SimpleProduct} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postFlattenedSimpleProduct(productId, maxProductDisplayName, options, optionalCallback) {
     let client = this;
@@ -2443,37 +1899,18 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put Simple Product with client flattening true on the model
-   *
-   * @param {object} flattenParameterGroup Additional parameters for the
-   * operation
-   *
-   * @param {string} flattenParameterGroup.name Product name with value
-   * 'groupproduct'
-   *
-   * @param {string} flattenParameterGroup.productId Unique identifier
-   * representing a specific product for a given latitude & longitude. For
-   * example, uberX in San Francisco will have a different product_id than uberX
-   * in Los Angeles.
-   *
+   * @param {object} flattenParameterGroup Additional parameters for the operation
+   * @param {string} flattenParameterGroup.name Product name with value 'groupproduct'
+   * @param {string} flattenParameterGroup.productId Unique identifier representing a specific
+   * product for a given latitude & longitude. For example, uberX in San Francisco will have a
+   * different product_id than uberX in Los Angeles.
    * @param {string} [flattenParameterGroup.description] Description of product.
-   *
-   * @param {string} flattenParameterGroup.maxProductDisplayName Display name of
-   * product.
-   *
+   * @param {string} flattenParameterGroup.maxProductDisplayName Display name of product.
    * @param {string} [flattenParameterGroup.genericValue] Generic URL value.
-   *
    * @param {string} [flattenParameterGroup.odatavalue] URL value.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<SimpleProduct>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   putSimpleProductWithGroupingWithHttpOperationResponse(flattenParameterGroup, options) {
     let client = this;
@@ -2491,53 +1928,20 @@ class AutoRestResourceFlatteningTestService extends ServiceClient {
 
   /**
    * Put Simple Product with client flattening true on the model
-   *
-   * @param {object} flattenParameterGroup Additional parameters for the
-   * operation
-   *
-   * @param {string} flattenParameterGroup.name Product name with value
-   * 'groupproduct'
-   *
-   * @param {string} flattenParameterGroup.productId Unique identifier
-   * representing a specific product for a given latitude & longitude. For
-   * example, uberX in San Francisco will have a different product_id than uberX
-   * in Los Angeles.
-   *
+   * @param {object} flattenParameterGroup Additional parameters for the operation
+   * @param {string} flattenParameterGroup.name Product name with value 'groupproduct'
+   * @param {string} flattenParameterGroup.productId Unique identifier representing a specific
+   * product for a given latitude & longitude. For example, uberX in San Francisco will have a
+   * different product_id than uberX in Los Angeles.
    * @param {string} [flattenParameterGroup.description] Description of product.
-   *
-   * @param {string} flattenParameterGroup.maxProductDisplayName Display name of
-   * product.
-   *
+   * @param {string} flattenParameterGroup.maxProductDisplayName Display name of product.
    * @param {string} [flattenParameterGroup.genericValue] Generic URL value.
-   *
    * @param {string} [flattenParameterGroup.odatavalue] URL value.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {SimpleProduct} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link SimpleProduct} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   putSimpleProductWithGrouping(flattenParameterGroup, options, optionalCallback) {
     let client = this;

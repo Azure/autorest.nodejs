@@ -14,28 +14,13 @@ const msRest = require('ms-rest');
 const WebResource = msRest.WebResource;
 
 /**
- * Test explicitly required integer. Please put null and the client library
- * should throw before the request is sent.
- *
+ * Test explicitly required integer. Please put null and the client library should throw before the
+ * request is sent.
  * @param {number} bodyParameter
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredIntegerParameter(bodyParameter, options, callback) {
    /* jshint validthis: true */
@@ -151,25 +136,11 @@ function _postRequiredIntegerParameter(bodyParameter, options, callback) {
 
 /**
  * Test explicitly optional integer. Please put null.
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {number} [options.bodyParameter]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalIntegerParameter(options, callback) {
    /* jshint validthis: true */
@@ -271,29 +242,13 @@ function _postOptionalIntegerParameter(options, callback) {
 }
 
 /**
- * Test explicitly required integer. Please put a valid int-wrapper with
- * 'value' = null and the client library should throw before the request is
- * sent.
- *
+ * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the
+ * client library should throw before the request is sent.
  * @param {number} value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredIntegerProperty(value, options, callback) {
    /* jshint validthis: true */
@@ -407,27 +362,12 @@ function _postRequiredIntegerProperty(value, options, callback) {
 }
 
 /**
- * Test explicitly optional integer. Please put a valid int-wrapper with
- * 'value' = null.
- *
+ * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
  * @param {object} [options] Optional Parameters.
- *
  * @param {number} [options.value]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalIntegerProperty(options, callback) {
    /* jshint validthis: true */
@@ -528,28 +468,13 @@ function _postOptionalIntegerProperty(options, callback) {
 }
 
 /**
- * Test explicitly required integer. Please put a header 'headerParameter' =>
- * null and the client library should throw before the request is sent.
- *
+ * Test explicitly required integer. Please put a header 'headerParameter' => null and the client
+ * library should throw before the request is sent.
  * @param {number} headerParameter
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredIntegerHeader(headerParameter, options, callback) {
    /* jshint validthis: true */
@@ -647,27 +572,12 @@ function _postRequiredIntegerHeader(headerParameter, options, callback) {
 }
 
 /**
- * Test explicitly optional integer. Please put a header 'headerParameter' =>
- * null.
- *
+ * Test explicitly optional integer. Please put a header 'headerParameter' => null.
  * @param {object} [options] Optional Parameters.
- *
  * @param {number} [options.headerParameter]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalIntegerHeader(options, callback) {
    /* jshint validthis: true */
@@ -752,28 +662,13 @@ function _postOptionalIntegerHeader(options, callback) {
 }
 
 /**
- * Test explicitly required string. Please put null and the client library
- * should throw before the request is sent.
- *
+ * Test explicitly required string. Please put null and the client library should throw before the
+ * request is sent.
  * @param {string} bodyParameter
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredStringParameter(bodyParameter, options, callback) {
    /* jshint validthis: true */
@@ -889,25 +784,11 @@ function _postRequiredStringParameter(bodyParameter, options, callback) {
 
 /**
  * Test explicitly optional string. Please put null.
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.bodyParameter]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalStringParameter(options, callback) {
    /* jshint validthis: true */
@@ -1009,29 +890,13 @@ function _postOptionalStringParameter(options, callback) {
 }
 
 /**
- * Test explicitly required string. Please put a valid string-wrapper with
- * 'value' = null and the client library should throw before the request is
- * sent.
- *
+ * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the
+ * client library should throw before the request is sent.
  * @param {string} value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredStringProperty(value, options, callback) {
    /* jshint validthis: true */
@@ -1145,27 +1010,12 @@ function _postRequiredStringProperty(value, options, callback) {
 }
 
 /**
- * Test explicitly optional integer. Please put a valid string-wrapper with
- * 'value' = null.
- *
+ * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.value]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalStringProperty(options, callback) {
    /* jshint validthis: true */
@@ -1266,28 +1116,13 @@ function _postOptionalStringProperty(options, callback) {
 }
 
 /**
- * Test explicitly required string. Please put a header 'headerParameter' =>
- * null and the client library should throw before the request is sent.
- *
+ * Test explicitly required string. Please put a header 'headerParameter' => null and the client
+ * library should throw before the request is sent.
  * @param {string} headerParameter
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredStringHeader(headerParameter, options, callback) {
    /* jshint validthis: true */
@@ -1385,27 +1220,12 @@ function _postRequiredStringHeader(headerParameter, options, callback) {
 }
 
 /**
- * Test explicitly optional string. Please put a header 'headerParameter' =>
- * null.
- *
+ * Test explicitly optional string. Please put a header 'headerParameter' => null.
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.bodyParameter]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalStringHeader(options, callback) {
    /* jshint validthis: true */
@@ -1490,32 +1310,15 @@ function _postOptionalStringHeader(options, callback) {
 }
 
 /**
- * Test explicitly required complex object. Please put null and the client
- * library should throw before the request is sent.
- *
+ * Test explicitly required complex object. Please put null and the client library should throw
+ * before the request is sent.
  * @param {object} bodyParameter
- *
  * @param {number} bodyParameter.id
- *
  * @param {string} [bodyParameter.name]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredClassParameter(bodyParameter, options, callback) {
    /* jshint validthis: true */
@@ -1625,29 +1428,13 @@ function _postRequiredClassParameter(bodyParameter, options, callback) {
 
 /**
  * Test explicitly optional complex object. Please put null.
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.bodyParameter]
- *
  * @param {number} options.bodyParameter.id
- *
  * @param {string} [options.bodyParameter.name]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalClassParameter(options, callback) {
    /* jshint validthis: true */
@@ -1735,33 +1522,15 @@ function _postOptionalClassParameter(options, callback) {
 }
 
 /**
- * Test explicitly required complex object. Please put a valid class-wrapper
- * with 'value' = null and the client library should throw before the request
- * is sent.
- *
+ * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null
+ * and the client library should throw before the request is sent.
  * @param {object} value
- *
  * @param {number} value.id
- *
  * @param {string} [value.name]
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredClassProperty(value, options, callback) {
    /* jshint validthis: true */
@@ -1875,31 +1644,14 @@ function _postRequiredClassProperty(value, options, callback) {
 }
 
 /**
- * Test explicitly optional complex object. Please put a valid class-wrapper
- * with 'value' = null.
- *
+ * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
  * @param {object} [options] Optional Parameters.
- *
  * @param {object} [options.value]
- *
  * @param {number} options.value.id
- *
  * @param {string} [options.value.name]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalClassProperty(options, callback) {
    /* jshint validthis: true */
@@ -1992,28 +1744,13 @@ if (value !== null && value !== undefined) {
 }
 
 /**
- * Test explicitly required array. Please put null and the client library
- * should throw before the request is sent.
- *
+ * Test explicitly required array. Please put null and the client library should throw before the
+ * request is sent.
  * @param {array} bodyParameter
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredArrayParameter(bodyParameter, options, callback) {
    /* jshint validthis: true */
@@ -2141,25 +1878,11 @@ function _postRequiredArrayParameter(bodyParameter, options, callback) {
 
 /**
  * Test explicitly optional array. Please put null.
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {array} [options.bodyParameter]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalArrayParameter(options, callback) {
    /* jshint validthis: true */
@@ -2272,29 +1995,13 @@ function _postOptionalArrayParameter(options, callback) {
 }
 
 /**
- * Test explicitly required array. Please put a valid array-wrapper with
- * 'value' = null and the client library should throw before the request is
- * sent.
- *
+ * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the
+ * client library should throw before the request is sent.
  * @param {array} value
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredArrayProperty(value, options, callback) {
    /* jshint validthis: true */
@@ -2413,27 +2120,12 @@ function _postRequiredArrayProperty(value, options, callback) {
 }
 
 /**
- * Test explicitly optional array. Please put a valid array-wrapper with
- * 'value' = null.
- *
+ * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
  * @param {object} [options] Optional Parameters.
- *
  * @param {array} [options.value]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalArrayProperty(options, callback) {
    /* jshint validthis: true */
@@ -2538,28 +2230,13 @@ function _postOptionalArrayProperty(options, callback) {
 }
 
 /**
- * Test explicitly required array. Please put a header 'headerParameter' =>
- * null and the client library should throw before the request is sent.
- *
+ * Test explicitly required array. Please put a header 'headerParameter' => null and the client
+ * library should throw before the request is sent.
  * @param {array} headerParameter
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {object} [result]   - The deserialized result object if an error did not occur.
- *                      See {@link ErrorModel} for more information.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postRequiredArrayHeader(headerParameter, options, callback) {
    /* jshint validthis: true */
@@ -2662,27 +2339,12 @@ function _postRequiredArrayHeader(headerParameter, options, callback) {
 }
 
 /**
- * Test explicitly optional integer. Please put a header 'headerParameter' =>
- * null.
- *
+ * Test explicitly optional integer. Please put a header 'headerParameter' => null.
  * @param {object} [options] Optional Parameters.
- *
  * @param {array} [options.headerParameter]
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _postOptionalArrayHeader(options, callback) {
    /* jshint validthis: true */
@@ -2803,21 +2465,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required integer. Please put null and the client library
-   * should throw before the request is sent.
-   *
+   * Test explicitly required integer. Please put null and the client library should throw before the
+   * request is sent.
    * @param {number} bodyParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredIntegerParameterWithHttpOperationResponse(bodyParameter, options) {
     let client = this.client;
@@ -2834,37 +2487,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required integer. Please put null and the client library
-   * should throw before the request is sent.
-   *
+   * Test explicitly required integer. Please put null and the client library should throw before the
+   * request is sent.
    * @param {number} bodyParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredIntegerParameter(bodyParameter, options, optionalCallback) {
     let client = this.client;
@@ -2888,19 +2518,10 @@ class Explicit {
 
   /**
    * Test explicitly optional integer. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {number} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalIntegerParameterWithHttpOperationResponse(options) {
     let client = this.client;
@@ -2918,34 +2539,12 @@ class Explicit {
 
   /**
    * Test explicitly optional integer. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {number} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalIntegerParameter(options, optionalCallback) {
     let client = this.client;
@@ -2968,22 +2567,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required integer. Please put a valid int-wrapper with
-   * 'value' = null and the client library should throw before the request is
-   * sent.
-   *
+   * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the
+   * client library should throw before the request is sent.
    * @param {number} value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredIntegerPropertyWithHttpOperationResponse(value, options) {
     let client = this.client;
@@ -3000,38 +2589,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required integer. Please put a valid int-wrapper with
-   * 'value' = null and the client library should throw before the request is
-   * sent.
-   *
+   * Test explicitly required integer. Please put a valid int-wrapper with 'value' = null and the
+   * client library should throw before the request is sent.
    * @param {number} value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredIntegerProperty(value, options, optionalCallback) {
     let client = this.client;
@@ -3054,21 +2619,11 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a valid int-wrapper with
-   * 'value' = null.
-   *
+   * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {number} [options.value]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalIntegerPropertyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3085,36 +2640,13 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a valid int-wrapper with
-   * 'value' = null.
-   *
+   * Test explicitly optional integer. Please put a valid int-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {number} [options.value]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalIntegerProperty(options, optionalCallback) {
     let client = this.client;
@@ -3137,21 +2669,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required integer. Please put a header 'headerParameter' =>
-   * null and the client library should throw before the request is sent.
-   *
+   * Test explicitly required integer. Please put a header 'headerParameter' => null and the client
+   * library should throw before the request is sent.
    * @param {number} headerParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredIntegerHeaderWithHttpOperationResponse(headerParameter, options) {
     let client = this.client;
@@ -3168,37 +2691,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required integer. Please put a header 'headerParameter' =>
-   * null and the client library should throw before the request is sent.
-   *
+   * Test explicitly required integer. Please put a header 'headerParameter' => null and the client
+   * library should throw before the request is sent.
    * @param {number} headerParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredIntegerHeader(headerParameter, options, optionalCallback) {
     let client = this.client;
@@ -3221,21 +2721,11 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a header 'headerParameter' =>
-   * null.
-   *
+   * Test explicitly optional integer. Please put a header 'headerParameter' => null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {number} [options.headerParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalIntegerHeaderWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3252,36 +2742,13 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a header 'headerParameter' =>
-   * null.
-   *
+   * Test explicitly optional integer. Please put a header 'headerParameter' => null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {number} [options.headerParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalIntegerHeader(options, optionalCallback) {
     let client = this.client;
@@ -3304,21 +2771,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required string. Please put null and the client library
-   * should throw before the request is sent.
-   *
+   * Test explicitly required string. Please put null and the client library should throw before the
+   * request is sent.
    * @param {string} bodyParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredStringParameterWithHttpOperationResponse(bodyParameter, options) {
     let client = this.client;
@@ -3335,37 +2793,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required string. Please put null and the client library
-   * should throw before the request is sent.
-   *
+   * Test explicitly required string. Please put null and the client library should throw before the
+   * request is sent.
    * @param {string} bodyParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredStringParameter(bodyParameter, options, optionalCallback) {
     let client = this.client;
@@ -3389,19 +2824,10 @@ class Explicit {
 
   /**
    * Test explicitly optional string. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalStringParameterWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3419,34 +2845,12 @@ class Explicit {
 
   /**
    * Test explicitly optional string. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalStringParameter(options, optionalCallback) {
     let client = this.client;
@@ -3469,22 +2873,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required string. Please put a valid string-wrapper with
-   * 'value' = null and the client library should throw before the request is
-   * sent.
-   *
+   * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the
+   * client library should throw before the request is sent.
    * @param {string} value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredStringPropertyWithHttpOperationResponse(value, options) {
     let client = this.client;
@@ -3501,38 +2895,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required string. Please put a valid string-wrapper with
-   * 'value' = null and the client library should throw before the request is
-   * sent.
-   *
+   * Test explicitly required string. Please put a valid string-wrapper with 'value' = null and the
+   * client library should throw before the request is sent.
    * @param {string} value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredStringProperty(value, options, optionalCallback) {
     let client = this.client;
@@ -3555,21 +2925,11 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a valid string-wrapper with
-   * 'value' = null.
-   *
+   * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.value]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalStringPropertyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3586,36 +2946,13 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a valid string-wrapper with
-   * 'value' = null.
-   *
+   * Test explicitly optional integer. Please put a valid string-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.value]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalStringProperty(options, optionalCallback) {
     let client = this.client;
@@ -3638,21 +2975,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required string. Please put a header 'headerParameter' =>
-   * null and the client library should throw before the request is sent.
-   *
+   * Test explicitly required string. Please put a header 'headerParameter' => null and the client
+   * library should throw before the request is sent.
    * @param {string} headerParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredStringHeaderWithHttpOperationResponse(headerParameter, options) {
     let client = this.client;
@@ -3669,37 +2997,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required string. Please put a header 'headerParameter' =>
-   * null and the client library should throw before the request is sent.
-   *
+   * Test explicitly required string. Please put a header 'headerParameter' => null and the client
+   * library should throw before the request is sent.
    * @param {string} headerParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredStringHeader(headerParameter, options, optionalCallback) {
     let client = this.client;
@@ -3722,21 +3027,11 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional string. Please put a header 'headerParameter' =>
-   * null.
-   *
+   * Test explicitly optional string. Please put a header 'headerParameter' => null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalStringHeaderWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3753,36 +3048,13 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional string. Please put a header 'headerParameter' =>
-   * null.
-   *
+   * Test explicitly optional string. Please put a header 'headerParameter' => null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalStringHeader(options, optionalCallback) {
     let client = this.client;
@@ -3805,25 +3077,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required complex object. Please put null and the client
-   * library should throw before the request is sent.
-   *
+   * Test explicitly required complex object. Please put null and the client library should throw
+   * before the request is sent.
    * @param {object} bodyParameter
-   *
    * @param {number} bodyParameter.id
-   *
    * @param {string} [bodyParameter.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredClassParameterWithHttpOperationResponse(bodyParameter, options) {
     let client = this.client;
@@ -3840,41 +3101,16 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required complex object. Please put null and the client
-   * library should throw before the request is sent.
-   *
+   * Test explicitly required complex object. Please put null and the client library should throw
+   * before the request is sent.
    * @param {object} bodyParameter
-   *
    * @param {number} bodyParameter.id
-   *
    * @param {string} [bodyParameter.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredClassParameter(bodyParameter, options, optionalCallback) {
     let client = this.client;
@@ -3898,23 +3134,12 @@ class Explicit {
 
   /**
    * Test explicitly optional complex object. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.bodyParameter]
-   *
    * @param {number} options.bodyParameter.id
-   *
    * @param {string} [options.bodyParameter.name]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalClassParameterWithHttpOperationResponse(options) {
     let client = this.client;
@@ -3932,38 +3157,14 @@ class Explicit {
 
   /**
    * Test explicitly optional complex object. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.bodyParameter]
-   *
    * @param {number} options.bodyParameter.id
-   *
    * @param {string} [options.bodyParameter.name]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalClassParameter(options, optionalCallback) {
     let client = this.client;
@@ -3986,26 +3187,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required complex object. Please put a valid class-wrapper
-   * with 'value' = null and the client library should throw before the request
-   * is sent.
-   *
+   * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null
+   * and the client library should throw before the request is sent.
    * @param {object} value
-   *
    * @param {number} value.id
-   *
    * @param {string} [value.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredClassPropertyWithHttpOperationResponse(value, options) {
     let client = this.client;
@@ -4022,42 +3211,16 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required complex object. Please put a valid class-wrapper
-   * with 'value' = null and the client library should throw before the request
-   * is sent.
-   *
+   * Test explicitly required complex object. Please put a valid class-wrapper with 'value' = null
+   * and the client library should throw before the request is sent.
    * @param {object} value
-   *
    * @param {number} value.id
-   *
    * @param {string} [value.name]
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredClassProperty(value, options, optionalCallback) {
     let client = this.client;
@@ -4080,25 +3243,13 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional complex object. Please put a valid class-wrapper
-   * with 'value' = null.
-   *
+   * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.value]
-   *
    * @param {number} options.value.id
-   *
    * @param {string} [options.value.name]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalClassPropertyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -4115,40 +3266,15 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional complex object. Please put a valid class-wrapper
-   * with 'value' = null.
-   *
+   * Test explicitly optional complex object. Please put a valid class-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.value]
-   *
    * @param {number} options.value.id
-   *
    * @param {string} [options.value.name]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalClassProperty(options, optionalCallback) {
     let client = this.client;
@@ -4171,21 +3297,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required array. Please put null and the client library
-   * should throw before the request is sent.
-   *
+   * Test explicitly required array. Please put null and the client library should throw before the
+   * request is sent.
    * @param {array} bodyParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredArrayParameterWithHttpOperationResponse(bodyParameter, options) {
     let client = this.client;
@@ -4202,37 +3319,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required array. Please put null and the client library
-   * should throw before the request is sent.
-   *
+   * Test explicitly required array. Please put null and the client library should throw before the
+   * request is sent.
    * @param {array} bodyParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredArrayParameter(bodyParameter, options, optionalCallback) {
     let client = this.client;
@@ -4256,19 +3350,10 @@ class Explicit {
 
   /**
    * Test explicitly optional array. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalArrayParameterWithHttpOperationResponse(options) {
     let client = this.client;
@@ -4286,34 +3371,12 @@ class Explicit {
 
   /**
    * Test explicitly optional array. Please put null.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.bodyParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalArrayParameter(options, optionalCallback) {
     let client = this.client;
@@ -4336,22 +3399,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required array. Please put a valid array-wrapper with
-   * 'value' = null and the client library should throw before the request is
-   * sent.
-   *
+   * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the
+   * client library should throw before the request is sent.
    * @param {array} value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredArrayPropertyWithHttpOperationResponse(value, options) {
     let client = this.client;
@@ -4368,38 +3421,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required array. Please put a valid array-wrapper with
-   * 'value' = null and the client library should throw before the request is
-   * sent.
-   *
+   * Test explicitly required array. Please put a valid array-wrapper with 'value' = null and the
+   * client library should throw before the request is sent.
    * @param {array} value
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredArrayProperty(value, options, optionalCallback) {
     let client = this.client;
@@ -4422,21 +3451,11 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional array. Please put a valid array-wrapper with
-   * 'value' = null.
-   *
+   * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.value]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalArrayPropertyWithHttpOperationResponse(options) {
     let client = this.client;
@@ -4453,36 +3472,13 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional array. Please put a valid array-wrapper with
-   * 'value' = null.
-   *
+   * Test explicitly optional array. Please put a valid array-wrapper with 'value' = null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.value]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalArrayProperty(options, optionalCallback) {
     let client = this.client;
@@ -4505,21 +3501,12 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required array. Please put a header 'headerParameter' =>
-   * null and the client library should throw before the request is sent.
-   *
+   * Test explicitly required array. Please put a header 'headerParameter' => null and the client
+   * library should throw before the request is sent.
    * @param {array} headerParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<ErrorModel>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postRequiredArrayHeaderWithHttpOperationResponse(headerParameter, options) {
     let client = this.client;
@@ -4536,37 +3523,14 @@ class Explicit {
   }
 
   /**
-   * Test explicitly required array. Please put a header 'headerParameter' =>
-   * null and the client library should throw before the request is sent.
-   *
+   * Test explicitly required array. Please put a header 'headerParameter' => null and the client
+   * library should throw before the request is sent.
    * @param {array} headerParameter
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {ErrorModel} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {object} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link ErrorModel} for more information.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postRequiredArrayHeader(headerParameter, options, optionalCallback) {
     let client = this.client;
@@ -4589,21 +3553,11 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a header 'headerParameter' =>
-   * null.
-   *
+   * Test explicitly optional integer. Please put a header 'headerParameter' => null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.headerParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postOptionalArrayHeaderWithHttpOperationResponse(options) {
     let client = this.client;
@@ -4620,36 +3574,13 @@ class Explicit {
   }
 
   /**
-   * Test explicitly optional integer. Please put a header 'headerParameter' =>
-   * null.
-   *
+   * Test explicitly optional integer. Please put a header 'headerParameter' => null.
    * @param {object} [options] Optional Parameters.
-   *
    * @param {array} [options.headerParameter]
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postOptionalArrayHeader(options, optionalCallback) {
     let client = this.client;

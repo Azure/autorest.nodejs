@@ -16,26 +16,11 @@ const WebResource = msRest.WebResource;
 
 /**
  * Get method with unencoded path parameter with value 'path1/path2/path3'
- *
- * @param {string} unencodedPathParam Unencoded path parameter with value
- * 'path1/path2/path3'
- *
+ * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getMethodPathValid(unencodedPathParam, options, callback) {
    /* jshint validthis: true */
@@ -131,26 +116,11 @@ function _getMethodPathValid(unencodedPathParam, options, callback) {
 
 /**
  * Get method with unencoded path parameter with value 'path1/path2/path3'
- *
- * @param {string} unencodedPathParam Unencoded path parameter with value
- * 'path1/path2/path3'
- *
+ * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getPathPathValid(unencodedPathParam, options, callback) {
    /* jshint validthis: true */
@@ -246,23 +216,10 @@ function _getPathPathValid(unencodedPathParam, options, callback) {
 
 /**
  * Get method with unencoded path parameter with value 'path1/path2/path3'
- *
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getSwaggerPathValid(options, callback) {
    /* jshint validthis: true */
@@ -355,28 +312,12 @@ function _getSwaggerPathValid(options, callback) {
 }
 
 /**
- * Get method with unencoded query parameter with value
- * 'value1&q2=value2&q3=value3'
- *
- * @param {string} q1 Unencoded query parameter with value
- * 'value1&q2=value2&q3=value3'
- *
+ * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+ * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getMethodQueryValid(q1, options, callback) {
    /* jshint validthis: true */
@@ -472,25 +413,11 @@ function _getMethodQueryValid(q1, options, callback) {
 
 /**
  * Get method with unencoded query parameter with value null
- *
  * @param {object} [options] Optional Parameters.
- *
  * @param {string} [options.q1] Unencoded query parameter with value null
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getMethodQueryNull(options, callback) {
    /* jshint validthis: true */
@@ -588,28 +515,12 @@ function _getMethodQueryNull(options, callback) {
 }
 
 /**
- * Get method with unencoded query parameter with value
- * 'value1&q2=value2&q3=value3'
- *
- * @param {string} q1 Unencoded query parameter with value
- * 'value1&q2=value2&q3=value3'
- *
+ * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+ * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getPathQueryValid(q1, options, callback) {
    /* jshint validthis: true */
@@ -704,25 +615,11 @@ function _getPathQueryValid(q1, options, callback) {
 }
 
 /**
- * Get method with unencoded query parameter with value
- * 'value1&q2=value2&q3=value3'
- *
+ * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
  * @param {object} [options] Optional Parameters.
- *
- * @param {object} [options.customHeaders] Headers that will be added to the
- * request
- *
- * @param {function} callback - The callback.
- *
+ * @param {object} [options.customHeaders] Headers that will be added to the request
+ * @param {function} callback The callback.
  * @returns {function} callback(err, result, request, response)
- *
- *                      {Error}  err        - The Error object if an error occurred, null otherwise.
- *
- *                      {null} [result]   - The deserialized result object if an error did not occur.
- *
- *                      {object} [request]  - The HTTP Request object if an error did not occur.
- *
- *                      {stream} [response] - The HTTP Response stream if an error did not occur.
  */
 function _getSwaggerQueryValid(options, callback) {
    /* jshint validthis: true */
@@ -833,20 +730,10 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded path parameter with value 'path1/path2/path3'
-   *
-   * @param {string} unencodedPathParam Unencoded path parameter with value
-   * 'path1/path2/path3'
-   *
+   * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getMethodPathValidWithHttpOperationResponse(unencodedPathParam, options) {
     let client = this.client;
@@ -864,35 +751,12 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded path parameter with value 'path1/path2/path3'
-   *
-   * @param {string} unencodedPathParam Unencoded path parameter with value
-   * 'path1/path2/path3'
-   *
+   * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getMethodPathValid(unencodedPathParam, options, optionalCallback) {
     let client = this.client;
@@ -916,20 +780,10 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded path parameter with value 'path1/path2/path3'
-   *
-   * @param {string} unencodedPathParam Unencoded path parameter with value
-   * 'path1/path2/path3'
-   *
+   * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getPathPathValidWithHttpOperationResponse(unencodedPathParam, options) {
     let client = this.client;
@@ -947,35 +801,12 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded path parameter with value 'path1/path2/path3'
-   *
-   * @param {string} unencodedPathParam Unencoded path parameter with value
-   * 'path1/path2/path3'
-   *
+   * @param {string} unencodedPathParam Unencoded path parameter with value 'path1/path2/path3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getPathPathValid(unencodedPathParam, options, optionalCallback) {
     let client = this.client;
@@ -999,17 +830,9 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded path parameter with value 'path1/path2/path3'
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getSwaggerPathValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1027,32 +850,11 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded path parameter with value 'path1/path2/path3'
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getSwaggerPathValid(options, optionalCallback) {
     let client = this.client;
@@ -1075,22 +877,11 @@ class SkipUrlEncoding {
   }
 
   /**
-   * Get method with unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
-   * @param {string} q1 Unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
+   * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+   * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getMethodQueryValidWithHttpOperationResponse(q1, options) {
     let client = this.client;
@@ -1107,37 +898,13 @@ class SkipUrlEncoding {
   }
 
   /**
-   * Get method with unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
-   * @param {string} q1 Unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
+   * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+   * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getMethodQueryValid(q1, options, optionalCallback) {
     let client = this.client;
@@ -1161,19 +928,10 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded query parameter with value null
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.q1] Unencoded query parameter with value null
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getMethodQueryNullWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1191,34 +949,12 @@ class SkipUrlEncoding {
 
   /**
    * Get method with unencoded query parameter with value null
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {string} [options.q1] Unencoded query parameter with value null
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getMethodQueryNull(options, optionalCallback) {
     let client = this.client;
@@ -1241,22 +977,11 @@ class SkipUrlEncoding {
   }
 
   /**
-   * Get method with unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
-   * @param {string} q1 Unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
+   * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+   * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getPathQueryValidWithHttpOperationResponse(q1, options) {
     let client = this.client;
@@ -1273,37 +998,13 @@ class SkipUrlEncoding {
   }
 
   /**
-   * Get method with unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
-   * @param {string} q1 Unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
+   * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
+   * @param {string} q1 Unencoded query parameter with value 'value1&q2=value2&q3=value3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getPathQueryValid(q1, options, optionalCallback) {
     let client = this.client;
@@ -1326,19 +1027,10 @@ class SkipUrlEncoding {
   }
 
   /**
-   * Get method with unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
+   * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getSwaggerQueryValidWithHttpOperationResponse(options) {
     let client = this.client;
@@ -1355,34 +1047,12 @@ class SkipUrlEncoding {
   }
 
   /**
-   * Get method with unencoded query parameter with value
-   * 'value1&q2=value2&q3=value3'
-   *
+   * Get method with unencoded query parameter with value 'value1&q2=value2&q3=value3'
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {function} [optionalCallback] - The optional callback.
-   *
-   * @returns {function|Promise} If a callback was passed as the last parameter
-   * then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error} - The error object.
-   *
-   * {function} optionalCallback(err, result, request, response)
-   *
-   *                      {Error}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {object} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {stream} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getSwaggerQueryValid(options, optionalCallback) {
     let client = this.client;

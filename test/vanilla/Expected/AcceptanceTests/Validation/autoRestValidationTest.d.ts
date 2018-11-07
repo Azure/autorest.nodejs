@@ -42,59 +42,25 @@ export default class AutoRestValidationTest extends ServiceClient {
 
   /**
    * Validates input parameters on the method. See swagger for details.
-   *
-   * @param {string} resourceGroupName Required string between 3 and 10 chars
-   * with pattern [a-zA-Z0-9]+.
-   *
+   * @param {string} resourceGroupName Required string between 3 and 10 chars with pattern
+   * [a-zA-Z0-9]+.
    * @param {number} id Required int multiple of 10 from 100 to 1000.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   validationOfMethodParametersWithHttpOperationResponse(resourceGroupName: string, id: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
   /**
    * Validates input parameters on the method. See swagger for details.
-   *
-   * @param {string} resourceGroupName Required string between 3 and 10 chars
-   * with pattern [a-zA-Z0-9]+.
-   *
+   * @param {string} resourceGroupName Required string between 3 and 10 chars with pattern
+   * [a-zA-Z0-9]+.
    * @param {number} id Required int multiple of 10 from 100 to 1000.
-   *
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {Product} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {Product} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Product} for more information.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   validationOfMethodParameters(resourceGroupName: string, id: number, options?: { customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
   validationOfMethodParameters(resourceGroupName: string, id: number, callback: ServiceCallback<models.Product>): void;
@@ -103,93 +69,43 @@ export default class AutoRestValidationTest extends ServiceClient {
 
   /**
    * Validates body parameters on the method. See swagger for details.
-   *
-   * @param {string} resourceGroupName Required string between 3 and 10 chars
-   * with pattern [a-zA-Z0-9]+.
-   *
+   * @param {string} resourceGroupName Required string between 3 and 10 chars with pattern
+   * [a-zA-Z0-9]+.
    * @param {number} id Required int multiple of 10 from 100 to 1000.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.body]
-   *
-   * @param {array} [options.body.displayNames] Non required array of unique
-   * items from 0 to 6 elements.
-   *
-   * @param {number} [options.body.capacity] Non required int betwen 0 and 100
-   * exclusive.
-   *
+   * @param {array} [options.body.displayNames] Non required array of unique items from 0 to 6
+   * elements.
+   * @param {number} [options.body.capacity] Non required int betwen 0 and 100 exclusive.
    * @param {string} [options.body.image] Image URL representing the product.
-   *
    * @param {object} options.body.child
-   *
    * @param {number} [options.body.child.count] Count
-   *
-   * @param {string} [options.body.constStringAsEnum] Constant string as Enum.
-   * Possible values include: 'constant_string_as_enum'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {string} [options.body.constStringAsEnum] Constant string as Enum. Possible values
+   * include: 'constant_string_as_enum'
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   validationOfBodyWithHttpOperationResponse(resourceGroupName: string, id: number, options?: { body? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
   /**
    * Validates body parameters on the method. See swagger for details.
-   *
-   * @param {string} resourceGroupName Required string between 3 and 10 chars
-   * with pattern [a-zA-Z0-9]+.
-   *
+   * @param {string} resourceGroupName Required string between 3 and 10 chars with pattern
+   * [a-zA-Z0-9]+.
    * @param {number} id Required int multiple of 10 from 100 to 1000.
-   *
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.body]
-   *
-   * @param {array} [options.body.displayNames] Non required array of unique
-   * items from 0 to 6 elements.
-   *
-   * @param {number} [options.body.capacity] Non required int betwen 0 and 100
-   * exclusive.
-   *
+   * @param {array} [options.body.displayNames] Non required array of unique items from 0 to 6
+   * elements.
+   * @param {number} [options.body.capacity] Non required int betwen 0 and 100 exclusive.
    * @param {string} [options.body.image] Image URL representing the product.
-   *
    * @param {object} options.body.child
-   *
    * @param {number} [options.body.child.count] Count
-   *
-   * @param {string} [options.body.constStringAsEnum] Constant string as Enum.
-   * Possible values include: 'constant_string_as_enum'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {Product} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {Product} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Product} for more information.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.body.constStringAsEnum] Constant string as Enum. Possible values
+   * include: 'constant_string_as_enum'
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   validationOfBody(resourceGroupName: string, id: number, options?: { body? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
   validationOfBody(resourceGroupName: string, id: number, callback: ServiceCallback<models.Product>): void;
@@ -198,44 +114,17 @@ export default class AutoRestValidationTest extends ServiceClient {
 
   /**
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<null>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   getWithConstantInPathWithHttpOperationResponse(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<void>>;
 
   /**
    * @param {object} [options] Optional Parameters.
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {null} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {null} [result]   - The deserialized result object if an error did not occur.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   getWithConstantInPath(options?: { customHeaders? : { [headerName: string]: string; } }): Promise<void>;
   getWithConstantInPath(callback: ServiceCallback<void>): void;
@@ -244,79 +133,35 @@ export default class AutoRestValidationTest extends ServiceClient {
 
   /**
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.body]
-   *
-   * @param {array} [options.body.displayNames] Non required array of unique
-   * items from 0 to 6 elements.
-   *
-   * @param {number} [options.body.capacity] Non required int betwen 0 and 100
-   * exclusive.
-   *
+   * @param {array} [options.body.displayNames] Non required array of unique items from 0 to 6
+   * elements.
+   * @param {number} [options.body.capacity] Non required int betwen 0 and 100 exclusive.
    * @param {string} [options.body.image] Image URL representing the product.
-   *
    * @param {object} options.body.child
-   *
    * @param {number} [options.body.child.count] Count
-   *
-   * @param {string} [options.body.constStringAsEnum] Constant string as Enum.
-   * Possible values include: 'constant_string_as_enum'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @returns {Promise} A promise is returned
-   *
-   * @resolve {HttpOperationResponse<Product>} - The deserialized result object.
-   *
-   * @reject {Error|ServiceError} - The error object.
+   * @param {string} [options.body.constStringAsEnum] Constant string as Enum. Possible values
+   * include: 'constant_string_as_enum'
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @returns {Promise} A promise is returned.
    */
   postWithConstantInBodyWithHttpOperationResponse(options?: { body? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<HttpOperationResponse<models.Product>>;
 
   /**
    * @param {object} [options] Optional Parameters.
-   *
    * @param {object} [options.body]
-   *
-   * @param {array} [options.body.displayNames] Non required array of unique
-   * items from 0 to 6 elements.
-   *
-   * @param {number} [options.body.capacity] Non required int betwen 0 and 100
-   * exclusive.
-   *
+   * @param {array} [options.body.displayNames] Non required array of unique items from 0 to 6
+   * elements.
+   * @param {number} [options.body.capacity] Non required int betwen 0 and 100 exclusive.
    * @param {string} [options.body.image] Image URL representing the product.
-   *
    * @param {object} options.body.child
-   *
    * @param {number} [options.body.child.count] Count
-   *
-   * @param {string} [options.body.constStringAsEnum] Constant string as Enum.
-   * Possible values include: 'constant_string_as_enum'
-   *
-   * @param {object} [options.customHeaders] Headers that will be added to the
-   * request
-   *
-   * @param {ServiceCallback} [optionalCallback] - The optional callback.
-   *
-   * @returns {ServiceCallback|Promise} If a callback was passed as the last
-   * parameter then it returns the callback else returns a Promise.
-   *
-   * {Promise} A promise is returned.
-   *
-   *                      @resolve {Product} - The deserialized result object.
-   *
-   *                      @reject {Error|ServiceError} - The error object.
-   *
-   * {ServiceCallback} optionalCallback(err, result, request, response)
-   *
-   *                      {Error|ServiceError}  err        - The Error object if an error occurred, null otherwise.
-   *
-   *                      {Product} [result]   - The deserialized result object if an error did not occur.
-   *                      See {@link Product} for more information.
-   *
-   *                      {WebResource} [request]  - The HTTP Request object if an error did not occur.
-   *
-   *                      {http.IncomingMessage} [response] - The HTTP Response stream if an error did not occur.
+   * @param {string} [options.body.constStringAsEnum] Constant string as Enum. Possible values
+   * include: 'constant_string_as_enum'
+   * @param {object} [options.customHeaders] Headers that will be added to the request
+   * @param {function} [optionalCallback] The optional callback.
+   * @returns {function|Promise} If a callback was passed as the last parameter, then it returns the
+   * callback. Otherwise it returns a Promise.
    */
   postWithConstantInBody(options?: { body? : models.Product, customHeaders? : { [headerName: string]: string; } }): Promise<models.Product>;
   postWithConstantInBody(callback: ServiceCallback<models.Product>): void;

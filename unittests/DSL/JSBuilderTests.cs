@@ -803,12 +803,12 @@ namespace AutoRest.NodeJS.DSL
             builder.DocumentationComment(comment =>
             {
                 comment.Description("This is my description.");
-                comment.Parameter("parameterName", "This is my parameter description.");
+                comment.Parameter("parameterName", "parameterType", "This is my parameter description.");
             });
             AssertEx.EqualLines(
                 "/**\n" +
                 " * This is my description.\n" +
-                " * @param parameterName This is my parameter description.\n" +
+                " * @param {parameterType} parameterName This is my parameter description.\n" +
                 " */",
                 builder);
         }
