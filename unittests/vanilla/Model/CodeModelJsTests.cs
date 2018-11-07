@@ -2,50 +2,51 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // 
 
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AutoRest.NodeJS.Model
 {
+    [TestClass]
     public class CodeModelJsTests
     {
-        [Fact]
+        [TestMethod]
         public void HomePageUrlWithNullOutputFolder()
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = null;
-            Assert.Equal("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
+            Assert.AreEqual("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
         }
 
-        [Fact]
+        [TestMethod]
         public void HomePageUrlWithEmptyOutputFolder()
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "";
-            Assert.Equal("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
+            Assert.AreEqual("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
         }
 
-        [Fact]
+        [TestMethod]
         public void HomePageUrlWithOutputFolderThatDoesntContainAzureSdkForNode()
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "test/azure/generated/StorageManagementClient";
-            Assert.Equal("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
+            Assert.AreEqual("https://github.com/azure/azure-sdk-for-node", codeModel.HomePageUrl);
         }
 
-        [Fact]
+        [TestMethod]
         public void HomePageUrlWithBackslashOutputFolderThatContainsAzureSdkForNode()
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "C:\\Users\\daschult\\Sources\\azure-sdk-for-node\\lib\\services\\batchManagement";
-            Assert.Equal("https://github.com/azure/azure-sdk-for-node/tree/master/lib/services/batchManagement", codeModel.HomePageUrl);
+            Assert.AreEqual("https://github.com/azure/azure-sdk-for-node/tree/master/lib/services/batchManagement", codeModel.HomePageUrl);
         }
 
-        [Fact]
+        [TestMethod]
         public void HomePageUrlWithForwardSlashOutputFolderThatContainsAzureSdkForNode()
         {
             CodeModelJs codeModel = new CodeModelJs();
             codeModel.OutputFolder = "C:/Users/daschult/Sources/azure-sdk-for-node/lib/services/batchManagement";
-            Assert.Equal("https://github.com/azure/azure-sdk-for-node/tree/master/lib/services/batchManagement", codeModel.HomePageUrl);
+            Assert.AreEqual("https://github.com/azure/azure-sdk-for-node/tree/master/lib/services/batchManagement", codeModel.HomePageUrl);
         }
     }
 }
