@@ -23,7 +23,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getEmpty(accountName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

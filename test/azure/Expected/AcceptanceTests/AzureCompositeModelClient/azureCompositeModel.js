@@ -35,7 +35,9 @@ const operations = require('./operations');
  * @returns {function} callback(err, result, request, response)
  */
 function _list(resourceGroupName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -158,7 +160,9 @@ function _list(resourceGroupName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _create(subscriptionId, resourceGroupName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -304,7 +308,9 @@ function _create(subscriptionId, resourceGroupName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _update(subscriptionId, resourceGroupName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;

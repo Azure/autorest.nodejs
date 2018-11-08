@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -121,7 +123,9 @@ function _getNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -221,7 +225,9 @@ function _getInvalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getOverflowInt32(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -321,7 +327,9 @@ function _getOverflowInt32(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUnderflowInt32(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -421,7 +429,9 @@ function _getUnderflowInt32(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getOverflowInt64(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -521,7 +531,9 @@ function _getOverflowInt64(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUnderflowInt64(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -622,7 +634,9 @@ function _getUnderflowInt64(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putMax32(intBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -728,7 +742,9 @@ function _putMax32(intBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putMax64(intBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -834,7 +850,9 @@ function _putMax64(intBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putMin32(intBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -940,7 +958,9 @@ function _putMin32(intBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putMin64(intBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1045,7 +1065,9 @@ function _putMin64(intBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUnixTime(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1146,7 +1168,9 @@ function _getUnixTime(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putUnixTimeDate(intBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1252,7 +1276,9 @@ function _putUnixTimeDate(intBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalidUnixTime(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1352,7 +1378,9 @@ function _getInvalidUnixTime(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getNullUnixTime(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

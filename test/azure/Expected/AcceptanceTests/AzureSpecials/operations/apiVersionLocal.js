@@ -22,7 +22,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getMethodLocalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -121,7 +123,9 @@ function _getMethodLocalValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMethodLocalNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -223,7 +227,9 @@ function _getMethodLocalNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getPathLocalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -320,7 +326,9 @@ function _getPathLocalValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSwaggerLocalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

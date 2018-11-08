@@ -2364,7 +2364,9 @@ function _postAsyncRetrycanceled(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut200Succeeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2495,7 +2497,9 @@ function _beginPut200Succeeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut200SucceededNoState(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2627,7 +2631,9 @@ function _beginPut200SucceededNoState(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut202Retry200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2759,7 +2765,9 @@ function _beginPut202Retry200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut201CreatingSucceeded200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2908,7 +2916,9 @@ function _beginPut201CreatingSucceeded200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut200UpdatingSucceeded204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3040,7 +3050,9 @@ function _beginPut200UpdatingSucceeded204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut201CreatingFailed200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3189,7 +3201,9 @@ function _beginPut201CreatingFailed200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut200Acceptedcanceled200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3320,7 +3334,9 @@ function _beginPut200Acceptedcanceled200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutNoHeaderInRetry(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3452,7 +3468,9 @@ function _beginPutNoHeaderInRetry(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3584,7 +3602,9 @@ function _beginPutAsyncRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncNoRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3716,7 +3736,9 @@ function _beginPutAsyncNoRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRetryFailed(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3848,7 +3870,9 @@ function _beginPutAsyncRetryFailed(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncNoRetrycanceled(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3979,7 +4003,9 @@ function _beginPutAsyncNoRetrycanceled(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncNoHeaderInRetry(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4108,7 +4134,9 @@ function _beginPutAsyncNoHeaderInRetry(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutNonResource(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4237,7 +4265,9 @@ function _beginPutNonResource(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncNonResource(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4364,7 +4394,9 @@ function _beginPutAsyncNonResource(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutSubResource(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4504,7 +4536,9 @@ function _beginPutSubResource(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncSubResource(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4645,7 +4679,9 @@ function _beginPutAsyncSubResource(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteProvisioning202Accepted200Succeeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4775,7 +4811,9 @@ function _beginDeleteProvisioning202Accepted200Succeeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteProvisioning202DeletingFailed200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4905,7 +4943,9 @@ function _beginDeleteProvisioning202DeletingFailed200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteProvisioning202Deletingcanceled200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5033,7 +5073,9 @@ function _beginDeleteProvisioning202Deletingcanceled200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDelete204Succeeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5128,7 +5170,9 @@ function _beginDelete204Succeeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDelete202Retry200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5240,7 +5284,9 @@ function _beginDelete202Retry200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDelete202NoRetry204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5352,7 +5398,9 @@ function _beginDelete202NoRetry204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteNoHeaderInRetry(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5447,7 +5495,9 @@ function _beginDeleteNoHeaderInRetry(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncNoHeaderInRetry(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5542,7 +5592,9 @@ function _beginDeleteAsyncNoHeaderInRetry(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5637,7 +5689,9 @@ function _beginDeleteAsyncRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncNoRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5732,7 +5786,9 @@ function _beginDeleteAsyncNoRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRetryFailed(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5827,7 +5883,9 @@ function _beginDeleteAsyncRetryFailed(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRetrycanceled(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5922,7 +5980,9 @@ function _beginDeleteAsyncRetrycanceled(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost200WithPayload(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6055,7 +6115,9 @@ function _beginPost200WithPayload(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost202Retry200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6169,7 +6231,9 @@ function _beginPost202Retry200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost202NoRetry204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6297,7 +6361,9 @@ function _beginPost202NoRetry204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostDoubleHeadersFinalLocationGet(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6410,7 +6476,9 @@ function _beginPostDoubleHeadersFinalLocationGet(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostDoubleHeadersFinalAzureHeaderGet(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6523,7 +6591,9 @@ function _beginPostDoubleHeadersFinalAzureHeaderGet(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostDoubleHeadersFinalAzureHeaderGetDefault(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6640,7 +6710,9 @@ function _beginPostDoubleHeadersFinalAzureHeaderGetDefault(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6772,7 +6844,9 @@ function _beginPostAsyncRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncNoRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6904,7 +6978,9 @@ function _beginPostAsyncNoRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRetryFailed(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -7019,7 +7095,9 @@ function _beginPostAsyncRetryFailed(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRetrycanceled(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

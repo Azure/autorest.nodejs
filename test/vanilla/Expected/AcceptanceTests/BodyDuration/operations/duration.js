@@ -22,7 +22,9 @@ const moment = require('moment');
  * @returns {function} callback(err, result, request, response)
  */
 function _getNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -123,7 +125,9 @@ function _getNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putPositiveDuration(durationBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -228,7 +232,9 @@ function _putPositiveDuration(durationBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getPositiveDuration(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -328,7 +334,9 @@ function _getPositiveDuration(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

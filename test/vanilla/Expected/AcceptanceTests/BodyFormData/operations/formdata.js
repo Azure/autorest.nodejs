@@ -23,7 +23,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _uploadFile(fileContent, fileName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -121,7 +123,9 @@ function _uploadFile(fileContent, fileName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _uploadFileViaBody(fileContent, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

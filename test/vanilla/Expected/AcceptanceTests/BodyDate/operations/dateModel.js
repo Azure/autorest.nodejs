@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -121,7 +123,9 @@ function _getNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalidDate(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -221,7 +225,9 @@ function _getInvalidDate(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getOverflowDate(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -321,7 +327,9 @@ function _getOverflowDate(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUnderflowDate(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -422,7 +430,9 @@ function _getUnderflowDate(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putMaxDate(dateBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -528,7 +538,9 @@ function _putMaxDate(dateBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMaxDate(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -629,7 +641,9 @@ function _getMaxDate(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putMinDate(dateBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -735,7 +749,9 @@ function _putMinDate(dateBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMinDate(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

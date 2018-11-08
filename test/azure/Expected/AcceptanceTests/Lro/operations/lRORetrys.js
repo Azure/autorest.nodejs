@@ -419,7 +419,9 @@ function _postAsyncRelativeRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut201CreatingSucceeded200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -568,7 +570,9 @@ function _beginPut201CreatingSucceeded200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRelativeRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -696,7 +700,9 @@ function _beginPutAsyncRelativeRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteProvisioning202Accepted200Succeeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -825,7 +831,9 @@ function _beginDeleteProvisioning202Accepted200Succeeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDelete202Retry200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -920,7 +928,9 @@ function _beginDelete202Retry200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRelativeRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1019,7 +1029,9 @@ function _beginDeleteAsyncRelativeRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost202Retry200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1134,7 +1146,9 @@ function _beginPost202Retry200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRelativeRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

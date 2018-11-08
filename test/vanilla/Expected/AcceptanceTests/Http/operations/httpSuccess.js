@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _head200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -98,7 +100,9 @@ function _head200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -199,7 +203,9 @@ function _get200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _put200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -306,7 +312,9 @@ function _put200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _patch200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -413,7 +421,9 @@ function _patch200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _post200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -520,7 +530,9 @@ function _post200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _delete200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -627,7 +639,9 @@ function _delete200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _put201(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -734,7 +748,9 @@ function _put201(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _post201(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -841,7 +857,9 @@ function _post201(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _put202(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -948,7 +966,9 @@ function _put202(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _patch202(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1055,7 +1075,9 @@ function _patch202(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _post202(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1162,7 +1184,9 @@ function _post202(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _delete202(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1268,7 +1292,9 @@ function _delete202(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _head204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1346,7 +1372,9 @@ function _head204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _put204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1453,7 +1481,9 @@ function _put204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _patch204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1560,7 +1590,9 @@ function _patch204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _post204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1667,7 +1699,9 @@ function _post204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _delete204(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1773,7 +1807,9 @@ function _delete204(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _head404(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

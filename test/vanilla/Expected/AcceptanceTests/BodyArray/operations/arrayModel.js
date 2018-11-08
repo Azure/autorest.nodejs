@@ -22,7 +22,9 @@ const moment = require('moment');
  * @returns {function} callback(err, result, request, response)
  */
 function _getNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -129,7 +131,9 @@ function _getNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -236,7 +240,9 @@ function _getInvalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -344,7 +350,9 @@ function _getEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putEmpty(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -461,7 +469,9 @@ function _putEmpty(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBooleanTfft(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -569,7 +579,9 @@ function _getBooleanTfft(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBooleanTfft(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -686,7 +698,9 @@ function _putBooleanTfft(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBooleanInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -793,7 +807,9 @@ function _getBooleanInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBooleanInvalidString(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -900,7 +916,9 @@ function _getBooleanInvalidString(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getIntegerValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1008,7 +1026,9 @@ function _getIntegerValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putIntegerValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1125,7 +1145,9 @@ function _putIntegerValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getIntInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1232,7 +1254,9 @@ function _getIntInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getIntInvalidString(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1339,7 +1363,9 @@ function _getIntInvalidString(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getLongValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1447,7 +1473,9 @@ function _getLongValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putLongValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1564,7 +1592,9 @@ function _putLongValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getLongInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1671,7 +1701,9 @@ function _getLongInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getLongInvalidString(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1778,7 +1810,9 @@ function _getLongInvalidString(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getFloatValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1886,7 +1920,9 @@ function _getFloatValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putFloatValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2003,7 +2039,9 @@ function _putFloatValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getFloatInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2110,7 +2148,9 @@ function _getFloatInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getFloatInvalidString(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2217,7 +2257,9 @@ function _getFloatInvalidString(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDoubleValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2325,7 +2367,9 @@ function _getDoubleValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDoubleValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2442,7 +2486,9 @@ function _putDoubleValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDoubleInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2549,7 +2595,9 @@ function _getDoubleInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDoubleInvalidString(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2656,7 +2704,9 @@ function _getDoubleInvalidString(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getStringValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2764,7 +2814,9 @@ function _getStringValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putStringValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2881,7 +2933,9 @@ function _putStringValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getEnumValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2990,7 +3044,9 @@ function _getEnumValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putEnumValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3111,7 +3167,9 @@ function _putEnumValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getStringEnumValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3219,7 +3277,9 @@ function _getStringEnumValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putStringEnumValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3336,7 +3396,9 @@ function _putStringEnumValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getStringWithNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3443,7 +3505,9 @@ function _getStringWithNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getStringWithInvalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3551,7 +3615,9 @@ function _getStringWithInvalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUuidValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3660,7 +3726,9 @@ function _getUuidValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putUuidValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3777,7 +3845,9 @@ function _putUuidValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUuidInvalidChars(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3884,7 +3954,9 @@ function _getUuidInvalidChars(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3992,7 +4064,9 @@ function _getDateValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDateValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4110,7 +4184,9 @@ function _putDateValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4217,7 +4293,9 @@ function _getDateInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateInvalidChars(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4325,7 +4403,9 @@ function _getDateInvalidChars(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateTimeValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4434,7 +4514,9 @@ function _getDateTimeValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDateTimeValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4552,7 +4634,9 @@ function _putDateTimeValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateTimeInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4659,7 +4743,9 @@ function _getDateTimeInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateTimeInvalidChars(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4767,7 +4853,9 @@ function _getDateTimeInvalidChars(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateTimeRfc1123Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4876,7 +4964,9 @@ function _getDateTimeRfc1123Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDateTimeRfc1123Valid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4994,7 +5084,9 @@ function _putDateTimeRfc1123Valid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDurationValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5102,7 +5194,9 @@ function _getDurationValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDurationValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5220,7 +5314,9 @@ function _putDurationValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getByteValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5329,7 +5425,9 @@ function _getByteValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putByteValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5446,7 +5544,9 @@ function _putByteValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getByteInvalidNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5554,7 +5654,9 @@ function _getByteInvalidNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBase64Url(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5661,7 +5763,9 @@ function _getBase64Url(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getComplexNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5769,7 +5873,9 @@ function _getComplexNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getComplexEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5878,7 +5984,9 @@ function _getComplexEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getComplexItemNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -5987,7 +6095,9 @@ function _getComplexItemNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getComplexItemEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6096,7 +6206,9 @@ function _getComplexItemEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getComplexValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6206,7 +6318,9 @@ function _getComplexValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putComplexValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6311,7 +6425,9 @@ function _putComplexValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getArrayNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6425,7 +6541,9 @@ function _getArrayNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getArrayEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6539,7 +6657,9 @@ function _getArrayEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getArrayItemNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6653,7 +6773,9 @@ function _getArrayItemNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getArrayItemEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6767,7 +6889,9 @@ function _getArrayItemEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getArrayValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -6882,7 +7006,9 @@ function _getArrayValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putArrayValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -7010,7 +7136,9 @@ function _putArrayValid(arrayBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDictionaryNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -7124,7 +7252,9 @@ function _getDictionaryNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDictionaryEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -7239,7 +7369,9 @@ function _getDictionaryEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDictionaryItemNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -7354,7 +7486,9 @@ function _getDictionaryItemNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDictionaryItemEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -7469,7 +7603,9 @@ function _getDictionaryItemEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDictionaryValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -7585,7 +7721,9 @@ function _getDictionaryValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDictionaryValid(arrayBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

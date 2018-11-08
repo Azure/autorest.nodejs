@@ -268,7 +268,9 @@ function _postAsyncRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -401,7 +403,9 @@ function _beginPutAsyncRetrySucceeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut201CreatingSucceeded200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -550,7 +554,9 @@ function _beginPut201CreatingSucceeded200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost202Retry200(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -666,7 +672,9 @@ function _beginPost202Retry200(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRetrySucceeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

@@ -1460,7 +1460,9 @@ function _postAsyncRelativeRetryInvalidJsonPolling(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutNonRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1608,7 +1610,9 @@ function _beginPutNonRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutNonRetry201Creating400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1756,7 +1760,9 @@ function _beginPutNonRetry201Creating400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutNonRetry201Creating400InvalidJson(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1904,7 +1910,9 @@ function _beginPutNonRetry201Creating400InvalidJson(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRelativeRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2030,7 +2038,9 @@ function _beginPutAsyncRelativeRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteNonRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2124,7 +2134,9 @@ function _beginDeleteNonRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDelete202NonRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2219,7 +2231,9 @@ function _beginDelete202NonRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRelativeRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2317,7 +2331,9 @@ function _beginDeleteAsyncRelativeRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostNonRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2430,7 +2446,9 @@ function _beginPostNonRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost202NonRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2544,7 +2562,9 @@ function _beginPost202NonRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRelativeRetry400(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2657,7 +2677,9 @@ function _beginPostAsyncRelativeRetry400(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutError201NoProvisioningStatePayload(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2806,7 +2828,9 @@ function _beginPutError201NoProvisioningStatePayload(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRelativeRetryNoStatus(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2938,7 +2962,9 @@ function _beginPutAsyncRelativeRetryNoStatus(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRelativeRetryNoStatusPayload(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3064,7 +3090,9 @@ function _beginPutAsyncRelativeRetryNoStatusPayload(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDelete204Succeeded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3159,7 +3187,9 @@ function _beginDelete204Succeeded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRelativeRetryNoStatus(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3258,7 +3288,9 @@ function _beginDeleteAsyncRelativeRetryNoStatus(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost202NoLocation(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3373,7 +3405,9 @@ function _beginPost202NoLocation(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRelativeRetryNoPayload(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3487,7 +3521,9 @@ function _beginPostAsyncRelativeRetryNoPayload(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPut200InvalidJson(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3619,7 +3655,9 @@ function _beginPut200InvalidJson(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRelativeRetryInvalidHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3751,7 +3789,9 @@ function _beginPutAsyncRelativeRetryInvalidHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPutAsyncRelativeRetryInvalidJsonPolling(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3878,7 +3918,9 @@ function _beginPutAsyncRelativeRetryInvalidJsonPolling(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDelete202RetryInvalidHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3973,7 +4015,9 @@ function _beginDelete202RetryInvalidHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRelativeRetryInvalidHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4068,7 +4112,9 @@ function _beginDeleteAsyncRelativeRetryInvalidHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginDeleteAsyncRelativeRetryInvalidJsonPolling(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4167,7 +4213,9 @@ function _beginDeleteAsyncRelativeRetryInvalidJsonPolling(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPost202RetryInvalidHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4282,7 +4330,9 @@ function _beginPost202RetryInvalidHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRelativeRetryInvalidHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -4397,7 +4447,9 @@ function _beginPostAsyncRelativeRetryInvalidHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginPostAsyncRelativeRetryInvalidJsonPolling(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

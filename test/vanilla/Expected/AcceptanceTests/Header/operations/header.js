@@ -23,7 +23,9 @@ const moment = require('moment');
  * @returns {function} callback(err, result, request, response)
  */
 function _paramExistingKey(userAgent, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -111,7 +113,9 @@ function _paramExistingKey(userAgent, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseExistingKey(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -189,7 +193,9 @@ function _responseExistingKey(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramProtectedKey(contentType, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -277,7 +283,9 @@ function _paramProtectedKey(contentType, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseProtectedKey(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -358,7 +366,9 @@ function _responseProtectedKey(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramInteger(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -454,7 +464,9 @@ function _paramInteger(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseInteger(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -546,7 +558,9 @@ function _responseInteger(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramLong(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -642,7 +656,9 @@ function _paramLong(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseLong(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -734,7 +750,9 @@ function _responseLong(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramFloat(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -830,7 +848,9 @@ function _paramFloat(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseFloat(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -922,7 +942,9 @@ function _responseFloat(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramDouble(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1018,7 +1040,9 @@ function _paramDouble(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseDouble(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1109,7 +1133,9 @@ function _responseDouble(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramBool(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1204,7 +1230,9 @@ function _paramBool(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseBool(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1297,7 +1325,9 @@ function _responseBool(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramString(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1394,7 +1424,9 @@ function _paramString(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseString(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1485,7 +1517,9 @@ function _responseString(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramDate(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1581,7 +1615,9 @@ function _paramDate(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseDate(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1673,7 +1709,9 @@ function _responseDate(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramDatetime(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1769,7 +1807,9 @@ function _paramDatetime(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseDatetime(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1861,7 +1901,9 @@ function _responseDatetime(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramDatetimeRfc1123(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1959,7 +2001,9 @@ function _paramDatetimeRfc1123(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseDatetimeRfc1123(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2049,7 +2093,9 @@ function _responseDatetimeRfc1123(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramDuration(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2144,7 +2190,9 @@ function _paramDuration(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseDuration(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2234,7 +2282,9 @@ function _responseDuration(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramByte(scenario, value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2329,7 +2379,9 @@ function _paramByte(scenario, value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseByte(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2422,7 +2474,9 @@ function _responseByte(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _paramEnum(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2522,7 +2576,9 @@ function _paramEnum(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _responseEnum(scenario, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2610,7 +2666,9 @@ function _responseEnum(scenario, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _customRequestId(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

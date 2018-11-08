@@ -30,7 +30,9 @@ const models = require('./models');
  * @returns {function} callback(err, result, request, response)
  */
 function _putArray(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -136,7 +138,9 @@ function _putArray(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getArray(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -246,7 +250,9 @@ function _getArray(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putWrappedArray(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -353,7 +359,9 @@ function _putWrappedArray(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getWrappedArray(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -462,7 +470,9 @@ function _getWrappedArray(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDictionary(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -568,7 +578,9 @@ function _putDictionary(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDictionary(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -685,7 +697,9 @@ function _getDictionary(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putResourceCollection(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -777,7 +791,9 @@ function _putResourceCollection(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getResourceCollection(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -879,7 +895,9 @@ function _getResourceCollection(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putSimpleProduct(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -995,7 +1013,9 @@ function _putSimpleProduct(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postFlattenedSimpleProduct(productId, maxProductDisplayName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1149,7 +1169,9 @@ function _postFlattenedSimpleProduct(productId, maxProductDisplayName, options, 
  * @returns {function} callback(err, result, request, response)
  */
 function _putSimpleProductWithGrouping(flattenParameterGroup, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;

@@ -22,7 +22,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getMethodGlobalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -121,7 +123,9 @@ function _getMethodGlobalValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMethodGlobalNotProvidedValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -220,7 +224,9 @@ function _getMethodGlobalNotProvidedValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getPathGlobalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -319,7 +325,9 @@ function _getPathGlobalValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSwaggerGlobalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

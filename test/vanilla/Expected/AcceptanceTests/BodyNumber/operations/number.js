@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -121,7 +123,9 @@ function _getNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalidFloat(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -221,7 +225,9 @@ function _getInvalidFloat(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalidDouble(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -321,7 +327,9 @@ function _getInvalidDouble(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalidDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -422,7 +430,9 @@ function _getInvalidDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBigFloat(numberBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -527,7 +537,9 @@ function _putBigFloat(numberBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBigFloat(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -628,7 +640,9 @@ function _getBigFloat(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBigDouble(numberBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -733,7 +747,9 @@ function _putBigDouble(numberBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBigDouble(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -833,7 +849,9 @@ function _getBigDouble(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBigDoublePositiveDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -933,7 +951,9 @@ function _putBigDoublePositiveDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBigDoublePositiveDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1033,7 +1053,9 @@ function _getBigDoublePositiveDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBigDoubleNegativeDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1133,7 +1155,9 @@ function _putBigDoubleNegativeDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBigDoubleNegativeDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1234,7 +1258,9 @@ function _getBigDoubleNegativeDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBigDecimal(numberBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1339,7 +1365,9 @@ function _putBigDecimal(numberBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBigDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1439,7 +1467,9 @@ function _getBigDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBigDecimalPositiveDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1539,7 +1569,9 @@ function _putBigDecimalPositiveDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBigDecimalPositiveDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1639,7 +1671,9 @@ function _getBigDecimalPositiveDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBigDecimalNegativeDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1739,7 +1773,9 @@ function _putBigDecimalNegativeDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBigDecimalNegativeDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1840,7 +1876,9 @@ function _getBigDecimalNegativeDecimal(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putSmallFloat(numberBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1945,7 +1983,9 @@ function _putSmallFloat(numberBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSmallFloat(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2046,7 +2086,9 @@ function _getSmallFloat(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putSmallDouble(numberBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2151,7 +2193,9 @@ function _putSmallDouble(numberBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSmallDouble(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2252,7 +2296,9 @@ function _getSmallDouble(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putSmallDecimal(numberBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2357,7 +2403,9 @@ function _putSmallDecimal(numberBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSmallDecimal(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

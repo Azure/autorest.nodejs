@@ -25,7 +25,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _postMethodLocalValid(subscriptionId, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -127,7 +129,9 @@ function _postMethodLocalValid(subscriptionId, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postMethodLocalNull(subscriptionId, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -229,7 +233,9 @@ function _postMethodLocalNull(subscriptionId, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postPathLocalValid(subscriptionId, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -331,7 +337,9 @@ function _postPathLocalValid(subscriptionId, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postSwaggerLocalValid(subscriptionId, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

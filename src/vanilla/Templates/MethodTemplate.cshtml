@@ -8,7 +8,7 @@
 
 @(Model.GenerateMethodDocumentation(MethodJs.MethodFlavor.Callback))
 function _@(Model.Name.ToCamelCase())(@(Model.MethodParameterDeclarationWithCallback())) {
-   /* jshint validthis: true */
+  @(Model.GenerateMethodBody(EmptyLine))
   let client = @(Model.ClientReference);
   if(!callback && typeof options === 'function') {
     callback = options;

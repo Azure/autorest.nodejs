@@ -22,7 +22,9 @@ const moment = require('moment');
  * @returns {function} callback(err, result, request, response)
  */
 function _getInt(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -119,7 +121,9 @@ function _getInt(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putInt(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -218,7 +222,9 @@ function _putInt(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getLong(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -315,7 +321,9 @@ function _getLong(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putLong(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -414,7 +422,9 @@ function _putLong(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getFloat(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -511,7 +521,9 @@ function _getFloat(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putFloat(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -610,7 +622,9 @@ function _putFloat(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDouble(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -709,7 +723,9 @@ function _getDouble(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDouble(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -808,7 +824,9 @@ function _putDouble(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBool(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -905,7 +923,9 @@ function _getBool(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBool(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1004,7 +1024,9 @@ function _putBool(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getString(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1102,7 +1124,9 @@ function _getString(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putString(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1201,7 +1225,9 @@ function _putString(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDate(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1298,7 +1324,9 @@ function _getDate(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDate(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1397,7 +1425,9 @@ function _putDate(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateTime(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1495,7 +1525,9 @@ function _getDateTime(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDateTime(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1594,7 +1626,9 @@ function _putDateTime(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDateTimeRfc1123(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1692,7 +1726,9 @@ function _getDateTimeRfc1123(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDateTimeRfc1123(complexBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1791,7 +1827,9 @@ function _putDateTimeRfc1123(complexBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDuration(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1886,7 +1924,9 @@ function _getDuration(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putDuration(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1991,7 +2031,9 @@ function _putDuration(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getByte(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2086,7 +2128,9 @@ function _getByte(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putByte(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

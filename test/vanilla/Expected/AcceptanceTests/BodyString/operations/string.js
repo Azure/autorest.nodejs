@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -122,7 +124,9 @@ function _getNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -228,7 +232,9 @@ function _putNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -328,7 +334,9 @@ function _getEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -428,7 +436,9 @@ function _putEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMbcs(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -528,7 +538,9 @@ function _getMbcs(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putMbcs(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -629,7 +641,9 @@ function _putMbcs(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getWhitespace(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -730,7 +744,9 @@ function _getWhitespace(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putWhitespace(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -830,7 +846,9 @@ function _putWhitespace(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getNotProvided(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -930,7 +948,9 @@ function _getNotProvided(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBase64Encoded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1030,7 +1050,9 @@ function _getBase64Encoded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBase64UrlEncoded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1131,7 +1153,9 @@ function _getBase64UrlEncoded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putBase64UrlEncoded(stringBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1236,7 +1260,9 @@ function _putBase64UrlEncoded(stringBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getNullBase64UrlEncoded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

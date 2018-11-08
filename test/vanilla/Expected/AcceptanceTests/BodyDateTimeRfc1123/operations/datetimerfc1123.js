@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -121,7 +123,9 @@ function _getNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getInvalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -221,7 +225,9 @@ function _getInvalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getOverflow(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -321,7 +327,9 @@ function _getOverflow(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUnderflow(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -422,7 +430,9 @@ function _getUnderflow(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putUtcMaxDateTime(datetimeBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -528,7 +538,9 @@ function _putUtcMaxDateTime(datetimeBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUtcLowercaseMaxDateTime(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -628,7 +640,9 @@ function _getUtcLowercaseMaxDateTime(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUtcUppercaseMaxDateTime(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -729,7 +743,9 @@ function _getUtcUppercaseMaxDateTime(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putUtcMinDateTime(datetimeBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -835,7 +851,9 @@ function _putUtcMinDateTime(datetimeBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getUtcMinDateTime(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

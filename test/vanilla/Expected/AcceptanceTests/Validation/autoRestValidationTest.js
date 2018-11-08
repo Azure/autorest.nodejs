@@ -32,7 +32,9 @@ const models = require('./models');
  * @returns {function} callback(err, result, request, response)
  */
 function _validationOfMethodParameters(resourceGroupName, id, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -197,7 +199,9 @@ function _validationOfMethodParameters(resourceGroupName, id, options, callback)
  * @returns {function} callback(err, result, request, response)
  */
 function _validationOfBody(resourceGroupName, id, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -364,7 +368,9 @@ function _validationOfBody(resourceGroupName, id, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getWithConstantInPath(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -447,7 +453,9 @@ function _getWithConstantInPath(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postWithConstantInBody(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this;
   if(!callback && typeof options === 'function') {
     callback = options;

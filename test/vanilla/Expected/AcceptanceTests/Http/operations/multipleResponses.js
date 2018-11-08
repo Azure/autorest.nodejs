@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model204NoModelDefaultError200Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -115,7 +117,9 @@ function _get200Model204NoModelDefaultError200Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model204NoModelDefaultError204Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -209,7 +213,9 @@ function _get200Model204NoModelDefaultError204Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model204NoModelDefaultError201Invalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -303,7 +309,9 @@ function _get200Model204NoModelDefaultError201Invalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model204NoModelDefaultError202None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -397,7 +405,9 @@ function _get200Model204NoModelDefaultError202None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model204NoModelDefaultError400Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -491,7 +501,9 @@ function _get200Model204NoModelDefaultError400Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model201ModelDefaultError200Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -602,7 +614,9 @@ function _get200Model201ModelDefaultError200Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model201ModelDefaultError201Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -713,7 +727,9 @@ function _get200Model201ModelDefaultError201Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200Model201ModelDefaultError400Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -824,7 +840,9 @@ function _get200Model201ModelDefaultError400Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA201ModelC404ModelDDefaultError200Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -952,7 +970,9 @@ function _get200ModelA201ModelC404ModelDDefaultError200Valid(options, callback) 
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA201ModelC404ModelDDefaultError201Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1080,7 +1100,9 @@ function _get200ModelA201ModelC404ModelDDefaultError201Valid(options, callback) 
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA201ModelC404ModelDDefaultError404Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1208,7 +1230,9 @@ function _get200ModelA201ModelC404ModelDDefaultError404Valid(options, callback) 
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA201ModelC404ModelDDefaultError400Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1336,7 +1360,9 @@ function _get200ModelA201ModelC404ModelDDefaultError400Valid(options, callback) 
  * @returns {function} callback(err, result, request, response)
  */
 function _get202None204NoneDefaultError202None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1413,7 +1439,9 @@ function _get202None204NoneDefaultError202None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get202None204NoneDefaultError204None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1490,7 +1518,9 @@ function _get202None204NoneDefaultError204None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get202None204NoneDefaultError400Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1567,7 +1597,9 @@ function _get202None204NoneDefaultError400Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get202None204NoneDefaultNone202Invalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1640,7 +1672,9 @@ function _get202None204NoneDefaultNone202Invalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get202None204NoneDefaultNone204None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1713,7 +1747,9 @@ function _get202None204NoneDefaultNone204None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get202None204NoneDefaultNone400None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1786,7 +1822,9 @@ function _get202None204NoneDefaultNone400None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get202None204NoneDefaultNone400Invalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1859,7 +1897,9 @@ function _get202None204NoneDefaultNone400Invalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultModelA200Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1950,7 +1990,9 @@ function _getDefaultModelA200Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultModelA200None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2041,7 +2083,9 @@ function _getDefaultModelA200None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultModelA400Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2132,7 +2176,9 @@ function _getDefaultModelA400Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultModelA400None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2223,7 +2269,9 @@ function _getDefaultModelA400None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultNone200Invalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2296,7 +2344,9 @@ function _getDefaultNone200Invalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultNone200None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2369,7 +2419,9 @@ function _getDefaultNone200None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultNone400Invalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2442,7 +2494,9 @@ function _getDefaultNone400Invalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getDefaultNone400None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2516,7 +2570,9 @@ function _getDefaultNone400None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA200None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2606,7 +2662,9 @@ function _get200ModelA200None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA200Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2696,7 +2754,9 @@ function _get200ModelA200Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA200Invalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2786,7 +2846,9 @@ function _get200ModelA200Invalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA400None(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2876,7 +2938,9 @@ function _get200ModelA400None(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA400Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2966,7 +3030,9 @@ function _get200ModelA400Valid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA400Invalid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3056,7 +3122,9 @@ function _get200ModelA400Invalid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _get200ModelA202Valid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

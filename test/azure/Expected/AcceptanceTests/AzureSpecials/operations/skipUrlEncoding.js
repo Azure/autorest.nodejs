@@ -23,7 +23,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getMethodPathValid(unencodedPathParam, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -123,7 +125,9 @@ function _getMethodPathValid(unencodedPathParam, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getPathPathValid(unencodedPathParam, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -222,7 +226,9 @@ function _getPathPathValid(unencodedPathParam, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSwaggerPathValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -320,7 +326,9 @@ function _getSwaggerPathValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMethodQueryValid(q1, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -420,7 +428,9 @@ function _getMethodQueryValid(q1, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMethodQueryNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -523,7 +533,9 @@ function _getMethodQueryNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getPathQueryValid(q1, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -622,7 +634,9 @@ function _getPathQueryValid(q1, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSwaggerQueryValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

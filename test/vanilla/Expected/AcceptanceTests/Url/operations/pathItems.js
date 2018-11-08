@@ -28,7 +28,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getAllWithValues(localStringPath, pathItemStringPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -153,7 +155,9 @@ function _getAllWithValues(localStringPath, pathItemStringPath, options, callbac
  * @returns {function} callback(err, result, request, response)
  */
 function _getGlobalQueryNull(localStringPath, pathItemStringPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -278,7 +282,9 @@ function _getGlobalQueryNull(localStringPath, pathItemStringPath, options, callb
  * @returns {function} callback(err, result, request, response)
  */
 function _getGlobalAndLocalQueryNull(localStringPath, pathItemStringPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -402,7 +408,9 @@ function _getGlobalAndLocalQueryNull(localStringPath, pathItemStringPath, option
  * @returns {function} callback(err, result, request, response)
  */
 function _getLocalPathItemQueryNull(localStringPath, pathItemStringPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

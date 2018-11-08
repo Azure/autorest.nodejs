@@ -27,7 +27,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequired(parameterGroupingPostRequiredParameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -193,7 +195,9 @@ function _postRequired(parameterGroupingPostRequiredParameters, options, callbac
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptional(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -323,7 +327,9 @@ function _postOptional(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postMultiParamGroups(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -471,7 +477,9 @@ function _postMultiParamGroups(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postSharedParameterGroupObject(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

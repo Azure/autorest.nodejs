@@ -27,7 +27,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _checkNameAvailability(accountName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -239,7 +241,9 @@ function _create(resourceGroupName, accountName, parameters, options, callback) 
  * @returns {function} callback(err, result, request, response)
  */
 function _deleteMethod(resourceGroupName, accountName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -355,7 +359,9 @@ function _deleteMethod(resourceGroupName, accountName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getProperties(resourceGroupName, accountName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -507,7 +513,9 @@ function _getProperties(resourceGroupName, accountName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _update(resourceGroupName, accountName, parameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -653,7 +661,9 @@ function _update(resourceGroupName, accountName, parameters, options, callback) 
  * @returns {function} callback(err, result, request, response)
  */
 function _listKeys(resourceGroupName, accountName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -781,7 +791,9 @@ function _listKeys(resourceGroupName, accountName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _list(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -902,7 +914,9 @@ function _list(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _listByResourceGroup(resourceGroupName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1030,7 +1044,9 @@ function _listByResourceGroup(resourceGroupName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _regenerateKey(resourceGroupName, accountName, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1195,7 +1211,9 @@ function _regenerateKey(resourceGroupName, accountName, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginCreate(resourceGroupName, accountName, parameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

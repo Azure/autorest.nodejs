@@ -23,7 +23,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _postMethodGlobalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -123,7 +125,9 @@ function _postMethodGlobalValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postMethodGlobalNull(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -223,7 +227,9 @@ function _postMethodGlobalNull(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postMethodGlobalNotProvidedValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -327,7 +333,9 @@ function _postMethodGlobalNotProvidedValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postPathGlobalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -427,7 +435,9 @@ function _postPathGlobalValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postSwaggerGlobalValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

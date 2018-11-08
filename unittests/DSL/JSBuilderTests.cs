@@ -774,6 +774,74 @@ namespace AutoRest.NodeJS.DSL
         }
 
         [TestMethod]
+        public void BlockCommentWithNoArguments()
+        {
+            JSBuilder builder = new JSBuilder();
+            builder.BlockComment();
+            AssertEx.EqualLines("", builder);
+        }
+
+        [TestMethod]
+        public void BlockCommentWithOneArgument()
+        {
+            JSBuilder builder = new JSBuilder();
+            builder.BlockComment("This is a test");
+            AssertEx.EqualLines("/* This is a test */", builder);
+        }
+
+        [TestMethod]
+        public void BlockCommentWithOneArgumentWithTwoLines()
+        {
+            JSBuilder builder = new JSBuilder();
+            builder.BlockComment("This is\na test");
+            AssertEx.EqualLines(
+                new[]
+                {
+                    "/*",
+                    " * This is",
+                    " * a test",
+                    " */"
+                },
+                builder);
+        }
+
+        [TestMethod]
+        public void BlockCommentWithTwoArgumentWithOneLineEach()
+        {
+            JSBuilder builder = new JSBuilder();
+            builder.BlockComment("This is", "a test");
+            AssertEx.EqualLines(
+                new[]
+                {
+                    "/*",
+                    " * This is",
+                    " * a test",
+                    " */"
+                },
+                builder);
+        }
+
+
+
+        [TestMethod]
+        public void BlockCommentWithTwoArgumentWithTwoLinesEach()
+        {
+            JSBuilder builder = new JSBuilder();
+            builder.BlockComment("This\nis", "a\ntest");
+            AssertEx.EqualLines(
+                new[]
+                {
+                    "/*",
+                    " * This",
+                    " * is",
+                    " * a",
+                    " * test",
+                    " */"
+                },
+                builder);
+        }
+
+        [TestMethod]
         public void DocumentCommentWithNoContents()
         {
             JSBuilder builder = new JSBuilder();

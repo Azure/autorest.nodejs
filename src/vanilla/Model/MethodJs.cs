@@ -1037,5 +1037,12 @@ namespace AutoRest.NodeJS.Model
             });
             return builder.ToString();
         }
+
+        public string GenerateMethodBody(string emptyLine)
+        {
+            JSBuilder builder = new JSBuilder();
+            builder.BlockComment("jshint validthis: true");
+            return builder.ToString();
+        }
     }
 }

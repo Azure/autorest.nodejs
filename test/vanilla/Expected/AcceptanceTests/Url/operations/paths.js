@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getBooleanTrue(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -100,7 +102,9 @@ function _getBooleanTrue(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getBooleanFalse(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -179,7 +183,9 @@ function _getBooleanFalse(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getIntOneMillion(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -258,7 +264,9 @@ function _getIntOneMillion(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getIntNegativeOneMillion(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -337,7 +345,9 @@ function _getIntNegativeOneMillion(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getTenBillion(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -416,7 +426,9 @@ function _getTenBillion(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getNegativeTenBillion(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -495,7 +507,9 @@ function _getNegativeTenBillion(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _floatScientificPositive(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -574,7 +588,9 @@ function _floatScientificPositive(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _floatScientificNegative(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -653,7 +669,9 @@ function _floatScientificNegative(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _doubleDecimalPositive(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -732,7 +750,9 @@ function _doubleDecimalPositive(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _doubleDecimalNegative(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -811,7 +831,9 @@ function _doubleDecimalNegative(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _stringUnicode(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -890,7 +912,9 @@ function _stringUnicode(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _stringUrlEncoded(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -969,7 +993,9 @@ function _stringUrlEncoded(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _stringEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1049,7 +1075,9 @@ function _stringEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _stringNull(stringPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1137,7 +1165,9 @@ function _stringNull(stringPath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _enumValid(enumPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1230,7 +1260,9 @@ function _enumValid(enumPath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _enumNull(enumPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1322,7 +1354,9 @@ function _enumNull(enumPath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _byteMultiByte(bytePath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1408,7 +1442,9 @@ function _byteMultiByte(bytePath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _byteEmpty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1488,7 +1524,9 @@ function _byteEmpty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _byteNull(bytePath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1574,7 +1612,9 @@ function _byteNull(bytePath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _dateValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1655,7 +1695,9 @@ function _dateValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _dateNull(datePath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1742,7 +1784,9 @@ function _dateNull(datePath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _dateTimeValid(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1822,7 +1866,9 @@ function _dateTimeValid(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _dateTimeNull(dateTimePath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1910,7 +1956,9 @@ function _dateTimeNull(dateTimePath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _base64Url(base64UrlPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1999,7 +2047,9 @@ function _base64Url(base64UrlPath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _arrayCsvInPath(arrayPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2091,7 +2141,9 @@ function _arrayCsvInPath(arrayPath, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _unixTimeUrl(unixTimeUrlPath, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

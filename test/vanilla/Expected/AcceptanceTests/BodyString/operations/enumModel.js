@@ -21,7 +21,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getNotExpandable(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -123,7 +125,9 @@ function _getNotExpandable(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putNotExpandable(stringBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -234,7 +238,9 @@ function _putNotExpandable(stringBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getReferenced(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -336,7 +342,9 @@ function _getReferenced(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putReferenced(enumStringBody, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -447,7 +455,9 @@ function _putReferenced(enumStringBody, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getReferencedConstant(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -542,7 +552,9 @@ function _getReferencedConstant(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putReferencedConstant(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

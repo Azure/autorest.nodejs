@@ -22,7 +22,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getSinglePages(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -139,7 +141,9 @@ function _getSinglePages(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePages(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -291,7 +295,9 @@ function _getMultiplePages(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getOdataMultiplePages(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -443,7 +449,9 @@ function _getOdataMultiplePages(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesWithOffset(pagingGetMultiplePagesWithOffsetOptions, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -600,7 +608,9 @@ function _getMultiplePagesWithOffset(pagingGetMultiplePagesWithOffsetOptions, op
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesRetryFirst(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -712,7 +722,9 @@ function _getMultiplePagesRetryFirst(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesRetrySecond(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -823,7 +835,9 @@ function _getMultiplePagesRetrySecond(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSinglePagesFailure(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -934,7 +948,9 @@ function _getSinglePagesFailure(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesFailure(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1045,7 +1061,9 @@ function _getMultiplePagesFailure(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesFailureUri(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1158,7 +1176,9 @@ function _getMultiplePagesFailureUri(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesFragmentNextLink(apiVersion, tenant, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1280,7 +1300,9 @@ function _getMultiplePagesFragmentNextLink(apiVersion, tenant, options, callback
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesFragmentWithGroupingNextLink(customParameterGroup, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1486,7 +1508,9 @@ function _getMultiplePagesLRO(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _nextFragment(apiVersion, tenant, nextLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1613,7 +1637,9 @@ function _nextFragment(apiVersion, tenant, nextLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _nextFragmentWithGrouping(nextLink, customParameterGroup, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1760,7 +1786,9 @@ function _nextFragmentWithGrouping(nextLink, customParameterGroup, options, call
  * @returns {function} callback(err, result, request, response)
  */
 function _beginGetMultiplePagesLRO(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1906,7 +1934,9 @@ function _beginGetMultiplePagesLRO(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSinglePagesNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2023,7 +2053,9 @@ function _getSinglePagesNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2175,7 +2207,9 @@ function _getMultiplePagesNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getOdataMultiplePagesNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2327,7 +2361,9 @@ function _getOdataMultiplePagesNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesWithOffsetNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2473,7 +2509,9 @@ function _getMultiplePagesWithOffsetNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesRetryFirstNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2585,7 +2623,9 @@ function _getMultiplePagesRetryFirstNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesRetrySecondNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2696,7 +2736,9 @@ function _getMultiplePagesRetrySecondNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getSinglePagesFailureNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2807,7 +2849,9 @@ function _getSinglePagesFailureNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesFailureNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2918,7 +2962,9 @@ function _getMultiplePagesFailureNext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getMultiplePagesFailureUriNext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -3104,7 +3150,9 @@ function _getMultiplePagesLRONext(nextPageLink, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _beginGetMultiplePagesLRONext(nextPageLink, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

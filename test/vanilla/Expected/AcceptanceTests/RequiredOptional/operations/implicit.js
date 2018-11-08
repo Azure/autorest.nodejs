@@ -22,7 +22,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _getRequiredPath(pathParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -123,7 +125,9 @@ function _getRequiredPath(pathParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putOptionalQuery(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -217,7 +221,9 @@ function _putOptionalQuery(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putOptionalHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -307,7 +313,9 @@ function _putOptionalHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _putOptionalBody(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -413,7 +421,9 @@ function _putOptionalBody(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getRequiredGlobalPath(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -513,7 +523,9 @@ function _getRequiredGlobalPath(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getRequiredGlobalQuery(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -617,7 +629,9 @@ function _getRequiredGlobalQuery(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _getOptionalGlobalQuery(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

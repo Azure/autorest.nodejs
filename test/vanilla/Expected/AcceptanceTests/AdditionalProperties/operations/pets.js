@@ -24,7 +24,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _createAPTrue(createParameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -144,7 +146,9 @@ function _createAPTrue(createParameters, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _createCatAPTrue(createParameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -263,7 +267,9 @@ function _createCatAPTrue(createParameters, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _createAPObject(createParameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -382,7 +388,9 @@ function _createAPObject(createParameters, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _createAPString(createParameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -502,7 +510,9 @@ function _createAPString(createParameters, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _createAPInProperties(createParameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -623,7 +633,9 @@ function _createAPInProperties(createParameters, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _createAPInPropertiesWithAPString(createParameters, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;

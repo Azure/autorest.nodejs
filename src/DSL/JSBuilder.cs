@@ -319,41 +319,77 @@ namespace AutoRest.NodeJS.DSL
             });
         }
 
+        public static IEnumerable<string> GetCommentLines(IEnumerable<string> lines)
+        {
+            return lines == null ? null : lines.Where((string line) => !string.IsNullOrWhiteSpace(line));
+        }
+
         /// <summary>
         /// Get whether or not the provided lines has any lines that are not null and not whitespace.
         /// </summary>
         /// <param name="lines">The lines to check.</param>
         /// <returns>Whether or not the provided lines has any lines that are not null and not whitespace.</returns>
-        public bool AnyCommentLines(IEnumerable<string> lines)
+        public static bool AnyCommentLines(IEnumerable<string> lines)
         {
-            return lines != null && lines.Any((string line) => !string.IsNullOrWhiteSpace(line));
+            IEnumerable<string> commentLines = GetCommentLines(lines);
+            return commentLines != null && lines.Any();
         }
+
+
 
         private void Comment(string commentHeader, IEnumerable<string> lines)
         {
-            if (AnyCommentLines(lines))
+            IEnumerable<string> commentLines = GetCommentLines(lines);
+            if (commentLines != null && commentLines.Any())
             {
-                Line(commentHeader);
-                WithAddedPrefix(" * ", () =>
+                if (commentLines.Count() == 1)
                 {
-                    int? previousWordWrapWidth = WordWrapWidth;
-                    WordWrapWidth = commentWordWrapWidth;
-                    try
+                    Line($"{commentHeader} {commentLines.Single()} */");
+                }
+                else
+                {
+                    Line(commentHeader);
+                    WithAddedPrefix(" * ", () =>
                     {
-                        foreach (string line in lines)
+                        int? previousWordWrapWidth = WordWrapWidth;
+                        WordWrapWidth = commentWordWrapWidth;
+                        try
                         {
-                            if (line != null)
+                            // We're specifically using lines here instead of commentLines to preserve empty lines in 
+                            foreach (string line in lines)
                             {
-                                Line(line);
+                                if (line != null)
+                                {
+                                    Line(line);
+                                }
                             }
                         }
-                    }
-                    finally
-                    {
-                        WordWrapWidth = previousWordWrapWidth;
-                    }
-                });
-                Line(" */");
+                        finally
+                        {
+                            WordWrapWidth = previousWordWrapWidth;
+                        }
+                    });
+                    Line(" */");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Add a /* */ comment to this JSBuilder.
+        /// </summary>
+        /// <param name="line">The line to add.
+        public void BlockComment(string line)
+        {
+            if (!string.IsNullOrEmpty(line))
+            {
+                if (line.Contains('\n'))
+                {
+                    BlockComment(line.Split('\n'));
+                }
+                else
+                {
+                    Line($"/* {line} */");
+                }
             }
         }
 
@@ -361,7 +397,7 @@ namespace AutoRest.NodeJS.DSL
         /// Add a /* */ comment to this JSBuilder. If no non-null and non-empty lines are provided, then nothing will be added.
         /// </summary>
         /// <param name="lines">The lines to add. Null lines will be ignored.</param>
-        public void Comment(params string[] lines)
+        public void BlockComment(params string[] lines)
         {
             Comment("/*", lines);
         }

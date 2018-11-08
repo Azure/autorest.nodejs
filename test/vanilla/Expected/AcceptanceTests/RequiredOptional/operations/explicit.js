@@ -23,7 +23,9 @@ const WebResource = msRest.WebResource;
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredIntegerParameter(bodyParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -143,7 +145,9 @@ function _postRequiredIntegerParameter(bodyParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalIntegerParameter(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -251,7 +255,9 @@ function _postOptionalIntegerParameter(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredIntegerProperty(value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -370,7 +376,9 @@ function _postRequiredIntegerProperty(value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalIntegerProperty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -477,7 +485,9 @@ function _postOptionalIntegerProperty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredIntegerHeader(headerParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -580,7 +590,9 @@ function _postRequiredIntegerHeader(headerParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalIntegerHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -671,7 +683,9 @@ function _postOptionalIntegerHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredStringParameter(bodyParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -791,7 +805,9 @@ function _postRequiredStringParameter(bodyParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalStringParameter(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -899,7 +915,9 @@ function _postOptionalStringParameter(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredStringProperty(value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1018,7 +1036,9 @@ function _postRequiredStringProperty(value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalStringProperty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1125,7 +1145,9 @@ function _postOptionalStringProperty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredStringHeader(headerParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1228,7 +1250,9 @@ function _postRequiredStringHeader(headerParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalStringHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1321,7 +1345,9 @@ function _postOptionalStringHeader(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredClassParameter(bodyParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1437,7 +1463,9 @@ function _postRequiredClassParameter(bodyParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalClassParameter(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1533,7 +1561,9 @@ function _postOptionalClassParameter(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredClassProperty(value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1654,7 +1684,9 @@ function _postRequiredClassProperty(value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalClassProperty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1753,7 +1785,9 @@ if (value !== null && value !== undefined) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredArrayParameter(bodyParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -1885,7 +1919,9 @@ function _postRequiredArrayParameter(bodyParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalArrayParameter(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2004,7 +2040,9 @@ function _postOptionalArrayParameter(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredArrayProperty(value, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2128,7 +2166,9 @@ function _postRequiredArrayProperty(value, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalArrayProperty(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2239,7 +2279,9 @@ function _postOptionalArrayProperty(options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postRequiredArrayHeader(headerParameter, options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
@@ -2347,7 +2389,9 @@ function _postRequiredArrayHeader(headerParameter, options, callback) {
  * @returns {function} callback(err, result, request, response)
  */
 function _postOptionalArrayHeader(options, callback) {
-   /* jshint validthis: true */
+  /*
+   * jshint validthis: true
+   */
   let client = this.client;
   if(!callback && typeof options === 'function') {
     callback = options;
