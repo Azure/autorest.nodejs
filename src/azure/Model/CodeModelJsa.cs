@@ -8,6 +8,8 @@ using AutoRest.Extensions.Azure;
 using AutoRest.NodeJS.Model;
 using Newtonsoft.Json;
 using AutoRest.Core.Utilities;
+using AutoRest.NodeJS.DSL;
+using AutoRest.Core;
 
 namespace AutoRest.NodeJS.Azure.Model
 {
@@ -69,5 +71,35 @@ namespace AutoRest.NodeJS.Azure.Model
 
         public string ConstructImportTSAzure() =>
             "import { AzureServiceClient, AzureServiceClientOptions } from 'ms-rest-azure';";
+
+
+
+        public override string GenerateModelIndexDTS()
+        {
+            TSBuilder builder = new TSBuilder();
+
+            builder.Comment(Settings.Instance.Header);
+            builder.Line();
+            builder.Import(new[] { "BaseResource", "CloudError" }, "ms-rest-azure");
+            builder.ImportAllAs("moment", "moment");
+            builder.Line();
+            builder.Export(export =>
+            {
+                export.Export("BaseResource");
+                export.Export("CloudError");
+            });
+            foreach (CompositeTypeJs modelType in OrderedModelTemplateModels)
+            {
+                builder.Line();
+                modelType.GenerateModelDefinition(builder);
+            }
+            foreach (PageCompositeTypeJsa pageModelType in PageTemplateModels)
+            {
+                builder.Line();
+                pageModelType.GenerateModelDefinition(builder);
+            }
+
+            return builder.ToString();
+        }
     }
 }

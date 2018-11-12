@@ -2,52 +2,53 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // 
 
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AutoRest.NodeJS
 {
+    [TestClass]
     public class GeneratorSettingsJsTests
     {
-        [Fact]
+        [TestMethod]
         public void UpdatePackageVersionWithNullPackageName()
         {
             GeneratorSettingsJs settings = new GeneratorSettingsJs();
-            Assert.Null(settings.PackageName);
-            Assert.Null(settings.PackageVersion);
+            Assert.IsNull(settings.PackageName);
+            Assert.IsNull(settings.PackageVersion);
 
             settings.UpdatePackageVersion();
 
-            Assert.Null(settings.PackageName);
-            Assert.Null(settings.PackageVersion);
+            Assert.IsNull(settings.PackageName);
+            Assert.IsNull(settings.PackageVersion);
         }
 
-        [Fact]
+        [TestMethod]
         public void UpdatePackageVersionWithEmptyPackageName()
         {
             GeneratorSettingsJs settings = new GeneratorSettingsJs();
             settings.PackageName = "";
-            Assert.Null(settings.PackageVersion);
+            Assert.IsNull(settings.PackageVersion);
 
             settings.UpdatePackageVersion();
 
-            Assert.Equal("", settings.PackageName);
-            Assert.Null(settings.PackageVersion);
+            Assert.AreEqual("", settings.PackageName);
+            Assert.IsNull(settings.PackageVersion);
         }
 
-        [Fact]
+        [TestMethod]
         public void UpdatePackageVersionWithNonExistingPackageName()
         {
             GeneratorSettingsJs settings = new GeneratorSettingsJs();
             settings.PackageName = "idontexistandyoucantinstallme";
-            Assert.Null(settings.PackageVersion);
+            Assert.IsNull(settings.PackageVersion);
 
             settings.UpdatePackageVersion();
 
-            Assert.Equal("idontexistandyoucantinstallme", settings.PackageName);
-            Assert.Equal("1.0.0", settings.PackageVersion);
+            Assert.AreEqual("idontexistandyoucantinstallme", settings.PackageName);
+            Assert.AreEqual("1.0.0", settings.PackageVersion);
         }
 
-        [Fact]
+        [TestMethod]
         public void UpdatePackageVersionWithNonExistingPackageNameAndPackageVersionSpecified()
         {
             GeneratorSettingsJs settings = new GeneratorSettingsJs();
@@ -56,25 +57,25 @@ namespace AutoRest.NodeJS
 
             settings.UpdatePackageVersion();
 
-            Assert.Equal("idontexistandyoucantinstallme", settings.PackageName);
-            Assert.Equal("2.3.4", settings.PackageVersion);
+            Assert.AreEqual("idontexistandyoucantinstallme", settings.PackageName);
+            Assert.AreEqual("2.3.4", settings.PackageVersion);
         }
 
-        [Fact]
+        [TestMethod]
         public void UpdatePackageVersionWithExistingPackageName()
         {
             GeneratorSettingsJs settings = new GeneratorSettingsJs();
             settings.PackageName = "npm";
-            Assert.Null(settings.PackageVersion);
+            Assert.IsNull(settings.PackageVersion);
 
             settings.UpdatePackageVersion();
 
-            Assert.Equal("npm", settings.PackageName);
-            Assert.NotNull(settings.PackageVersion);
-            Assert.NotEmpty(settings.PackageVersion);
+            Assert.AreEqual("npm", settings.PackageName);
+            AssertEx.NotNull(settings.PackageVersion);
+            AssertEx.NotEmpty(settings.PackageVersion);
         }
 
-        [Fact]
+        [TestMethod]
         public void UpdatePackageVersionWithExistingPackageNameAndPackageVersionSpecified()
         {
             GeneratorSettingsJs settings = new GeneratorSettingsJs();
@@ -83,8 +84,8 @@ namespace AutoRest.NodeJS
 
             settings.UpdatePackageVersion();
 
-            Assert.Equal("npm", settings.PackageName);
-            Assert.Equal("1.2.3", settings.PackageVersion);
+            Assert.AreEqual("npm", settings.PackageName);
+            Assert.AreEqual("1.2.3", settings.PackageVersion);
         }
     }
 }
