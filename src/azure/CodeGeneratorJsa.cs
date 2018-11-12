@@ -48,7 +48,7 @@ namespace AutoRest.NodeJS.Azure
             {
                 await GenerateModelIndexJs(() => new AzureModelIndexTemplate { Model = codeModel }, generatorSettings).ConfigureAwait(false);
 
-                await GenerateModelIndexDts(() => new AzureModelIndexTemplateTS { Model = codeModel }, generatorSettings).ConfigureAwait(false);
+                await GenerateModelIndexDts(codeModel, generatorSettings).ConfigureAwait(false);
 
                 // Paged Models
                 foreach (var pageModel in codeModel.PageTemplateModels)

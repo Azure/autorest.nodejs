@@ -1,9 +1,11 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
+using AutoRest.Core;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using AutoRest.Extensions;
+using AutoRest.NodeJS.DSL;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -435,6 +437,22 @@ namespace AutoRest.NodeJS.Model
         public string GenerateTypeScriptSDKMessage()
         {
             return $"**This SDK will be deprecated next year and will be replaced by a new TypeScript-based isomorphic SDK (found at https://github.com/Azure/azure-sdk-for-js) which works on Node.js and browsers.**";
+        }
+
+        public virtual string GenerateModelIndexDTS()
+        {
+            TSBuilder builder = new TSBuilder();
+
+            builder.Comment(Settings.Instance.Header);
+            builder.Line();
+            builder.ImportAllAs("moment", "moment");
+            foreach (CompositeTypeJs modelType in OrderedModelTemplateModels)
+            {
+                builder.Line();
+                modelType.GenerateModelDefinition(builder);
+            }
+
+            return builder.ToString();
         }
     }
 }

@@ -51,7 +51,7 @@ namespace AutoRest.NodeJS
             {
                 await GenerateModelIndexJs(() => new ModelIndexTemplate { Model = codeModel }, generatorSettings).ConfigureAwait(false);
 
-                await GenerateModelIndexDts(() => new ModelIndexTemplateTS { Model = codeModel }, generatorSettings).ConfigureAwait(false);
+                await GenerateModelIndexDts(codeModel, generatorSettings).ConfigureAwait(false);
 
                 foreach (CompositeTypeJs modelType in codeModel.ModelTemplateModels)
                 {
@@ -97,10 +97,9 @@ namespace AutoRest.NodeJS
             await Write(modelIndexTemplate, GetModelSourceCodeFilePath(generatorSettings, "index.js")).ConfigureAwait(false);
         }
 
-        protected async Task GenerateModelIndexDts<T>(Func<Template<T>> modelIndexTemplateCreator, GeneratorSettingsJs generatorSettings) where T : CodeModelJs
+        protected async Task GenerateModelIndexDts(CodeModelJs codeModel, GeneratorSettingsJs generatorSettings)
         {
-            Template<T> modelIndexTemplateTS = modelIndexTemplateCreator();
-            await Write(modelIndexTemplateTS, GetModelSourceCodeFilePath(generatorSettings, "index.d.ts")).ConfigureAwait(false);
+            await Write(codeModel.GenerateModelIndexDTS(), GetModelSourceCodeFilePath(generatorSettings, "index.d.ts")).ConfigureAwait(false);
         }
 
         protected async Task GenerateModelJs(CompositeTypeJs model, GeneratorSettingsJs generatorSettings)

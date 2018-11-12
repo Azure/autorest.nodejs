@@ -3,6 +3,7 @@
 
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
+using AutoRest.NodeJS.DSL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -219,30 +220,6 @@ namespace AutoRest.NodeJS.Model
             return result;
         }
 
-        /// <summary>
-        /// Returns the TypeScript string to define the specified property, including its type and whether it's optional or not
-        /// </summary>
-        /// <param name="property">Model property to query</param>
-        /// <param name="inModelsModule">Pass true if generating the code for the models module, thus model types don't need a "models." prefix</param>
-        /// <returns>TypeScript property definition</returns>
-        public static string PropertyTS(Core.Model.Property property, bool inModelsModule)
-        {
-            if (property == null)
-            {
-                throw new ArgumentNullException(nameof(property));
-            }
-
-            string typeString = property.ModelType.TSType(inModelsModule);
-            var propertyName = property.Name;
-            if (property.IsReadOnly)
-            {
-                propertyName = "readonly " + propertyName;
-            }
-            if (!property.IsRequired)
-                return propertyName + "?: " + typeString;
-            else return propertyName + ": " + typeString;
-        }
-
         public virtual string ConstructModelMapper()
         {
             var modelMapper = this.ConstructMapper(SerializedName, null, false, true);
@@ -338,6 +315,49 @@ namespace AutoRest.NodeJS.Model
             }
 
             return builder.ToString();
+        }
+
+        public string GenerateModelDefinition()
+        {
+            TSBuilder builder = new TSBuilder();
+
+            GenerateModelDefinition(builder);
+
+            return builder.ToString();
+        }
+
+        public virtual void GenerateModelDefinition(TSBuilder builder)
+        {
+            builder.DocumentationComment(comment =>
+            {
+                comment.Summary(Summary);
+                comment.Description(Documentation);
+            });
+            ISet<string> addedPropertyNames = new HashSet<string>();
+            builder.ExportInterface(Name, BaseModelType?.Name?.ToString(), tsInterface =>
+            {
+                foreach (Property property in Properties.Where(p => !p.IsConstant))
+                {
+                    if (!addedPropertyNames.Contains(property.Name))
+                    {
+                        addedPropertyNames.Add(property.Name);
+
+                        tsInterface.DocumentationComment(comment =>
+                        {
+                            comment.Summary(property.Summary);
+                            comment.Description(property.Documentation);
+                        });
+                        string propertyType = property.ModelType.TSType(inModelsModule: true);
+                        tsInterface.Property(property.Name, propertyType, isRequired: property.IsRequired, isReadonly: property.IsReadOnly);
+                    }
+                }
+
+                if (AdditionalProperties != null)
+                {
+                    tsInterface.DocumentationComment(AdditionalPropertiesDocumentation());
+                    tsInterface.Indexer("additionalPropertyName", AdditionalPropertiesTSType());
+                }
+            });
         }
     }
 }
