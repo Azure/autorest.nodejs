@@ -498,7 +498,7 @@ namespace AutoRest.NodeJS.Model
             }
             else
             {
-                builder.AppendLine("let resultMapper = {{{0}}};", type.ConstructMapper(responseVariable, null, false, false));
+                builder.AppendLine("let resultMapper = {{{0}}};", ClientModelExtensions.ConstructMapper(type, responseVariable, null, false, false));
             }
             builder.AppendLine("{1} = client.deserialize(resultMapper, {0}, '{1}');", responseVariable, valueReference);
             return builder.ToString();
@@ -732,11 +732,12 @@ namespace AutoRest.NodeJS.Model
                 else
                 {
                     builder.AppendLine("let requestModelMapper = {{{0}}};",
-                        RequestBody.ModelType.ConstructMapper(RequestBody.SerializedName, RequestBody, false, false));
+                        ClientModelExtensions.ConstructMapper(RequestBody.ModelType, RequestBody.SerializedName, RequestBody, false, false));
                 }
                 return builder.ToString();
             }
         }
+
         [JsonIgnore]
         public virtual string InitializeResult
         {
@@ -745,6 +746,7 @@ namespace AutoRest.NodeJS.Model
                 return string.Empty;
             }
         }
+
         [JsonIgnore]
         public string ReturnTypeInfo
         {

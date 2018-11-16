@@ -222,7 +222,7 @@ namespace AutoRest.NodeJS.Model
 
         public virtual string ConstructModelMapper()
         {
-            var modelMapper = this.ConstructMapper(SerializedName, null, false, true);
+            var modelMapper = ClientModelExtensions.ConstructMapper(this, SerializedName, null, false, true);
             var builder = new IndentedStringBuilder("  ");
             builder.AppendLine("return {{{0}}};", modelMapper);
             return builder.ToString();
