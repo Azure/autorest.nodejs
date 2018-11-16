@@ -728,7 +728,7 @@ namespace AutoRest.NodeJS
                     var constraintValue = constraints[keys[j]];
                     if (keys[j] == Constraint.Pattern)
                     {
-                        constraintValue = $"\"{CreateRegexPatternConstraintValue(constraintValue)}\"";
+                        constraintValue = CreateRegexPatternConstraintValue(constraintValue);
                     }
                     if (j != keys.Count - 1)
                     {

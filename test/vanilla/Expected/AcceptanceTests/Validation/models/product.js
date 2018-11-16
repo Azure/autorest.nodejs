@@ -77,7 +77,7 @@ class Product {
             required: false,
             serializedName: 'image',
             constraints: {
-              Pattern: "/http:\/\/\w+/"
+              Pattern: /http:\/\/\w+/
             },
             type: {
               name: 'String'
