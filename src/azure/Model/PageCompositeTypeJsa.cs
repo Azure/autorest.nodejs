@@ -24,7 +24,7 @@ namespace AutoRest.NodeJS.Azure.Model
 
         public override string ConstructModelMapper()
         {
-            var modelMapper = this.ConstructMapper(SerializedName, null, true, true);
+            var modelMapper = ClientModelExtensions.ConstructMapper(this, SerializedName, null, true, true);
             var builder = new IndentedStringBuilder("  ");
             builder.AppendLine("return {{{0}}};", modelMapper);
             return builder.ToString();

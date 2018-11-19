@@ -594,7 +594,7 @@ namespace AutoRest.NodeJS
             return builder;
         }
 
-        public static string ConstructMapper(this IModelType type, string serializedName, IVariable parameter, bool isPageable, bool expandComposite)
+        public static string ConstructMapper(IModelType type, string serializedName, IVariable parameter, bool isPageable, bool expandComposite)
         {
             var builder = new IndentedStringBuilder("  ");
             string defaultValue = null;
@@ -677,7 +677,7 @@ namespace AutoRest.NodeJS
                     var constraintValue = constraints[keys[j]];
                     if (keys[j] == Constraint.Pattern)
                     {
-                        constraintValue = $"'{constraintValue}'";
+                        constraintValue = CreateRegexPatternConstraintValue(constraintValue);
                     }
                     if (j != keys.Count - 1)
                     {
@@ -769,7 +769,7 @@ namespace AutoRest.NodeJS
                          .AppendLine("name: 'Sequence',")
                          .AppendLine("element: {")
                            .Indent()
-                           .AppendLine("{0}", sequence.ElementType.ConstructMapper(sequence.ElementType.DeclarationName + "ElementType", null, false, false))
+                           .AppendLine("{0}", ConstructMapper(sequence.ElementType, sequence.ElementType.DeclarationName + "ElementType", null, false, false))
                          .Outdent().AppendLine("}").Outdent().AppendLine("}");
             }
             else if (dictionary != null)
@@ -779,7 +779,7 @@ namespace AutoRest.NodeJS
                          .AppendLine("name: 'Dictionary',")
                          .AppendLine("value: {")
                            .Indent()
-                           .AppendLine("{0}", dictionary.ValueType.ConstructMapper(dictionary.ValueType.DeclarationName + "ElementType", null, false, false))
+                           .AppendLine("{0}", ConstructMapper(dictionary.ValueType, dictionary.ValueType.DeclarationName + "ElementType", null, false, false))
                          .Outdent().AppendLine("}").Outdent().AppendLine("}");
             }
             else if (composite != null)
@@ -797,7 +797,7 @@ namespace AutoRest.NodeJS
                            .AppendLine("name: 'Dictionary',")
                            .AppendLine("value: {")
                            .Indent()
-                           .AppendLine("{0}", compositeJs.AdditionalProperties.ConstructMapper(compositeJs.AdditionalProperties.DeclarationName + "ElementType", null, false, false))
+                           .AppendLine("{0}", ConstructMapper(compositeJs.AdditionalProperties, compositeJs.AdditionalProperties.DeclarationName + "ElementType", null, false, false))
                            .Outdent().AppendLine("}")
                            .Outdent().AppendLine("}")
                            .Outdent().AppendLine("},");
@@ -832,7 +832,7 @@ namespace AutoRest.NodeJS
                             }
 
                             bool shouldWriteNextProperty = (i < composedPropertyList.Count - 1 && ShouldWriteProperty(writeAllModelProperties, composedPropertyList[i + 1]));
-                            builder.AppendLine($"{prop.Name}: {{{prop.ModelType.ConstructMapper(serializedPropertyName, prop, false, false)}}}{(shouldWriteNextProperty ? "," : "")}");
+                            builder.AppendLine($"{prop.Name}: {{{ConstructMapper(prop.ModelType, serializedPropertyName, prop, false, false)}}}{(shouldWriteNextProperty ? "," : "")}");
                         }
                     }
 
@@ -843,6 +843,34 @@ namespace AutoRest.NodeJS
             else
             {
                 throw new NotImplementedException($"{type} is not a supported Type.");
+            }
+            return builder.ToString();
+        }
+
+        internal static string CreateRegexPatternConstraintValue(string constraintValue)
+        {
+            StringBuilder builder = new StringBuilder();
+            if (!string.IsNullOrEmpty(constraintValue))
+            {
+                builder.Append('/');
+                bool escaped = false;
+                foreach (char c in constraintValue)
+                {
+                    if (c == '/' && !escaped)
+                    {
+                        builder.Append('\\');
+                    }
+                    else if (c == '\\')
+                    {
+                        escaped = !escaped;
+                    }
+                    else
+                    {
+                        escaped = false;
+                    }
+                    builder.Append(c);
+                }
+                builder.Append('/');
             }
             return builder.ToString();
         }
