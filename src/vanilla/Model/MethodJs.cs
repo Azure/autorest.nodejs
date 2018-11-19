@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
+using AutoRest.NodeJS.DSL;
 using AutoRest.NodeJS.vanilla.Templates;
 using Newtonsoft.Json;
 using static AutoRest.Core.Utilities.DependencyInjection;
@@ -593,7 +594,8 @@ namespace AutoRest.NodeJS.Model
         /// <returns></returns>
         public virtual string BuildUrl(string variableName)
         {
-            var builder = new IndentedStringBuilder("  ");
+            JSBuilder builder = new JSBuilder();
+
             BuildPathParameters(variableName, builder);
             if (HasQueryParameters())
             {
@@ -609,20 +611,19 @@ namespace AutoRest.NodeJS.Model
         /// </summary>
         /// <param name="variableName">The variable reference for the url</param>
         /// <param name="builder">The string builder for url construction</param>
-        private void AddQueryParametersToUrl(string variableName, IndentedStringBuilder builder)
+        private void AddQueryParametersToUrl(string variableName, JSBuilder builder)
         {
-            builder.AppendLine("if (queryParameters.length > 0) {")
-                .Indent();
-            if (this.Extensions.ContainsKey("nextLinkMethod") && (bool)this.Extensions["nextLinkMethod"])
+            builder.If("queryParameters.length > 0", ifBlock =>
             {
-                builder.AppendLine("{0} += ({0}.indexOf('?') !== -1 ? '&' : '?') + queryParameters.join('&');", variableName);
-            }
-            else
-            {
-                builder.AppendLine("{0} += '?' + queryParameters.join('&');", variableName);
-            }
-
-            builder.Outdent().AppendLine("}");
+                if (Extensions.ContainsKey("nextLinkMethod") && (bool)Extensions["nextLinkMethod"])
+                {
+                    ifBlock.Line($"{variableName} += ({variableName}.indexOf('?') !== -1 ? '&' : '?') + queryParameters.join('&');");
+                }
+                else
+                {
+                    builder.Line($"{variableName} += '?' + queryParameters.join('&');");
+                }
+            });
         }
 
         /// <summary>
@@ -639,72 +640,115 @@ namespace AutoRest.NodeJS.Model
         /// array should contain one string element for each query parameter of the form 'key=value'
         /// </summary>
         /// <param name="builder">The stringbuilder for url construction</param>
-        protected virtual void BuildQueryParameterArray(IndentedStringBuilder builder)
+        protected virtual void BuildQueryParameterArray(JSBuilder builder)
         {
-            if (builder == null)
-            {
-                throw new ArgumentNullException(nameof(builder));
-            }
+            JSBlock block = new JSBlock(builder);
 
-            builder.AppendLine("let queryParameters = [];");
-            foreach (var queryParameter in LogicalParameters.Where(p => p.Location == ParameterLocation.Query))
+            IEnumerable<Parameter> queryParameters = LogicalParameters.Where(p => p.Location == ParameterLocation.Query);
+
+            const string queryParametersArrayName = "queryParameters";
+            block.Variable(queryParametersArrayName, "[]");
+            foreach (Parameter queryParameter in queryParameters)
             {
-                var queryAddFormat = "queryParameters.push('{0}=' + encodeURIComponent({1}));";
-                if (queryParameter.SkipUrlEncoding())
-                {
-                    queryAddFormat = "queryParameters.push('{0}=' + {1});";
-                }
+                bool shouldEncode = !queryParameter.SkipUrlEncoding();
+                string queryParameterName = queryParameter.Name;
+                string queryParameterSerializedName = queryParameter.SerializedName;
 
                 if (!queryParameter.IsRequired)
                 {
-                    builder.AppendLine("if ({0} !== null && {0} !== undefined) {{", queryParameter.Name)
-                        .Indent();
+                    block.StartBlock($"if ({queryParameterName} !== null && {queryParameterName} !== undefined)");
                 }
+
                 if (queryParameter.CollectionFormat == CollectionFormat.Multi)
                 {
-                    builder.AppendLine("if ({0}.length == 0) {{", queryParameter.Name).Indent()
-                           .AppendLine(queryAddFormat, queryParameter.SerializedName, "''").Outdent()
-                           .AppendLine("} else {").Indent()
-                           .AppendLine("for (let item of {0}) {{", queryParameter.Name).Indent()
-                           .AppendLine("item = (item === null || item === undefined) ? '' : item;")
-                           .AppendLine(queryAddFormat, queryParameter.SerializedName, "'' + item").Outdent()
-                           .AppendLine("}").Outdent()
-                           .AppendLine("}").Outdent();
+                    block.If($"{queryParameterName}.length == 0", ifBlock =>
+                    {
+                        ifBlock.Line($"{queryParametersArrayName}.push('{queryParameterSerializedName}=');");
+                    })
+                    .Else(elseBlock =>
+                    {
+                        elseBlock.ForEachLet("item", queryParameterName, foreachBlock =>
+                        {
+                            foreachBlock.Line($"item = (item === null || item === undefined) ? '' : item;");
+                            foreachBlock.Line($"{queryParametersArrayName}.push('{queryParameterSerializedName}=' + {Encode(shouldEncode, "'' + item")});");
+                        });
+                    });
                 }
                 else
                 {
-                    builder.AppendLine(queryAddFormat,
-                        queryParameter.SerializedName, queryParameter.GetFormattedReferenceValue());
+                    block.Line($"{queryParametersArrayName}.push('{queryParameterSerializedName}=' + {GetFormattedReferenceValue(queryParameter)});");
                 }
+
                 if (!queryParameter.IsRequired)
                 {
-                    builder.Outdent().AppendLine("}");
+                    block.EndBlock();
                 }
             }
         }
+
+
+
+        /// <summary>
+        /// Format the value of a sequence given the modeled element format.
+        /// </summary>
+        /// <param name="parameter">The parameter to format</param>
+        /// <returns>A reference to the formatted parameter value</returns>
+        private static string GetFormattedReferenceValue(Parameter parameter)
+        {
+            if (parameter == null)
+            {
+                throw new ArgumentNullException(nameof(parameter));
+            }
+
+            SequenceType sequence = parameter.ModelType as SequenceType;
+            if (sequence != null)
+            {
+                return $"{parameter.Name}.join('{GetSeparator(parameter.CollectionFormat)}')";
+            }
+            else
+            {
+                return parameter.ModelType.ToString(parameter.Name);
+            }
+        }
+
+        /// <summary>
+        /// Return the separator associated with a given collectionFormat
+        /// </summary>
+        /// <param name="format">The collection format</param>
+        /// <returns>The separator</returns>
+        private static string GetSeparator(CollectionFormat format)
+        {
+            switch (format)
+            {
+                case CollectionFormat.Csv:
+                    return ",";
+                case CollectionFormat.Pipes:
+                    return "|";
+                case CollectionFormat.Ssv:
+                    return " ";
+                case CollectionFormat.Tsv:
+                    return "\t";
+                default:
+                    throw new NotSupportedException($"Collection format {format} is not supported.");
+            }
+        }
+
+        public static string Encode(bool shouldEncode, string text)
+            => shouldEncode ? $"encodeURIComponent({text})" : text;
 
         /// <summary>
         /// Generate code to replace path parameters in the url template with the appropriate values
         /// </summary>
         /// <param name="variableName">The variable name for the url to be constructed</param>
         /// <param name="builder">The string builder for url construction</param>
-        protected virtual void BuildPathParameters(string variableName, IndentedStringBuilder builder)
+        protected virtual void BuildPathParameters(string variableName, JSBuilder builder)
         {
-            if (builder == null)
+            IEnumerable<Parameter> pathParameters = LogicalParameters.Where(p => p.Location == ParameterLocation.Path);
+            foreach (Parameter pathParameter in pathParameters)
             {
-                throw new ArgumentNullException(nameof(builder));
-            }
-
-            foreach (var pathParameter in LogicalParameters.Where(p => p.Location == ParameterLocation.Path))
-            {
-                var pathReplaceFormat = "{0} = {0}.replace('{{{1}}}', encodeURIComponent({2}));";
-                if (pathParameter.SkipUrlEncoding())
-                {
-                    pathReplaceFormat = "{0} = {0}.replace('{{{1}}}', {2});";
-                }
-
-                builder.AppendLine(pathReplaceFormat, variableName, pathParameter.SerializedName,
-                    pathParameter.ModelType.ToString(pathParameter.Name));
+                string serializedName = pathParameter.SerializedName;
+                string pathParameterToStringExpression = Encode(!pathParameter.SkipUrlEncoding(), pathParameter.ModelType.ToString(pathParameter.Name));
+                builder.Line($"{variableName} = {variableName}.replace('{{{serializedName}}}', {pathParameterToStringExpression});");
             }
         }
 

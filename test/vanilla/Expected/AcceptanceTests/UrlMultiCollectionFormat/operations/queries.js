@@ -66,7 +66,7 @@ function _arrayStringMultiNull(options, callback) {
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
     if (arrayQuery.length == 0) {
-      queryParameters.push('arrayQuery=' + encodeURIComponent(''));
+      queryParameters.push('arrayQuery=');
     } else {
       for (let item of arrayQuery) {
         item = (item === null || item === undefined) ? '' : item;
@@ -186,7 +186,7 @@ function _arrayStringMultiEmpty(options, callback) {
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
     if (arrayQuery.length == 0) {
-      queryParameters.push('arrayQuery=' + encodeURIComponent(''));
+      queryParameters.push('arrayQuery=');
     } else {
       for (let item of arrayQuery) {
         item = (item === null || item === undefined) ? '' : item;
@@ -307,7 +307,7 @@ function _arrayStringMultiValid(options, callback) {
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
     if (arrayQuery.length == 0) {
-      queryParameters.push('arrayQuery=' + encodeURIComponent(''));
+      queryParameters.push('arrayQuery=');
     } else {
       for (let item of arrayQuery) {
         item = (item === null || item === undefined) ? '' : item;

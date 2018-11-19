@@ -358,14 +358,26 @@ namespace AutoRest.NodeJS.DSL
 
         public void Block(string beforeBlock, bool newLineAfterBlock, Action<JSBlock> blockAction)
         {
-            Line($"{beforeBlock} {{");
-            Indent(() =>
+            StartBlock(beforeBlock);
+            try
             {
-                using (JSBlock block = new JSBlock(this))
-                {
-                    blockAction.Invoke(block);
-                }
-            });
+                blockAction.Invoke(new JSBlock(this));
+            }
+            finally
+            {
+                EndBlock(newLineAfterBlock);
+            }
+        }
+
+        public void StartBlock(string beforeBlock)
+        {
+            Line($"{beforeBlock} {{");
+            IncreaseIndent();
+        }
+
+        public void EndBlock(bool newLineAfterBlock = true)
+        {
+            DecreaseIndent();
             WriteNewLineBeforeNextText = true;
             Text($"}}");
             WriteNewLineBeforeNextText = newLineAfterBlock;
@@ -419,9 +431,24 @@ namespace AutoRest.NodeJS.DSL
             Line($"throw {valueToThrow};");
         }
 
+        public void ForEachLet(string variableName, string sourceExpression, Action<JSBlock> blockAction)
+        {
+            Block($"for (let {variableName} of {sourceExpression})", blockAction);
+        }
+
+        public void ForEachConst(string variableName, string sourceExpression, Action<JSBlock> blockAction)
+        {
+            Block($"for (const {variableName} of {sourceExpression})", blockAction);
+        }
+
         public void ConstQuotedStringVariable(string variableName, string text)
         {
             ConstVariable(variableName, $"\"{text}\"");
+        }
+
+        public void Variable(string variableName, string variableValue)
+        {
+            Line($"let {variableName} = {variableValue};");
         }
 
         public void ConstVariable(string variableName, string variableValue)

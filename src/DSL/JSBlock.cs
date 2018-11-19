@@ -5,7 +5,7 @@ using System;
 
 namespace AutoRest.NodeJS.DSL
 {
-    public class JSBlock : IDisposable
+    public class JSBlock
     {
         protected readonly JSBuilder builder;
         private State currentState;
@@ -40,10 +40,6 @@ namespace AutoRest.NodeJS.DSL
             currentState = newState;
         }
 
-        public void Dispose()
-        {
-        }
-
         public void Text(string text)
         {
             SetCurrentState(State.Statement);
@@ -59,6 +55,12 @@ namespace AutoRest.NodeJS.DSL
         {
             SetCurrentState(State.Statement);
             builder.Line(text);
+        }
+
+        public void Line(string formattedText, params object[] formattedTextArguments)
+        {
+            SetCurrentState(State.Statement);
+            builder.Line(formattedText, formattedTextArguments);
         }
 
         public void LineComment(string text)
@@ -119,9 +121,33 @@ namespace AutoRest.NodeJS.DSL
             builder.Throw(valueToThrow);
         }
 
-        public void Value(Action<JSValue> valueAction)
+        public void ForEachLet(string variableName, string sourceExpression, Action<JSBlock> blockAction)
         {
-            builder.Value(valueAction);
+            SetCurrentState(State.Statement);
+            builder.ForEachLet(variableName, sourceExpression, blockAction);
+        }
+
+        public void ForEachConst(string variableName, string sourceExpression, Action<JSBlock> blockAction)
+        {
+            SetCurrentState(State.Statement);
+            builder.ForEachConst(variableName, sourceExpression, blockAction);
+        }
+
+        public void Variable(string variableName, string variableValue)
+        {
+            SetCurrentState(State.Statement);
+            builder.Variable(variableName, variableValue);
+        }
+
+        public void StartBlock(string beforeBlock)
+        {
+            SetCurrentState(State.Statement);
+            builder.StartBlock(beforeBlock);
+        }
+
+        public void EndBlock(bool newLineAfterBlock = true)
+        {
+            builder.EndBlock(newLineAfterBlock);
         }
     }
 }
