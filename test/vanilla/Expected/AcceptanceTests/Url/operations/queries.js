@@ -2911,7 +2911,7 @@ function _arrayStringCsvValid(options, callback) {
   let requestUrl = baseUrl + (baseUrl.endsWith('/') ? '' : '/') + 'queries/array/csv/string/valid';
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
-    queryParameters.push('arrayQuery=' + encodeURIComponent(arrayQuery.join(',')));
+    queryParameters.push('arrayQuery=' + arrayQuery.map(encodeURIComponent).join(','));
   }
   if (queryParameters.length > 0) {
     requestUrl += '?' + queryParameters.join('&');
@@ -3024,7 +3024,7 @@ function _arrayStringCsvNull(options, callback) {
   let requestUrl = baseUrl + (baseUrl.endsWith('/') ? '' : '/') + 'queries/array/csv/string/null';
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
-    queryParameters.push('arrayQuery=' + encodeURIComponent(arrayQuery.join(',')));
+    queryParameters.push('arrayQuery=' + arrayQuery.map(encodeURIComponent).join(','));
   }
   if (queryParameters.length > 0) {
     requestUrl += '?' + queryParameters.join('&');
@@ -3137,7 +3137,7 @@ function _arrayStringCsvEmpty(options, callback) {
   let requestUrl = baseUrl + (baseUrl.endsWith('/') ? '' : '/') + 'queries/array/csv/string/empty';
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
-    queryParameters.push('arrayQuery=' + encodeURIComponent(arrayQuery.join(',')));
+    queryParameters.push('arrayQuery=' + arrayQuery.map(encodeURIComponent).join(','));
   }
   if (queryParameters.length > 0) {
     requestUrl += '?' + queryParameters.join('&');
@@ -3251,7 +3251,7 @@ function _arrayStringSsvValid(options, callback) {
   let requestUrl = baseUrl + (baseUrl.endsWith('/') ? '' : '/') + 'queries/array/ssv/string/valid';
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
-    queryParameters.push('arrayQuery=' + encodeURIComponent(arrayQuery.join(' ')));
+    queryParameters.push('arrayQuery=' + arrayQuery.map(encodeURIComponent).join(' '));
   }
   if (queryParameters.length > 0) {
     requestUrl += '?' + queryParameters.join('&');
@@ -3365,7 +3365,7 @@ function _arrayStringTsvValid(options, callback) {
   let requestUrl = baseUrl + (baseUrl.endsWith('/') ? '' : '/') + 'queries/array/tsv/string/valid';
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
-    queryParameters.push('arrayQuery=' + encodeURIComponent(arrayQuery.join('	')));
+    queryParameters.push('arrayQuery=' + arrayQuery.map(encodeURIComponent).join('	'));
   }
   if (queryParameters.length > 0) {
     requestUrl += '?' + queryParameters.join('&');
@@ -3479,7 +3479,7 @@ function _arrayStringPipesValid(options, callback) {
   let requestUrl = baseUrl + (baseUrl.endsWith('/') ? '' : '/') + 'queries/array/pipes/string/valid';
   let queryParameters = [];
   if (arrayQuery !== null && arrayQuery !== undefined) {
-    queryParameters.push('arrayQuery=' + encodeURIComponent(arrayQuery.join('|')));
+    queryParameters.push('arrayQuery=' + arrayQuery.map(encodeURIComponent).join('|'));
   }
   if (queryParameters.length > 0) {
     requestUrl += '?' + queryParameters.join('&');

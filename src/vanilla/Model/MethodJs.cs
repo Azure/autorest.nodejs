@@ -700,14 +700,15 @@ namespace AutoRest.NodeJS.Model
                 throw new ArgumentNullException(nameof(parameter));
             }
 
-            SequenceType sequence = parameter.ModelType as SequenceType;
-            if (sequence != null)
+            bool shouldEncode = !parameter.SkipUrlEncoding();
+            if (parameter.ModelType is SequenceType)
             {
-                return $"{parameter.Name}.join('{GetSeparator(parameter.CollectionFormat)}')";
+                string separator = GetSeparator(parameter.CollectionFormat);
+                return $"{parameter.Name}{(shouldEncode ? $".map(encodeURIComponent)" : "")}.join('{separator}')";
             }
             else
             {
-                return parameter.ModelType.ToString(parameter.Name);
+                return Encode(shouldEncode, parameter.ModelType.ToString(parameter.Name));
             }
         }
 
