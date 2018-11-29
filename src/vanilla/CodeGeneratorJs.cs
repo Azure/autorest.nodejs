@@ -74,7 +74,7 @@ namespace AutoRest.NodeJS
 
             await GeneratePackageJson(codeModel, generatorSettings).ConfigureAwait(false);
 
-            await GenerateReadmeMd(() => new ReadmeTemplate { Model = codeModel }, generatorSettings).ConfigureAwait(false);
+            await GenerateReadmeMd(codeModel, generatorSettings).ConfigureAwait(false);
 
             await GenerateLicenseTxt(codeModel, generatorSettings).ConfigureAwait(false);
         }
@@ -135,12 +135,11 @@ namespace AutoRest.NodeJS
             }
         }
 
-        protected async Task GenerateReadmeMd<T>(Func<Template<T>> readmeMdTemplateCreator, GeneratorSettingsJs generatorSettings) where T : CodeModelJs
+        protected async Task GenerateReadmeMd(CodeModelJs codeModel, GeneratorSettingsJs generatorSettings)
         {
             if (generatorSettings.GenerateReadmeMd)
             {
-                Template<T> readmeTemplate = readmeMdTemplateCreator();
-                await Write(readmeTemplate, "README.md").ConfigureAwait(false);
+                await Write(codeModel.GenerateReadmeMd(), "README.md").ConfigureAwait(false);
             }
         }
 
