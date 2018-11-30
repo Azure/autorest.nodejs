@@ -79,12 +79,6 @@
     <DotnetRazor Remove="vanilla\Templates\PackageJson.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <DotnetRazor Remove="vanilla\Templates\ReadmeTemplate.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <DotnetRazor Remove="azure\Templates\AzureReadmeTemplate.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <DotnetRazor Remove="vanilla\Templates\LicenseTemplate.cshtml" />
   </ItemGroup>
 

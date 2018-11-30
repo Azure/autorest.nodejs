@@ -78,7 +78,7 @@ namespace AutoRest.NodeJS.Azure
 
             await GeneratePackageJson(codeModel, generatorSettings).ConfigureAwait(false);
 
-            await GenerateReadmeMd(() => new AzureReadmeTemplate { Model = codeModel }, generatorSettings).ConfigureAwait(false);
+            await GenerateReadmeMd(codeModel, generatorSettings).ConfigureAwait(false);
 
             await GenerateLicenseTxt(codeModel, generatorSettings).ConfigureAwait(false);
         }

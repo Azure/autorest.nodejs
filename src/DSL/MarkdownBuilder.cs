@@ -234,7 +234,7 @@ namespace AutoRest.NodeJS.DSL
         /// <param name="commands">The commands that will be output as individual lines within the console section.</param>
         public void Console(IEnumerable<string> commands)
         {
-            Block(commands);
+            Block("bash", commands);
         }
 
         public void HTML(params string[] lines)
@@ -255,12 +255,23 @@ namespace AutoRest.NodeJS.DSL
         }
 
         /// <summary>
+        /// Create a new JavaScript code block in the Markdown text.
+        /// </summary>
+        /// <param name="action">The action that will generate the JavaScript code.</param>
+        public void JavaScript(Action<JSBuilder> action)
+        {
+            Line("```javascript");
+            action.Invoke(new JSBuilder(this));
+            Line("```");
+        }
+
+        /// <summary>
         /// Create a new TypeScript code block in the Markdown text.
         /// </summary>
         /// <param name="action">The action that will generate the TypeScript code.</param>
         public void TypeScript(Action<TSBuilder> action)
         {
-            Line($"```ts");
+            Line($"```typescript");
             action.Invoke(new TSBuilder(this));
             Line("```");
         }

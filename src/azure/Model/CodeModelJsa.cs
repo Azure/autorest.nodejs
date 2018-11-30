@@ -101,5 +101,53 @@ namespace AutoRest.NodeJS.Azure.Model
 
             return builder.ToString();
         }
+
+        public override string GenerateReadmeMd()
+        {
+            MarkdownBuilder builder = new MarkdownBuilder();
+            ConstructDocsHeader(builder);
+            GenerateTypeScriptSDKMessage(builder);
+
+            builder.IncreaseCurrentHeaderLevel();
+            builder.Section($"Microsoft Azure SDK for Node.js - {Name}", () =>
+            {
+                builder.Line("This project provides a Node.js package for accessing Azure. Right now it supports:");
+                builder.List("**Node.js version 6.x.x or higher**");
+                builder.Line();
+                builder.Section("Features");
+                builder.Line();
+                builder.Line();
+                builder.Section("How to Install", () =>
+                {
+                    builder.Console($"npm install {PackageName}");
+                });
+                builder.Line();
+                builder.Section("How to use", () =>
+                {
+                    builder.Section($"Authentication, client creation, and {GetSampleMethod()?.Name} {GetSampleMethodGroupName()} as an example.", () =>
+                    {
+                        builder.JavaScript(jsBuilder =>
+                        {
+                            jsBuilder.ConstVariable("msRestAzure", "require(\"ms-rest-azure\")");
+                            jsBuilder.ConstVariable(Name, $"require(\"{PackageName}\")");
+                            jsBuilder.Line($"msRestAzure.interactiveLogin().then((creds) => {{");
+                            jsBuilder.Indent(() =>
+                            {
+                                jsBuilder.ConstQuotedStringVariable("subscriptionId", "<Subscription_Id>");
+                                jsBuilder.ConstVariable("client", $"new {Name}(creds, subscriptionId)");
+                                jsBuilder.Line($"{GenerateSampleMethod(true, true)};");
+                            });
+                            jsBuilder.Text($"}}){GetSampleCatchBlock()}");
+                        });
+                    });
+                });
+                builder.Section("Related projects", () =>
+                {
+                    builder.List("[Microsoft Azure SDK for Node.js](https://github.com/Azure/azure-sdk-for-node)");
+                });
+            });
+
+            return builder.ToString();
+        }
     }
 }
