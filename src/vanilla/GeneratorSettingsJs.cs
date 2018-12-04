@@ -108,11 +108,6 @@ namespace AutoRest.NodeJS
                 else
                 {
                     string newPackageVersion = "1.0.0";
-                    string[] inputFilePaths = host?.GetValue<string[]>("input-file").Result;
-                    if (inputFilePaths != null && inputFilePaths.Any((string inputFilePath) => inputFilePath.Replace('\\', '/').ToLowerInvariant().Contains("/preview/")))
-                    {
-                        newPackageVersion += "-preview";
-                    }
                     Log(Category.Information, $"Package doesn't exist on NPM, so setting its initial version to \"{newPackageVersion}\".");
                     PackageVersion = newPackageVersion;
                 }
