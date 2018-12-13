@@ -1193,8 +1193,7 @@ function _postFlattenedSimpleProduct(productId, maxProductDisplayName, options, 
   }
   let simpleBodyProduct;
   try {
-    if ((productId !== null && productId !== undefined) || (description !== null && description !== undefined) || (maxProductDisplayName !== null && maxProductDisplayName !== undefined) || (genericValue !== null && genericValue !== undefined) || (odatavalue !== null && odatavalue !== undefined))
-    {
+    if ((productId !== null && productId !== undefined) || (description !== null && description !== undefined) || (maxProductDisplayName !== null && maxProductDisplayName !== undefined) || (genericValue !== null && genericValue !== undefined) || (odatavalue !== null && odatavalue !== undefined)) {
       simpleBodyProduct = new client.models['SimpleProduct']();
       simpleBodyProduct.productId = productId;
       simpleBodyProduct.description = description;
@@ -1363,50 +1362,43 @@ function _putSimpleProductWithGrouping(flattenParameterGroup, options, callback)
   let odatavalue;
   let simpleBodyProduct;
   try {
-    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined)
-    {
+    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined) {
       name = flattenParameterGroup.name;
       if (name === null || name === undefined || typeof name.valueOf() !== 'string') {
         throw new Error('name cannot be null or undefined and it must be of type string.');
       }
     }
-    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined)
-    {
+    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined) {
       productId = flattenParameterGroup.productId;
       if (productId === null || productId === undefined || typeof productId.valueOf() !== 'string') {
         throw new Error('productId cannot be null or undefined and it must be of type string.');
       }
     }
-    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined)
-    {
+    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined) {
       description = flattenParameterGroup.description;
       if (description !== null && description !== undefined && typeof description.valueOf() !== 'string') {
         throw new Error('description must be of type string.');
       }
     }
-    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined)
-    {
+    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined) {
       maxProductDisplayName = flattenParameterGroup.maxProductDisplayName;
       if (maxProductDisplayName === null || maxProductDisplayName === undefined || typeof maxProductDisplayName.valueOf() !== 'string') {
         throw new Error('maxProductDisplayName cannot be null or undefined and it must be of type string.');
       }
     }
-    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined)
-    {
+    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined) {
       genericValue = flattenParameterGroup.genericValue;
       if (genericValue !== null && genericValue !== undefined && typeof genericValue.valueOf() !== 'string') {
         throw new Error('genericValue must be of type string.');
       }
     }
-    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined)
-    {
+    if (flattenParameterGroup !== null && flattenParameterGroup !== undefined) {
       odatavalue = flattenParameterGroup.odatavalue;
       if (odatavalue !== null && odatavalue !== undefined && typeof odatavalue.valueOf() !== 'string') {
         throw new Error('odatavalue must be of type string.');
       }
     }
-    if ((productId !== null && productId !== undefined) || (description !== null && description !== undefined) || (maxProductDisplayName !== null && maxProductDisplayName !== undefined) || (genericValue !== null && genericValue !== undefined) || (odatavalue !== null && odatavalue !== undefined))
-    {
+    if ((productId !== null && productId !== undefined) || (description !== null && description !== undefined) || (maxProductDisplayName !== null && maxProductDisplayName !== undefined) || (genericValue !== null && genericValue !== undefined) || (odatavalue !== null && odatavalue !== undefined)) {
       simpleBodyProduct = new client.models['SimpleProduct']();
       simpleBodyProduct.productId = productId;
       simpleBodyProduct.description = description;

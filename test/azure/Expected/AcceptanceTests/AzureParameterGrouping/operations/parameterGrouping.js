@@ -72,29 +72,25 @@ function _postRequired(parameterGroupingPostRequiredParameters, options, callbac
   let query;
   let path;
   try {
-    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined)
-    {
+    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined) {
       body = parameterGroupingPostRequiredParameters.body;
       if (body === null || body === undefined || typeof body !== 'number') {
         throw new Error('body cannot be null or undefined and it must be of type number.');
       }
     }
-    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined)
-    {
+    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined) {
       customHeader = parameterGroupingPostRequiredParameters.customHeader;
       if (customHeader !== null && customHeader !== undefined && typeof customHeader.valueOf() !== 'string') {
         throw new Error('customHeader must be of type string.');
       }
     }
-    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined)
-    {
+    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined) {
       query = parameterGroupingPostRequiredParameters.query;
       if (query !== null && query !== undefined && typeof query !== 'number') {
         throw new Error('query must be of type number.');
       }
     }
-    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined)
-    {
+    if (parameterGroupingPostRequiredParameters !== null && parameterGroupingPostRequiredParameters !== undefined) {
       path = parameterGroupingPostRequiredParameters.path;
       if (path === null || path === undefined || typeof path.valueOf() !== 'string') {
         throw new Error('path cannot be null or undefined and it must be of type string.');
@@ -251,15 +247,13 @@ function _postOptional(options, callback) {
   let customHeader;
   let query;
   try {
-    if (parameterGroupingPostOptionalParameters !== null && parameterGroupingPostOptionalParameters !== undefined)
-    {
+    if (parameterGroupingPostOptionalParameters !== null && parameterGroupingPostOptionalParameters !== undefined) {
       customHeader = parameterGroupingPostOptionalParameters.customHeader;
       if (customHeader !== null && customHeader !== undefined && typeof customHeader.valueOf() !== 'string') {
         throw new Error('customHeader must be of type string.');
       }
     }
-    if (parameterGroupingPostOptionalParameters !== null && parameterGroupingPostOptionalParameters !== undefined)
-    {
+    if (parameterGroupingPostOptionalParameters !== null && parameterGroupingPostOptionalParameters !== undefined) {
       query = parameterGroupingPostOptionalParameters.query;
       if (query !== null && query !== undefined && typeof query !== 'number') {
         throw new Error('query must be of type number.');
@@ -408,29 +402,25 @@ function _postMultiParamGroups(options, callback) {
   let headerTwo;
   let queryTwo;
   try {
-    if (firstParameterGroup !== null && firstParameterGroup !== undefined)
-    {
+    if (firstParameterGroup !== null && firstParameterGroup !== undefined) {
       headerOne = firstParameterGroup.headerOne;
       if (headerOne !== null && headerOne !== undefined && typeof headerOne.valueOf() !== 'string') {
         throw new Error('headerOne must be of type string.');
       }
     }
-    if (firstParameterGroup !== null && firstParameterGroup !== undefined)
-    {
+    if (firstParameterGroup !== null && firstParameterGroup !== undefined) {
       queryOne = firstParameterGroup.queryOne;
       if (queryOne !== null && queryOne !== undefined && typeof queryOne !== 'number') {
         throw new Error('queryOne must be of type number.');
       }
     }
-    if (parameterGroupingPostMultiParamGroupsSecondParamGroup !== null && parameterGroupingPostMultiParamGroupsSecondParamGroup !== undefined)
-    {
+    if (parameterGroupingPostMultiParamGroupsSecondParamGroup !== null && parameterGroupingPostMultiParamGroupsSecondParamGroup !== undefined) {
       headerTwo = parameterGroupingPostMultiParamGroupsSecondParamGroup.headerTwo;
       if (headerTwo !== null && headerTwo !== undefined && typeof headerTwo.valueOf() !== 'string') {
         throw new Error('headerTwo must be of type string.');
       }
     }
-    if (parameterGroupingPostMultiParamGroupsSecondParamGroup !== null && parameterGroupingPostMultiParamGroupsSecondParamGroup !== undefined)
-    {
+    if (parameterGroupingPostMultiParamGroupsSecondParamGroup !== null && parameterGroupingPostMultiParamGroupsSecondParamGroup !== undefined) {
       queryTwo = parameterGroupingPostMultiParamGroupsSecondParamGroup.queryTwo;
       if (queryTwo !== null && queryTwo !== undefined && typeof queryTwo !== 'number') {
         throw new Error('queryTwo must be of type number.');
@@ -571,15 +561,13 @@ function _postSharedParameterGroupObject(options, callback) {
   let headerOne;
   let queryOne;
   try {
-    if (firstParameterGroup !== null && firstParameterGroup !== undefined)
-    {
+    if (firstParameterGroup !== null && firstParameterGroup !== undefined) {
       headerOne = firstParameterGroup.headerOne;
       if (headerOne !== null && headerOne !== undefined && typeof headerOne.valueOf() !== 'string') {
         throw new Error('headerOne must be of type string.');
       }
     }
-    if (firstParameterGroup !== null && firstParameterGroup !== undefined)
-    {
+    if (firstParameterGroup !== null && firstParameterGroup !== undefined) {
       queryOne = firstParameterGroup.queryOne;
       if (queryOne !== null && queryOne !== undefined && typeof queryOne !== 'number') {
         throw new Error('queryOne must be of type number.');

@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
+using AutoRest.NodeJS.DSL;
 using AutoRest.NodeJS.vanilla.Templates;
 using Newtonsoft.Json;
 using static AutoRest.Core.Utilities.DependencyInjection;
@@ -819,145 +820,127 @@ namespace AutoRest.NodeJS.Model
         /// Generates input mapping code block.
         /// </summary>
         /// <returns></returns>
-        public virtual string BuildInputMappings()
+        public string BuildInputMappings()
         {
-            var builder = new IndentedStringBuilder("  ");
-            if (InputParameterTransformation.Count > 0)
+            JSBuilder builder = new JSBuilder();
+            IEnumerable<ParameterTransformation> transformations = InputParameterTransformation;
+            if (AreWeFlatteningParameters(transformations))
             {
-                if (AreWeFlatteningParameters())
-                {
-                    return BuildFlattenParameterMappings();
-                }
-                else
-                {
-                    return BuildGroupedParameterMappings();
-                }
+                BuildFlattenParameterMappings(builder, transformations);
+            }
+            else
+            {
+                BuildGroupedParameterMappings(builder, transformations);
             }
             return builder.ToString();
         }
 
-        public virtual bool AreWeFlatteningParameters()
+        private static bool AreWeFlatteningParameters(IEnumerable<ParameterTransformation> transformations)
         {
             bool result = true;
-            foreach (var transformation in InputParameterTransformation)
+            if (transformations != null)
             {
-                var compositeOutputParameter = transformation.OutputParameter.ModelType as CompositeType;
-                if (compositeOutputParameter == null)
+                foreach (ParameterTransformation transformation in transformations)
                 {
-                    result = false;
-                    break;
-                }
-                else
-                {
-                    foreach (var poperty in compositeOutputParameter.ComposedProperties.Select(p => p.Name))
+                    CompositeType compositeOutputParameter = transformation.OutputParameter.ModelType as CompositeType;
+                    if (compositeOutputParameter == null)
                     {
-                        if (!transformation.ParameterMappings.Select(m => m.InputParameter.Name).Contains(poperty))
-                        {
-                            result = false;
-                            break;
-                        }
-                    }
-                    if (!result) break;
-                }
-            }
-
-            return result;
-        }
-
-        public virtual string BuildFlattenParameterMappings()
-        {
-            var builder = new IndentedStringBuilder("  ");
-            foreach (var transformation in InputParameterTransformation)
-            {
-                builder.AppendLine("let {0};",
-                        transformation.OutputParameter.Name);
-
-                builder.AppendLine("if ({0}) {{", BuildNullCheckExpression(transformation))
-                       .Indent();
-
-                if (transformation.ParameterMappings.Any(m => !string.IsNullOrEmpty(m.OutputParameterProperty)) &&
-                    transformation.OutputParameter.ModelType is CompositeType)
-                {
-                    builder.AppendLine("{0} = new client.models['{1}']();",
-                        transformation.OutputParameter.Name,
-                        transformation.OutputParameter.ModelType.Name);
-                }
-
-                foreach (var mapping in transformation.ParameterMappings)
-                {
-                    builder.AppendLine("{0};", mapping.CreateCode(transformation.OutputParameter));
-                }
-
-                builder.Outdent()
-                       .AppendLine("}");
-            }
-
-            return builder.ToString();
-        }
-
-        public virtual string BuildGroupedParameterMappings()
-        {
-            var builder = new IndentedStringBuilder("  ");
-            if (InputParameterTransformation.Count > 0)
-            {
-                // Declare all the output paramaters outside the try block
-                foreach (var transformation in InputParameterTransformation)
-                {
-                    if (transformation.OutputParameter.ModelType is CompositeType &&
-                        transformation.OutputParameter.IsRequired)
-                    {
-                        builder.AppendLine("let {0} = new client.models['{1}']();",
-                            transformation.OutputParameter.Name,
-                            transformation.OutputParameter.ModelType.Name);
+                        result = false;
+                        break;
                     }
                     else
                     {
-                        builder.AppendLine("let {0};", transformation.OutputParameter.Name);
+                        foreach (Fixable<string> propertyName in compositeOutputParameter.ComposedProperties.Select(p => p.Name))
+                        {
+                            if (!transformation.ParameterMappings.Select(m => m.InputParameter.Name).Contains(propertyName))
+                            {
+                                result = false;
+                                break;
+                            }
+                        }
+                        if (!result) break;
                     }
-
                 }
-                builder.AppendLine("try {").Indent();
-                foreach (var transformation in InputParameterTransformation)
+            }
+            return result;
+        }
+
+        private static void BuildFlattenParameterMappings(JSBuilder builder, IEnumerable<ParameterTransformation> transformations)
+        {
+            foreach (ParameterTransformation transformation in transformations)
+            {
+                builder.Line($"let {transformation.OutputParameter.Name};");
+                builder.If(BuildNullCheckExpression(transformation), ifBlock =>
                 {
-                    builder.AppendLine("if ({0})", BuildNullCheckExpression(transformation))
-                           .AppendLine("{").Indent();
-                    var outputParameter = transformation.OutputParameter;
-                    bool noCompositeTypeInitialized = true;
                     if (transformation.ParameterMappings.Any(m => !string.IsNullOrEmpty(m.OutputParameterProperty)) &&
                         transformation.OutputParameter.ModelType is CompositeType)
                     {
-                        //required outputParameter is initialized at the time of declaration
-                        if (!transformation.OutputParameter.IsRequired)
-                        {
-                            builder.AppendLine("{0} = new client.models['{1}']();",
-                                transformation.OutputParameter.Name,
-                                transformation.OutputParameter.ModelType.Name);
-                        }
-
-                        noCompositeTypeInitialized = false;
+                        ifBlock.Line($"{transformation.OutputParameter.Name} = new client.models['{transformation.OutputParameter.ModelType.Name}']();");
                     }
 
-                    foreach (var mapping in transformation.ParameterMappings)
+                    foreach (ParameterMapping mapping in transformation.ParameterMappings)
                     {
-                        builder.AppendLine("{0};", mapping.CreateCode(transformation.OutputParameter));
-                        if (noCompositeTypeInitialized)
-                        {
-                            // If composite type is initialized based on the above logic then it should not be validated.
-                            builder.AppendLine(outputParameter.ModelType.ValidateType(this, outputParameter.Name, outputParameter.IsRequired));
-                        }
+                        ifBlock.Line($"{mapping.CreateCode(transformation.OutputParameter)};");
                     }
-
-                    builder.Outdent()
-                           .AppendLine("}");
-                }
-                builder.Outdent()
-                       .AppendLine("} catch (error) {")
-                         .Indent()
-                         .AppendLine("return callback(error);")
-                       .Outdent()
-                       .AppendLine("}");
+                });
             }
-            return builder.ToString();
+        }
+
+        private void BuildGroupedParameterMappings(JSBuilder builder, IEnumerable<ParameterTransformation> transformations)
+        {
+            // Declare all the output paramaters outside the try block
+            foreach (ParameterTransformation transformation in transformations)
+            {
+                if (transformation.OutputParameter.ModelType is CompositeType &&
+                    transformation.OutputParameter.IsRequired)
+                {
+                    builder.Line($"let {transformation.OutputParameter.Name} = new client.models['{transformation.OutputParameter.ModelType.Name}']();");
+                }
+                else
+                {
+                    builder.Line($"let {transformation.OutputParameter.Name};");
+                }
+            }
+
+            IEnumerable<ParameterTransformation> transformationsWithMappings = transformations.Where((ParameterTransformation transformation) => transformation?.ParameterMappings?.Any() == true);
+            if (transformationsWithMappings.Any())
+            {
+                builder.Try(tryBlock =>
+                {
+                    foreach (ParameterTransformation transformation in transformations)
+                    {
+                        tryBlock.If(BuildNullCheckExpression(transformation), ifBlock =>
+                        {
+                            Parameter outputParameter = transformation.OutputParameter;
+                            bool noCompositeTypeInitialized = true;
+                            if (transformation.ParameterMappings.Any(m => !string.IsNullOrEmpty(m.OutputParameterProperty)) &&
+                                transformation.OutputParameter.ModelType is CompositeType)
+                            {
+                            //required outputParameter is initialized at the time of declaration
+                            if (!transformation.OutputParameter.IsRequired)
+                                {
+                                    ifBlock.Line($"{transformation.OutputParameter.Name} = new client.models['{transformation.OutputParameter.ModelType.Name}']();");
+                                }
+                                noCompositeTypeInitialized = false;
+                            }
+
+                            foreach (ParameterMapping mapping in transformation.ParameterMappings)
+                            {
+                                ifBlock.Line($"{mapping.CreateCode(transformation.OutputParameter)};");
+                                if (noCompositeTypeInitialized)
+                                {
+                                // If composite type is initialized based on the above logic then it should not be validated.
+                                ifBlock.Line(outputParameter.ModelType.ValidateType(this, outputParameter.Name, outputParameter.IsRequired));
+                                }
+                            }
+                        });
+                    }
+                })
+                .Catch("error", catchAction =>
+                {
+                    catchAction.Return("callback(error)");
+                });
+            }
         }
 
         private static string BuildNullCheckExpression(ParameterTransformation transformation)

@@ -198,15 +198,13 @@ function _getMultiplePages(options, callback) {
   let maxresults;
   let timeout;
   try {
-    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined) {
       maxresults = pagingGetMultiplePagesOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined) {
       timeout = pagingGetMultiplePagesOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
@@ -370,15 +368,13 @@ function _getOdataMultiplePages(options, callback) {
   let maxresults;
   let timeout;
   try {
-    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined) {
       maxresults = pagingGetOdataMultiplePagesOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined) {
       timeout = pagingGetOdataMultiplePagesOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
@@ -547,22 +543,19 @@ function _getMultiplePagesWithOffset(pagingGetMultiplePagesWithOffsetOptions, op
   let offset;
   let timeout;
   try {
-    if (pagingGetMultiplePagesWithOffsetOptions !== null && pagingGetMultiplePagesWithOffsetOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesWithOffsetOptions !== null && pagingGetMultiplePagesWithOffsetOptions !== undefined) {
       maxresults = pagingGetMultiplePagesWithOffsetOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetMultiplePagesWithOffsetOptions !== null && pagingGetMultiplePagesWithOffsetOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesWithOffsetOptions !== null && pagingGetMultiplePagesWithOffsetOptions !== undefined) {
       offset = pagingGetMultiplePagesWithOffsetOptions.offset;
       if (offset === null || offset === undefined || typeof offset !== 'number') {
         throw new Error('offset cannot be null or undefined and it must be of type number.');
       }
     }
-    if (pagingGetMultiplePagesWithOffsetOptions !== null && pagingGetMultiplePagesWithOffsetOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesWithOffsetOptions !== null && pagingGetMultiplePagesWithOffsetOptions !== undefined) {
       timeout = pagingGetMultiplePagesWithOffsetOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
@@ -1484,15 +1477,13 @@ function _getMultiplePagesFragmentWithGroupingNextLink(customParameterGroup, opt
   let apiVersion;
   let tenant;
   try {
-    if (customParameterGroup !== null && customParameterGroup !== undefined)
-    {
+    if (customParameterGroup !== null && customParameterGroup !== undefined) {
       apiVersion = customParameterGroup.apiVersion;
       if (apiVersion === null || apiVersion === undefined || typeof apiVersion.valueOf() !== 'string') {
         throw new Error('apiVersion cannot be null or undefined and it must be of type string.');
       }
     }
-    if (customParameterGroup !== null && customParameterGroup !== undefined)
-    {
+    if (customParameterGroup !== null && customParameterGroup !== undefined) {
       tenant = customParameterGroup.tenant;
       if (tenant === null || tenant === undefined || typeof tenant.valueOf() !== 'string') {
         throw new Error('tenant cannot be null or undefined and it must be of type string.');
@@ -1874,15 +1865,13 @@ function _nextFragmentWithGrouping(nextLink, customParameterGroup, options, call
   let apiVersion;
   let tenant;
   try {
-    if (customParameterGroup !== null && customParameterGroup !== undefined)
-    {
+    if (customParameterGroup !== null && customParameterGroup !== undefined) {
       apiVersion = customParameterGroup.apiVersion;
       if (apiVersion === null || apiVersion === undefined || typeof apiVersion.valueOf() !== 'string') {
         throw new Error('apiVersion cannot be null or undefined and it must be of type string.');
       }
     }
-    if (customParameterGroup !== null && customParameterGroup !== undefined)
-    {
+    if (customParameterGroup !== null && customParameterGroup !== undefined) {
       tenant = customParameterGroup.tenant;
       if (tenant === null || tenant === undefined || typeof tenant.valueOf() !== 'string') {
         throw new Error('tenant cannot be null or undefined and it must be of type string.');
@@ -2039,15 +2028,13 @@ function _beginGetMultiplePagesLRO(options, callback) {
   let maxresults;
   let timeout;
   try {
-    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined) {
       maxresults = pagingGetMultiplePagesLROOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined) {
       timeout = pagingGetMultiplePagesLROOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
@@ -2343,15 +2330,13 @@ function _getMultiplePagesNext(nextPageLink, options, callback) {
   let maxresults;
   let timeout;
   try {
-    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined) {
       maxresults = pagingGetMultiplePagesOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesOptions !== null && pagingGetMultiplePagesOptions !== undefined) {
       timeout = pagingGetMultiplePagesOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
@@ -2517,15 +2502,13 @@ function _getOdataMultiplePagesNext(nextPageLink, options, callback) {
   let maxresults;
   let timeout;
   try {
-    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined) {
       maxresults = pagingGetOdataMultiplePagesOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined)
-    {
+    if (pagingGetOdataMultiplePagesOptions !== null && pagingGetOdataMultiplePagesOptions !== undefined) {
       timeout = pagingGetOdataMultiplePagesOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
@@ -2692,15 +2675,13 @@ function _getMultiplePagesWithOffsetNext(nextPageLink, options, callback) {
   let maxresults;
   let timeout;
   try {
-    if (pagingGetMultiplePagesWithOffsetNextOptions !== null && pagingGetMultiplePagesWithOffsetNextOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesWithOffsetNextOptions !== null && pagingGetMultiplePagesWithOffsetNextOptions !== undefined) {
       maxresults = pagingGetMultiplePagesWithOffsetNextOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetMultiplePagesWithOffsetNextOptions !== null && pagingGetMultiplePagesWithOffsetNextOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesWithOffsetNextOptions !== null && pagingGetMultiplePagesWithOffsetNextOptions !== undefined) {
       timeout = pagingGetMultiplePagesWithOffsetNextOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
@@ -3592,15 +3573,13 @@ function _beginGetMultiplePagesLRONext(nextPageLink, options, callback) {
   let maxresults;
   let timeout;
   try {
-    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined) {
       maxresults = pagingGetMultiplePagesLROOptions.maxresults;
       if (maxresults !== null && maxresults !== undefined && typeof maxresults !== 'number') {
         throw new Error('maxresults must be of type number.');
       }
     }
-    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined)
-    {
+    if (pagingGetMultiplePagesLROOptions !== null && pagingGetMultiplePagesLROOptions !== undefined) {
       timeout = pagingGetMultiplePagesLROOptions.timeout;
       if (timeout !== null && timeout !== undefined && typeof timeout !== 'number') {
         throw new Error('timeout must be of type number.');
