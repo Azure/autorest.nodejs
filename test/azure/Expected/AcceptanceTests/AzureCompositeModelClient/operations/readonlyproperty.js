@@ -186,8 +186,7 @@ function _putValid(options, callback) {
   }
   let complexBody = new client.models['ReadonlyObj']();
   try {
-    if (size !== null && size !== undefined)
-    {
+    if (size !== null && size !== undefined) {
       complexBody.size = size;
     }
   } catch (error) {

@@ -5308,8 +5308,7 @@ function _beginPutSubResource(options, callback) {
   }
   let product;
   try {
-    if (provisioningState !== null && provisioningState !== undefined)
-    {
+    if (provisioningState !== null && provisioningState !== undefined) {
       product = new client.models['SubProduct']();
       product.provisioningState = provisioningState;
     }
@@ -5463,8 +5462,7 @@ function _beginPutAsyncSubResource(options, callback) {
   }
   let product;
   try {
-    if (provisioningState !== null && provisioningState !== undefined)
-    {
+    if (provisioningState !== null && provisioningState !== undefined) {
       product = new client.models['SubProduct']();
       product.provisioningState = provisioningState;
     }

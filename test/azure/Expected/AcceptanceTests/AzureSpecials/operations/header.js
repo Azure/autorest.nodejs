@@ -182,8 +182,7 @@ function _customNamedRequestIdParamGrouping(headerCustomNamedRequestIdParamGroup
   }
   let fooClientRequestId;
   try {
-    if (headerCustomNamedRequestIdParamGroupingParameters !== null && headerCustomNamedRequestIdParamGroupingParameters !== undefined)
-    {
+    if (headerCustomNamedRequestIdParamGroupingParameters !== null && headerCustomNamedRequestIdParamGroupingParameters !== undefined) {
       fooClientRequestId = headerCustomNamedRequestIdParamGroupingParameters.fooClientRequestId;
       if (fooClientRequestId === null || fooClientRequestId === undefined || typeof fooClientRequestId.valueOf() !== 'string') {
         throw new Error('fooClientRequestId cannot be null or undefined and it must be of type string.');
