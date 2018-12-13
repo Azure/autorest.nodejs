@@ -820,54 +820,54 @@ namespace AutoRest.NodeJS.Model
         /// Generates input mapping code block.
         /// </summary>
         /// <returns></returns>
-        public virtual string BuildInputMappings()
+        public string BuildInputMappings()
         {
             JSBuilder builder = new JSBuilder();
-            if (InputParameterTransformation.Count > 0)
+            IEnumerable<ParameterTransformation> transformations = InputParameterTransformation;
+            if (AreWeFlatteningParameters(transformations))
             {
-                if (AreWeFlatteningParameters())
-                {
-                    BuildFlattenParameterMappings(builder);
-                }
-                else
-                {
-                    BuildGroupedParameterMappings(builder);
-                }
+                BuildFlattenParameterMappings(builder, transformations);
+            }
+            else
+            {
+                BuildGroupedParameterMappings(builder, transformations);
             }
             return builder.ToString();
         }
 
-        public bool AreWeFlatteningParameters()
+        private static bool AreWeFlatteningParameters(IEnumerable<ParameterTransformation> transformations)
         {
             bool result = true;
-            foreach (ParameterTransformation transformation in InputParameterTransformation)
+            if (transformations != null)
             {
-                var compositeOutputParameter = transformation.OutputParameter.ModelType as CompositeType;
-                if (compositeOutputParameter == null)
+                foreach (ParameterTransformation transformation in transformations)
                 {
-                    result = false;
-                    break;
-                }
-                else
-                {
-                    foreach (var poperty in compositeOutputParameter.ComposedProperties.Select(p => p.Name))
+                    CompositeType compositeOutputParameter = transformation.OutputParameter.ModelType as CompositeType;
+                    if (compositeOutputParameter == null)
                     {
-                        if (!transformation.ParameterMappings.Select(m => m.InputParameter.Name).Contains(poperty))
-                        {
-                            result = false;
-                            break;
-                        }
+                        result = false;
+                        break;
                     }
-                    if (!result) break;
+                    else
+                    {
+                        foreach (Fixable<string> propertyName in compositeOutputParameter.ComposedProperties.Select(p => p.Name))
+                        {
+                            if (!transformation.ParameterMappings.Select(m => m.InputParameter.Name).Contains(propertyName))
+                            {
+                                result = false;
+                                break;
+                            }
+                        }
+                        if (!result) break;
+                    }
                 }
             }
-
             return result;
         }
 
-        public void BuildFlattenParameterMappings(JSBuilder builder)
+        private static void BuildFlattenParameterMappings(JSBuilder builder, IEnumerable<ParameterTransformation> transformations)
         {
-            foreach (ParameterTransformation transformation in InputParameterTransformation)
+            foreach (ParameterTransformation transformation in transformations)
             {
                 builder.Line($"let {transformation.OutputParameter.Name};");
                 builder.If(BuildNullCheckExpression(transformation), ifBlock =>
@@ -886,10 +886,10 @@ namespace AutoRest.NodeJS.Model
             }
         }
 
-        public void BuildGroupedParameterMappings(JSBuilder builder)
+        private void BuildGroupedParameterMappings(JSBuilder builder, IEnumerable<ParameterTransformation> transformations)
         {
             // Declare all the output paramaters outside the try block
-            foreach (ParameterTransformation transformation in InputParameterTransformation)
+            foreach (ParameterTransformation transformation in transformations)
             {
                 if (transformation.OutputParameter.ModelType is CompositeType &&
                     transformation.OutputParameter.IsRequired)
@@ -900,44 +900,47 @@ namespace AutoRest.NodeJS.Model
                 {
                     builder.Line($"let {transformation.OutputParameter.Name};");
                 }
-
             }
-            builder.Try(tryBlock =>
+
+            IEnumerable<ParameterTransformation> transformationsWithMappings = transformations.Where((ParameterTransformation transformation) => transformation?.ParameterMappings?.Any() == true);
+            if (transformationsWithMappings.Any())
             {
-                foreach (ParameterTransformation transformation in InputParameterTransformation)
+                builder.Try(tryBlock =>
                 {
-                    tryBlock.If(BuildNullCheckExpression(transformation), ifBlock =>
+                    foreach (ParameterTransformation transformation in transformations)
                     {
-                        Parameter outputParameter = transformation.OutputParameter;
-                        bool noCompositeTypeInitialized = true;
-                        if (transformation.ParameterMappings.Any(m => !string.IsNullOrEmpty(m.OutputParameterProperty)) &&
-                            transformation.OutputParameter.ModelType is CompositeType)
+                        tryBlock.If(BuildNullCheckExpression(transformation), ifBlock =>
                         {
+                            Parameter outputParameter = transformation.OutputParameter;
+                            bool noCompositeTypeInitialized = true;
+                            if (transformation.ParameterMappings.Any(m => !string.IsNullOrEmpty(m.OutputParameterProperty)) &&
+                                transformation.OutputParameter.ModelType is CompositeType)
+                            {
                             //required outputParameter is initialized at the time of declaration
                             if (!transformation.OutputParameter.IsRequired)
-                            {
-                                ifBlock.Line($"{transformation.OutputParameter.Name} = new client.models['{transformation.OutputParameter.ModelType.Name}']();");
+                                {
+                                    ifBlock.Line($"{transformation.OutputParameter.Name} = new client.models['{transformation.OutputParameter.ModelType.Name}']();");
+                                }
+                                noCompositeTypeInitialized = false;
                             }
 
-                            noCompositeTypeInitialized = false;
-                        }
-
-                        foreach (ParameterMapping mapping in transformation.ParameterMappings)
-                        {
-                            ifBlock.Line($"{mapping.CreateCode(transformation.OutputParameter)};");
-                            if (noCompositeTypeInitialized)
+                            foreach (ParameterMapping mapping in transformation.ParameterMappings)
                             {
+                                ifBlock.Line($"{mapping.CreateCode(transformation.OutputParameter)};");
+                                if (noCompositeTypeInitialized)
+                                {
                                 // If composite type is initialized based on the above logic then it should not be validated.
                                 ifBlock.Line(outputParameter.ModelType.ValidateType(this, outputParameter.Name, outputParameter.IsRequired));
+                                }
                             }
-                        }
-                    });
-                }
-            })
-            .Catch("error", catchAction =>
-            {
-                catchAction.Return("callback(error)");
-            });
+                        });
+                    }
+                })
+                .Catch("error", catchAction =>
+                {
+                    catchAction.Return("callback(error)");
+                });
+            }
         }
 
         private static string BuildNullCheckExpression(ParameterTransformation transformation)
