@@ -420,9 +420,28 @@ namespace AutoRest.NodeJS.Model
             builder.Line($"---");
         }
 
+        private static string ConvertPackageNameToTypeScript(string packageName) {
+            Dictionary<string, string> customNamePackages = new Dictionary<string, string> {
+                { "azure-arm-sb", "@azure/arm-servicebus" }
+            };
+
+            if (customNamePackages.ContainsKey(packageName)) {
+                return customNamePackages[packageName];
+            }
+
+            const string nodeSdkAzurePrefix = "azure-";
+            if (packageName.StartsWith(nodeSdkAzurePrefix)) {
+                packageName = packageName.Substring(nodeSdkAzurePrefix.Length);
+            }
+
+            return $"@azure/{packageName}";
+        }
+
         public void GenerateTypeScriptSDKMessage(MarkdownBuilder builder)
         {
-            builder.Line($"**This SDK will be deprecated next year and will be replaced by a new TypeScript-based isomorphic SDK (found at https://github.com/Azure/azure-sdk-for-js) which works on Node.js and browsers.**");
+            string typeScriptPackageName = ConvertPackageNameToTypeScript(PackageName);
+            builder.Line($"**This SDK will be deprecated next year and will be replaced by a new TypeScript-based isomorphic SDK (found at https://www.npmjs.com/package/{typeScriptPackageName}) which works on Node.js and browsers.**");
+            builder.Line($"**See https://aka.ms/azure-sdk-for-js-migration to learn more.**");
         }
 
         public virtual string GenerateModelIndexDTS()

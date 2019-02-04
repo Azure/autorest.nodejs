@@ -14,7 +14,7 @@ namespace AutoRest.NodeJS.Azure
 {
     public class CodeGeneratorJsa : CodeGeneratorJs
     {
-        private const string ClientRuntimePackage = "ms-rest-azure version 2.0.0";
+        private const string ClientRuntimePackage = "ms-rest-azure version 2.6.0";
 
         public override string UsageInstructions => $"The {ClientRuntimePackage} or higher npm package is required to execute the generated code.";
 
