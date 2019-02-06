@@ -17,7 +17,7 @@ namespace AutoRest.NodeJS
 {
     public class CodeGeneratorJs : CodeGenerator
     {
-        private const string ClientRuntimePackage = "ms-rest version 2.0.0";
+        private const string ClientRuntimePackage = "ms-rest version 2.4.0";
 
         public override string ImplementationFileExtension => ".js";
 

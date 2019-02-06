@@ -13,7 +13,7 @@ using AutoRest.Core;
 
 namespace AutoRest.NodeJS.Azure.Model
 {
-    
+
     public class CodeModelJsa : CodeModelJs
     {
         public CodeModelJsa()
@@ -58,7 +58,7 @@ namespace AutoRest.NodeJS.Azure.Model
             {
                 List<string> predefinedOptionalParameters = new List<string>() { "apiVersion", "acceptLanguage", "longRunningOperationRetryTimeout", "generateClientRequestId", "rpRegistrationRetryTimeout" };
                 var optionalParameters = this.Properties.Where(
-                    p => (!p.IsRequired || p.IsRequired && !string.IsNullOrEmpty(p.DefaultValue)) 
+                    p => (!p.IsRequired || p.IsRequired && !string.IsNullOrEmpty(p.DefaultValue))
                     && !p.IsConstant && !predefinedOptionalParameters.Contains(p.Name));
                 return optionalParameters.Count() > 0;
             }
