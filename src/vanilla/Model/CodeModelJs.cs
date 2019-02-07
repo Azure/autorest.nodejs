@@ -94,7 +94,7 @@ namespace AutoRest.NodeJS.Model
         {
             return new[]
             {
-                "\"ms-rest\": \"^2.4.0\""
+                "\"ms-rest\": \"^2.4.1\""
             };
         }
 
