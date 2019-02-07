@@ -159,7 +159,7 @@ namespace AutoRest.NodeJS
             if (generatorSettings.GeneratePostinstallScript)
             {
                 PostinstallScript postinstallScript = new PostinstallScript { Model = codeModel };
-                await Write(postinstallScript, ".scripts/poinstall.js").ConfigureAwait(false);
+                await Write(postinstallScript, ".scripts/postinstall.js").ConfigureAwait(false);
             }
         }
         protected string GetModelSourceCodeFilePath(GeneratorSettingsJs generatorSettings, string modelFileName)

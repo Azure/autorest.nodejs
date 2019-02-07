@@ -426,7 +426,7 @@ namespace AutoRest.NodeJS.Model
             };
 
             if (packageName == null) {
-                throw new ArgumentNullException("Package name cannot be null");
+                return "";
             }
 
             if (customNamePackages.ContainsKey(packageName)) {

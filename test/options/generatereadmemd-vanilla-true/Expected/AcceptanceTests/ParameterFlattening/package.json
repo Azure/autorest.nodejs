@@ -22,6 +22,6 @@
     "url": "https://github.com/azure/azure-sdk-for-node/issues"
   },
  "scripts": {
-    "postinstall": "npm explore ms-rest -- npm run print-deprecation-message"
+    "postinstall": "node .scripts/postinstall.js"
   }
 }
