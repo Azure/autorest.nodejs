@@ -77,6 +77,8 @@ namespace AutoRest.NodeJS
             await GenerateReadmeMd(codeModel, generatorSettings).ConfigureAwait(false);
 
             await GenerateLicenseTxt(codeModel, generatorSettings).ConfigureAwait(false);
+
+            await GeneratePostinstallScript(codeModel, generatorSettings).ConfigureAwait(false);
         }
 
         protected async Task GenerateServiceClientJs<T>(Func<Template<T>> serviceClientTemplateCreator, GeneratorSettingsJs generatorSettings) where T : CodeModelJs
@@ -152,6 +154,14 @@ namespace AutoRest.NodeJS
             }
         }
 
+        protected async Task GeneratePostinstallScript(CodeModelJs codeModel, GeneratorSettingsJs generatorSettings)
+        {
+            if (generatorSettings.GeneratePostinstallScript)
+            {
+                PostinstallScript postinstallScript = new PostinstallScript { Model = codeModel };
+                await Write(postinstallScript, ".scripts/poinstall.js").ConfigureAwait(false);
+            }
+        }
         protected string GetModelSourceCodeFilePath(GeneratorSettingsJs generatorSettings, string modelFileName)
             => GetSourceCodeFilePath(generatorSettings, "models", modelFileName);
 

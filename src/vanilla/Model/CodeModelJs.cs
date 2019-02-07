@@ -425,6 +425,10 @@ namespace AutoRest.NodeJS.Model
                 { "azure-arm-sb", "@azure/arm-servicebus" }
             };
 
+            if (packageName == null) {
+                throw new ArgumentNullException("Package name cannot be null");
+            }
+
             if (customNamePackages.ContainsKey(packageName)) {
                 return customNamePackages[packageName];
             }
@@ -437,9 +441,14 @@ namespace AutoRest.NodeJS.Model
             return $"@azure/{packageName}";
         }
 
+        public string GetCorrespondingTypeScriptPackageName()
+        {
+            return ConvertPackageNameToTypeScript(PackageName);
+        }
+
         public void GenerateTypeScriptSDKMessage(MarkdownBuilder builder)
         {
-            string typeScriptPackageName = ConvertPackageNameToTypeScript(PackageName);
+            string typeScriptPackageName = GetCorrespondingTypeScriptPackageName();
             builder.Line($"**This SDK will be deprecated next year and will be replaced by a new TypeScript-based isomorphic SDK (found at https://www.npmjs.com/package/{typeScriptPackageName}) which works on Node.js and browsers.**");
             builder.Line($"**See https://aka.ms/azure-sdk-for-js-migration to learn more.**");
         }
