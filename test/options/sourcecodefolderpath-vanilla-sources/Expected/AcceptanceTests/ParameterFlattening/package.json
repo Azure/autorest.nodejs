@@ -4,7 +4,7 @@
   "description": "AutoRestParameterFlattening Library with typescript type definitions for node",
   "version": "1.0.0-preview",
   "dependencies": {
-    "ms-rest": "^2.4.1"
+    "ms-rest": "^2.5.0"
   },
   "keywords": [
     "node",
@@ -22,6 +22,6 @@
     "url": "https://github.com/azure/azure-sdk-for-node/issues"
   },
  "scripts": {
-    "postinstall": "npm explore ms-rest -- npm run print-deprecation-message"
+    "postinstall": "node .scripts/postinstall.js"
   }
 }

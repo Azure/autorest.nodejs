@@ -33,6 +33,11 @@ namespace AutoRest.NodeJS
         public bool GenerateLicenseTxt { get; set; }
 
         /// <summary>
+        /// Whether or not to generate the postinstall.js script.
+        /// </summary>
+        public bool GeneratePostinstallScript { get; set; } = true;
+
+        /// <summary>
         /// The sub-folder path where source code will be generated.
         /// </summary>
         public string SourceCodeFolderPath { get; set; } = "lib";
