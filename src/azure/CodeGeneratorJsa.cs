@@ -21,7 +21,7 @@ namespace AutoRest.NodeJS.Azure
         public override string ImplementationFileExtension => ".js";
 
         /// <summary>
-        /// Generate Azure NodeJS client code 
+        /// Generate Azure NodeJS client code
         /// </summary>
         /// <param name="cm"></param>
         /// <returns></returns>
@@ -56,7 +56,7 @@ namespace AutoRest.NodeJS.Azure
                     var pageTemplate = new PageModelTemplate { Model = pageModel };
                     await Write(pageTemplate, GetModelSourceCodeFilePath(generatorSettings, pageModel.Name.ToCamelCase() + ".js")).ConfigureAwait(false);
                 }
-                
+
                 foreach (var modelType in codeModel.ModelTemplateModels)
                 {
                     await GenerateModelJs(modelType, generatorSettings).ConfigureAwait(false);
@@ -81,6 +81,8 @@ namespace AutoRest.NodeJS.Azure
             await GenerateReadmeMd(codeModel, generatorSettings).ConfigureAwait(false);
 
             await GenerateLicenseTxt(codeModel, generatorSettings).ConfigureAwait(false);
+
+            await GeneratePostinstallScript(codeModel, generatorSettings).ConfigureAwait(false);
         }
     }
 }
