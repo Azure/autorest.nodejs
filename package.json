@@ -1,6 +1,6 @@
 {
   "name": "@microsoft.azure/autorest.nodejs",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "The NodeJS extension for classic generators in AutoRest.",
   "scripts": {
     "autorest": "autorest",
