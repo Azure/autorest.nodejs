@@ -1124,7 +1124,7 @@ namespace AutoRest.NodeJS
             }
             else if (paramType.IsPrimaryType(KnownPrimaryType.Uuid))
             {
-                paramValue = "ec7b1657-199d-4d8a-bbb2-89a11a42e02a";
+                paramValue = "\"ec7b1657-199d-4d8a-bbb2-89a11a42e02a\"";
             }
             else if (paramType.IsPrimaryType(KnownPrimaryType.Stream))
             {
